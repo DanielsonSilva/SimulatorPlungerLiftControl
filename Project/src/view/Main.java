@@ -21,7 +21,7 @@ public class Main {
     {
         // Initialize the variable responsible for internationalization
         this.messages = message;
-        General general = new General(messages);
+        new Principal(messages);
     }
 
     /**
@@ -48,7 +48,7 @@ public class Main {
         currentLocale = new Locale(language, country);
         ResourceBundle international = ResourceBundle.getBundle("resources.MessagesBundle", currentLocale);
         
-        Main main = new Main(international);
+        new Main(international);
 	}
 
 }
