@@ -1,12 +1,14 @@
 package view;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.GridBagLayout;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.net.URL;
+import java.util.Map;
 import java.util.ResourceBundle;
 
 import javax.swing.Icon;
@@ -18,12 +20,27 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JToolBar;
 
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.data.xy.XYSeries;
+import org.jfree.data.xy.XYSeriesCollection;
+import org.jfree.ui.RectangleInsets;
+
 public class Principal extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	// Numbers variables
     private int width; //width of the window
     private int height; //height of the window
     private double sizeRate; // Rate size of the window
+    private Map<String,Double> series; // Store several series for the chart
     
 	public Principal(ResourceBundle messages)
     {
@@ -53,6 +70,8 @@ public class Principal extends JFrame {
         addMenuBarToPane(this,messages);
         // Add the tool bar
         addToolBarToPane(this,messages);
+        // Add the Chart
+        addChartToPane(this,messages);
         // Pop-up the main window
         this.setVisible(true);
     }
@@ -153,19 +172,55 @@ public class Principal extends JFrame {
         button.setIcon(icone);
         toolBar.add(button);
     }
+    
+    /**
+     * Add the charts to the program
+     * 
+     * @param frame Container that will receive the components
+     * @param messages Variable for internationalization
+     */    
+    private void addChartToPane(JFrame frame, ResourceBundle messages) {
+    	XYSeries series1 = new XYSeries("First");
+    	series1.add(1,2);
+    	series1.add(2,3);
+    	series1.add(3,4);
+    	XYSeries series2 = new XYSeries("Second");
+    	series2.add(1,8);
+    	series2.add(2,5);
+    	series2.add(3,1);
+    	XYSeries series3 = new XYSeries("Third");
+    	series3.add(1,5);
+    	series3.add(2,9);
+    	series3.add(3,-1);
+    	
+    	XYSeriesCollection dataset = new XYSeriesCollection();
+    	dataset.addSeries(series1);
+    	dataset.addSeries(series2);
+    	dataset.addSeries(series3);
+    	
+    	JFreeChart chart = ChartFactory.createXYLineChart(
+    		"Gráfico1", // Chart Title
+    		"Tempo", // X Label
+    		"Valor", // Y Label
+    		dataset, // XYSeriesCollection
+    		PlotOrientation.VERTICAL,
+    		true, // include legend
+    		true, // include tooltips
+    		false // include urls
+    	);
+    	
+    	XYPlot plot = (XYPlot) chart.getPlot();
+    	plot.setBackgroundPaint(Color.WHITE);
+    	plot.setAxisOffset(new RectangleInsets(5,5,5,5));
+    	plot.setDomainGridlinePaint(Color.BLACK);
+    	plot.setRangeGridlinePaint(Color.BLACK);
+    	
+    	NumberAxis rangeAxis = (NumberAxis)plot.getRangeAxis();
+    	rangeAxis.setStandardTickUnits(NumberAxis.createIntegerTickUnits());
+    	
+    	Container contentPane = frame.getContentPane();
+    	ChartPanel chartPanel = new ChartPanel(chart);
+    	contentPane.add(chartPanel, BorderLayout.CENTER);
+   	
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
