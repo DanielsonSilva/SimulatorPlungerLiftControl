@@ -33,7 +33,7 @@ import org.jfree.ui.RectangleInsets;
 public class Principal extends JFrame {
 
 	/**
-	 * 
+	 * @author Danielson Flávio Xavier da Silva
 	 */
 	private static final long serialVersionUID = 1L;
 	// Numbers variables
@@ -42,6 +42,10 @@ public class Principal extends JFrame {
     private double sizeRate; // Rate size of the window
     private Map<String,Double> series; // Store several series for the chart
     
+    /**
+     * Constructor
+     * @param messages Variable for internationalization
+     */
 	public Principal(ResourceBundle messages)
     {
         // Initialize variables
