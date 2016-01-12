@@ -19,5 +19,13 @@ public class DataFluid {
 	public DataFluid() {
 		
 	}
+	
+	public void Limpar() {
+		this.BSW = 0;
+		this.APi = 0;
+		this.SGgas = 0;
+		this.SGagua = 0;
+		this.GAMA = 0;
+	}
 
 }

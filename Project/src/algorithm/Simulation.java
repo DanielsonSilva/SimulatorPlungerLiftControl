@@ -34,7 +34,7 @@ public class Simulation {
 	 * Constructor
 	 * @param pool Caixa de correio para levar ou trazer as mensagens.
 	 */
-	public Simulation(MessagePool* pool) {
+	public Simulation() {
 		//Configuracoes iniciais do algoritmo
 		tempo             = 0;
 		idRamoSimulacao   = 0;

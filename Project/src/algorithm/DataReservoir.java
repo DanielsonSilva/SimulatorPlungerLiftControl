@@ -1,9 +1,21 @@
 package algorithm;
 
-public class DataReservoir {
+public class DataReservoir {	
+
+	double Pest;    /*!< Pressao Estatica    */
+	double Qteste;  /*!< Vazao de Teste???   */
+	double Pteste;  /*!< Pressao de Teste??? */
+	int RGL;        /*!< Razao gas-liquido de producao (m3 std / m3) */
 
 	public DataReservoir() {
-		// TODO Auto-generated constructor stub
+		// Empty
+	}
+	
+	public void Limpar() {
+		this.Pest = 0;
+		this.Qteste = 0;
+		this.Pteste = 0;
+		this.RGL = 0;
 	}
 
 }

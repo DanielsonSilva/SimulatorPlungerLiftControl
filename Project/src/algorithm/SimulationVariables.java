@@ -2,7 +2,7 @@ package algorithm;
 
 public class SimulationVariables {
 	
-	// Variaveis
+	// Variables
 	double Ntotal;        /*!< Numero de moles total do gas             */
 	double PtbgB;         /*!< Pressao na base do tubing                */
 	double save_Hplg;     /*!< Guarda a posicao da base do pistao       */
