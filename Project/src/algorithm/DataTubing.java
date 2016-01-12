@@ -1,6 +1,6 @@
 package algorithm;
 
-public class DataTubing {
+public final class DataTubing {
 	
 	// Dados utilizados na simulação
 	public double Lcauda;  /*!< Comprimento da coluna de produção   */
@@ -11,10 +11,19 @@ public class DataTubing {
 	// Dados não utilizados na simulação apenas para informação
 	public double peso;
 
+	private static DataTubing instance;
+	
+	public static synchronized DataTubing getInstance() {
+		if (instance == null) {
+			instance = new DataTubing();
+		}
+		return instance;
+	}	
+	
 	/**
 	 * Constructor
 	 */
-	public DataTubing() {
+	private DataTubing() {
 		// TODO Auto-generated constructor stub
 	}
 

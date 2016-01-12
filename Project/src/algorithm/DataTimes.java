@@ -1,6 +1,6 @@
 package algorithm;
 
-public class DataTimes {
+public final class DataTimes {
 	
 	// Dados utilizados na simulação
 	int Afterflow;  /*!< Tempo de afterflow (s)               */
@@ -13,7 +13,16 @@ public class DataTimes {
 	// Dados não utilizados na simulação apenas para informação
 	boolean Controller; /*!< Deve-se utilizar o controlador      */
 
-	public DataTimes() {
+	private static DataTimes instance;
+	
+	public static synchronized DataTimes getInstance() {
+		if (instance == null) {
+			instance = new DataTimes();
+		}
+		return instance;
+	}	
+	
+	private DataTimes() {
 		// Empty
 	}
 	

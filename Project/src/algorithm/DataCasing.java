@@ -6,7 +6,7 @@ package algorithm;
  * @author Danielson Flávio Xavier da Silva
  *
  */
-public class DataCasing {
+public final class DataCasing {
 	
 	// Simulation Data
 	/** Casing internal diameter */
@@ -20,10 +20,19 @@ public class DataCasing {
 	/** Casing Weight */
 	public double peso;
 			
+	private static DataCasing instance;
+	
+	public static synchronized DataCasing getInstance() {
+		if (instance == null) {
+			instance = new DataCasing();
+		}
+		return instance;
+	}
+	
 	/**
 	 * Constructor
 	 */
-	public DataCasing() {
+	private DataCasing() {
 		// Empty
 	}
 	
@@ -46,7 +55,7 @@ public class DataCasing {
 	/**
 	 * Reset Casing values
 	 */
-	public void Clean() {
+	public void Limpar() {
 		this.DIcsg = 0;
 		this.comprimento = 0;
 		this.rugosidade = 0;

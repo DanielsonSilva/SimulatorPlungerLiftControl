@@ -21,26 +21,44 @@ public class Entities {
 	/** Variaveis concernentes à interface.     */
 	OutputVariables varSaida;
 	
+	
+	private static Entities instance;
+	
+	public static synchronized Entities getInstance() {
+		if (instance == null) {
+			instance = new Entities();
+		}
+		return instance;
+	}	
+	
 	/**
 	 * Constructor
 	 */
-	public Entities() {
-		// TODO Auto-generated constructor stub
+	private Entities() {
+		this.tubing   = DataTubing.getInstance();
+	    this.casing   = DataCasing.getInstance();
+	    this.valvula  = DataMotorValve.getInstance();
+	    this.linhaPro = DataProductionLine.getInstance();
+	    this.reservat = DataReservoir.getInstance();
+	    this.pistao   = DataPlunger.getInstance();
+	    this.fluido   = DataFluid.getInstance();
+	    this.tempos   = DataTimes.getInstance();
+	    this.varSaida = OutputVariables.getInstance();
 	}
 	
 	/**
 	 * Clear the variables
 	 */
 	public void Limpar() {
-		tubing->Limpar()  ;
-		casing->Limpar()  ;
-		valvula->Limpar() ;
-		linhaPro->Limpar();
-		reservat->Limpar();
-		pistao->Limpar()  ;
-		fluido->Limpar()  ;
-		tempos->Limpar()  ;
-		varSaida->Limpar();
+		this.tubing.Limpar()  ;
+		this.casing.Limpar()  ;
+		this.valvula.Limpar() ;
+		this.linhaPro.Limpar();
+		this.reservat.Limpar();
+		this.pistao.Limpar()  ;
+		this.fluido.Limpar()  ;
+		this.tempos.Limpar()  ;
+		this.varSaida.Limpar();
 	}
 
 }

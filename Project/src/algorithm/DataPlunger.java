@@ -1,6 +1,6 @@
 package algorithm;
 
-public class DataPlunger {
+public final class DataPlunger {
 	
 	// Dados utilizados na simulação
 	float EfVed;   /*!< Eficiencia de Vedacao ao Gas (%)      */
@@ -10,7 +10,16 @@ public class DataPlunger {
 	double Vqpg;   /*!< Velocidade de Queda no Gas (m/s)      */
 	double Dplg;   /*!< Diâmetro do pistão (m)                    */
 	
-	public DataPlunger() {
+	private static DataPlunger instance;
+	
+	public static synchronized DataPlunger getInstance() {
+		if (instance == null) {
+			instance = new DataPlunger();
+		}
+		return instance;
+	}	
+	
+	private DataPlunger() {
 		//Empty
 	}
 	

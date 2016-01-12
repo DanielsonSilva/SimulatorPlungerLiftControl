@@ -1,6 +1,6 @@
 package algorithm;
 
-public class DataFluid {
+public final class DataFluid {
 	
 	/** Fração de água no líquido */
 	public int BSW;
@@ -13,10 +13,19 @@ public class DataFluid {
 	/** Peso específico (Ro*g) */
 	public double GAMA;
 	
+	private static DataFluid instance;
+	
+	public static synchronized DataFluid getInstance() {
+		if (instance == null) {
+			instance = new DataFluid();
+		}
+		return instance;
+	}	
+	
 	/**
 	 * Constructor
 	 */	
-	public DataFluid() {
+	private DataFluid() {
 		
 	}
 	
