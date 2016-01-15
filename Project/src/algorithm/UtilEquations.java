@@ -6,9 +6,14 @@ package algorithm;
 import static java.lang.Math.*;
 /**
  * @author Danielson Flávio Xavier da Silva
- *
+ * Utilitary equations used in Simulation.java
  */
 public class UtilEquations {
+	
+	public UtilEquations () {
+		// Empty
+	}
+	
 	/**
 	 * @brief 
 	 * @param p1 Pressao montante abFS em (kPa).

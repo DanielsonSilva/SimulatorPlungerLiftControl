@@ -90,10 +90,19 @@ public class SimulationVariables {
 	int limite;           /*!<                             */
 	double Cav;           /*!< Coeficiente de amortecimento viscoso (Kg/s^2) */
 
+	private static SimulationVariables instance;
+	
+	public static synchronized SimulationVariables getInstance() {
+		if (instance == null) {
+			instance = new SimulationVariables();
+		}
+		return instance;
+	}	
+	
 	/**
 	 * Constructor
 	 */
-	public SimulationVariables() {
+	private SimulationVariables() {
 		// TODO Empty
 	}
 	

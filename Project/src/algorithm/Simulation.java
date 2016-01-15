@@ -1,5 +1,7 @@
 package algorithm;
 
+import static java.lang.Math.*;
+
 /**
  * Simulation Methods
  * @author Danielson Flávio Xavier da Silva
@@ -30,11 +32,20 @@ public class Simulation {
 			feito ou não */
 	boolean alterarValvula;
 	
+	private static Simulation instance;
+	
+	public static synchronized Simulation getInstance() {
+		if (instance == null) {
+			instance = new Simulation();
+		}
+		return instance;
+	}	
+	
 	/**
 	 * Constructor
 	 * @param pool Caixa de correio para levar ou trazer as mensagens.
 	 */
-	public Simulation() {
+	private Simulation() {
 		//Configuracoes iniciais do algoritmo
 		tempo             = 0;
 		idRamoSimulacao   = 0;
@@ -58,11 +69,12 @@ public class Simulation {
 	/**
 	 * Inicia os parâmetros para poder começar a simulação.
 	 */
-	void iniciarSimulacao() {
+	public void iniciarSimulacao() {
 
-		Entities f = new Entities();
-		DataConstants c = new DataConstants();
-		SimulationVariables v = new SimulationVariables();
+		Entities            f = Entities.getInstance();
+		DataConstants       c = DataConstants.getInstance();
+		SimulationVariables v = SimulationVariables.getInstance();
+		UtilEquations       ue= new UtilEquations();
 
 		// Variáveis de controle de passos de integração
 		//c->_stepGas2Liq = 0.01;//valor antigo = 0.001
@@ -97,9 +109,8 @@ public class Simulation {
 		c.AItbg = M_PI * pow(f.tubing.DItbg, 2)/4;
 
 		//FORMULAS DE GREEN  PARA Ppc e Tpc (Pressao e temperatura pseudo critica)
-		c.Ppc = (677 + 15*f.fluido.SGgas - 37.5*powl(f.fluido.SGgas,2));
-																															 6.894757*pow(10,3);
-		c.Tpc = ((168 + 325*f.fluido.SGgas - 12.5*pow(f.fluido.SGgas,2))-491.67);																																	 5.0/9.0+273.15;
+		c.Ppc = (677 + 15*f.fluido.SGgas - 37.5*pow(f.fluido.SGgas,2)) * 6.894757*pow(10,3);
+		c.Tpc = ((168 + 325*f.fluido.SGgas - 12.5*pow(f.fluido.SGgas,2))-491.67) * 5.0/9.0+273.15;
 
 		//VAZAO MAXIMA DO RESERVATORIO
 		c.Qmax = f.reservat.Qteste/(1-.2*f.reservat.Pteste/f.reservat.Pest - .8*powl(f.reservat.Pteste/f.reservat.Pest,2));
@@ -111,10 +122,10 @@ public class Simulation {
 		c.Vcsg = c.AIcsg * f.tubing.Lcauda;
 
 		//Pressão na base do Anular
-		f.varSaida.PcsgB = EquacoesUtilitarias::GASOSTB(f.tempos.PcsgT, c.Tsup,EquacoesUtilitarias::TEMP(f.tubing.Lcauda),f.tubing.Lcauda);
+		f.varSaida.PcsgB = ue.GASOSTB(f.tempos.PcsgT, c.Tsup,ue.TEMP(f.tubing.Lcauda),f.tubing.Lcauda);
 
 		//Temperatura média do Anular
-		c.TTcsg=( EquacoesUtilitarias::TEMP ( f.tubing.Lcauda ) + c.Tsup)/2;
+		c.TTcsg=( ue.TEMP ( f.tubing.Lcauda ) + c.Tsup)/2;
 
 		//Inicializa número de moles do gás
 		v.Ntotal = 0;
@@ -138,7 +149,7 @@ public class Simulation {
 		v.PtbgB = f.varSaida.PcsgB - ( c.ROliq * c.G * f.tempos.Lslg + f.pistao.Mplg * c.G/c.AItbg);
 
 		//Pressao no topo do tubing pela equacao GASOSTT
-		f.varSaida.PtbgT = EquacoesUtilitarias::GASOSTT(v.PtbgB,EquacoesUtilitarias::TEMP(v.H), c.Tsup, v.H);
+		f.varSaida.PtbgT = ue.GASOSTT(v.PtbgB,ue.TEMP(v.H), c.Tsup, v.H);
 
 		//Passando o valor da entidade para variaveis auxiliares
 		v.temp_Offtime = f.tempos.Offtime;
@@ -155,12 +166,13 @@ public class Simulation {
 	 *				novo ciclo.
 	 * @return True se ocorreu a função com sucesso, false caso contrário.
 	 */
-	bool EquacoesAuxiliares::inicioCiclo(){
+	public boolean inicioCiclo(){
 
 		//Objetos de manipulacao de variaveis do poco
-		FacedeEntidades*      f = FacedeEntidades::getInstance();
-		ConstantesUniversais* c = ConstantesUniversais::getInstance();
-		VariaveisAuxiliares*  v = VariaveisAuxiliares::getInstance();
+		Entities            f = Entities.getInstance();
+		DataConstants       c = DataConstants.getInstance();
+		SimulationVariables v = SimulationVariables.getInstance();
+		UtilEquations       ue= new UtilEquations();
 
 		v->Ppart_csg = f->tempos->PcsgT;
 		v->Ppart_tbg = f->varSaida->PtbgT;
@@ -285,11 +297,12 @@ public class Simulation {
 	/**
 	 * @brief Modelo matemático da parte de subida do pistão.
 	 */
-	void EquacoesAuxiliares::subidaPistao(){
+	public void subidaPistao() {
 		//CRIACAO DE VARIAVEIS
-		FacedeEntidades* f = FacedeEntidades::getInstance();
-		ConstantesUniversais* c = ConstantesUniversais::getInstance();
-		VariaveisAuxiliares* v = VariaveisAuxiliares::getInstance();
+		Entities            f = new Entities();
+		DataConstants       c = new DataConstants();
+		SimulationVariables v = new SimulationVariables();
+		UtilEquations       ue= new UtilEquations();
 
 		//FORÇAR A PLOTAGEM DO PRIMEIRO PONTO DA ETAPA
 		if ( forcarPontosI ) {
@@ -631,12 +644,13 @@ public class Simulation {
 	/**
 	 * @brief Modelo matemático da etapa de produção de líquido.
 	 */
-	void EquacoesAuxiliares::producaoLiquido(){
+	public void producaoLiquido(){
 
 		//CRIACAO DE VARIAVEIS PARA A SIMULACAO
-		FacedeEntidades*      f = FacedeEntidades     ::getInstance();
-		ConstantesUniversais* c = ConstantesUniversais::getInstance();
-		VariaveisAuxiliares*  v = VariaveisAuxiliares ::getInstance();
+		Entities            f = new Entities();
+		DataConstants       c = new DataConstants();
+		SimulationVariables v = new SimulationVariables();
+		UtilEquations       ue= new UtilEquations();
 
 		//FORÇANDO PLOTAR O PRIMEIRO PONTO DA ETAPA
 		if ( forcarPontosI ) {
@@ -834,11 +848,12 @@ public class Simulation {
 	/**
 	 * @brief Parte de controle da simulação.
 	 */
-	void EquacoesAuxiliares::Controle(){
+	public void Controle() {
 
-		FacedeEntidades* f = FacedeEntidades::getInstance();
-		ConstantesUniversais* c = ConstantesUniversais::getInstance();
-		VariaveisAuxiliares* v = VariaveisAuxiliares::getInstance();
+		Entities            f = new Entities();
+		DataConstants       c = new DataConstants();
+		SimulationVariables v = new SimulationVariables();
+		UtilEquations       ue= new UtilEquations();
 
 		/*CALCULA A VARIACAO DE PRESSAO COMO SENDO A DIFERENCA ENTRE AS PRESSOES
 		 *NO TOPO DO ANULAR DO INICIO DO PROGRAMA E DA ITERACAO ATUAL
@@ -945,11 +960,12 @@ public class Simulation {
 	/**
 	 * @brief Parte do modelo matemático da etapa de Afterflow.
 	 */
-	void EquacoesAuxiliares::Afterflow(){
+	public void Afterflow() {
 
-		FacedeEntidades* f = FacedeEntidades::getInstance();
-		ConstantesUniversais* c = ConstantesUniversais::getInstance();
-		VariaveisAuxiliares* v = VariaveisAuxiliares::getInstance();
+		Entities            f = new Entities();
+		DataConstants       c = new DataConstants();
+		SimulationVariables v = new SimulationVariables();
+		UtilEquations       ue= new UtilEquations();
 
 		//FORÇAR A PLOTAGEM DO PRIMEIRO PONTO DA ETAPA
 		if ( forcarPontosI ) {
@@ -1115,11 +1131,12 @@ public class Simulation {
 	 *									conseguiu chegar à superfície, se sim true ou false caso
 	 *									contrário.
 	 */
-	void EquacoesAuxiliares::OffBuildUp(bool ChegouSup){
+	public void OffBuildUp(bool ChegouSup){
 
-		FacedeEntidades*      f = FacedeEntidades     ::getInstance();
-		ConstantesUniversais* c = ConstantesUniversais::getInstance();
-		VariaveisAuxiliares*  v = VariaveisAuxiliares ::getInstance();
+		Entities            f = new Entities();
+		DataConstants       c = new DataConstants();
+		SimulationVariables v = new SimulationVariables();
+		UtilEquations       ue= new UtilEquations();
 
 		//FORÇAR A PLOTAGEM DO PRIMEIRO PONTO DA ETAPA
 		if ( forcarPontosI ) {
@@ -1485,14 +1502,14 @@ public class Simulation {
 	/**
 	 * @brief Função que seta o ID da simulação.
 	 */
-	void EquacoesAuxiliares::setIdSimulacao(int id){
-		this->idSimulacao = id;
+	public void setIdSimulacao(int id){
+		this.idSimulacao = id;
 	}
 	//---------------------------------------------------------------------------
 	/**
 	 * @brief Função que retorna o ID da simulação.
 	 */
-	int EquacoesAuxiliares::getIdSimulacao(){
+	public int getIdSimulacao() {
 		return idSimulacao;
 	}
 	/**
@@ -1500,11 +1517,12 @@ public class Simulation {
 	 * 				sejam apresentadas ao usuário no gráfico e numericamente.
 	 * @param stage Informa a etapa que se está criando a mensagem.
 	 */
-	void EquacoesAuxiliares::criarMensagem(CycleStage stage){
+	public void criarMensagem(CycleStage stage) {
 
-		FacedeEntidades*      f = FacedeEntidades     ::getInstance();
-		ConstantesUniversais* c = ConstantesUniversais::getInstance();
-		VariaveisAuxiliares*  v = VariaveisAuxiliares ::getInstance();
+		Entities            f = new Entities();
+		DataConstants       c = new DataConstants();
+		SimulationVariables v = new SimulationVariables();
+		UtilEquations       ue= new UtilEquations();
 
 		//ADICIONA O TEMPO DE ACORDO COM A ETAPA
 		switch (stage) {
@@ -1583,8 +1601,8 @@ public class Simulation {
 	 * @brief Trata de enviar uma mensagem de amostra para interface.
 	 * @param msg Mensagem de amostra que será enviada.
 	 */
-	void EquacoesAuxiliares::enviarSampleMessage(SampleMessage* msg) {
-		this->sendMessage(msg);
+	public void enviarSampleMessage(SampleMessage* msg) {
+		this.sendMessage(msg);
 	}
 	/**
 	 * @brief Seta a precisão de um double na quantidade de casas decimais.
@@ -1592,11 +1610,11 @@ public class Simulation {
 	 * @param precisao Precisão do double resultante.
 	 * @return Retorna o valor X com PRECISAO casas decimais.
 	 */
-	double EquacoesAuxiliares::setPrecision(double x, int precisao) {
+	public double setPrecision(double x, int precisao) {
 		//Para pegar somente a precisao, multiplica o numero X por 10 elevado a
 		//precisao e então transforma em inteiro. Com o numero inteiro, divide por
 		//10 elevado a precisao e depois da virgula tera somente precisao numeros.
-		return (((int)(x * powl(10,precisao)))/powl(10,precisao));
+		return (((int)(x * pow(10,precisao)))/pow(10,precisao));
 	}
 	/**
 	 * @brief Função que trata de enviar um dado para ser inserido no histórico
@@ -1606,11 +1624,11 @@ public class Simulation {
 	 *									do dado.
 	 * @param valor Valor que deve ser enviado caracterizando a ocorrência.
 	 */
-	void EquacoesAuxiliares::enviarVarCiclo(CycleVariable ciclovar, double valor) {
-		this->sendMessage( new CycleVariableMessage
+	public void enviarVarCiclo(CycleVariable ciclovar, double valor) {
+		this.sendMessage( new CycleVariableMessage
 			(
-				this->tempo, ciclovar, valor,
-				this->idSimulacao, this->idRamoSimulacao
+				this.tempo, ciclovar, valor,
+				this.idSimulacao, this.idRamoSimulacao
 			)
 		);
 	}
@@ -1619,11 +1637,11 @@ public class Simulation {
 	 * 				em determinado tempo.
 	 * @param cycle Tempo em que o ciclo foi finalizado.
 	 */
-	void EquacoesAuxiliares::enviarFimCiclo(double cycle) {
+	public void enviarFimCiclo(double cycle) {
 
-		this->sendMessage( new EndOfCycleMessage
+		this.sendMessage( new EndOfCycleMessage
 			(
-				cycle, this->idSimulacao, this->idRamoSimulacao
+				cycle, this.idSimulacao, this.idRamoSimulacao
 			)
 		);
 
@@ -1631,8 +1649,8 @@ public class Simulation {
 	/**
 	 * @brief Função que recebe o pedido de alteração no estado da válvula motora.
 	 */
-	void EquacoesAuxiliares::alterValvula() {
-		this->alterarValvula = true;
+	public void alterValvula() {
+		this.alterarValvula = true;
 	}
 
 }
