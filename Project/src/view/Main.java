@@ -12,7 +12,7 @@ import java.util.ResourceBundle;
  */
 public class Main {
 	
-	// Variable for intercionalization
+	// Variable for intertionalization
     private ResourceBundle messages;
     /**
      * Constructor for the Main Class
@@ -21,7 +21,7 @@ public class Main {
     {
         // Initialize the variable responsible for internationalization
         this.messages = message;
-        new Principal(messages);
+        Principal.getInstance(messages);
     }
 
     /**

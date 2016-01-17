@@ -606,14 +606,14 @@ public class Simulation {
 				v.N=v.Ntotal;
 
 			}
-			criarMensagem(CycleStage.PLUNGER_RISE);
+			//criarMensagem(CycleStage.PLUNGER_RISE);
 
 		}/* fim do FOR Abrir Valv Motora */
 
 		//FORÇANDO O PLOTE DO ÚLTIMO PONTO DA ETAPA
 		if ( forcarPontosF ) {
 			quantidadePontos = periodoAmostragem + 1;
-			criarMensagem(CycleStage.PLUNGER_RISE);
+			//criarMensagem(CycleStage.PLUNGER_RISE);
 		}
 
 		//NÃO CONSEGUIU CHEGAR NA SUPERFÍCIE
@@ -621,7 +621,7 @@ public class Simulation {
 			v.j = 0;
 			v.Ntotal += v.nn;
 			Controle();
-			break;
+			//break;
 		}
 
 		//ENVIANDO MENSAGEM COM O TEMPO DE DURACAO DA SUBIDA PISTAO
@@ -820,14 +820,14 @@ public class Simulation {
 			//DECREMENTA A PERDA POR FRICCAO DE UM FATOR NAO COMENTADO NO BARUZZI???????
 			v.Pfric += v.delta_h*c.ROliq*v.v0*(pow(f.tubing.DItbg,2) /pow(f.valvula.Dab/1000,2)-1)/ c.step_;
 			//CRIA UMA MENSAGEM PARA A INTERFACE ATUALIZAR SEUS ATRIBUTOS
-			criarMensagem(CycleStage.PRODUCTION);
+			//criarMensagem(CycleStage.PRODUCTION);
 
 		}//fim for1
 
 		//FORÇANDO O PLOTE DO ULTIMO PONTO DA ETAPA
 		if ( forcarPontosF ) {
 			quantidadePontos = periodoAmostragem + 1;
-			criarMensagem(CycleStage.PRODUCTION);
+			//criarMensagem(CycleStage.PRODUCTION);
 		}
 
 		//Enviando o tempo de duração da etapa de produção
@@ -908,7 +908,7 @@ public class Simulation {
 			}
 			//VAI PARA A ETAPA DE BUILDUP
 			OffBuildUp(false);
-			break;
+			//break;
 		}
 		//PARTE DO CONTROLADOR
 		if ( !byPassController ) {
@@ -1105,7 +1105,7 @@ public class Simulation {
 			//ATRIBUI À PRESSÃO NO FUNDO DO REVESTIMENTO A PRESSÃO DE FLUXO NO FUNDO
 			f.varSaida.PcsgB = v.Pwf;
 
-			criarMensagem(CycleStage.AFTERFLOW);
+			//criarMensagem(CycleStage.AFTERFLOW);
 		} /*   fim do FOR  AfterFlow  -  linha 1415    */
 		//Colocando valor default para a alteracao da variável
 		this.alterarValvula = false;
@@ -1113,7 +1113,7 @@ public class Simulation {
 		//FORÇANDO O PLOTE DO ULTIMO PONTO DA ETAPA
 		if ( forcarPontosF ) {
 			quantidadePontos = periodoAmostragem + 1;
-			criarMensagem(CycleStage.AFTERFLOW);
+			//criarMensagem(CycleStage.AFTERFLOW);
 		}
 
 		//Enviando o tempo de duração do afterflow
@@ -1416,7 +1416,7 @@ public class Simulation {
 			}
 
 			//ENVIA MENSAGEM PARA PLOTAR A SITUACAO ATUAL
-			criarMensagem(CycleStage.BUILDUP);
+			//criarMensagem(CycleStage.BUILDUP);
 
 			tpgasto += c._step;
 			switch (modo_passo) {
@@ -1438,7 +1438,7 @@ public class Simulation {
 		//FORÇANDO O PLOTE DO ULTIMO PONTO DA ETAPA
 		if ( forcarPontosF ) {
 			quantidadePontos = periodoAmostragem + 1;
-			criarMensagem(CycleStage.BUILDUP);
+			//criarMensagem(CycleStage.BUILDUP);
 		}
 
 		//ATUALIZA O NÚMERO TOTAL DE MOLES SOMENTE COM O NÚMERO DE MOLES DO ESPAÇO
@@ -1508,100 +1508,7 @@ public class Simulation {
 	public int getIdSimulacao() {
 		return idSimulacao;
 	}
-	/**
-	 * @brief Cria uma mensagem para ser enviada à interface para que as variáveis
-	 * 				sejam apresentadas ao usuário no gráfico e numericamente.
-	 * @param stage Informa a etapa que se está criando a mensagem.
-	 */
-	public void criarMensagem(CycleStage stage) {
-
-		Entities            f = Entities.getInstance();
-		DataConstants       c = DataConstants.getInstance();
-		SimulationVariables v = SimulationVariables.getInstance();
-		UtilEquations       ue= new UtilEquations();
-
-		//ADICIONA O TEMPO DE ACORDO COM A ETAPA
-		switch (stage) {
-			case PLUNGER_RISE:
-				this.tempo = (float)(this.tempo + c.step) ;
-				break;
-			case PRODUCTION:
-				this.tempo = (float)(this.tempo + c.step_);
-				break;
-			case AFTERFLOW:
-				this.tempo = (float)(this.tempo + c.step_aft);
-				break;
-			case BUILDUP:
-				this.tempo = (float)(this.tempo + c._step);
-				break;
-			default:
-				break;
-		}
-
-		//ADICIONA A CONTAGEM DE QUANTIDADES DE PONTOS
-		quantidadePontos = quantidadePontos + 1;
-		DataManager *dm = DataManager::getInstance();
-
-		//SE A QUANTIDADE DE PONTOS FOR MAIOR QUE O PERIODO DE AMOSTRAGEM
-		if ( quantidadePontos > periodoAmostragem ) {
-			//SE A FILA PARA PLOTAGEM ESTIVER LOTADA, ESPERAR 200MS DENTRO
-			// DO WHILE E TENTAR NOVAMENTE
-			while (dm.getLenghtSimulatorPool2() >= this.bufferSendPoints
-												|| dm.getLenghtGuiPool1() >= this.bufferSendPoints ) {
-				// Somente para testes para monitorar as filas
-				int x = DataManager::getInstance().getLenghtGuiPool1();
-				int y = DataManager::getInstance().getLenghtGuiPool2();
-				int z = DataManager::getInstance().getLenghtSimulatorPool1();
-				int k = DataManager::getInstance().getLenghtSimulatorPool2();
-				Sleep(200);
-			}
-
-			//CALCULAR A VAZAO DE GAS DE ANTEMAO
-			double vazaogas = f.varSaida.Qlres * f.reservat.RGL;
-
-			//CRIAR O PONTO DE SIMULACAO E ADICIONAR AS VARIAVEIS CABIVEIS
-			SimulatorPoint* point = new SimulatorPoint();
-			//Pressão no topo da coluna de produção
-			point.points.push_back(f.varSaida.PtbgT);
-			//Pressão no topo da golfada
-			point.points.push_back(f.varSaida.pp);
-			//Pressão na base do anular
-			point.points.push_back(f.varSaida.PcsgB);
-			//Pressão no topo do anular
-			point.points.push_back(f.tempos.PcsgT);
-			//Comprimento da golfada
-			point.points.push_back(f.tempos.Lslg);
-			//Altura da golfada no fundo da coluna
-			point.points.push_back(f.tempos.Ltbg);
-			//Posição do pistão
-			point.points.push_back(f.varSaida.Hplg);
-			//Velocidade do pistão
-			point.points.push_back(v.v0);
-			//Vazão de líquido do reservatório
-			point.points.push_back(f.varSaida.Qlres);
-			//Vazão de gás do reservatório
-			point.points.push_back(vazaogas);
-			//Tempo de simulação
-			point.time = tempo;
-			//Etapa do processo
-			point.stage = stage;
-			//CRIA UMA MENSAGEM DE AMOSTRAGEM PARA ENVIAR PARA INTERFACE
-			SampleMessage* msg = new SampleMessage(point,this.idSimulacao,
-																													 this.idRamoSimulacao);
-			this.enviarSampleMessage(msg);
-			//ZERA A QUANTIDADE DE PONTOS PARA ESPERAR PELO PERIODO DE AMOSTRAGEM
-			quantidadePontos = 0;
-		}
-
-	}
-	//---------------------------------------------------------------------------
-	/**
-	 * @brief Trata de enviar uma mensagem de amostra para interface.
-	 * @param msg Mensagem de amostra que será enviada.
-	 */
-	public void enviarSampleMessage(SampleMessage* msg) {
-		this.sendMessage(msg);
-	}
+	
 	/**
 	 * @brief Seta a precisão de um double na quantidade de casas decimais.
 	 * @param x Número para ser ajustado.
@@ -1621,25 +1528,14 @@ public class Simulation {
 	 * @param valor Valor que deve ser enviado caracterizando a ocorrência.
 	 */
 	public void enviarVarCiclo(CycleStage ciclovar, double valor) {
-		this.sendMessage( new CycleVariableMessage
-			(
-				this.tempo, ciclovar, valor,
-				this.idSimulacao, this.idRamoSimulacao
-			)
-		);
+		
 	}
 	/**
 	 * @brief Função que trata de informar a interface que chegou ao fim do ciclo
 	 * 				em determinado tempo.
 	 * @param cycle Tempo em que o ciclo foi finalizado.
 	 */
-	public void enviarFimCiclo(double cycle) {
-
-		this.sendMessage( new EndOfCycleMessage
-			(
-				cycle, this.idSimulacao, this.idRamoSimulacao
-			)
-		);
+	public void enviarFimCiclo(double cycle) {		
 
 	}
 	/**

@@ -6,7 +6,6 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Toolkit;
-import java.awt.event.*;
 import java.net.URL;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -18,15 +17,16 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
 import javax.swing.JToolBar;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.plot.Plot;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
+import org.jfree.data.general.Dataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import org.jfree.ui.RectangleInsets;
@@ -44,12 +44,23 @@ public class Principal extends JFrame {
     private Map<String,Double> series; // Store several series for the chart
     private JButton buttons[]; // Reference to the buttons
     private ButtonsListener buttonsAction; // Class for actions of the buttons
+    private JFreeChart chart; // Chart to plot variables
+    private XYSeriesCollection dataset; // Sets of data for the chart
+    
+	private static Principal instance;
+	
+	public static synchronized Principal getInstance(ResourceBundle messages) {
+		if (instance == null) {
+			instance = new Principal(messages);
+		}
+		return instance;
+	}	
     
     /**
      * Constructor
      * @param messages Variable for internationalization
      */
-	public Principal(ResourceBundle messages)
+	private Principal(ResourceBundle messages)
     {
         // Initialize variables
         String title = messages.getString("title");
@@ -213,25 +224,32 @@ public class Principal extends JFrame {
      * @param messages Variable for internationalization
      */    
     private void addChartToPane(JFrame frame, ResourceBundle messages) {
-    	XYSeries series1 = new XYSeries("First");
-    	series1.add(1,2);
-    	series1.add(2,3);
-    	series1.add(3,4);
-    	XYSeries series2 = new XYSeries("Second");
-    	series2.add(1,8);
-    	series2.add(2,5);
-    	series2.add(3,1);
-    	XYSeries series3 = new XYSeries("Third");
-    	series3.add(1,5);
-    	series3.add(2,9);
-    	series3.add(3,-1);
-    	
-    	XYSeriesCollection dataset = new XYSeriesCollection();
+    	XYSeries series1 = new XYSeries(messages.getString("gasflow"));
+    	XYSeries series2 = new XYSeries(messages.getString("PtbgT"));
+    	XYSeries series3 = new XYSeries(messages.getString("pp"));
+    	XYSeries series4 = new XYSeries(messages.getString("PcsgB"));
+    	XYSeries series5 = new XYSeries(messages.getString("PcsgT"));
+    	XYSeries series6 = new XYSeries(messages.getString("Lslg"));
+    	XYSeries series7 = new XYSeries(messages.getString("Ltbg"));
+    	XYSeries series8 = new XYSeries(messages.getString("Hplg"));
+    	XYSeries series9 = new XYSeries(messages.getString("v0"));
+    	XYSeries series0 = new XYSeries(messages.getString("Qlres"));
+    	XYSeries series10 = new XYSeries(messages.getString("Time"));
+    	    	
+    	dataset = new XYSeriesCollection();
+    	dataset.addSeries(series0);
     	dataset.addSeries(series1);
     	dataset.addSeries(series2);
     	dataset.addSeries(series3);
+    	dataset.addSeries(series4);
+    	dataset.addSeries(series5);
+    	dataset.addSeries(series6);
+    	dataset.addSeries(series7);
+    	dataset.addSeries(series8);
+    	dataset.addSeries(series9);
+    	dataset.addSeries(series10);
     	
-    	JFreeChart chart = ChartFactory.createXYLineChart(
+    	chart = ChartFactory.createXYLineChart(
     		messages.getString("chartTitle"), // Chart Title
     		messages.getString("chartXlabel"), // X Label
     		messages.getString("chartYlabel"), // Y Label
@@ -269,6 +287,12 @@ public class Principal extends JFrame {
 	 */
 	public JButton[] getButtons() {
 		return buttons;
+	}
+	
+	public void paint(Map<String,Double> p) {
+		//XYPlot plot = (XYPlot) chart.getPlot();
+		//XYSeriesCollection data = plot.
+		dataset.set
 	}
     
 }

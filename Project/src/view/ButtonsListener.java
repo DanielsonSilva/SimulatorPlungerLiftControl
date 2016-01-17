@@ -102,6 +102,7 @@ public class ButtonsListener implements MouseListener {
 	 * Starts the Requisition object for capturing the data from Simulation
 	 */
 	private void play() {
+		requisition.setStop(false);
 		t.start();
 	}
 
