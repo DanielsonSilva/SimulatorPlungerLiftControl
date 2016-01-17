@@ -7,6 +7,7 @@ import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.net.URL;
+import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 
@@ -292,7 +293,19 @@ public class Principal extends JFrame {
 	public void paint(Map<String,Double> p) {
 		//XYPlot plot = (XYPlot) chart.getPlot();
 		//XYSeriesCollection data = plot.
-		dataset.set
+		List<XYSeries> series = dataset.getSeries();
+		
+		series.get(0).add(p.get("tempo"), p.get("gasflow"));
+		series.get(1).add(p.get("tempo"), p.get("PtbgT"));
+		series.get(2).add(p.get("tempo"), p.get("pp"));
+		series.get(3).add(p.get("tempo"), p.get("PcsgB"));
+		series.get(4).add(p.get("tempo"), p.get("PcsgT"));
+		series.get(5).add(p.get("tempo"), p.get("Lslg"));
+		series.get(6).add(p.get("tempo"), p.get("Ltbg"));
+		series.get(7).add(p.get("tempo"), p.get("Hplg"));
+		series.get(8).add(p.get("tempo"), p.get("v0"));
+		series.get(9).add(p.get("tempo"), p.get("Qlres"));
+			
 	}
     
 }
