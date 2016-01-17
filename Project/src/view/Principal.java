@@ -1,11 +1,13 @@
 package view;
 
+import processing.Requisition;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.awt.event.*;
 import java.net.URL;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -17,6 +19,7 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JToolBar;
 
 import org.jfree.chart.ChartFactory;
@@ -29,17 +32,20 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import org.jfree.ui.RectangleInsets;
 
+/**
+ * @author Danielson Flávio Xavier da Silva
+ */
 public class Principal extends JFrame {
 
-	/**
-	 * @author Danielson Flávio Xavier da Silva
-	 */
 	private static final long serialVersionUID = 1L;
 	// Numbers variables
     private int width; //width of the window
     private int height; //height of the window
     private double sizeRate; // Rate size of the window
     private Map<String,Double> series; // Store several series for the chart
+    private Requisition requisition; // Object for points requisition
+    private JButton buttons[]; // Reference to the buttons
+    private ButtonsListener buttonsAction; // Class for actions of the buttons
     
     /**
      * Constructor
@@ -53,6 +59,9 @@ public class Principal extends JFrame {
         sizeRate = 0.9;
         width  = (int) (Math.round(dim.width*sizeRate));
         height = (int) (Math.round(dim.height*sizeRate));
+        buttonsAction = new ButtonsListener();
+        buttons = new JButton[8];
+        requisition = new Requisition();
 
         // Setting up the icon
         URL url = this.getClass().getResource("/resources/icon.png");    
@@ -130,16 +139,25 @@ public class Principal extends JFrame {
     	icone = new ImageIcon(getClass().getResource("/resources/play.png"));
         button = new JButton();
         button.setIcon(icone);
+        button.putClientProperty("id", 1);
+        button.addMouseListener(buttonsAction);
+        buttons[0] = button;
         toolBar.add(button);
         // Pause button
     	icone = new ImageIcon(getClass().getResource("/resources/pause.png"));
         button = new JButton();
         button.setIcon(icone);
+        button.putClientProperty("id", 2);
+        button.addMouseListener(buttonsAction);
+        buttons[1] = button;
         toolBar.add(button);
         // Stop button
     	icone = new ImageIcon(getClass().getResource("/resources/stop.png"));
         button = new JButton();
         button.setIcon(icone);
+        button.putClientProperty("id", 3);
+        button.addMouseListener(buttonsAction);
+        buttons[2] = button;
         toolBar.add(button);
         
         // Add a separator
@@ -149,21 +167,33 @@ public class Principal extends JFrame {
         icone = new ImageIcon(getClass().getResource("/resources/first.png"));
         button = new JButton();
         button.setIcon(icone);
+        button.putClientProperty("id", 4);
+        button.addMouseListener(buttonsAction);
+        buttons[3] = button;
         toolBar.add(button);
         // Previous Cycle
         icone = new ImageIcon(getClass().getResource("/resources/previous.png"));
         button = new JButton();
         button.setIcon(icone);
+        button.putClientProperty("id", 5);
+        button.addMouseListener(buttonsAction);
+        buttons[4] = button;
         toolBar.add(button);
         // Next Cycle
         icone = new ImageIcon(getClass().getResource("/resources/next.png"));
         button = new JButton();
         button.setIcon(icone);
+        button.putClientProperty("id", 6);
+        button.addMouseListener(buttonsAction);
+        buttons[5] = button;
         toolBar.add(button);
         // Last Cycle
         icone = new ImageIcon(getClass().getResource("/resources/last.png"));
         button = new JButton();
         button.setIcon(icone);
+        button.putClientProperty("id", 7);
+        button.addMouseListener(buttonsAction);
+        buttons[6] = button;
         toolBar.add(button);
         
         // Add a Separator
@@ -173,6 +203,9 @@ public class Principal extends JFrame {
         icone = new ImageIcon(getClass().getResource("/resources/configuration.png"));
         button = new JButton();
         button.setIcon(icone);
+        button.putClientProperty("id", 8);
+        button.addMouseListener(buttonsAction);
+        buttons[7] = button;
         toolBar.add(button);
     }
     
@@ -202,9 +235,9 @@ public class Principal extends JFrame {
     	dataset.addSeries(series3);
     	
     	JFreeChart chart = ChartFactory.createXYLineChart(
-    		"Gráfico1", // Chart Title
-    		"Tempo", // X Label
-    		"Valor", // Y Label
+    		messages.getString("chartTitle"), // Chart Title
+    		messages.getString("chartXlabel"), // X Label
+    		messages.getString("chartYlabel"), // Y Label
     		dataset, // XYSeriesCollection
     		PlotOrientation.VERTICAL,
     		true, // include legend
@@ -226,4 +259,26 @@ public class Principal extends JFrame {
     	contentPane.add(chartPanel, BorderLayout.CENTER);
    	
     }
+
+	/**
+	 * @return the requisition
+	 */
+	public Requisition getRequisition() {
+		return requisition;
+	}
+
+	/**
+	 * @return the series
+	 */
+	public Map<String,Double> getSeries() {
+		return series;
+	}
+
+	/**
+	 * @return the buttons
+	 */
+	public JButton[] getButtons() {
+		return buttons;
+	}
+    
 }

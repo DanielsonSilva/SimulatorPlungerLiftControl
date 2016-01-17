@@ -1617,12 +1617,10 @@ public class Simulation {
 	/**
 	 * @brief Função que trata de enviar um dado para ser inserido no histórico
 	 * 				mostrado em uma das abas na interface a cada ciclo.
-	 * @param ciclovar Pode assumir valores de 0 a 5 ou os valores mostrados
-	 *									no arquivo CycleVariableMessage.h determinando a ocasião
-	 *									do dado.
+	 * @param ciclovar estágio do ciclo atual ou variável de ciclo
 	 * @param valor Valor que deve ser enviado caracterizando a ocorrência.
 	 */
-	public void enviarVarCiclo(CycleVariable ciclovar, double valor) {
+	public void enviarVarCiclo(CycleStage ciclovar, double valor) {
 		this.sendMessage( new CycleVariableMessage
 			(
 				this.tempo, ciclovar, valor,
