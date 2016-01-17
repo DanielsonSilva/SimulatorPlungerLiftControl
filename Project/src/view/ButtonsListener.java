@@ -6,10 +6,16 @@ import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
+import processing.Requisition;
+
 public class ButtonsListener implements MouseListener {
+	
+	private Requisition requisition; // Object for points requisition
+	private Thread t; // Thread for manipulate the Requisition
 
 	public ButtonsListener() {
-		// TODO Auto-generated constructor stub
+		requisition = new Requisition();
+		t = new Thread(requisition);
 	}
 	
 	@Override
@@ -96,8 +102,7 @@ public class ButtonsListener implements MouseListener {
 	 * Starts the Requisition object for capturing the data from Simulation
 	 */
 	private void play() {
-		// TODO Auto-generated method stub
-		Principal.ge
+		t.start();
 	}
 
 	@Override

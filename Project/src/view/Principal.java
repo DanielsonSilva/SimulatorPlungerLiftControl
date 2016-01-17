@@ -1,6 +1,5 @@
 package view;
 
-import processing.Requisition;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
@@ -43,7 +42,6 @@ public class Principal extends JFrame {
     private int height; //height of the window
     private double sizeRate; // Rate size of the window
     private Map<String,Double> series; // Store several series for the chart
-    private Requisition requisition; // Object for points requisition
     private JButton buttons[]; // Reference to the buttons
     private ButtonsListener buttonsAction; // Class for actions of the buttons
     
@@ -61,7 +59,6 @@ public class Principal extends JFrame {
         height = (int) (Math.round(dim.height*sizeRate));
         buttonsAction = new ButtonsListener();
         buttons = new JButton[8];
-        requisition = new Requisition();
 
         // Setting up the icon
         URL url = this.getClass().getResource("/resources/icon.png");    
@@ -259,13 +256,6 @@ public class Principal extends JFrame {
     	contentPane.add(chartPanel, BorderLayout.CENTER);
    	
     }
-
-	/**
-	 * @return the requisition
-	 */
-	public Requisition getRequisition() {
-		return requisition;
-	}
 
 	/**
 	 * @return the series

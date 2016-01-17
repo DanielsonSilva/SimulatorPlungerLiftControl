@@ -3,7 +3,6 @@ package algorithm;
 /**
  * Store all the Data Constants of the simulation
  * @author DANJUH
- *
  */
 public final class DataConstants {
 	
@@ -40,14 +39,14 @@ public final class DataConstants {
 	public double Fast; /** Velocidade do pistão para ser considerada rapida */
 	public double good_velocity; /** Chute de uma boa velocidade (não usada) */
 	
-	public double estagio; /** Variável para representar o estagio */
-	public double INICIAR; /** Variável para representar o iniciar */
-	public double INICIO_CICLO; /** Variável para representar o inicio ciclo */
-	public double SUBIDA_PISTAO; /** Variável para representar a subida do pistão */
-	public double PRODUCAO_LIQUIDO; /** Variável para representar a produção de líquido */
-	public double CONTROLE; /** Variável para representar o estágio de controle */
-	public double AFTERFLOW; /** Variável para representar o afterflow */
-	public double OFF_BUILD_UP; /** Variável para representar o buildup */
+	public int estagio; /** Variável para representar o estagio */
+	public int INICIAR; /** Variável para representar o iniciar */
+	public int INICIO_CICLO; /** Variável para representar o inicio ciclo */
+	public int SUBIDA_PISTAO; /** Variável para representar a subida do pistão */
+	public int PRODUCAO_LIQUIDO; /** Variável para representar a produção de líquido */
+	public int CONTROLE; /** Variável para representar o estágio de controle */
+	public int AFTERFLOW; /** Variável para representar o afterflow */
+	public int OFF_BUILD_UP; /** Variável para representar o buildup */
 	
 	private static DataConstants instance;
 	/**
