@@ -1,6 +1,6 @@
 package algorithm;
 
-public final class DataPlunger {
+public class DataPlunger {
 	
 	// Dados utilizados na simulação
 	float EfVed;   /*!< Eficiencia de Vedacao ao Gas (%)      */

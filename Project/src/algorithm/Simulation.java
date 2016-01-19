@@ -2,6 +2,8 @@ package algorithm;
 
 import static java.lang.Math.*;
 
+import javax.swing.JOptionPane;
+
 /**
  * Simulation Methods
  * @author Danielson Flávio Xavier da Silva
@@ -33,6 +35,7 @@ public class Simulation {
 	/** Parâmetro que verifica se o pedido de alteração da válvula motora foi
 			feito ou não */
 	public boolean alterarValvula;
+	int teste = 0;
 	
 	private static Simulation instance;
 	
@@ -123,7 +126,7 @@ public class Simulation {
 
 		//Casing - Volume interno
 		c.Vcsg = c.AIcsg * f.tubing.Lcauda;
-
+				
 		//Pressão na base do Anular
 		f.varSaida.PcsgB = ue.GASOSTB(f.tempos.PcsgT, c.Tsup,ue.TEMP(f.tubing.Lcauda),f.tubing.Lcauda);
 
@@ -162,6 +165,7 @@ public class Simulation {
 
 		//O Estagio e setado como BuildUp para que o inicioCiclo() seja iniciado
 		c.estagio = c.OFF_BUILD_UP;
+
 	}
 	//---------------------------------------------------------------------------
 	/**

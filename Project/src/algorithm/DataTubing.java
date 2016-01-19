@@ -1,6 +1,6 @@
 package algorithm;
 
-public final class DataTubing {
+public class DataTubing {
 	
 	// Dados utilizados na simulação
 	public double Lcauda;  /*!< Comprimento da coluna de produção   */

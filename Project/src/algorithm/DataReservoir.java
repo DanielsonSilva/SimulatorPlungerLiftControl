@@ -1,6 +1,6 @@
 package algorithm;
 
-public final class DataReservoir {	
+public class DataReservoir {	
 
 	double Pest;    /*!< Pressao Estatica    */
 	double Qteste;  /*!< Vazao de Teste???   */

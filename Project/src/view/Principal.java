@@ -18,6 +18,7 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JToolBar;
 
 import org.jfree.chart.ChartFactory;
@@ -293,6 +294,8 @@ public class Principal extends JFrame {
 	public void paint(Map<String,Double> p) {
 		//XYPlot plot = (XYPlot) chart.getPlot();
 		//XYSeriesCollection data = plot.
+		
+		JOptionPane.showMessageDialog(null, p);
 		List<XYSeries> series = dataset.getSeries();
 		
 		series.get(0).add(p.get("tempo"), p.get("gasflow"));

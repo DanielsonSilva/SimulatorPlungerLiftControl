@@ -1,6 +1,6 @@
 package algorithm;
 
-public final class DataProductionLine {
+public class DataProductionLine {
 	
 	double Psep;    /*!< Pressao no separador */
 	

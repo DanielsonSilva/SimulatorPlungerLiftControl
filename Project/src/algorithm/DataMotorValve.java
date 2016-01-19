@@ -1,6 +1,6 @@
 package algorithm;
 
-public final class DataMotorValve {
+public class DataMotorValve {
 
 	public double Dab; /*!< Diâmetro de abertura da válvula (mm) */
 	

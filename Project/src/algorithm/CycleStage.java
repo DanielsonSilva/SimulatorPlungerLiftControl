@@ -37,7 +37,7 @@ public enum CycleStage {
 	/** Total Duration of the cycle */
 	CYCLE_DURATION(9);
 	
-	private final int valor;
+	private int valor;
 	CycleStage(int valorOpcao){
 		valor = valorOpcao;
 	}
