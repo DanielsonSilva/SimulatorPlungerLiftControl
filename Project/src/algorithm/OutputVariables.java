@@ -1,6 +1,6 @@
 package algorithm;
 
-public class OutputVariables {
+public final class OutputVariables {
 	
 	// Dados utilizados na simulação
 	public double PtbgT;   /*!< Pressao no topo do tubing                    */

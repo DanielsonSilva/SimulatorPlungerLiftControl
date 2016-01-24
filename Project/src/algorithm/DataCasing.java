@@ -6,7 +6,7 @@ package algorithm;
  * @author Danielson Flávio Xavier da Silva
  *
  */
-public class DataCasing {
+public final class DataCasing {
 	
 	// Simulation Data
 	/** Casing internal diameter */

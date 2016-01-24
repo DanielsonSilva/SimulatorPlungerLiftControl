@@ -1,6 +1,6 @@
 package algorithm;
 
-public class DataFluid {
+public final class DataFluid {
 	
 	/** Fração de água no líquido */
 	public int BSW;

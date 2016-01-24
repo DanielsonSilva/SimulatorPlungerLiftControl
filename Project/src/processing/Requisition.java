@@ -3,8 +3,6 @@ package processing;
 import java.util.Map;
 import java.util.ResourceBundle;
 
-import javax.swing.JOptionPane;
-
 import algorithm.SimulationThread;
 import view.Principal;
 /**
@@ -32,7 +30,7 @@ public class Requisition implements Runnable {
 	/**
 	 * Runnable method
 	 */
-	public void run() {		
+	public void run() {
 		simulationthread.setStop(false);
 		t.start();
 		while ( !stop ) {
@@ -40,7 +38,6 @@ public class Requisition implements Runnable {
 			Principal.getInstance(messages).paint(point);
 		}
 		simulationthread.setStop(true);
-		JOptionPane.showMessageDialog(null, "Saiu do Requisition");
 	}
 
 	/**

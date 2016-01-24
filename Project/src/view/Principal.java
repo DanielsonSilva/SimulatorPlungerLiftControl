@@ -45,7 +45,7 @@ public class Principal extends JFrame {
     private double sizeRate; // Rate size of the window
     private Map<String,Double> series; // Store several series for the chart
     private JButton buttons[]; // Reference to the buttons
-    private ButtonsListener buttonsAction; // Class for actions of the buttons
+    private ButtonsListenerPrincipal buttonsAction; // Class for actions of the buttons
     private JFreeChart chart; // Chart to plot variables
     private XYSeriesCollection dataset; // Sets of data for the chart
     
@@ -70,7 +70,7 @@ public class Principal extends JFrame {
         sizeRate = 0.9;
         width  = (int) (Math.round(dim.width*sizeRate));
         height = (int) (Math.round(dim.height*sizeRate));
-        buttonsAction = new ButtonsListener();
+        buttonsAction = new ButtonsListenerPrincipal(messages);
         buttons = new JButton[8];
 
         // Setting up the icon

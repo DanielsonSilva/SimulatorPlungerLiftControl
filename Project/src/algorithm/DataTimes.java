@@ -1,6 +1,6 @@
 package algorithm;
 
-public class DataTimes {
+public final class DataTimes {
 	
 	// Dados utilizados na simulação
 	int Afterflow;  /*!< Tempo de afterflow (s)               */

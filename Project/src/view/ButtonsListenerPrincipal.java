@@ -2,20 +2,23 @@ package view;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.ResourceBundle;
 
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 import processing.Requisition;
 
-public class ButtonsListener implements MouseListener {
+public class ButtonsListenerPrincipal implements MouseListener {
 	
 	private Requisition requisition; // Object for points requisition
 	private Thread t; // Thread for manipulate the Requisition
+	private Configuration configuration;
 
-	public ButtonsListener() {
+	public ButtonsListenerPrincipal(ResourceBundle messages) {
 		requisition = new Requisition();
 		t = new Thread(requisition);
+		configuration = Configuration.getInstance(messages);
 	}
 	
 	@Override
@@ -62,9 +65,11 @@ public class ButtonsListener implements MouseListener {
 		}
 	}
 
+	/**
+	 * Opens the configuration window
+	 */
 	private void configuration() {
-		// TODO Auto-generated method stub
-		
+		configuration.setVisible(true);
 	}
 
 	private void lastCycle() {
@@ -102,8 +107,9 @@ public class ButtonsListener implements MouseListener {
 	 * Starts the Requisition object for capturing the data from Simulation
 	 */
 	private void play() {
-		requisition.setStop(false);
-		t.start();
+		//requisition.setStop(false);
+		//t.start();
+		
 	}
 
 	@Override

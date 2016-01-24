@@ -3,8 +3,6 @@ package algorithm;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.swing.JOptionPane;
-
 public class SimulationThread implements Runnable {
 	
 	private Simulation simulation;
@@ -16,6 +14,7 @@ public class SimulationThread implements Runnable {
 	public SimulationThread() {
 		stop = false;
 		simulation = Simulation.getInstance();
+		stop = false;
 	}
 	
 	/**
@@ -25,7 +24,7 @@ public class SimulationThread implements Runnable {
 		Entities            f = Entities.getInstance();
 		DataConstants       c = DataConstants.getInstance();
 		SimulationVariables v = SimulationVariables.getInstance();
-				
+		
 		while ( !stop ) {
 			// Somente a primeira vez que estiver iniciando a simulação.
 			switch ( c.estagio ) {
@@ -33,35 +32,27 @@ public class SimulationThread implements Runnable {
 					simulation.iniciarSimulacao();
 					break;
 				case 7:
-					JOptionPane.showMessageDialog(null, "Inicio Ciclo");
 					simulation.inicioCiclo();
 					break;
 				case 2:
-					JOptionPane.showMessageDialog(null, "Subida Pistao");
 					simulation.subidaPistao();
 					break;
 				case 3:
-					JOptionPane.showMessageDialog(null, "Iniciar Simulacao");
 					simulation.producaoLiquido();
 					break;
 				case 4:
-					JOptionPane.showMessageDialog(null, "Controle");
 					simulation.Controle();
 					break;
 				case 5:
-					JOptionPane.showMessageDialog(null, "Afterflow");
 					simulation.Afterflow();
 					break;
 				case 6:
-					JOptionPane.showMessageDialog(null, "BuildUp");
 					simulation.OffBuildUp(true);
 					break;
 				default:
 					continue;
 			}
 		}
-
-		JOptionPane.showMessageDialog(null, "Saiu no SimulationThread");
 		// When the thread will be killed
 		f.Limpar();
 		c.init();

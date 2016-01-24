@@ -2,9 +2,9 @@ package algorithm;
 
 /**
  * Store all the Data Constants of the simulation
- * @author Danielson Flávio Xavier da Silva
+ * @author DANJUH
  */
-public class DataConstants {
+public final class DataConstants {
 	
 	public double Qmax; /** Maximum Flow of the Reservoir */
 	public double Ppc; /** Pseudo Critical Pressure */
@@ -53,7 +53,7 @@ public class DataConstants {
 	 * Constructor
 	 */
 	private DataConstants() {
-		this.init();
+		//Empty
 	}
 	
 	public static synchronized DataConstants getInstance() {
@@ -89,67 +89,64 @@ public class DataConstants {
 	 * Verifica o valor da variável INICIAR.
 	 * @return Valor da variável INICIAR.
 	 */
-	public int getINICIAR() {
-		return this.INICIAR ;
+	public double getINICIAR() {
+			return this.INICIAR ;
 	}
 
 	/**
 	 * Verifica o valor da variável INICIO_CICLO.
 	 * @return Valor da variável INICIO_CICLO.
 	 */
-	public int getINICIO_CICLO() {
-		return this.INICIO_CICLO ;
+	public double getINICIO_CICLO() {
+			return this.INICIO_CICLO ;
 	}
 
 	/**
 	 * Verifica o valor da variável SUBIDA_PISTAO.
 	 * @return Valor da variável SUBIDA_PISTAO.
 	 */
-	public int getSUBIDA_PISTAO() {
-		return this.SUBIDA_PISTAO ;
+	public double getSUBIDA_PISTAO() {
+			return this.SUBIDA_PISTAO ;
 	}
 
 	/**
 	 * Verifica o valor da variável PRODUCAO_LIQUIDO.
 	 * @return Valor da variável PRODUCAO_LIQUIDO.
 	 */
-	public int getPRODUCAO_LIQUIDO() {
-		return this.PRODUCAO_LIQUIDO ;
+	public double getPRODUCAO_LIQUIDO() {
+			return this.PRODUCAO_LIQUIDO ;
 	}
 	
 	/**
 	 * Verifica o valor da variável CONTROLE.
 	 * @return Valor da variável CONTROLE.
 	 */
-	public int getCONTROLE() {
-		return this.CONTROLE;
+	public double getCONTROLE() {
+			return this.CONTROLE;
 	}
 	
 	/**
 	 * Verifica o valor da variável AFTERFLOW.
 	 * @return Valor da variável AFTERFLOW.
 	 */
-	public int getAFTERFLOW() {
-		return this.AFTERFLOW ;
+	public double getAFTERFLOW() {
+			return this.AFTERFLOW ;
 	}
 	
 	/**
 	 * Verifica o valor da variável BUILDUP.
 	 * @return Valor da variável BUILDUP.
 	 */
-	public int getOFF_BUILD_UP() {
-		return this.OFF_BUILD_UP ;
+	public double getOFF_BUILD_UP() {
+			return this.OFF_BUILD_UP ;
 	}
 	
 	/**
 	 * Verifica o valor da variável Estagio.
 	 * @return Valor da variável Estagio.
 	 */
-	public int getEstagio() {
-		return this.estagio ;
+	public double getEstagio() {
+			return this.estagio ;
 	}	
 
-	public void setEstagio(int stage) {
-		this.estagio = stage;
-	}
 }
