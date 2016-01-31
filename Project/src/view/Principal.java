@@ -33,6 +33,8 @@ import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 import org.jfree.ui.RectangleInsets;
 
+import algorithm.Conversion;
+
 /**
  * @author Danielson Flávio Xavier da Silva
  */
@@ -48,6 +50,7 @@ public class Principal extends JFrame {
     private ButtonsListenerPrincipal buttonsAction; // Class for actions of the buttons
     private JFreeChart chart; // Chart to plot variables
     private XYSeriesCollection dataset; // Sets of data for the chart
+    private Conversion conv;
     
 	private static Principal instance;
 	
@@ -72,7 +75,7 @@ public class Principal extends JFrame {
         height = (int) (Math.round(dim.height*sizeRate));
         buttonsAction = new ButtonsListenerPrincipal(messages);
         buttons = new JButton[8];
-
+        conv = new Conversion();
         // Setting up the icon
         URL url = this.getClass().getResource("/resources/icon.png");    
         Image icon = Toolkit.getDefaultToolkit().getImage(url);    
@@ -295,14 +298,14 @@ public class Principal extends JFrame {
 		//XYPlot plot = (XYPlot) chart.getPlot();
 		//XYSeriesCollection data = plot.
 		
-		JOptionPane.showMessageDialog(null, p);
+		//JOptionPane.showMessageDialog(null, p);
 		List<XYSeries> series = dataset.getSeries();
 		
 		series.get(0).add(p.get("tempo"), p.get("gasflow"));
-		series.get(1).add(p.get("tempo"), p.get("PtbgT"));
+		series.get(1).add((double)p.get("tempo"), conv.paToPsi(p.get("PtbgT")));
 		series.get(2).add(p.get("tempo"), p.get("pp"));
-		series.get(3).add(p.get("tempo"), p.get("PcsgB"));
-		series.get(4).add(p.get("tempo"), p.get("PcsgT"));
+		series.get(3).add((double)p.get("tempo"), conv.paToPsi(p.get("PcsgB")));
+		series.get(4).add((double)p.get("tempo"), conv.paToPsi(p.get("PcsgT")));
 		series.get(5).add(p.get("tempo"), p.get("Lslg"));
 		series.get(6).add(p.get("tempo"), p.get("Ltbg"));
 		series.get(7).add(p.get("tempo"), p.get("Hplg"));

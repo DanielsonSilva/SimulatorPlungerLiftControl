@@ -107,10 +107,9 @@ public class SimulationThread implements Runnable {
 	public void setInitialCondition(Map<String, Double> variables) {
 		Entities            f = Entities.getInstance();
 		DataConstants       c = DataConstants.getInstance();
-		SimulationVariables v = SimulationVariables.getInstance();
 		Conversion       conv = new Conversion();
 		
-		f.fluido.BSW = Float.parseFloat(String.valueOf(variables.get("fluidBSW")));
+		f.fluido.BSW = variables.get("fluidBSW").floatValue();
 		f.fluido.APi = variables.get("fluidAPI");
 		f.fluido.SGagua = variables.get("fluidSGWater");
 		f.fluido.SGgas = variables.get("fluidSGGas");
@@ -133,14 +132,14 @@ public class SimulationThread implements Runnable {
 		f.valvula.Dab = conv.inchToM(variables.get("motorvalveDiameter"));
 
 		f.pistao.Mplg = variables.get("plungerMass");
-		f.pistao.EfVed = Float.parseFloat(String.valueOf(variables.get("plungerEfi")));
-		f.pistao.Lplg = Float.parseFloat(String.valueOf(variables.get("plungerLength")));
+		f.pistao.EfVed = variables.get("plungerEfi").floatValue();
+		f.pistao.Lplg = variables.get("plungerLength").floatValue();
 		f.pistao.Dplg = conv.inchToM(variables.get("plungerDiameter"));
 
 		f.reservat.Pest = conv.kgfPerCm2ToPa(variables.get("reservoirStaticP")) + 101325;
 		f.reservat.Pteste = conv.kgfPerCm2ToPa(variables.get("reservoirTestFlow")) + 101325;
 		f.reservat.Qteste = variables.get("reservoirTestPressure");
-		f.reservat.RGL = Integer.parseInt(String.valueOf(variables.get("reservoirRGL")));
+		f.reservat.RGL = variables.get("reservoirRGL").intValue();
 		
 		//Setando os passos de integracao
 		c.step     	   = variables.get("stepRise")/1000.0;
@@ -162,9 +161,9 @@ public class SimulationThread implements Runnable {
 		//Setando dados iniciais e variaveis de tempo de controle
 		f.tempos.Lslg      = variables.get("initialSlug");
 		f.tempos.PcsgT     = conv.psigToPa(variables.get("initialCasingTop"));
-		f.tempos.Ontime    = Integer.parseInt(String.valueOf(variables.get("initialOpenValve")));
-		f.tempos.Offtime   = Integer.parseInt(String.valueOf(variables.get("initialCloseValve")));
-		f.tempos.Afterflow = Integer.parseInt(String.valueOf(variables.get("initialAfterflow")));
+		f.tempos.Ontime    = variables.get("initialOpenValve").intValue();
+		f.tempos.Offtime   = variables.get("initialCloseValve").intValue();
+		f.tempos.Afterflow = variables.get("initialAfterflow").intValue();
 	}
 	
 }

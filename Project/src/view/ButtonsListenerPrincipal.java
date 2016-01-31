@@ -110,8 +110,7 @@ public class ButtonsListenerPrincipal implements MouseListener {
 		requisition.setStop(false);
 		requisition.setVariables(InitialCondition.getInstance().getVariables());
 		requisition.passVariablesToSimulation();
-		//t.start();
-		
+		t.start();		
 	}
 
 	@Override

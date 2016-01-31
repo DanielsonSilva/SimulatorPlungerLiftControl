@@ -61,6 +61,7 @@ public class ButtonsListenerConfiguration implements MouseListener {
 		}
 		InitialCondition initial = InitialCondition.getInstance();
 		initial.Insert(v);
+		config.seteVisible(false);
 	}
 
 	@Override

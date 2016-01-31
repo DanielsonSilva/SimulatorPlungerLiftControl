@@ -479,7 +479,7 @@ public class Conversion {
 	}
 
 	//! Converte de Pascal para psi
-	double paToPsi( double pa ) {
+	public double paToPsi( double pa ) {
 		return pa * 0.000145037743897f;
 	}
 

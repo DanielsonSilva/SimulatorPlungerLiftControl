@@ -3,6 +3,8 @@ package processing;
 import java.util.Map;
 import java.util.ResourceBundle;
 
+import javax.swing.JOptionPane;
+
 import algorithm.SimulationThread;
 import view.Principal;
 /**
