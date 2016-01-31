@@ -3,7 +3,7 @@ package algorithm;
 public final class DataFluid {
 	
 	/** Fração de água no líquido */
-	public int BSW;
+	public float BSW;
 	/** Grau API do óleo do reservatório */
 	public double APi;
 	/** Massa específica do gás */

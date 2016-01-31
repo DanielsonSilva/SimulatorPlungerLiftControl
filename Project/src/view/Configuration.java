@@ -8,6 +8,8 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import javax.swing.BorderFactory;
@@ -33,7 +35,16 @@ public class Configuration extends JFrame {
     private int width; //width of the window
     private int height; //height of the window
     private ButtonsListenerConfiguration buttonsAction; // Class for actions of the buttons
+    private List<JTextField> texts; // List for the JTextFields
     
+	/**
+	 * Get the list of jtextfields
+	 * @return the jtextfields
+	 */
+	public List<JTextField> getTexts() {
+		return texts;
+	}
+
 	private static Configuration instance;
 	
 	public static synchronized Configuration getInstance(ResourceBundle messages) {
@@ -52,6 +63,8 @@ public class Configuration extends JFrame {
         this.setLocationRelativeTo(null);  
 		//Gets the actions for the buttons
         buttonsAction = new ButtonsListenerConfiguration(messages, this);
+        // List for the JTextFields
+        texts = new ArrayList<JTextField>();
         // Initialize the window with 80% of the screen resolution
         this.setSize(width, height);
         //this.setLayout(new GridLayout(0,2));
@@ -154,6 +167,7 @@ public class Configuration extends JFrame {
 			field.setHorizontalAlignment(JTextField.CENTER);
 			panel.add(label);
 			panel.add(field);
+			texts.add(field);
 		}		
 		return panel;
 	}

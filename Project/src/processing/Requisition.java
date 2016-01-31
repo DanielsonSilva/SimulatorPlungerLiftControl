@@ -17,6 +17,7 @@ public class Requisition implements Runnable {
 	private boolean stop; // Variable to stop or not
 	private Map<String,Double> point; // One point of the cycle
 	private ResourceBundle messages; // Just to send to Principal
+	private Map<String,Double> variables; // Initial condition for the simulation
 	
 	/**
 	 * Constructor
@@ -46,4 +47,19 @@ public class Requisition implements Runnable {
 	public void setStop(boolean stop) {
 		this.stop = stop;
 	}
+
+	/**
+	 * @param variables the variables to set
+	 */
+	public void setVariables(Map<String, Double> variables) {
+		this.variables = variables;
+	}
+	
+	/**
+	 * Pass the variables to simulation to start properly
+	 */
+	public void passVariablesToSimulation() {
+		simulationthread.setInitialCondition(variables);
+	}
+	
 }

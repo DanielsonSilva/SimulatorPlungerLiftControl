@@ -107,7 +107,9 @@ public class ButtonsListenerPrincipal implements MouseListener {
 	 * Starts the Requisition object for capturing the data from Simulation
 	 */
 	private void play() {
-		//requisition.setStop(false);
+		requisition.setStop(false);
+		requisition.setVariables(InitialCondition.getInstance().getVariables());
+		requisition.passVariablesToSimulation();
 		//t.start();
 		
 	}

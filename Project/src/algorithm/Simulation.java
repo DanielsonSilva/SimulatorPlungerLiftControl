@@ -979,8 +979,7 @@ public class Simulation {
 		//PRESSÃO NA COLUNA DE GÁS ABAIXO DO PISTÃO
 		v.Pt = f.tempos.PcsgT - c.ROliq * c.G * f.tempos.Ltbg;
 		//PARA UM TEMPO MENOR QUE O DE AFTERFLOW
-		for(v.k = 1; v.k*c.step_aft < f.tempos.Afterflow && (!this.alterarValvula);
-				v. k++) {
+		for(v.k = 1; v.k*c.step_aft < f.tempos.Afterflow && (!this.alterarValvula); v.k++) {
 			/*****/
 			if((int)(v.j*c.step_aft*10) % 10 == 0){
 				v.templ = f.tubing.Lcauda - f.varSaida.Hplg;

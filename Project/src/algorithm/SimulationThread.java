@@ -100,4 +100,71 @@ public class SimulationThread implements Runnable {
 		this.stop = stop;
 	}
 	
+	/**
+	 * Set the initialVariables
+	 * @param v The variables for the simulation
+	 */
+	public void setInitialCondition(Map<String, Double> variables) {
+		Entities            f = Entities.getInstance();
+		DataConstants       c = DataConstants.getInstance();
+		SimulationVariables v = SimulationVariables.getInstance();
+		Conversion       conv = new Conversion();
+		
+		f.fluido.BSW = Float.parseFloat(String.valueOf(variables.get("fluidBSW")));
+		f.fluido.APi = variables.get("fluidAPI");
+		f.fluido.SGagua = variables.get("fluidSGWater");
+		f.fluido.SGgas = variables.get("fluidSGGas");
+		f.fluido.GAMA = variables.get("fluidGammaGas");
+		
+		f.tubing.Lcauda = variables.get("tubingLength");
+		f.tubing.E = conv.mmToM(variables.get("tubingRoughness"));
+		f.tubing.DItbg = conv.inchToM(variables.get("tubingInternal"));
+		f.tubing.DOtbg = conv.inchToM(variables.get("tubingExternal"));
+		f.tubing.peso = variables.get("tubingWeigth");
+		
+		f.casing.comprimento = variables.get("casingLength");
+		f.casing.rugosidade = conv.mmToM(variables.get("casingRoughness"));
+		f.casing.DIcsg = conv.inchToM(variables.get("casingInternal"));
+		f.casing.DEcsg = conv.inchToM(variables.get("casingExternal"));
+		f.casing.peso = variables.get("casingWeigth");
+
+		f.linhaPro.Psep = conv.psiaToNPerM2(variables.get("prodlineSepPressure"));
+
+		f.valvula.Dab = conv.inchToM(variables.get("motorvalveDiameter"));
+
+		f.pistao.Mplg = variables.get("plungerMass");
+		f.pistao.EfVed = Float.parseFloat(String.valueOf(variables.get("plungerEfi")));
+		f.pistao.Lplg = Float.parseFloat(String.valueOf(variables.get("plungerLength")));
+		f.pistao.Dplg = conv.inchToM(variables.get("plungerDiameter"));
+
+		f.reservat.Pest = conv.kgfPerCm2ToPa(variables.get("reservoirStaticP")) + 101325;
+		f.reservat.Pteste = conv.kgfPerCm2ToPa(variables.get("reservoirTestFlow")) + 101325;
+		f.reservat.Qteste = variables.get("reservoirTestPressure");
+		f.reservat.RGL = Integer.parseInt(String.valueOf(variables.get("reservoirRGL")));
+		
+		//Setando os passos de integracao
+		c.step     	   = variables.get("stepRise")/1000.0;
+		c.step_ 	   = variables.get("stepProduction")/1000.0;
+		c.step_aft     = variables.get("stepAfterflow")/1000.0;
+		c._stepGas     = variables.get("stepBuildGas")/1000.0;
+		c._stepGas2Liq = variables.get("stepBuildGasLiq")/1000.0;
+		c._stepLiq     = variables.get("stepBuidLiq")/1000.0;
+
+		//Setando dados de amostragem
+		/*TimeStepsData samplingData ;
+		samplingData.slugLiftTimeStep      = editSampSlugLift->getFloat()     /1000.0;
+		samplingData.slugProductionTimeStep= editSampSlugProd->getFloat()     /1000.0;
+		samplingData.afterflowTimeStep     = editSampAfter->getFloat()        /1000.0;
+		samplingData.buildupTimeStepGas    = editSampBuildupGas->getFloat()   /1000.0;
+		samplingData.buildupTimeStepGasLiq = editSampBuildupGasLiq->getFloat()/1000.0;
+		samplingData.buildupTimeStepLiq    = editSampBuildupLiq->getFloat()   /1000.0;*/
+
+		//Setando dados iniciais e variaveis de tempo de controle
+		f.tempos.Lslg      = variables.get("initialSlug");
+		f.tempos.PcsgT     = conv.psigToPa(variables.get("initialCasingTop"));
+		f.tempos.Ontime    = Integer.parseInt(String.valueOf(variables.get("initialOpenValve")));
+		f.tempos.Offtime   = Integer.parseInt(String.valueOf(variables.get("initialCloseValve")));
+		f.tempos.Afterflow = Integer.parseInt(String.valueOf(variables.get("initialAfterflow")));
+	}
+	
 }
