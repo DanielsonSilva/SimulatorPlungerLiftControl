@@ -76,6 +76,27 @@ public class SimulationThread implements Runnable {
 		}
 		point.put("stage", stage);
 		
+		switch (c.estagio) {
+			// Subida do Pistao
+			case 2:
+				simulation.tempo = simulation.tempo + c.step ;
+				break;
+			//Producao do Liquido
+			case 3:
+				simulation.tempo = simulation.tempo + c.step_;
+				break;
+			//Afterflow
+			case 5:
+				simulation.tempo = simulation.tempo + c.step_aft;
+				break;
+			//Build-Up
+			case 6:
+				simulation.tempo = simulation.tempo + c._step;
+				break;
+			default:
+				break;
+		}
+		
 		double gasflow = f.varSaida.Qlres * f.reservat.RGL;
 		point.put("gasflow", gasflow); //CALCULAR A VAZAO DE GAS
 		point.put("PtbgT", f.varSaida.PtbgT);//Pressão no topo da coluna de produção
@@ -164,6 +185,7 @@ public class SimulationThread implements Runnable {
 		f.tempos.Ontime    = variables.get("initialOpenValve").intValue();
 		f.tempos.Offtime   = variables.get("initialCloseValve").intValue();
 		f.tempos.Afterflow = variables.get("initialAfterflow").intValue();
+		
 	}
 	
 }

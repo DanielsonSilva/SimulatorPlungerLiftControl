@@ -10,7 +10,7 @@ import static java.lang.Math.*;
 public class Simulation {
 	
 	/** Guarda o tempo de simulação */
-	public float tempo;
+	public double tempo;
 	/** Identifica a simulação (não usada) */
 	public int idSimulacao;
 	/** Identifica a simulação (não usada) */

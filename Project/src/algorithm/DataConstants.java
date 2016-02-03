@@ -53,7 +53,7 @@ public final class DataConstants {
 	 * Constructor
 	 */
 	private DataConstants() {
-		//Empty
+		init();
 	}
 	
 	public static synchronized DataConstants getInstance() {

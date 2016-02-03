@@ -6,7 +6,18 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+import java.io.Writer;
 import java.net.URL;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -51,6 +62,7 @@ public class Principal extends JFrame {
     private JFreeChart chart; // Chart to plot variables
     private XYSeriesCollection dataset; // Sets of data for the chart
     private Conversion conv;
+    PrintWriter file;
     
 	private static Principal instance;
 	
@@ -80,7 +92,15 @@ public class Principal extends JFrame {
         URL url = this.getClass().getResource("/resources/icon.png");    
         Image icon = Toolkit.getDefaultToolkit().getImage(url);    
         this.setIconImage(icon);        
-        
+        try {
+			file = new PrintWriter("the-file-name.txt", "UTF-8");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         // Close operation
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // Initialize the window with 80% of the screen resolution
@@ -311,7 +331,13 @@ public class Principal extends JFrame {
 		series.get(7).add(p.get("tempo"), p.get("Hplg"));
 		series.get(8).add(p.get("tempo"), p.get("v0"));
 		series.get(9).add(p.get("tempo"), p.get("Qlres"));
-			
+		
+		List<String> keys = new ArrayList<String>(p.keySet());
+		for (String key: keys) {
+			this.file.print( key + ": " + p.get(key) + "|");
+		}
+		this.file.println();
+		//Files.write(this.file, p);
 	}
     
 }
