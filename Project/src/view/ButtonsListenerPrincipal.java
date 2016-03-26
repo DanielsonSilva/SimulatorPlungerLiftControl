@@ -8,17 +8,24 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 import processing.Requisition;
+import view.Principal;
 
 public class ButtonsListenerPrincipal implements MouseListener {
 	
 	private Requisition requisition; // Object for points requisition
 	private Thread t; // Thread for manipulate the Requisition
-	private Configuration configuration;
+	private Configuration configuration; // Window of configuration
+	private boolean isSuspended; // Boolean for suspension state
+	private boolean isStoped; // Boolean for stop state
+	ResourceBundle messagesButListenerPrincipal;
 
 	public ButtonsListenerPrincipal(ResourceBundle messages) {
 		requisition = new Requisition();
 		t = new Thread(requisition);
 		configuration = Configuration.getInstance(messages);
+		messagesButListenerPrincipal = messages;
+		isSuspended = false;
+		isStoped = false;
 	}
 	
 	@Override
@@ -94,23 +101,46 @@ public class ButtonsListenerPrincipal implements MouseListener {
 
 	private void stop() {
 		// TODO Auto-generated method stub
-		
+		requisition.setStop(true);
+		isSuspended = false;
+		isStoped = true;
+		t.interrupt();
+		Principal.getInstance(messagesButListenerPrincipal).reboot();
 	}
 
+	@SuppressWarnings("deprecation")
 	private void pause() {
 		// TODO Auto-generated method stub
-		
+		requisition.pauseSimulation();
+		t.suspend();
+		isSuspended = true;
+		isStoped = false;
 	}
 
 	/**
 	 * Performs the action for the Play Button
 	 * Starts the Requisition object for capturing the data from Simulation
 	 */
+	@SuppressWarnings("deprecation")
 	private void play() {
 		requisition.setStop(false);
-		requisition.setVariables(InitialCondition.getInstance().getVariables());
-		requisition.passVariablesToSimulation();
-		t.start();		
+		if ( this.isSuspended == false ) {
+			requisition.setVariables(InitialCondition.getInstance().getVariables());
+			requisition.passVariablesToSimulation();
+			if ( isStoped == false ) {
+				t.start();				
+			}
+			else {
+				t.notify();
+				requisition.notifySimulation();
+			}
+			isStoped = false;
+		}
+		else {
+			requisition.resumeSimulation();
+			t.resume();
+			isSuspended = false;
+		}
 	}
 
 	@Override

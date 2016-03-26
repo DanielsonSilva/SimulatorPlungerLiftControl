@@ -86,6 +86,8 @@ public class UtilEquations {
 		b = 360.0/(TF + 200.0);
 		c = pow(10,(0.43 + 8.33/APi));
 		VISCo = a * pow(b, c);
+//		System.out.println("Temperatura T = " + T);
+		//System.out.println("--VISC(" + T + ")-- |TF = " + TF + " |VISCw = " + VISCw + " |APi = " + APi + " |a = " + a + " |b = " + b + " |c = " + c + " |VISCo = " + VISCo);
 		return (VISCo*(1.0 - DataConstants.getInstance().FW) + VISCw * DataConstants.getInstance().FW ) * 0.001;
 	}
 
@@ -127,10 +129,14 @@ public class UtilEquations {
 				//Tentativa de substituir GOTO
 				//Loop:
 				Y = X + 2.0*log10(A + B*X);
-				while (!(abs(Y) <= pow(10,-6))) {
+				int k = 1;
+				//System.out.println("----A = " + A + " |B = " + B);
+				while (!(abs(Y) <= pow(10,-6)) && k <=1000 ) {
 					YPRIM = 1.0 + (0.43429448*2.0*B) / (A + B*X);
 					X = X - Y / YPRIM;
 					Y = X + 2.0*log10(A + B*X);
+//					System.out.println("k= " + k + "----ABS de Y = " + abs(Y) + " |X = " + X + " |YPRIM = " + YPRIM);
+					k++;
 				}
 				return 1.0 / pow(X,2);
 				//goto Loop;

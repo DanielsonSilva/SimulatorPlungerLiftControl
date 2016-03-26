@@ -37,6 +37,7 @@ public class Requisition implements Runnable {
 		simulationthread.setStop(false);
 		t.start();
 		while ( !stop ) {
+			System.out.println("Pegando os dados");
 			point = simulationthread.requirePoint();
 			Principal.getInstance(messages).paint(point);
 		}
@@ -47,7 +48,11 @@ public class Requisition implements Runnable {
 	 * @param stop the stop to set
 	 */
 	public void setStop(boolean stop) {
-		this.stop = stop;
+		t.interrupt();
+	}
+	
+	public void notifySimulation() {
+		t.notify();
 	}
 
 	/**
@@ -62,6 +67,30 @@ public class Requisition implements Runnable {
 	 */
 	public void passVariablesToSimulation() {
 		simulationthread.setInitialCondition(variables);
+	}
+	
+	/**
+	 * Pauses the simulation and the requisition of points to the interface
+	 */
+	@SuppressWarnings("deprecation")
+	public void pauseSimulation() {
+		t.suspend();
+	}
+	
+	/**
+	 * Stop the simulation thread
+	 */
+	@SuppressWarnings("deprecation")
+	public void stopSimulation() {
+		t.stop();
+	}
+	
+	/**
+	 * Resumes the simulation to the point it stoped
+	 */
+	@SuppressWarnings("deprecation")
+	public void resumeSimulation() {
+		t.resume();
 	}
 	
 }

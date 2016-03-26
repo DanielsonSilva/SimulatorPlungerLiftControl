@@ -128,7 +128,7 @@ public class Configuration extends JFrame {
     	contentPane.add(createElement(messages,5,"group8", param8));
     	double[] param9 = {10000, 1000, 10000, 10000, 10000, 0};
     	contentPane.add(createElement(messages,6,"group9", param9));
-    	double[] param10 = {100, 10, 100, 100, 100, 100};
+    	double[] param10 = {10, 10, 10, 10, 10, 10};
     	contentPane.add(createElement(messages,6,"group10", param10));
     	
         JButton buttonCancel = new JButton(messages.getString("buttonConfigOut"));
@@ -177,17 +177,16 @@ public class Configuration extends JFrame {
 	 * @param messages internationalization
 	 * @return panel with the plunger parameters
 	 */
-	private Component createPlunger(ResourceBundle messages) {
-		// TODO Auto-generated method stub
+	/*private Component createPlunger(ResourceBundle messages) {
 		return null;
-	}
+	}*/
 
 	/**
 	 * Create the reservoir parameters
 	 * @param messages internationalization
 	 * @return panel with the reservoir parameters
 	 */
-	private Component createReservoir(ResourceBundle messages) {
+	/*private Component createReservoir(ResourceBundle messages) {
 		JPanel panel = new JPanel();
 		panel.setLayout(new GridLayout(0,2));
 		panel.setBorder(BorderFactory.createTitledBorder(messages.getString("group5")));
@@ -213,14 +212,14 @@ public class Configuration extends JFrame {
 		panel.add(field4);
 		
 		return panel;
-	}
+	}*/
 	
 	/**
 	 * Create the production line parameters
 	 * @param messages internationalization
 	 * @return panel with the production line parameters
 	 */
-	private Component createProductionLine(ResourceBundle messages) {
+	/*private Component createProductionLine(ResourceBundle messages) {
 		JPanel panel = new JPanel();
 		panel.setLayout(new GridLayout(0,2));
 		panel.setBorder(BorderFactory.createTitledBorder(messages.getString("group4")));
@@ -234,14 +233,14 @@ public class Configuration extends JFrame {
 		panel.add(field1);
 		
 		return panel;
-	}
+	}*/
 
 	/**
 	 * Create the motor valve parameters
 	 * @param messages internationalization
 	 * @return panel with the motor valve parameters
 	 */
-	private Component createMotorValve(ResourceBundle messages) {
+	/*private Component createMotorValve(ResourceBundle messages) {
 		JPanel panel = new JPanel();
 		panel.setLayout(new GridLayout(0,2));
 		panel.setBorder(BorderFactory.createTitledBorder(messages.getString("group3")));
@@ -255,14 +254,14 @@ public class Configuration extends JFrame {
 		panel.add(field1);
 		
 		return panel;
-	}
+	}*/
 
 	/**
 	 * Create the casing parameters
 	 * @param messages Internationalization
 	 * @return panel with casing parameters
 	 */
-	private Component createCasing(ResourceBundle messages) {
+	/*private Component createCasing(ResourceBundle messages) {
 		JPanel panel = new JPanel();
 		panel.setLayout(new GridLayout(0,2));
 		panel.setBorder(BorderFactory.createTitledBorder(messages.getString("group2")));
@@ -292,14 +291,14 @@ public class Configuration extends JFrame {
 		panel.add(field5);
 		
 		return panel;
-	}
+	}*/
 
 	/**
 	 * Create the tubing parameters
 	 * @param messages Internationalization
 	 * @return Panel with the parameters
 	 */
-	private Component createTubing(ResourceBundle messages) {
+	/*private Component createTubing(ResourceBundle messages) {
 		JPanel panel = new JPanel();
 		panel.setLayout(new GridLayout(0,2));
 		panel.setBorder(BorderFactory.createTitledBorder(messages.getString("group1")));
@@ -329,7 +328,7 @@ public class Configuration extends JFrame {
 		panel.add(field5);
 		
 		return panel;
-	}
+	}*/
 
 }
 

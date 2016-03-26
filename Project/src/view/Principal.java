@@ -315,22 +315,23 @@ public class Principal extends JFrame {
 	}
 	
 	public void paint(Map<String,Double> p) {
+		System.out.println("Pintando o gráfico");
 		//XYPlot plot = (XYPlot) chart.getPlot();
 		//XYSeriesCollection data = plot.
 		
 		//JOptionPane.showMessageDialog(null, p);
 		List<XYSeries> series = dataset.getSeries();
-		
-		series.get(0).add(p.get("tempo"), p.get("gasflow"));
-		series.get(1).add((double)p.get("tempo"), conv.paToPsi(p.get("PtbgT")));
-		series.get(2).add(p.get("tempo"), p.get("pp"));
-		series.get(3).add((double)p.get("tempo"), conv.paToPsi(p.get("PcsgB")));
-		series.get(4).add((double)p.get("tempo"), conv.paToPsi(p.get("PcsgT")));
-		series.get(5).add(p.get("tempo"), p.get("Lslg"));
-		series.get(6).add(p.get("tempo"), p.get("Ltbg"));
+
+		//series.get(0).add(p.get("tempo"), p.get("gasflow"));
+		//series.get(1).add((double)p.get("tempo"), conv.paToPsi(p.get("PtbgT")));
+		//series.get(2).add(p.get("tempo"), p.get("pp"));
+		//series.get(3).add((double)p.get("tempo"), conv.paToPsi(p.get("PcsgB")));
+		//series.get(4).add((double)p.get("tempo"), conv.paToPsi(p.get("PcsgT")));
+		//series.get(5).add(p.get("tempo"), p.get("Lslg"));
+		//series.get(6).add(p.get("tempo"), p.get("Ltbg"));
 		series.get(7).add(p.get("tempo"), p.get("Hplg"));
-		series.get(8).add(p.get("tempo"), p.get("v0"));
-		series.get(9).add(p.get("tempo"), p.get("Qlres"));
+		//series.get(8).add(p.get("tempo"), p.get("v0"));
+		//series.get(9).add(p.get("tempo"), p.get("Qlres"));
 		
 		List<String> keys = new ArrayList<String>(p.keySet());
 		for (String key: keys) {
@@ -338,6 +339,16 @@ public class Principal extends JFrame {
 		}
 		this.file.println();
 		//Files.write(this.file, p);
+	}
+	
+	/**
+	 * Resets the chart and makes everything to the program return to
+	 * its initial state
+	 */
+	public void reboot() {
+		for ( int i = 0; i < 10; i++ ) {
+			dataset.getSeries(i).clear();
+		}
 	}
     
 }

@@ -36,7 +36,7 @@ public class Conversion {
 	 ************************************/
 
 	double degreesToRadians( double deg ) {
-		DataConstants c = DataConstants.getInstance();
+		//DataConstants c = DataConstants.getInstance();
 		return deg * 2 * this.pi / 360;
 	}
 

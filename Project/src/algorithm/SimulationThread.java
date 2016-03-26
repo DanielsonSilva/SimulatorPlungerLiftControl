@@ -50,7 +50,8 @@ public class SimulationThread implements Runnable {
 					simulation.OffBuildUp(true);
 					break;
 				default:
-					continue;
+					this.stop = true;
+					break;
 			}
 		}
 		// When the thread will be killed
