@@ -47,7 +47,7 @@ import org.jfree.ui.RectangleInsets;
 import algorithm.Conversion;
 
 /**
- * @author Danielson Flávio Xavier da Silva
+ * @author Danielson FlÃ¡vio Xavier da Silva
  */
 public class Principal extends JFrame {
 
@@ -315,7 +315,7 @@ public class Principal extends JFrame {
 	}
 	
 	public void paint(Map<String,Double> p) {
-		System.out.println("Pintando o gráfico");
+		System.out.println("Pintando o grï¿½fico");
 		//XYPlot plot = (XYPlot) chart.getPlot();
 		//XYSeriesCollection data = plot.
 		

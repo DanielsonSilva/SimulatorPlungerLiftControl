@@ -1,9 +1,11 @@
 
 package algorithm;
 
+import java.io.PrintWriter;
+
 /**
  * Data for the Casing of Plunger Lift Well
- * @author Danielson Flávio Xavier da Silva
+ * @author Danielson Flï¿½vio Xavier da Silva
  *
  */
 public final class DataCasing {
@@ -61,6 +63,16 @@ public final class DataCasing {
 		this.rugosidade = 0;
 		this.DEcsg = 0;
 		this.peso = 0;
+	}
+	
+	public void imprimirVariaveis(PrintWriter writer) {
+		writer.println("Casing Data:");
+		writer.println("DIcsg: " + this.DIcsg);
+		writer.println("comprimento: " + this.comprimento);
+		writer.println("rugosidade: " + this.rugosidade);
+		writer.println("DEcsg: " + this.DEcsg);
+		writer.println("peso: " + this.peso);
+		writer.println("-----------------------------------");
 	}
 
 }

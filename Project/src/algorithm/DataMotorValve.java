@@ -1,8 +1,10 @@
 package algorithm;
 
+import java.io.PrintWriter;
+
 public final class DataMotorValve {
 
-	public double Dab; /*!< Diâmetro de abertura da válvula (mm) */
+	public double Dab; /*!< Diï¿½metro de abertura da vï¿½lvula (mm) */
 	
 	private static DataMotorValve instance;
 	
@@ -19,5 +21,11 @@ public final class DataMotorValve {
 
 	public void Limpar() {
 		this.Dab = 0;
+	}
+	
+	public void imprimirVariaveis(PrintWriter writer) {
+		writer.println("Motor Valve Data:");
+		writer.println("Dab: " + this.Dab);
+		writer.println("-----------------------------------");
 	}
 }

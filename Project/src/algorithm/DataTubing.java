@@ -1,14 +1,16 @@
 package algorithm;
 
+import java.io.PrintWriter;
+
 public final class DataTubing {
 	
-	// Dados utilizados na simulação
-	public double Lcauda;  /*!< Comprimento da coluna de produção   */
+	// Dados utilizados na simulaï¿½ï¿½o
+	public double Lcauda;  /*!< Comprimento da coluna de produï¿½ï¿½o   */
 	public double E;       /*!< Rugosidade do Tubing                */
 	public double DItbg;   /*!< Diametro interno do Tubing (m)      */
 	public double DOtbg;   /*!< diametro externo do Tubing          */
 
-	// Dados não utilizados na simulação apenas para informação
+	// Dados nï¿½o utilizados na simulaï¿½ï¿½o apenas para informaï¿½ï¿½o
 	public double peso;
 
 	private static DataTubing instance;
@@ -35,6 +37,15 @@ public final class DataTubing {
 		this.E      = 0;
 		this.DItbg  = 0;
 		this.DOtbg  = 0;
+	}
+	
+	public void imprimirVariaveis(PrintWriter writer) {
+		writer.println("Tubing Data:");
+		writer.println("Lcauda: " + this.Lcauda);
+		writer.println("E: " + this.E);
+		writer.println("DItbg: " + this.DItbg);
+		writer.println("DOtbg: " + this.DOtbg);
+		writer.println("-----------------------------------");
 	}
 	
 }

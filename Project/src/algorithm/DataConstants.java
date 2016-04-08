@@ -1,5 +1,7 @@
 package algorithm;
 
+import java.io.PrintWriter;
+
 /**
  * Store all the Data Constants of the simulation
  * @author DANJUH
@@ -30,23 +32,23 @@ public final class DataConstants {
 	public double ROliq; /** Liquid Specific mass (Kg/m3) */
 	public double ROgas; /** Gas Specific mass (Kg/m3) */
 	
-	public double Rgn;/** Constante para gás natural (R/mol) constante universal dos gases sobre massa molar do gas */
-	public double AItbg;	/** Área interna do tubing */
-	public double TTcsg; /** Temperatura média do anular */
-	public double Tstd; /** K - temperatura padrão (0°C) */
-	public double Pstd; /** Pressão padrao (Pa) */
-	public double Slow; /** Velocidade do pistão para ser considerada lenta */
-	public double Fast; /** Velocidade do pistão para ser considerada rapida */
-	public double good_velocity; /** Chute de uma boa velocidade (não usada) */
+	public double Rgn;/** Constante para gï¿½s natural (R/mol) constante universal dos gases sobre massa molar do gas */
+	public double AItbg;	/** ï¿½rea interna do tubing */
+	public double TTcsg; /** Temperatura mï¿½dia do anular */
+	public double Tstd; /** K - temperatura padrï¿½o (0ï¿½C) */
+	public double Pstd; /** Pressï¿½o padrao (Pa) */
+	public double Slow; /** Velocidade do pistï¿½o para ser considerada lenta */
+	public double Fast; /** Velocidade do pistï¿½o para ser considerada rapida */
+	public double good_velocity; /** Chute de uma boa velocidade (nï¿½o usada) */
 	
-	public int estagio; /** Variável para representar o estagio */
-	public int INICIAR; /** Variável para representar o iniciar */
-	public int INICIO_CICLO; /** Variável para representar o inicio ciclo */
-	public int SUBIDA_PISTAO; /** Variável para representar a subida do pistão */
-	public int PRODUCAO_LIQUIDO; /** Variável para representar a produção de líquido */
-	public int CONTROLE; /** Variável para representar o estágio de controle */
-	public int AFTERFLOW; /** Variável para representar o afterflow */
-	public int OFF_BUILD_UP; /** Variável para representar o buildup */
+	public int estagio; /** Variï¿½vel para representar o estagio */
+	public int INICIAR; /** Variï¿½vel para representar o iniciar */
+	public int INICIO_CICLO; /** Variï¿½vel para representar o inicio ciclo */
+	public int SUBIDA_PISTAO; /** Variï¿½vel para representar a subida do pistï¿½o */
+	public int PRODUCAO_LIQUIDO; /** Variï¿½vel para representar a produï¿½ï¿½o de lï¿½quido */
+	public int CONTROLE; /** Variï¿½vel para representar o estï¿½gio de controle */
+	public int AFTERFLOW; /** Variï¿½vel para representar o afterflow */
+	public int OFF_BUILD_UP; /** Variï¿½vel para representar o buildup */
 	
 	private static DataConstants instance;
 	/**
@@ -64,7 +66,7 @@ public final class DataConstants {
 	}
 	
 	public void init() {
-		//Inicialização dos valores das etapas
+		//Inicializaï¿½ï¿½o dos valores das etapas
 		this.INICIAR          = 1;
 		this.INICIO_CICLO     = 2;
 		this.SUBIDA_PISTAO    = 3;
@@ -74,7 +76,7 @@ public final class DataConstants {
 		this.OFF_BUILD_UP     = 7;
 		this.estagio          = 0;
 
-		//Inicialização das constantes
+		//Inicializaï¿½ï¿½o das constantes
 		this.G    = 9.81;
 		this.PMar = 0.02897;
 		this.Tsup = 5 * (80.0-32.0)/9.0 + 273.15;
@@ -86,67 +88,71 @@ public final class DataConstants {
 	}
 
 	/**
-	 * Verifica o valor da variável INICIAR.
-	 * @return Valor da variável INICIAR.
+	 * Verifica o valor da variï¿½vel INICIAR.
+	 * @return Valor da variï¿½vel INICIAR.
 	 */
 	public double getINICIAR() {
 			return this.INICIAR ;
 	}
 
 	/**
-	 * Verifica o valor da variável INICIO_CICLO.
-	 * @return Valor da variável INICIO_CICLO.
+	 * Verifica o valor da variï¿½vel INICIO_CICLO.
+	 * @return Valor da variï¿½vel INICIO_CICLO.
 	 */
 	public double getINICIO_CICLO() {
 			return this.INICIO_CICLO ;
 	}
 
 	/**
-	 * Verifica o valor da variável SUBIDA_PISTAO.
-	 * @return Valor da variável SUBIDA_PISTAO.
+	 * Verifica o valor da variï¿½vel SUBIDA_PISTAO.
+	 * @return Valor da variï¿½vel SUBIDA_PISTAO.
 	 */
 	public double getSUBIDA_PISTAO() {
 			return this.SUBIDA_PISTAO ;
 	}
 
 	/**
-	 * Verifica o valor da variável PRODUCAO_LIQUIDO.
-	 * @return Valor da variável PRODUCAO_LIQUIDO.
+	 * Verifica o valor da variï¿½vel PRODUCAO_LIQUIDO.
+	 * @return Valor da variï¿½vel PRODUCAO_LIQUIDO.
 	 */
 	public double getPRODUCAO_LIQUIDO() {
 			return this.PRODUCAO_LIQUIDO ;
 	}
 	
 	/**
-	 * Verifica o valor da variável CONTROLE.
-	 * @return Valor da variável CONTROLE.
+	 * Verifica o valor da variï¿½vel CONTROLE.
+	 * @return Valor da variï¿½vel CONTROLE.
 	 */
 	public double getCONTROLE() {
 			return this.CONTROLE;
 	}
 	
 	/**
-	 * Verifica o valor da variável AFTERFLOW.
-	 * @return Valor da variável AFTERFLOW.
+	 * Verifica o valor da variï¿½vel AFTERFLOW.
+	 * @return Valor da variï¿½vel AFTERFLOW.
 	 */
 	public double getAFTERFLOW() {
 			return this.AFTERFLOW ;
 	}
 	
 	/**
-	 * Verifica o valor da variável BUILDUP.
-	 * @return Valor da variável BUILDUP.
+	 * Verifica o valor da variï¿½vel BUILDUP.
+	 * @return Valor da variï¿½vel BUILDUP.
 	 */
 	public double getOFF_BUILD_UP() {
 			return this.OFF_BUILD_UP ;
 	}
 	
 	/**
-	 * Verifica o valor da variável Estagio.
-	 * @return Valor da variável Estagio.
+	 * Verifica o valor da variï¿½vel Estagio.
+	 * @return Valor da variï¿½vel Estagio.
 	 */
 	public double getEstagio() {
 			return this.estagio ;
-	}	
+	}
+	
+	public void imprimirVariaveis(PrintWriter writer) {
+		
+	}
 
 }

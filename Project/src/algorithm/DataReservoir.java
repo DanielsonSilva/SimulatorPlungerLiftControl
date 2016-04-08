@@ -1,5 +1,7 @@
 package algorithm;
 
+import java.io.PrintWriter;
+
 public final class DataReservoir {	
 
 	double Pest;    /*!< Pressao Estatica    */
@@ -25,6 +27,15 @@ public final class DataReservoir {
 		this.Qteste = 0;
 		this.Pteste = 0;
 		this.RGL = 0;
+	}
+	
+	public void imprimirVariaveis(PrintWriter writer) {
+		writer.println("Reservoir Data:");
+		writer.println("Pest: " + this.Pest);
+		writer.println("Qteste: " + this.Qteste);
+		writer.println("Pteste: " + this.Pteste);
+		writer.println("RGL: " + this.RGL);
+		writer.println("-----------------------------------");
 	}
 
 }

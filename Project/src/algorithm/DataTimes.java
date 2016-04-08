@@ -1,16 +1,18 @@
 package algorithm;
 
+import java.io.PrintWriter;
+
 public final class DataTimes {
 	
-	// Dados utilizados na simulação
+	// Dados utilizados na simulaï¿½ï¿½o
 	int Afterflow;  /*!< Tempo de afterflow (s)               */
 	int Offtime;    /*!< Tempo de BuildUp                     */
-	int Ontime;     /*!< Tempo de válvula aberta              */
+	int Ontime;     /*!< Tempo de vï¿½lvula aberta              */
 	double PcsgT;   /*!< Pressao no anular na superficie (Pa) */
 	double Ltbg;    /*!< Nivel de liquido no fundo da coluna  */
 	double Lslg;    /*!< Comprimento da glofada (m)           */
 
-	// Dados não utilizados na simulação apenas para informação
+	// Dados nï¿½o utilizados na simulaï¿½ï¿½o apenas para informaï¿½ï¿½o
 	boolean Controller; /*!< Deve-se utilizar o controlador      */
 
 	private static DataTimes instance;
@@ -34,6 +36,18 @@ public final class DataTimes {
 		this.Ltbg = 0;
 		this.Lslg = 0;
 		this.Controller = false;
+	}
+	
+	public void imprimirVariaveis(PrintWriter writer) {
+		writer.println("Initial Data Times:");
+		writer.println("Afterflow: " + this.Afterflow);
+		writer.println("Offtime: " + this.Offtime);
+		writer.println("Ontime: " + this.Ontime);
+		writer.println("PcsgT: " + this.PcsgT);
+		writer.println("Ltbg: " + this.Ltbg);
+		writer.println("Lslg: " + this.Lslg);
+		writer.println("Controller: " + this.Controller);
+		writer.println("-----------------------------------");
 	}
 
 }

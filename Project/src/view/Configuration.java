@@ -8,6 +8,7 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
+import java.awt.Toolkit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -18,10 +19,11 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 
 /**
- * @author Danielson Fl·vio Xavier da Silva
+ * @author Danielson Fl√°vio Xavier da Silva
  * Class for configuration window
  *
  */
@@ -55,25 +57,32 @@ public class Configuration extends JFrame {
 	}
 	
 	private Configuration(ResourceBundle messages) {
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		double sizeRate = 0.7;
+        width  = (int) (Math.round(dim.width*sizeRate));
+        height = (int) (Math.round(dim.height*sizeRate));
 		//Size of the window
-		this.width = 700;
-		this.height = 650;
-		this.setSize(width, height);
-        // Initialize the window in the center of the monitor
-        this.setLocationRelativeTo(null);  
+		//this.width = 700;
+		//this.height = 650;
+		//this.setSize(width, height);
 		//Gets the actions for the buttons
         buttonsAction = new ButtonsListenerConfiguration(messages, this);
         // List for the JTextFields
         texts = new ArrayList<JTextField>();
         // Initialize the window with 80% of the screen resolution
         this.setSize(width, height);
+        // Initialize the window in the center of the monitor
+        this.setLocationRelativeTo(null);
         //this.setLayout(new GridLayout(0,2));
         // Set the FlowLayout
         this.setLayout(new FlowLayout(FlowLayout.CENTER));
+        JPanel panel = new JPanel(); 	
+        JScrollPane jsp = new JScrollPane(panel);
+        this.getContentPane().add(jsp);
         // Set the default visible for the window
         this.seteVisible(false);
         // Disappear the buttons of the window
-        this.setUndecorated(true);
+        this.setUndecorated(false);
         // Set the fields in the window
         this.setFields(this, messages);
         // Take the options away

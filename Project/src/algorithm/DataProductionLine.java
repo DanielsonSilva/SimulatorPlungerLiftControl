@@ -1,5 +1,7 @@
 package algorithm;
 
+import java.io.PrintWriter;
+
 public final class DataProductionLine {
 	
 	double Psep;    /*!< Pressao no separador */
@@ -18,6 +20,12 @@ public final class DataProductionLine {
 	
 	void Limpar() {
 		this.Psep = 0;
+	}
+	
+	public void imprimirVariaveis(PrintWriter writer) {
+		writer.println("Production Line Data:");
+		writer.println("Psep: " + this.Psep);
+		writer.println("-----------------------------------");
 	}
 
 }

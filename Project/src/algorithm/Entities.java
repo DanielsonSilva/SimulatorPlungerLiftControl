@@ -1,24 +1,26 @@
 package algorithm;
 
+import java.io.PrintWriter;
+
 public class Entities {
 
-	/** Dados referentes à coluna de producao.  */
+	/** Dados referentes ï¿½ coluna de producao.  */
 	DataTubing tubing;
 	/** Dados referentes ao anular.             */
 	DataCasing casing;
-	/** Dados referentes à válvula motora.      */
+	/** Dados referentes ï¿½ vï¿½lvula motora.      */
 	DataMotorValve valvula;
-	/** Dados referentes à linha de produção.   */
+	/** Dados referentes ï¿½ linha de produï¿½ï¿½o.   */
 	DataProductionLine linhaPro;
-	/** Dados do reservatório do poço.          */
+	/** Dados do reservatï¿½rio do poï¿½o.          */
 	DataReservoir reservat;
-	/** Dados referentes ao pistão usado.       */
+	/** Dados referentes ao pistï¿½o usado.       */
 	DataPlunger pistao;
-	/** Dados do fluido do reservatório.        */
+	/** Dados do fluido do reservatï¿½rio.        */
 	DataFluid fluido;
 	/** Tempos de abertura e fechamento.        */
 	DataTimes tempos;
-	/** Variaveis concernentes à interface.     */
+	/** Variaveis concernentes ï¿½ interface.     */
 	OutputVariables varSaida;
 	
 	
@@ -59,6 +61,18 @@ public class Entities {
 		this.fluido.Limpar()  ;
 		this.tempos.Limpar()  ;
 		this.varSaida.Limpar();
+	}
+	
+	public void imprimirVariaveis(PrintWriter writer) {
+		tubing.imprimirVariaveis(writer);
+	    casing.imprimirVariaveis(writer);
+	    valvula.imprimirVariaveis(writer);
+	    linhaPro.imprimirVariaveis(writer);
+	    reservat.imprimirVariaveis(writer);
+	    pistao.imprimirVariaveis(writer);
+	    fluido.imprimirVariaveis(writer);
+	    tempos.imprimirVariaveis(writer);
+	    varSaida.imprimirVariaveis(writer);
 	}
 
 }

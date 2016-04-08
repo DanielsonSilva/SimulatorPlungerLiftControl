@@ -1,13 +1,15 @@
 package algorithm;
 
+import java.io.PrintWriter;
+
 public final class OutputVariables {
 	
-	// Dados utilizados na simulação
+	// Dados utilizados na simulaï¿½ï¿½o
 	public double PtbgT;   /*!< Pressao no topo do tubing                    */
 	public double PcsgB;   /*!< Pressao na base do anular                    */
-	public double Hplg;    /*!< Posiçao do pistão (0 = fundo poco)           */
+	public double Hplg;    /*!< Posiï¿½ao do pistï¿½o (0 = fundo poco)           */
 	public double Qlres;   /*!< Vazao de liquido instantanea do reservatorio */
-	public double pp;      /*!< Pressão no topo da golfada                   */
+	public double pp;      /*!< Pressï¿½o no topo da golfada                   */
 	
 	private static OutputVariables instance;
 	
@@ -31,6 +33,16 @@ public final class OutputVariables {
 		this.Hplg  = 0;
 		this.Qlres = 0;
 		this.pp    = 0; 
+	}
+	
+	public void imprimirVariaveis(PrintWriter writer) {
+		writer.println("Output Variables Data:");
+		writer.println("PtbgT: " + this.PtbgT);
+		writer.println("PcsgB: " + this.PcsgB);
+		writer.println("Hplg: " + this.Hplg);
+		writer.println("Qlres: " + this.Qlres);
+		writer.println("pp: " + this.pp);
+		writer.println("-----------------------------------");
 	}
 
 }

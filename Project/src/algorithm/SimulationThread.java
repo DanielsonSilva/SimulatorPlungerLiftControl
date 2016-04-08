@@ -1,5 +1,8 @@
 package algorithm;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,6 +10,8 @@ public class SimulationThread implements Runnable {
 	
 	private Simulation simulation;
 	private boolean stop;
+	/** VariÃ¡vel de impressÃ£o do arquivo das variÃ¡veis */
+	PrintWriter writer;
 	
 	/**
 	 * Constructor
@@ -26,7 +31,7 @@ public class SimulationThread implements Runnable {
 		SimulationVariables v = SimulationVariables.getInstance();
 		
 		while ( !stop ) {
-			// Somente a primeira vez que estiver iniciando a simulação.
+			// Somente a primeira vez que estiver iniciando a simulaï¿½ï¿½o.
 			switch ( c.estagio ) {
 				case 0:
 					simulation.iniciarSimulacao();
@@ -35,6 +40,7 @@ public class SimulationThread implements Runnable {
 					simulation.inicioCiclo();
 					break;
 				case 2:
+					imprimirVariaveis();
 					simulation.subidaPistao();
 					break;
 				case 3:
@@ -60,6 +66,28 @@ public class SimulationThread implements Runnable {
 		v.init();
 	}
 	
+	private void imprimirVariaveis() {
+		Entities            f = Entities.getInstance();
+		DataConstants       c = DataConstants.getInstance();
+		SimulationVariables v = SimulationVariables.getInstance();
+		
+		try {
+			writer = new PrintWriter("DataPlungerJava.txt", "UTF-8");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		f.imprimirVariaveis(writer);
+		c.imprimirVariaveis(writer);
+		v.imprimirVariaveis(writer);
+		
+		writer.close();
+	}
+
 	/**
 	 * Sends a point of the calculation
 	 * @return map variable containing all variables to plot
@@ -100,16 +128,16 @@ public class SimulationThread implements Runnable {
 		
 		double gasflow = f.varSaida.Qlres * f.reservat.RGL;
 		point.put("gasflow", gasflow); //CALCULAR A VAZAO DE GAS
-		point.put("PtbgT", f.varSaida.PtbgT);//Pressão no topo da coluna de produção
-		point.put("pp", f.varSaida.pp);//Pressão no topo da golfada
-		point.put("PcsgB", f.varSaida.PcsgB);//Pressão na base do anular
-		point.put("PcsgT", f.tempos.PcsgT);//Pressão no topo do anular
+		point.put("PtbgT", f.varSaida.PtbgT);//Pressï¿½o no topo da coluna de produï¿½ï¿½o
+		point.put("pp", f.varSaida.pp);//Pressï¿½o no topo da golfada
+		point.put("PcsgB", f.varSaida.PcsgB);//Pressï¿½o na base do anular
+		point.put("PcsgT", f.tempos.PcsgT);//Pressï¿½o no topo do anular
 		point.put("Lslg", f.tempos.Lslg);//Comprimento da golfada
 		point.put("Ltbg", f.tempos.Ltbg);//Altura da golfada no fundo da coluna
-		point.put("Hplg", f.varSaida.Hplg);//Posição do pistão
-		point.put("v0", v.v0);//Velocidade do pistão
-		point.put("Qlres", f.varSaida.Qlres);//Vazão de líquido do reservatório
-		point.put("tempo", (double)simulation.tempo);//tempo de simulação
+		point.put("Hplg", f.varSaida.Hplg);//Posiï¿½ï¿½o do pistï¿½o
+		point.put("v0", v.v0);//Velocidade do pistï¿½o
+		point.put("Qlres", f.varSaida.Qlres);//Vazï¿½o de lï¿½quido do reservatï¿½rio
+		point.put("tempo", (double)simulation.tempo);//tempo de simulaï¿½ï¿½o
 		
 		return point;
 	}
@@ -187,6 +215,42 @@ public class SimulationThread implements Runnable {
 		f.tempos.Offtime   = variables.get("initialCloseValve").intValue();
 		f.tempos.Afterflow = variables.get("initialAfterflow").intValue();
 		
+		System.out.println("01 :" + f.fluido.BSW); 
+		System.out.println("02 :" + f.fluido.APi);
+		System.out.println("03 :" + f.fluido.SGagua);
+		System.out.println("04 :" + f.fluido.SGgas);
+		System.out.println("05 :" + f.fluido.GAMA);	
+		System.out.println("06 :" + f.tubing.Lcauda); 
+		System.out.println("07 :" + f.tubing.E);
+		System.out.println("08 :" + f.tubing.DItbg);
+		System.out.println("09 :" + f.tubing.DOtbg);
+		System.out.println("10 :" + f.tubing.peso);
+		System.out.println("11 :" + f.casing.comprimento);
+		System.out.println("12 :" + f.casing.rugosidade);
+		System.out.println("13 :" + f.casing.DIcsg);
+		System.out.println("14 :" + f.casing.DEcsg);
+		System.out.println("15 :" + f.casing.peso);
+		System.out.println("16 :" + f.linhaPro.Psep);
+		System.out.println("17 :" + f.valvula.Dab);
+		System.out.println("18 :" + f.pistao.Mplg);
+		System.out.println("19 :" + f.pistao.EfVed);
+		System.out.println("20 :" + f.pistao.Lplg);
+		System.out.println("21 :" + f.pistao.Dplg);
+		System.out.println("22 :" + f.reservat.Pest);
+		System.out.println("23 :" + f.reservat.Pteste);
+		System.out.println("24 :" + f.reservat.Qteste); 
+		System.out.println("25 :" + f.reservat.RGL); 
+		System.out.println("26 :" + c.step);
+		System.out.println("27 :" + c.step_);
+		System.out.println("28 :" + c.step_aft);
+		System.out.println("29 :" + c._stepGas);
+		System.out.println("30 :" + c._stepGas2Liq);
+		System.out.println("31 :" + c._stepLiq);
+		System.out.println("32 :" + f.tempos.Lslg);
+		System.out.println("33 :" + f.tempos.PcsgT);
+		System.out.println("34 :" + f.tempos.Ontime);
+		System.out.println("35 :" + f.tempos.Offtime);
+		System.out.println("36 :" + f.tempos.Afterflow);		
 	}
 	
 }

@@ -1,16 +1,18 @@
 package algorithm;
 
+import java.io.PrintWriter;
+
 public final class DataFluid {
 	
-	/** Fração de água no líquido */
+	/** Fraï¿½ï¿½o de ï¿½gua no lï¿½quido */
 	public float BSW;
-	/** Grau API do óleo do reservatório */
+	/** Grau API do ï¿½leo do reservatï¿½rio */
 	public double APi;
-	/** Massa específica do gás */
+	/** Massa especï¿½fica do gï¿½s */
 	public double SGgas;
-	/** Massa específica da água */
+	/** Massa especï¿½fica da ï¿½gua */
 	public double SGagua;
-	/** Peso específico (Ro*g) */
+	/** Peso especï¿½fico (Ro*g) */
 	public double GAMA;
 	
 	private static DataFluid instance;
@@ -35,6 +37,16 @@ public final class DataFluid {
 		this.SGgas = 0;
 		this.SGagua = 0;
 		this.GAMA = 0;
+	}
+	
+	public void imprimirVariaveis(PrintWriter writer) {
+		writer.println("Fluid Data:");
+		writer.println("BSW: " + this.BSW);
+		writer.println("APi: " + this.APi);
+		writer.println("SGgas: " + this.SGgas);
+		writer.println("SGagua: " + this.SGagua);
+		writer.println("GAMA: " + this.GAMA);
+		writer.println("-----------------------------------");
 	}
 
 }

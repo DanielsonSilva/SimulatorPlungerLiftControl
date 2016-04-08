@@ -1,14 +1,16 @@
 package algorithm;
 
+import java.io.PrintWriter;
+
 public final class DataPlunger {
 	
-	// Dados utilizados na simulação
+	// Dados utilizados na simulaï¿½ï¿½o
 	float EfVed;   /*!< Eficiencia de Vedacao ao Gas (%)      */
 	double Mplg;   /*!< Massa do pistao (kg)                  */
 	float Lplg;    /*!< Comprimento do pistao (m)                */
 	double Vqpl;   /*!< Velocidade de Queda no Liquido (m/s)  */
 	double Vqpg;   /*!< Velocidade de Queda no Gas (m/s)      */
-	double Dplg;   /*!< Diâmetro do pistão (m)                    */
+	double Dplg;   /*!< Diï¿½metro do pistï¿½o (m)                    */
 	
 	private static DataPlunger instance;
 	
@@ -30,6 +32,17 @@ public final class DataPlunger {
 		this.Vqpl = 0;
 		this.Vqpg = 0;
 		this.Dplg = 0;
+	}
+	
+	public void imprimirVariaveis(PrintWriter writer) {
+		writer.println("Plunger Data:");
+		writer.println("EfVed: " + this.EfVed);
+		writer.println("Mplg: " + this.Mplg);
+		writer.println("Lplg: " + this.Lplg);
+		writer.println("Vqpl: " + this.Vqpl);
+		writer.println("Vqpg: " + this.Vqpg);
+		writer.println("Dplg: " + this.Dplg);
+		writer.println("-----------------------------------");
 	}
 
 }
