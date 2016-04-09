@@ -152,7 +152,39 @@ public final class DataConstants {
 	}
 	
 	public void imprimirVariaveis(PrintWriter writer) {
-		
+		writer.println("Universal Constants Data:");
+	    writer.println("Qmax = " + this.Qmax);
+	    writer.println("Ppc = " + this.Ppc);
+	    writer.println("Tpc = " + this.Tpc);
+	    writer.println("R = " + this.R);
+	    writer.println("Tsup = " + this.Tsup);
+	    writer.println("PMar = " + this.PMar);
+	    writer.println("G = " + this.G);
+	    writer.println("PM = " + this.PM);
+	    writer.println("step = " + this.step);
+	    writer.println("step_ = " + this.step_);
+	    writer.println("step_aft = " + this.step_aft);
+	    writer.println("_step = " + this._step);
+	    writer.println("_stepGas = " + this._stepGas);
+	    writer.println("_stepLiq = " + this._stepLiq);
+	    writer.println("_stepGas2Liq = " + this._stepGas2Liq);
+	    writer.println("AIcsg = " + this.AIcsg);
+	    writer.println("Vcsg = " + this.Vcsg);
+	    writer.println("FW = " + this.FW);
+	    writer.println("SGoleo = " + this.SGoleo);
+	    writer.println("ROliq = " + this.ROliq);
+	    writer.println("ROgas = " + this.ROgas);
+	    writer.println("Rgn = " + this.Rgn);
+	    writer.println("AItbg = " + this.AItbg);
+	    writer.println("TTcsg = " + this.TTcsg);
+	    writer.println("Tstd = " + this.Tstd);
+	    writer.println("Pstd = " + this.Pstd);
+	    writer.println("Slow = " + this.Slow);
+	    writer.println("Fast = " + this.Fast);
+	    writer.println("good_velocity = " + this.good_velocity);
+	    writer.println("Tstd = " + this.Tstd);
+	    writer.println("Pstd = " + this.Pstd);
+	    writer.println("--------------------------------");
 	}
-
+	
 }
