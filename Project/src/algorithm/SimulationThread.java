@@ -40,7 +40,7 @@ public class SimulationThread implements Runnable {
 					simulation.inicioCiclo();
 					break;
 				case 2:
-					imprimirVariaveis();
+					//imprimirVariaveis();
 					simulation.subidaPistao();
 					break;
 				case 3:

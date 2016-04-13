@@ -1,0 +1,174 @@
+Tubing Data:
+Lcauda: 1000.0
+E: 1.320000062696636E-4
+DItbg: 0.050672999387606985
+DOtbg: 0.06032499927096069
+-----------------------------------
+Casing Data:
+DIcsg: 0.1257299984805286
+comprimento: 1000.0
+rugosidade: 1.320000062696636E-4
+DEcsg: 0.13969999831169844
+peso: 15.5
+-----------------------------------
+Motor Valve Data:
+Dab: 0.01904999976977706
+-----------------------------------
+Production Line Data:
+Psep: 310264.0576171875
+-----------------------------------
+Reservoir Data:
+Pest: 5004650.0
+Qteste: 26.0
+Pteste: 326877.94999999995
+RGL: 596
+-----------------------------------
+Plunger Data:
+EfVed: 90.0
+Mplg: 4.48
+Lplg: 0.45
+Vqpl: 0.0
+Vqpg: 0.0
+Dplg: 0.04952999940142035
+-----------------------------------
+Fluid Data:
+BSW: 0.5 X
+APi: 37.0
+SGgas: 0.8
+SGagua: 1.01
+GAMA: 1.21
+-----------------------------------
+Initial Data Times:
+Afterflow: 60
+Offtime: 585
+Ontime: 600
+PcsgT: 721853.1591796875
+Ltbg: 0.0
+Lslg: 15.3
+Controller: false
+-----------------------------------
+Output Variables Data:
+PtbgT: 612981.2882460858 X
+PcsgB: 788859.2199810947
+Hplg: 0.0
+Qlres: 0.0
+pp: 640896.5880015199 X
+-----------------------------------
+Universal Constants Data:
+Qmax = 26.435546589468892
+Ppc = 4585013.405
+Tpc = 233.33333333333331
+R = 8.314
+Tsup = 299.81666666666666
+PMar = 0.02897
+G = 9.81
+PM = 0.023176000000000002
+step = 0.01
+step_ = 0.01
+step_aft = 0.01
+_step = 0.0
+_stepGas = 0.01
+_stepLiq = 0.01
+_stepGas2Liq = 0.01
+AIcsg = 0.00955260767998477
+Vcsg = 9.552607679984769
+FW = 0.004999999888241291 X
+SGoleo = 0.8397626112759644
+ROliq = 840.6137982005591
+ROgas = 0.766
+Rgn = 358.7331722471522
+AItbg = 0.0020167083834459697
+TTcsg = 315.3095383333333
+Tstd = 273.16
+Pstd = 101325.0
+Slow = 4.5
+Fast = 5.5
+good_velocity = 5.0
+Tstd = 273.16
+Pstd = 101325.0
+--------------------------------
+Auxiliary Variables Data:
+Ntotal = 2817.173369470547
+PtbgB = 640896.6305758838 X
+save_Hplg = 0.0
+CP = 30.0
+LslgX = 15.3
+velocity = 0.0
+H = 984.250000011921
+delta_h = 0.0
+delta_v = 0.0
+temp_Offtime = 585
+temp = 0.0
+templ = 0.0
+Ppart_csg = 721853.1591796875
+Ppart_tbg = 640896.6305758838
+V = 1.9849452264307368
+delta_V = 0.0
+PPcsg = 755356.1895803912
+N = 2817.173369470547
+PP = 640896.4586659316
+TT = 315.06552586726804
+z = 0.9804858233476134
+B = 366.1841608901814
+transient = 2.687855197284455
+n = 495.3182082208462
+q = 0.026189404841015264
+qq = 0.025619042795246634
+qqq = 0.0
+nn = 495.3181726622577
+ppp = 0.0
+y = 0
+Pt = 612981.2872864476
+fatorT = 302717.23062889825 X
+fatorB = 302674.76705462055 X
+APIapar = 0.0
+I = -334.57642
+Pfric = 0.0
+j = 0
+cont3 = 0
+k = 0
+m = 0
+LtbgY = 0.0
+LtbgX = 0.0
+LtbgZ = 0.0
+flag = 0
+d = 0
+i = 1
+o = 0
+u = 0
+Ptt = 0.0
+PplgJ = 0.0
+PplgM = 0.0
+save_PplgM = 0.0
+Visc = 0.0
+Rey = 0.0
+Fric = 0.0
+Pwf = 0.0
+Vt = 0.0
+TTt = 0.0
+Nt = 0.0
+v0 = 0.0
+save_v0 = 0.0
+Na = 0.0
+save_Na = 0.0
+save_PPt = 0.0
+save_PPcsg = 0.0
+p_ = 0.0
+PPt = 0.0
+Pbt = 0.0
+F_ = 0.0
+Pba = 0.0
+Nt_ = 0.0
+Ntt = 0.0
+delta_P = 0.0
+piston_arrival = 0
+count = 0.0
+save_Offtime = 0
+save_Afterflow = 0
+contador = 1
+cont = 1
+production = 0.0
+total_production = 0.0
+limite = 0
+Cav = 0.0
+--------------------------------

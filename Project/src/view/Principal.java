@@ -315,7 +315,7 @@ public class Principal extends JFrame {
 	}
 	
 	public void paint(Map<String,Double> p) {
-		System.out.println("Pintando o gr�fico");
+		//System.out.println("Pintando o gr�fico");
 		//XYPlot plot = (XYPlot) chart.getPlot();
 		//XYSeriesCollection data = plot.
 		

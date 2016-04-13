@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 import algorithm.SimulationThread;
 import view.Principal;
 /**
- * @author Danielson Flávio Xavier da Silva
+ * @author Danielson Flï¿½vio Xavier da Silva
  * Point requisition between algorithm and view
  *
  */
@@ -37,7 +37,7 @@ public class Requisition implements Runnable {
 		simulationthread.setStop(false);
 		t.start();
 		while ( !stop ) {
-			System.out.println("Pegando os dados");
+			//System.out.println("Pegando os dados");
 			point = simulationthread.requirePoint();
 			Principal.getInstance(messages).paint(point);
 		}
