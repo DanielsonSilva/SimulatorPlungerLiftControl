@@ -36,6 +36,7 @@ import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.axis.ValueAxis;
 import org.jfree.chart.plot.Plot;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
@@ -318,7 +319,11 @@ public class Principal extends JFrame {
 		//System.out.println("Pintando o gr�fico");
 		//XYPlot plot = (XYPlot) chart.getPlot();
 		//XYSeriesCollection data = plot.
-		
+		XYPlot xyPlot = chart.getXYPlot();
+		ValueAxis domainAxis = xyPlot.getDomainAxis();
+		if ( p.get("tempo") > 50 ) {
+			domainAxis.setRange(p.get("tempo") - 50 ,p.get("tempo") );
+		}
 		//JOptionPane.showMessageDialog(null, p);
 		List<XYSeries> series = dataset.getSeries();
 

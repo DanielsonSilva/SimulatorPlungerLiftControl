@@ -34,17 +34,17 @@ public class SimulationVariables {
 	double qqq;           /*!< Guarda o valor de vazao de gas         */
 	double nn;            /*!< Numero de moles m�dio do gas           */
 	double ppp;           /*!< Guarda o valor da pressao media        */
-	long y;               /*!< Serve de contador                      */
+	int y;               /*!< Serve de contador                      */
 	double Pt;            /*!< Armazena press�es no topo              */
 	double fatorT;        /*!< Diferenca de pressao do topo da coluna-separador*/
 	double fatorB;        /*!< Diferenca da base da coluna-coluna de gas       */
 	float APIapar;        /*!< N�o utilizado                                   */
 	float I;              /*!< Fator I                                    */
 	double Pfric;         /*!< Perdas por friccao                         */
-	long j;               /*!< Contador do la�o da etapa de Producao      */
-	long cont3;						/*!< Contador para resolver o problema da subida do pist�o*/
-	long k;               /*!< Contador do la�o da etapa de Afterflow     */
-	long m;               /*!< Contador do la�o da etapa de Build-up      */
+	int j;               /*!< Contador do la�o da etapa de Producao      */
+	int cont3;						/*!< Contador para resolver o problema da subida do pist�o*/
+	int k;               /*!< Contador do la�o da etapa de Afterflow     */
+	int m;               /*!< Contador do la�o da etapa de Build-up      */
 	double LtbgY;         /*!< Comprimento da coluna de fundo             */
 	double LtbgX;         /*!< Comprimento da coluna de fundo (interface) */
 	double LtbgZ;         /*!< Comprimento da futura golfada              */
@@ -52,9 +52,9 @@ public class SimulationVariables {
 							-Se = 0 o pistao est� em movimenta��o ascendente
 							-Se = 1 o pistao chegou a superf�cie
 							-Se = 2 o pistao nao chegou a superf�cie  */
-	long d;               /*!< Contador auxiliar                          */
-	long i;               /*!< Contador do la�o para etapa Subida Pistao  */
-	long o;               /*!< Contador auxiliar                          */
+	int d;               /*!< Contador auxiliar                          */
+	int i;               /*!< Contador do la�o para etapa Subida Pistao  */
+	int o;               /*!< Contador auxiliar                          */
 	int u;                /*!< Contadores para iteracoes for              */
 	double Ptt;           /*!< Pressao no Tubing na superficie            */
 	double PplgJ;  	      /*!< Pressao do pistao a jusante                */

@@ -40,10 +40,11 @@ public class SimulationThread implements Runnable {
 					simulation.inicioCiclo();
 					break;
 				case 2:
-					//imprimirVariaveis();
+					
 					simulation.subidaPistao();
 					break;
 				case 3:
+					imprimirVariaveis();
 					simulation.producaoLiquido();
 					break;
 				case 4:
@@ -108,19 +109,19 @@ public class SimulationThread implements Runnable {
 		switch (c.estagio) {
 			// Subida do Pistao
 			case 2:
-				simulation.tempo = simulation.tempo + c.step ;
+				this.simulation.tempo += c.step ;
 				break;
 			//Producao do Liquido
 			case 3:
-				simulation.tempo = simulation.tempo + c.step_;
+				this.simulation.tempo += c.step_;
 				break;
 			//Afterflow
 			case 5:
-				simulation.tempo = simulation.tempo + c.step_aft;
+				this.simulation.tempo += c.step_aft;
 				break;
 			//Build-Up
 			case 6:
-				simulation.tempo = simulation.tempo + c._step;
+				this.simulation.tempo += c._step;
 				break;
 			default:
 				break;
@@ -137,7 +138,7 @@ public class SimulationThread implements Runnable {
 		point.put("Hplg", f.varSaida.Hplg);//Posi��o do pist�o
 		point.put("v0", v.v0);//Velocidade do pist�o
 		point.put("Qlres", f.varSaida.Qlres);//Vaz�o de l�quido do reservat�rio
-		point.put("tempo", (double)simulation.tempo);//tempo de simula��o
+		point.put("tempo", this.simulation.tempo);//tempo de simula��o
 		
 		return point;
 	}

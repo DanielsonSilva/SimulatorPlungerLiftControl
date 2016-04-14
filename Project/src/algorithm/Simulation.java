@@ -119,7 +119,7 @@ public class Simulation {
 		c.Tpc = ((168 + 325*f.fluido.SGgas - 12.5*pow(f.fluido.SGgas,2))-491.67) * 5.0/9.0 + 273.15;
 
 		//VAZAO MAXIMA DO RESERVATORIO
-		c.Qmax = f.reservat.Qteste/(1-.2*f.reservat.Pteste/f.reservat.Pest - .8*pow(f.reservat.Pteste/f.reservat.Pest,2));
+		c.Qmax = f.reservat.Qteste/(1-0.2*f.reservat.Pteste/f.reservat.Pest - 0.8*pow(f.reservat.Pteste/f.reservat.Pest,2));
 
 		//Casing - �rea Interna
 		c.AIcsg = 3.14*(pow(f.casing.DIcsg,2)-pow(f.tubing.DOtbg,2))/4;
@@ -188,11 +188,12 @@ public class Simulation {
 		//Volume do Tubing
 		v.V = c.AItbg * f.tubing.Lcauda;
 		//PPcsg - Press�o m�dia no casing
-		v.PPcsg = (f.tempos.PcsgT + f.varSaida.PcsgB)/2.0;
+		v.PPcsg = (f.tempos.PcsgT + f.varSaida.PcsgB)/2;
 		//SE O NUMERO DE MOLES AINDA NAO FOI INICIADO
-		if ( v.Ntotal == 0 ) {
+		if ( v.Ntotal <= 0.0001 ) {
 			//INICIALIZA O NUMERO DE MOLES COM O CALCULO
-			v.N = v.Ntotal = (v.PPcsg * c.Vcsg)/(ue.Z(v.PPcsg/c.Ppc, c.TTcsg/c.Tpc) * c.R * c.TTcsg);
+			v.Ntotal = (v.PPcsg * c.Vcsg)/(ue.Z(v.PPcsg/c.Ppc, c.TTcsg/c.Tpc) * c.R * c.TTcsg);
+			v.N = v.Ntotal;
 		}
 		else {
 			//ARMAZENA O NUMERO DE MOLES ATUAL EM N
@@ -204,12 +205,12 @@ public class Simulation {
 		v.H = f.tubing.Lcauda - f.varSaida.Hplg - f.pistao.Lplg - f.tempos.Lslg;
 
 		// Se o poco afogou acaba funcao
-		if( v.PtbgB <= 0 ) {
+		if( v.PtbgB <= 0.00001 ) {
 			return false;
 		}
 
 		//PP - pressao media no tubing (Pa)
-		v.PP = (f.varSaida.PtbgT + v.PtbgB)/2.0;
+		v.PP = (f.varSaida.PtbgT + v.PtbgB)/2;
 		//TT temperatura media (K)
 		v.TT = (ue.TEMP(v.H) + c.Tsup)/2.0;
 		//Z Fator de compressibilidade m�dio
@@ -247,7 +248,7 @@ public class Simulation {
 		//Inicializa press�o no topo do tubing descontando a influ�ncia do pist�o
 		f.varSaida.PtbgT = ( f.varSaida.pp * 2 ) / ( 1 + exp( ( c.PM * c.G * ( f.tubing.Lcauda - f.tempos.Lslg - f.varSaida.Hplg ))/( v.z * c.R * v.TT ) ));
 		//INICIALIZA O CONTADOR
-		v.y=0;
+		v.y = 0;
 		do {
 			v.Pt = f.varSaida.PtbgT;
 			v.qq = (v.q + ue.QSC(v.Pt/1000.0, f.linhaPro.Psep/1000.0, f.valvula.Dab, c.Tsup))/2.0;
@@ -255,7 +256,7 @@ public class Simulation {
 			f.varSaida.pp = 0.98 * v.nn * c.R * v.TT/v.V;
 			do {
 				v.PP = f.varSaida.pp;
-				v.z=ue.Z(v.PP/c.Ppc, v.TT/c.Tpc);
+				v.z = ue.Z(v.PP/c.Ppc, v.TT/c.Tpc);
 				f.varSaida.pp = v.z * v.nn * c.R * v.TT/v.V;
 			} while( abs(v.PP - f.varSaida.pp) > 1.0);
 			f.varSaida.PtbgT = (f.varSaida.pp * 2)/(1 + exp((c.PM * c.G *(f.tubing.Lcauda - f.tempos.Lslg - f.varSaida.Hplg))/(v.z * c.R * v.TT)));
@@ -263,7 +264,7 @@ public class Simulation {
 		//CALCULA A DIFERENCA DE PRESSAO NO TOPO DO TUBING E NO SEPARADOR
 		v.fatorT = f.varSaida.PtbgT - f.linhaPro.Psep;
 		//CALCULA A DIFERENCA DA PRESSAO NA BASE DO TUBING E A COLUNA DE GAS
-		v.fatorB = v.PtbgB-ue.GASOSTB(f.linhaPro.Psep, c.Tsup, ue.TEMP(v.H), v.H);
+		v.fatorB = v.PtbgB - ue.GASOSTB(f.linhaPro.Psep, c.Tsup, ue.TEMP(v.H), v.H);
 
 		//Ate aqui calculou o tempo de transiente e queda de pressao,
 		//n mois de gas no tubing e p media
@@ -348,7 +349,7 @@ public class Simulation {
 				v.Ptt = f.varSaida.PtbgT;
 				//VAZ�O DE G�S NA LINHA DE SURG�NCIA
 				v.q = ue.QSC(f.varSaida.PtbgT/1000.0, f.linhaPro.Psep/1000.0, f.valvula.Dab, c.Tsup);
-				if ( v.q == 0 ) {
+				if ( v.q <= 0.00001 ) {
 					break;
 				}
 				//VAZ�O M�DIA NA LINHA DE SURG�NCIA(O VALOR DE q MUDA A CADA PASSO)
@@ -388,7 +389,7 @@ public class Simulation {
 			v.fatorB = v.PtbgB - ue.GASOSTB(f.linhaPro.Psep, c.Tsup, ue.TEMP(v.H), v.H);
 
 			//SE O PIST�O N�O EST� NO FUNDO DO PO�O
-			if ( f.varSaida.Hplg >= 0 ) {
+			if ( f.varSaida.Hplg >= 0.0 ) {
 				//System.out.println("Chegou nessa parte 6");
 				//PERDA DE PRESS�O A JUSANTE: LEVA EM CONTA A PRESS�O NA BASE DO TUBING,A PERDA POR PESO DA COLUNA DE L�QUIDO E A PERDA DE�PRESS�O NO PIST�O
 				v.PplgJ = v.PtbgB + f.tempos.Lslg * c.ROliq * c.G + f.pistao.Mplg * c.G/c.AItbg;
@@ -502,7 +503,8 @@ public class Simulation {
 				//SE O PISTAO ESTIVER EMBAIXO DA COLUNA DE LIQUIDO NO FUNDO
 				if( v.Vt <= 0 ) {
 					//CALCULA A PRESSAO DE FLUXO DE FUNDO = FUNDO DO REVESTIMENTO NORMALIZADA PELO NUMERO DE MOLES
-					v.Pwf = f.varSaida.PcsgB = f.varSaida.PcsgB * v.Ntotal/v.N;
+					f.varSaida.PcsgB = f.varSaida.PcsgB * v.Ntotal/v.N;
+					v.Pwf = f.varSaida.PcsgB;
 					//ASSOCIA O CONTADOR d AO CONTADOR i
 					v.d = v.i;
 					//CALCULA A PRESSAO NO TOPO DO REVESTIMENTO NORMALIZADA
@@ -656,7 +658,7 @@ public class Simulation {
 
 		int chamaControle = 0;
 		//N�O CONSEGUIU CHEGAR NA SUPERF�CIE
-		if (f.tempos.Ontime - (v.i*c.step + v.Transient) <= 0) {
+		if ( (f.tempos.Ontime - (v.i*c.step + v.Transient)) <= 0.0001) {
 			v.j = 0;
 			v.Ntotal += v.nn;
 			chamaControle = 1;
@@ -722,7 +724,7 @@ public class Simulation {
 			//PRESSAO DE FLUXO DO UNFOD RECEBE A PRESSAO NA BASE DO ANULAR
 			v.Pwf     = f.varSaida.PcsgB;
 			//VAZ�O DE L�QUIDO E G�S NO RESERVAT�RIO
-			f.varSaida.Qlres = c.Qmax * (1 - .2 *(v.Pwf/f.reservat.Pest) - .8 * pow(v.Pwf/f.reservat.Pest,  2));
+			f.varSaida.Qlres = c.Qmax * (1 - 0.2 *(v.Pwf/f.reservat.Pest) - 0.8 * pow(v.Pwf/f.reservat.Pest,  2));
 			//INCREMENTA O NUMERO DE MOLES DO GAS NO RESERVATORIO
 			v.Ntotal += ((c.step_ * f.varSaida.Qlres * f.reservat.RGL * c.Pstd/86400)/(c.R * c.Tstd) - c.step_ * v.I);
 			//INCREMENTA A ALTURA DE COLUNA DE LIQUIDO NO FUNDO DO POCO
@@ -776,7 +778,9 @@ public class Simulation {
 				//CALCULA A PRESSAO NA BASE DO ANULAR
 				v.Pba        = (v.p_ * 2) / (1 + exp( -(c.PM * c.G * f.tubing.Lcauda)/(v.z * c.R * c.TTcsg) ));
 				//SE A DIFERENCA ENTRE AS PRESSOES NA BASE DO TUBING E NA BASE DO ANULAR FOR MENOR QUE 1, ENTAO SAI DA ITERACAO DO1
-				if(abs(v.Pbt - v.Pba) <= 1.0) break;
+				if ( abs(v.Pbt - v.Pba) <= 1.0) {
+					break;
+				}
 				//SE O CONTADOR ESTIVER NA PRIMEIRA ITERACAO
 				else if ( v.y == 0 ) {
 					//ARMAZENA O NUMERO DE MOLES DO GAS NO TUBING
@@ -784,7 +788,7 @@ public class Simulation {
 					//F_ RECEBE A DIFERENCA ENTRE AS PRESSOES NAS BASES DO ESPACO ANULAR E DO TUBING
 					v.F_  = v.Pbt - v.Pba;
 					//SE A PRESSAO NA BASE DO TUBING FOR MAIOR QUE NA BASE DO ANULAR
-					if(v.Pbt > v.Pba){
+					if( v.Pbt > v.Pba ) {
 						//DIVIDE POR 2(*0.5) O NUMERO DE MOLES DE GAS NO TUBING
 						v.Nt *= 0.5;
 						//RECALCULA O NUMERO DE MOLES DO GAS NO ANULAR
@@ -818,7 +822,8 @@ public class Simulation {
 			//ARMAZENA O VALOR DO NUMERO DE MOLES NO ANULAR
 			v.save_Na = v.Na;
 			//ATRIBUI AO FLUXO NO FUNDO DO ANULAR A PRESSAO NA BASE DO ANULAR QUE RECEBE A PRESSAO NA BASE DO ESPACO ANULAR
-			v.Pwf     = f.varSaida.PcsgB = v.Pba;
+			f.varSaida.PcsgB = v.Pba;
+			v.Pwf     = f.varSaida.PcsgB;
 			//CALCULA A PRESSAO NO TOPO DO ANULAR
 			f.tempos.PcsgT   = (v.p_ * 2) / (1 + exp((c.PM * c.G * f.tubing.Lcauda)/(v.z * c.R * c.TTcsg) ));
 			//A PRESSAO NA BASE DO TUBING � A PRESSAO MEDIA NA BASE DA COLUNA DE GAS ABAIXO DO PISTAO SUBTRAIDA DA PRESSAO DA COLUNA DE LIQUIDO NO FUNDO DO POCO
@@ -847,19 +852,24 @@ public class Simulation {
 			//INCREMENTA A POSICAO DO PISTAO
 			f.varSaida.Hplg += v.delta_h;
 			//SE A POSICAO DO PISTAO FOR MAIOR QUE A ALTURA DO TUBING
-			if( f.varSaida.Hplg > f.tubing.Lcauda ){
+			if( (f.varSaida.Hplg - f.tubing.Lcauda) > 0.000001  ){
 				//POSICAO DO PISTAO RECEBE O VALOR DA ALTURA DO TUBING
-				f.varSaida.Hplg = f.tubing.Lcauda;
+				f.varSaida.Hplg = f.tubing.Lcauda-1;
 			}
 			//O COMPRIMENTO DA GOLFADA � SUBTRAIDO DE delta_h
 			f.tempos.Lslg  -= v.delta_h;
 			//SE O COMPRIMENTO DA GOLFADA FOR MENOR QUE ZERO
-			if ( f.tempos.Lslg < 0 ) {
+			if ( f.tempos.Lslg < 0.0001 ) {
 				//MANTEM O COMPRIMENTO DA GOLFADA IGUAL A ZERO
 				f.tempos.Lslg = 0;
 			}
 			//CALCULA A VISCOSIDADE COM A METADE DO COMPRIMENTO DA GOLFADA
-			v.Visc   = ue.VISC(ue.TEMP(( f.tempos.Lslg/2.0 < 0.0 ? 0.0 : f.tempos.Lslg/2.0)));
+			if ( f.tempos.Lslg/2 < 0.0001 ) {
+				v.Visc   = ue.VISC(ue.TEMP(0));
+			}
+			else {
+				v.Visc   = ue.VISC(ue.TEMP((f.tempos.Lslg/2.0)));
+			}			
 			//CALCULA O NUMERO DE REYNOLDS
 			v.Rey    = c.ROliq * abs(v.v0) * f.tubing.DItbg/v.Visc;
 			//CALCULA O FATOR DE FRICCAO
@@ -1220,7 +1230,7 @@ public class Simulation {
 		//pedido de altera��o de v�lvula motora
 
 		for( v.m = 1; ( tpgasto < f.tempos.Offtime ||
-									 (!byPassController && f.varSaida.Hplg > 0) ) &&
+									 (!byPassController && f.varSaida.Hplg > 0.0) ) &&
 									 (!this.alterarValvula);
 									 v.m++ ) {
 			//PARTE DO CONTROLADOR PARA SABER SE CHEGOU A HORA DE ABRIR A VALVULA
@@ -1259,7 +1269,7 @@ public class Simulation {
 				modo_passo = 0;
 			}
 			//Se pist�o estiver no L�quido
-			else if ( f.varSaida.Hplg < f.tempos.Ltbg && f.varSaida.Hplg > 0 ) {
+			else if ( f.varSaida.Hplg < f.tempos.Ltbg && f.varSaida.Hplg > 0.0 ) {
 				double visliq = ue.VISC(ue.TEMP(f.tempos.Ltbg));
 				double eqk = 3 * M_PI * DplgEsf * visliq + 300;
 				//double eqFliq = f.pistao.Mplg*c.G - c.ROliq*c.G*pow(f.pistao.Dplg,2)*(M_PI/4)*f.pistao.Lplg;
