@@ -302,8 +302,6 @@ public class Simulation {
 		SimulationVariables v = SimulationVariables.getInstance();
 		UtilEquations       ue= new UtilEquations();
 		
-		int encerrarPrograma = 0;
-		
 		//FOR�AR A PLOTAGEM DO PRIMEIRO PONTO DA ETAPA
 		if ( forcarPontosI ) {
 			quantidadePontos = periodoAmostragem + 1;
@@ -646,9 +644,7 @@ public class Simulation {
 				//ATRIBUI A N O N�MERO DE MOLES DO G�S NO RESERVAT�RIO
 				v.N = v.Ntotal;				
 			}
-			if (encerrarPrograma == 1) {
-				break;
-			}
+			addTempo();
 		}/* fim do FOR Abrir Valv Motora */
 		
 		//FOR�ANDO O PLOTE DO �LTIMO PONTO DA ETAPA
@@ -658,7 +654,7 @@ public class Simulation {
 
 		int chamaControle = 0;
 		//N�O CONSEGUIU CHEGAR NA SUPERF�CIE
-		if ( (f.tempos.Ontime - (v.i*c.step + v.Transient)) <= 0.0001) {
+		if ( (f.tempos.Ontime - (v.i*c.step + v.Transient)) <= 0.000001) {
 			v.j = 0;
 			v.Ntotal += v.nn;
 			chamaControle = 1;
@@ -677,13 +673,8 @@ public class Simulation {
 				c.estagio = c.PRODUCAO_LIQUIDO;
 			}
 			else {
-				if ( encerrarPrograma == 1 ) {
-					c.estagio = 10;
-				}
-				else {
-					//ETAPA QUE ACABOU FOI A SUBIDA DO PISTAO
-					c.estagio = c.SUBIDA_PISTAO;
-				}
+				//ETAPA QUE ACABOU FOI A SUBIDA DO PISTAO
+				c.estagio = c.SUBIDA_PISTAO;
 			}
 		}
 	}
@@ -880,7 +871,7 @@ public class Simulation {
 			v.Pfric += v.delta_h*c.ROliq*v.v0*(pow(f.tubing.DItbg,2) /pow(f.valvula.Dab/1000,2)-1)/ c.step_;
 			//CRIA UMA MENSAGEM PARA A INTERFACE ATUALIZAR SEUS ATRIBUTOS
 			//criarMensagem(CycleStage.PRODUCTION);
-
+			addTempo();
 		}//fim for1
 
 		//FOR�ANDO O PLOTE DO ULTIMO PONTO DA ETAPA
@@ -1164,6 +1155,7 @@ public class Simulation {
 			f.varSaida.PcsgB = v.Pwf;
 
 			//criarMensagem(CycleStage.AFTERFLOW);
+			addTempo();
 		} /*   fim do FOR  AfterFlow  -  linha 1415    */
 		//Colocando valor default para a alteracao da vari�vel
 		this.alterarValvula = false;
@@ -1490,7 +1482,7 @@ public class Simulation {
 				default:
 					continue;
 			}
-
+			addTempo();
 		}/*  fim do FOR (shut-in) OFF: - linha 1429  */
 		this.alterarValvula = false;
 		//FOR�ANDO O PLOTE DO ULTIMO PONTO DA ETAPA
@@ -1553,20 +1545,35 @@ public class Simulation {
 		enviarFimCiclo( v.i * c.step +  v.j * c.step_ + v.k * c.step + v.m * c._step );
 	}
 	//---------------------------------------------------------------------------
-	/**
-	 * @brief Fun��o que seta o ID da simula��o.
-	 */
-	public void setIdSimulacao(int id){
-		this.idSimulacao = id;
+	public void addTempo() {
+		DataConstants c = DataConstants.getInstance();
+		
+		int stage = c.estagio + 1;		
+		if (stage == 8) {
+			stage = 2;
+		}		
+		
+		switch (stage) {
+			// Subida do Pistao
+			case 2:
+				this.tempo += c.step ;
+				break;
+			//Producao do Liquido
+			case 3:
+				this.tempo += c.step_;
+				break;
+			//Afterflow
+			case 5:
+				this.tempo += c.step_aft;
+				break;
+			//Build-Up
+			case 6:
+				this.tempo += c._step;
+				break;
+			default:
+				break;
+		}
 	}
-	//---------------------------------------------------------------------------
-	/**
-	 * @brief Fun��o que retorna o ID da simula��o.
-	 */
-	public int getIdSimulacao() {
-		return idSimulacao;
-	}
-	
 	/**
 	 * @brief Seta a precis�o de um double na quantidade de casas decimais.
 	 * @param x N�mero para ser ajustado.

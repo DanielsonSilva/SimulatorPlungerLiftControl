@@ -31,6 +31,7 @@ public class SimulationThread implements Runnable {
 		SimulationVariables v = SimulationVariables.getInstance();
 		
 		while ( !stop ) {
+			System.out.println("Estagio: " + c.estagio);
 			// Somente a primeira vez que estiver iniciando a simula��o.
 			switch ( c.estagio ) {
 				case 0:
@@ -40,11 +41,9 @@ public class SimulationThread implements Runnable {
 					simulation.inicioCiclo();
 					break;
 				case 2:
-					
 					simulation.subidaPistao();
 					break;
 				case 3:
-					imprimirVariaveis();
 					simulation.producaoLiquido();
 					break;
 				case 4:
@@ -98,36 +97,10 @@ public class SimulationThread implements Runnable {
 		DataConstants       c = DataConstants.getInstance();
 		SimulationVariables v = SimulationVariables.getInstance();
 		Map<String,Double> point = new HashMap<String, Double>();
-		double stage;
 		
-		stage = c.estagio + 1;
-		if (stage == 8) {
-			stage = 2;
-		}
-		point.put("stage", stage);
-		
-		switch (c.estagio) {
-			// Subida do Pistao
-			case 2:
-				this.simulation.tempo += c.step ;
-				break;
-			//Producao do Liquido
-			case 3:
-				this.simulation.tempo += c.step_;
-				break;
-			//Afterflow
-			case 5:
-				this.simulation.tempo += c.step_aft;
-				break;
-			//Build-Up
-			case 6:
-				this.simulation.tempo += c._step;
-				break;
-			default:
-				break;
-		}
 		
 		double gasflow = f.varSaida.Qlres * f.reservat.RGL;
+		point.put("stage", (double)(c.estagio + 1));
 		point.put("gasflow", gasflow); //CALCULAR A VAZAO DE GAS
 		point.put("PtbgT", f.varSaida.PtbgT);//Press�o no topo da coluna de produ��o
 		point.put("pp", f.varSaida.pp);//Press�o no topo da golfada
