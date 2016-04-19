@@ -37,12 +37,15 @@ import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.axis.ValueAxis;
+import org.jfree.chart.plot.IntervalMarker;
+import org.jfree.chart.plot.Marker;
 import org.jfree.chart.plot.Plot;
 import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.data.general.Dataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
+import org.jfree.ui.Layer;
 import org.jfree.ui.RectangleInsets;
 
 import algorithm.Conversion;
@@ -57,6 +60,8 @@ public class Principal extends JFrame {
     private int width; //width of the window
     private int height; //height of the window
     private double sizeRate; // Rate size of the window
+    private double previoustime; // Store the last time ploted into chart
+    private int counttimes; //counts the time for printing into chart
     private Map<String,Double> series; // Store several series for the chart
     private JButton buttons[]; // Reference to the buttons
     private ButtonsListenerPrincipal buttonsAction; // Class for actions of the buttons
@@ -81,6 +86,8 @@ public class Principal extends JFrame {
 	private Principal(ResourceBundle messages)
     {
         // Initialize variables
+		previoustime = 0;
+		counttimes = 0;
         String title = messages.getString("title");
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         sizeRate = 0.9;
@@ -316,34 +323,81 @@ public class Principal extends JFrame {
 	}
 	
 	public void paint(Map<String,Double> p) {
-		//System.out.println("Pintando o gr�fico");
-		//XYPlot plot = (XYPlot) chart.getPlot();
-		//XYSeriesCollection data = plot.
-		XYPlot xyPlot = chart.getXYPlot();
-		ValueAxis domainAxis = xyPlot.getDomainAxis();
-		if ( p.get("tempo") > 50 ) {
-			domainAxis.setRange(p.get("tempo") - 50 ,p.get("tempo") );
-		}
-		//JOptionPane.showMessageDialog(null, p);
-		List<XYSeries> series = dataset.getSeries();
-
-		//series.get(0).add(p.get("tempo"), p.get("gasflow"));
-		//series.get(1).add((double)p.get("tempo"), conv.paToPsi(p.get("PtbgT")));
-		//series.get(2).add(p.get("tempo"), p.get("pp"));
-		//series.get(3).add((double)p.get("tempo"), conv.paToPsi(p.get("PcsgB")));
-		//series.get(4).add((double)p.get("tempo"), conv.paToPsi(p.get("PcsgT")));
-		//series.get(5).add(p.get("tempo"), p.get("Lslg"));
-		//series.get(6).add(p.get("tempo"), p.get("Ltbg"));
-		series.get(7).add(p.get("tempo"), p.get("Hplg"));
-		//series.get(8).add(p.get("tempo"), p.get("v0"));
-		//series.get(9).add(p.get("tempo"), p.get("Qlres"));
-		
-		List<String> keys = new ArrayList<String>(p.keySet());
-		for (String key: keys) {
-			this.file.print( key + ": " + p.get(key) + "|");
-		}
-		this.file.println();
-		//Files.write(this.file, p);
+		//Paint the background of the chart in this point if
+		//the new time is bigger than the previous one
+		//System.out.println("Ok1");
+		//System.out.println("-Previous: " + (double)Math.round(this.previoustime * 1000d) / 1000d);
+		//System.out.println("-Actual: " + (double)Math.round(p.get("tempo") * 1000d) / 1000d);
+		//this.previoustime = (double)Math.round(this.previoustime * 1000d) / 1000d;
+		//double actualtime = (double)Math.round(p.get("tempo") * 1000d) / 1000d;
+		//if ( (this.previoustime - actualtime) < 0 ) {
+			XYPlot xyPlot = chart.getXYPlot();
+			ValueAxis domainAxis = xyPlot.getDomainAxis();
+			if ( p.get("tempo") > 50 ) {
+				domainAxis.setRange(p.get("tempo") - 50 ,p.get("tempo") );
+			}
+			//JOptionPane.showMessageDialog(null, p);
+			List<XYSeries> series = dataset.getSeries();
+	
+			//series.get(0).add(p.get("tempo"), p.get("gasflow"));
+			series.get(1).add((double)p.get("tempo"), conv.paToPsi(p.get("PtbgT")));
+			//series.get(2).add(p.get("tempo"), p.get("pp"));
+			series.get(3).add((double)p.get("tempo"), conv.paToPsi(p.get("PcsgB")));
+			series.get(4).add((double)p.get("tempo"), conv.paToPsi(p.get("PcsgT")));
+			//series.get(5).add(p.get("tempo"), p.get("Lslg"));
+			//series.get(6).add(p.get("tempo"), p.get("Ltbg"));
+			series.get(7).add(p.get("tempo"), p.get("Hplg"));
+			//series.get(8).add(p.get("tempo"), p.get("v0"));
+			//series.get(9).add(p.get("tempo"), p.get("Qlres"));
+			
+			
+			//List<String> keys = new ArrayList<String>(p.keySet());
+			//for (String key: keys) {
+			//	this.file.print( key + ": " + p.get(key) + "|");
+			//}
+			//this.file.println();
+			//Files.write(this.file, p);
+			/*counttimes = counttimes + 1;
+			if ( counttimes > 0) {
+				counttimes = 0;
+				Marker marker = new IntervalMarker(this.previoustime, actualtime);
+				System.out.println("-Previous: " + this.previoustime);
+				System.out.println("-Actual: " + actualtime);
+				Color back;
+				System.out.println("Ok2");
+				//Color(int r, int g, int b, int a)
+				//Creates an sRGB color with the specified red, green, blue, and alpha values in the range (0 - 255).
+				switch ((p.get("stage")).intValue()) {
+					//Plunger rise
+					case 3:
+						back = new Color(219,72,72,100);
+						break;
+					//Liquid production
+					case 4:
+						back = new Color(72,219,72,100);
+						break;
+					//Afterflow
+					case 6:
+						back = new Color(79,79,219,100);
+						break;
+					//Build-up
+					case 7:
+						back = new Color(114,114,41,100);
+						break;
+					//Stage not covered
+					default:
+						//System.out.println("Ok3");
+						back = new Color(37,37,37,200);
+						break;
+				}
+				marker.setPaint(back);
+				//System.out.println("Ok4");
+				xyPlot.addDomainMarker(marker);
+				//System.out.println("Ok5");
+				this.previoustime = actualtime;
+				//System.out.println("Ok6");
+			}
+		}*/
 	}
 	
 	/**

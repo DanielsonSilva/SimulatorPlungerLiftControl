@@ -31,7 +31,6 @@ public class SimulationThread implements Runnable {
 		SimulationVariables v = SimulationVariables.getInstance();
 		
 		while ( !stop ) {
-			System.out.println("Estagio: " + c.estagio);
 			// Somente a primeira vez que estiver iniciando a simula��o.
 			switch ( c.estagio ) {
 				case 0:
@@ -96,8 +95,7 @@ public class SimulationThread implements Runnable {
 		Entities            f = Entities.getInstance();
 		DataConstants       c = DataConstants.getInstance();
 		SimulationVariables v = SimulationVariables.getInstance();
-		Map<String,Double> point = new HashMap<String, Double>();
-		
+		Map<String,Double> point = new HashMap<String, Double>();		
 		
 		double gasflow = f.varSaida.Qlres * f.reservat.RGL;
 		point.put("stage", (double)(c.estagio + 1));

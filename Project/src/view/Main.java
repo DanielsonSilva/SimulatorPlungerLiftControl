@@ -7,7 +7,7 @@ import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
- * @author Danielson Flávio Xavier da Silva
+ * @author Danielson Flï¿½vio Xavier da Silva
  * The start of the program
  */
 public class Main {
@@ -17,8 +17,7 @@ public class Main {
     /**
      * Constructor for the Main Class
      */
-    public Main(ResourceBundle message)
-    {
+    public Main(ResourceBundle message) {
         // Initialize the variable responsible for internationalization
         this.messages = message;
         Principal.getInstance(messages);
@@ -49,6 +48,7 @@ public class Main {
         ResourceBundle international = ResourceBundle.getBundle("resources.MessagesBundle", currentLocale);
         
         new Main(international);
+        
 	}
 
 }
