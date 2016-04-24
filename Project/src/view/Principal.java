@@ -333,9 +333,9 @@ public class Principal extends JFrame {
 		//if ( (this.previoustime - actualtime) < 0 ) {
 			XYPlot xyPlot = chart.getXYPlot();
 			ValueAxis domainAxis = xyPlot.getDomainAxis();
-			if ( p.get("tempo") > 50 ) {
+			/*if ( p.get("tempo") > 50 ) {
 				domainAxis.setRange(p.get("tempo") - 50 ,p.get("tempo") );
-			}
+			}*/
 			//JOptionPane.showMessageDialog(null, p);
 			List<XYSeries> series = dataset.getSeries();
 	
@@ -347,7 +347,7 @@ public class Principal extends JFrame {
 			//series.get(5).add(p.get("tempo"), p.get("Lslg"));
 			//series.get(6).add(p.get("tempo"), p.get("Ltbg"));
 			series.get(7).add(p.get("tempo"), p.get("Hplg"));
-			//series.get(8).add(p.get("tempo"), p.get("v0"));
+			series.get(8).add(p.get("tempo"), p.get("v0"));
 			//series.get(9).add(p.get("tempo"), p.get("Qlres"));
 			
 			
