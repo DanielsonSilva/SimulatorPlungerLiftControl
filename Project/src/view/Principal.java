@@ -51,7 +51,7 @@ import org.jfree.ui.RectangleInsets;
 import algorithm.Conversion;
 
 /**
- * @author Danielson Fl√°vio Xavier da Silva
+ * @author Danielson Fl·vio Xavier da Silva
  */
 public class Principal extends JFrame {
 
@@ -257,6 +257,7 @@ public class Principal extends JFrame {
      * @param messages Variable for internationalization
      */    
     private void addChartToPane(JFrame frame, ResourceBundle messages) {
+    	XYSeries series0 = new XYSeries(messages.getString("Qlres"));
     	XYSeries series1 = new XYSeries(messages.getString("gasflow"));
     	XYSeries series2 = new XYSeries(messages.getString("PtbgT"));
     	XYSeries series3 = new XYSeries(messages.getString("pp"));
@@ -265,8 +266,7 @@ public class Principal extends JFrame {
     	XYSeries series6 = new XYSeries(messages.getString("Lslg"));
     	XYSeries series7 = new XYSeries(messages.getString("Ltbg"));
     	XYSeries series8 = new XYSeries(messages.getString("Hplg"));
-    	XYSeries series9 = new XYSeries(messages.getString("v0"));
-    	XYSeries series0 = new XYSeries(messages.getString("Qlres"));
+    	XYSeries series9 = new XYSeries(messages.getString("v0"));    	
     	XYSeries series10 = new XYSeries(messages.getString("Time"));
     	    	
     	dataset = new XYSeriesCollection();
@@ -339,16 +339,17 @@ public class Principal extends JFrame {
 			//JOptionPane.showMessageDialog(null, p);
 			List<XYSeries> series = dataset.getSeries();
 	
-			//series.get(0).add(p.get("tempo"), p.get("gasflow"));
-			series.get(1).add((double)p.get("tempo"), conv.paToPsi(p.get("PtbgT")));
-			//series.get(2).add(p.get("tempo"), p.get("pp"));
-			series.get(3).add((double)p.get("tempo"), conv.paToPsi(p.get("PcsgB")));
-			series.get(4).add((double)p.get("tempo"), conv.paToPsi(p.get("PcsgT")));
-			//series.get(5).add(p.get("tempo"), p.get("Lslg"));
-			//series.get(6).add(p.get("tempo"), p.get("Ltbg"));
-			series.get(7).add(p.get("tempo"), p.get("Hplg"));
-			series.get(8).add(p.get("tempo"), p.get("v0"));
-			//series.get(9).add(p.get("tempo"), p.get("Qlres"));
+			//series.get(0).add(p.get("tempo"), p.get("Qlres"));
+			//series.get(1).add(p.get("tempo"), p.get("gasflow"));
+			series.get(2).add((double)p.get("tempo"), conv.paToPsi(p.get("PtbgT")));
+			//series.get(3).add(p.get("tempo"), p.get("pp"));
+			series.get(4).add((double)p.get("tempo"), conv.paToPsi(p.get("PcsgB")));
+			series.get(5).add((double)p.get("tempo"), conv.paToPsi(p.get("PcsgT")));
+			//series.get(6).add(p.get("tempo"), p.get("Lslg"));
+			//series.get(7).add(p.get("tempo"), p.get("Ltbg"));
+			series.get(8).add(p.get("tempo"), p.get("Hplg"));
+			//series.get(9).add(p.get("tempo"), p.get("v0"));
+
 			
 			
 			//List<String> keys = new ArrayList<String>(p.keySet());

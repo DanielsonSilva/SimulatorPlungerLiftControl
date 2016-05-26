@@ -8,6 +8,8 @@ package algorithm;
  * Define numbers for the stages of Plunger Lift
  */
 public enum CycleStage {
+	/** Indicate the start of a cycle */
+	CYCLE_START(10),
 	/** Indicate the Plunger Rise stage */
 	PLUNGER_RISE(100) ,
 	/** Indicate the Production stage */

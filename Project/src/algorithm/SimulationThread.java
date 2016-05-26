@@ -187,7 +187,7 @@ public class SimulationThread implements Runnable {
 		f.tempos.Offtime   = variables.get("initialCloseValve").intValue();
 		f.tempos.Afterflow = variables.get("initialAfterflow").intValue();
 		
-		System.out.println("01 :" + f.fluido.BSW); 
+		/*System.out.println("01 :" + f.fluido.BSW); 
 		System.out.println("02 :" + f.fluido.APi);
 		System.out.println("03 :" + f.fluido.SGagua);
 		System.out.println("04 :" + f.fluido.SGgas);
@@ -222,7 +222,7 @@ public class SimulationThread implements Runnable {
 		System.out.println("33 :" + f.tempos.PcsgT);
 		System.out.println("34 :" + f.tempos.Ontime);
 		System.out.println("35 :" + f.tempos.Offtime);
-		System.out.println("36 :" + f.tempos.Afterflow);		
+		System.out.println("36 :" + f.tempos.Afterflow);*/	
 	}
 	
 }

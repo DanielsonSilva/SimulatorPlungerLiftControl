@@ -2,7 +2,11 @@ package algorithm;
 
 import static java.lang.Math.*;
 
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 
 /**
  * Simulation Methods
@@ -37,7 +41,10 @@ public class Simulation {
 	/** Parï¿½metro que verifica se o pedido de alteraï¿½ï¿½o da vï¿½lvula motora foi
 			feito ou nï¿½o */
 	public boolean alterarValvula;
-	
+	/** Arquivo de impressão de variáveis de ciclo */
+	public PrintWriter arquivo;
+	/** Armazena o número do ciclo da execução corrente */
+	public int cyclenumber;
 	
 	private static Simulation instance;
 	
@@ -65,6 +72,15 @@ public class Simulation {
 		forcarPontosF     = true;
 		alterarValvula	  = false;
 		M_PI              = 3.14159265;
+		cyclenumber       = 1;
+		try {
+			arquivo  = new PrintWriter("variaveis_de_ciclo.txt");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			arquivo.close();
+		}
 	}
 		
 	/**
@@ -80,7 +96,7 @@ public class Simulation {
 	 */
 	public void iniciarSimulacao() {
 		
-		System.out.println("Estagio: Iniciar Simulação");
+		//System.out.println("Estagio: Iniciar Simulação");
 
 		Entities            f = Entities.getInstance();
 		DataConstants       c = DataConstants.getInstance();
@@ -179,7 +195,7 @@ public class Simulation {
 	 */
 	public boolean inicioCiclo(){
 		
-		System.out.println("Estagio: InÃ­cio Ciclo");
+		//System.out.println("Estagio: Início Ciclo");
 
 		//Objetos de manipulacao de variaveis do poco
 		Entities            f = Entities.getInstance();
@@ -187,6 +203,9 @@ public class Simulation {
 		SimulationVariables v = SimulationVariables.getInstance();
 		UtilEquations       ue= new UtilEquations();
 
+		enviarVarCiclo(CycleStage.CYCLE_START, this.cyclenumber);
+		this.cyclenumber = this.cyclenumber + 1;
+		
 		v.Ppart_csg = f.tempos.PcsgT;
 		v.Ppart_tbg = f.varSaida.PtbgT;
 		v.cont++;
@@ -303,7 +322,7 @@ public class Simulation {
 	 */
 	public void subidaPistao() {
 		
-		System.out.println("Estagio: Subida do PistÃ£o");
+		//System.out.println("Estagio: Subida do PistÃ£o");
 		//CRIACAO DE VARIAVEIS
 		Entities            f = Entities.getInstance();
 		DataConstants       c = DataConstants.getInstance();
@@ -624,11 +643,8 @@ public class Simulation {
 		}
 
 		//ENVIANDO MENSAGEM COM O TEMPO DE DURACAO DA SUBIDA PISTAO
-		//this.enviarVarCiclo(SLUG_RISE_TIME, (--v.i/(1.0/c.step)+v.transient) );
-		// STAGE_RISE_DURATION = 1
-		//this.enviarVarCiclo(1,(--v.i/(1.0/c.step)+v.transient));
-		//this.enviarVarCiclo(STAGE_RISE_DURATION, v.i * c.step);
-		//Se a vÃ¡lvula foi alterada, entÃ£o chamar buildup
+		this.enviarVarCiclo(CycleStage.STAGE_RISE_DURATION, v.i * c.step);
+		//Se a válvula foi alterada, então chamar buildup
 		if ( this.alterarValvula ) {
 			this.alterarValvula = false;
 			c.estagio = c.AFTERFLOW;
@@ -639,7 +655,7 @@ public class Simulation {
 			c.estagio = c.SUBIDA_PISTAO;
 		}
 		
-		//NÃƒO CONSEGUIU CHEGAR NA SUPERFÃ�CIE
+		//NÃO CONSEGUIU CHEGAR NA SUPERFÃ�CIE
 		if (f.tempos.Ontime - (v.i*c.step + v.Transient) <= 0) {
 			v.j = 0;
 			v.Ntotal += v.nn;
@@ -648,11 +664,11 @@ public class Simulation {
 	}
 	//---------------------------------------------------------------------------
 	/**
-	 * @brief Modelo matemï¿½tico da etapa de produï¿½ï¿½o de lï¿½quido.
+	 * @brief Modelo matemático da etapa de produção de líquido.
 	 */
 	public void producaoLiquido(){
 
-		System.out.println("Estagio: ProduÃ§Ã£o de LÃ­quido");
+		//System.out.println("Estagio: Produção de Líquido");
 		
 		//CRIACAO DE VARIAVEIS PARA A SIMULACAO
 		Entities            f = Entities.getInstance();
@@ -811,9 +827,9 @@ public class Simulation {
 			//INCREMENTA A POSICAO DO PISTAO
 			f.varSaida.Hplg += v.delta_h;
 			//SE A POSICAO DO PISTAO FOR MAIOR QUE A ALTURA DO TUBING
-			if( (f.varSaida.Hplg - f.tubing.Lcauda) > 0.000001  ){
+			if( f.varSaida.Hplg >= f.tubing.Lcauda ){
 				//POSICAO DO PISTAO RECEBE O VALOR DA ALTURA DO TUBING
-				f.varSaida.Hplg = f.tubing.Lcauda-1;
+				f.varSaida.Hplg = f.tubing.Lcauda;
 			}
 			//O COMPRIMENTO DA GOLFADA ï¿½ SUBTRAIDO DE delta_h
 			f.tempos.Lslg  -= v.delta_h;
@@ -866,7 +882,7 @@ public class Simulation {
 	 * @brief Parte de controle da simulaï¿½ï¿½o.
 	 */
 	public void Controle() {
-		System.out.println("Estagio: Controle");
+		//System.out.println("Estagio: Controle");
 
 		Entities            f = Entities.getInstance();
 		DataConstants       c = DataConstants.getInstance();
@@ -878,7 +894,7 @@ public class Simulation {
 		 */
 		v.delta_P = v.Ppart_csg - f.tempos.PcsgT;
 		//SE O PISTAO ESTIVER ACIMA DA SUPERFICIE OU NO TOPO DO TUBING
-		if( f.tubing.Lcauda <= f.varSaida.Hplg){
+		if( f.varSaida.Hplg <= f.tubing.Lcauda ){
 			//TEMPO DE CHEGADA DO PISTAO RECEBE A SOMA  DOS TEMPOS DE OCORRENCIA
 			//DAS ETAPAS ANTERIORES MAIS O TEMPO QUE A ONDA ACUSTICA ATRAVESSA
 			//O GAS NO TUBING ATE ATINGIR A GOLFADA
@@ -892,7 +908,7 @@ public class Simulation {
 
 		//CALCULA A PRODUCAO
 		v.production = (float)((v.LslgX - f.tempos.Lslg)*c.AItbg*6.2848352758387*(1- c.FW));
-	  //PRODUï¿½ï¿½O ACUMULADA
+	    //PRODUï¿½ï¿½O ACUMULADA
 		v.total_production = v.total_production + v.production;
 		//TEMP TEM DIMENSOES DE VELOCIDADE
 		v.temp = f.tubing.Lcauda/(v.j/(1.0/c.step_) + v.i/(1.0/ c.step) + v.Transient);
@@ -984,7 +1000,7 @@ public class Simulation {
 	 */
 	public void Afterflow() {
 		
-		System.out.println("Estagio: Afterflow");
+		//System.out.println("Estagio: Afterflow");
 
 		Entities            f = Entities.getInstance();
 		DataConstants       c = DataConstants.getInstance();
@@ -1161,7 +1177,7 @@ public class Simulation {
 		SimulationVariables v = SimulationVariables.getInstance();
 		UtilEquations       ue= new UtilEquations();
 		
-		System.out.println("Estagio: BuildUp | " + c.estagio);
+		//System.out.println("Estagio: BuildUp | " + c.estagio);
 		
 		this.ChegouSup = false;
 
@@ -1517,12 +1533,12 @@ public class Simulation {
 		c.estagio = c.OFF_BUILD_UP;
 
 		//Enviando o tempo de duraÃ§Ã£o do buildup
-		//STAGE_BUILDUP_DURATION = 10
-		//enviarVarCiclo(10, c._step * v.m);
+		//Enviando o tempo de duraï¿½ï¿½o do buildup
+		this.enviarVarCiclo(CycleStage.STAGE_BUILDUP_DURATION, c._step * v.m);
 
 		//Enviando o tempo de duraÃ§Ã£o do ciclo atual(SUBIDA + PRODUCAO + AFTERFLOW
 		// + BUILDUP)
-		enviarFimCiclo( v.i * c.step +  v.j * c.step_ + v.k * c.step + v.m * c._step );
+		this.enviarFimCiclo( v.i * c.step +  v.j * c.step_ + v.k * c.step + v.m * c._step );
 	}
 	//---------------------------------------------------------------------------
 	public void addTempo() {
@@ -1567,24 +1583,81 @@ public class Simulation {
 		return (((int)(x * pow(10,precisao)))/pow(10,precisao));
 	}
 	/**
-	 * @brief Funï¿½ï¿½o que trata de enviar um dado para ser inserido no histï¿½rico
+	 * @brief Função que trata de enviar um dado para ser inserido no histórico
 	 * 				mostrado em uma das abas na interface a cada ciclo.
-	 * @param ciclovar estï¿½gio do ciclo atual ou variï¿½vel de ciclo
-	 * @param valor Valor que deve ser enviado caracterizando a ocorrï¿½ncia.
+	 * @param ciclovar estágio do ciclo atual ou variável de ciclo
+	 * @param valor Valor que deve ser enviado caracterizando a ocorrência.
 	 */
 	public void enviarVarCiclo(CycleStage ciclovar, double valor) {
-		
+		try {
+			arquivo  = new PrintWriter(new FileWriter("variaveis_de_ciclo.txt", true));
+			switch (ciclovar) {
+			case STAGE_BUILDUP_DURATION:
+				arquivo.println("Duração da etapa Build-up:       " + valor);
+				break;
+			case STAGE_AFTER_DURATION:
+				arquivo.println("Duração da etapa Afterflow:      " + valor);
+				break;
+			case PRODUCTION_VOLUME:
+				arquivo.println("Volume de produção no Ciclo:     " + valor);
+				break;
+			case TOTAL_PRODUCTION:
+				arquivo.println("Total produzido pelo poço:       " + valor);
+				break;
+			case PL_RISE_TIME:
+				arquivo.println("Tempo de viagem do pistão:       " + valor);
+				break;
+			case AVERAGE_PL_VELOCITY:
+				arquivo.println("Média de velocidade do pistão:   " + valor);
+				break;
+			case IMPACT_VEL:
+				arquivo.println("Velocidade de impacto do pistão: " + valor);
+				break;
+			case STAGE_PRODUC_DURATION:
+				arquivo.println("Duração da etapa Produção:       " + valor);
+				break;
+			case STAGE_RISE_DURATION:
+				arquivo.println("Duração da etapa Subida:         " + valor);
+				break;
+			case CYCLE_START:
+				arquivo.println("Características do Ciclo nº" + (int)valor);
+				break;
+			default:
+				break;
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			arquivo.close();
+		}
 	}
 	/**
-	 * @brief Funï¿½ï¿½o que trata de informar a interface que chegou ao fim do ciclo
+	 * @brief Função que trata de informar a interface que chegou ao fim do ciclo
 	 * 				em determinado tempo.
-	 * @param cycle Tempo em que o ciclo foi finalizado.
+	 * @param valor Tempo em que o ciclo foi finalizado.
 	 */
-	public void enviarFimCiclo(double cycle) {		
-
+	public void enviarFimCiclo(double valor) {
+		try {
+			arquivo  = new PrintWriter(new FileWriter("variaveis_de_ciclo.txt", true));
+			arquivo.println("Duração do ciclo:                " + valor);
+			arquivo.println();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			arquivo.close();
+		}
+			
 	}
 	/**
-	 * @brief Funï¿½ï¿½o que recebe o pedido de alteraï¿½ï¿½o no estado da vï¿½lvula motora.
+	 * @brief Função que recebe o pedido de alteração no estado da válvula motora.
 	 */
 	public void alterValvula() {
 		this.alterarValvula = true;
