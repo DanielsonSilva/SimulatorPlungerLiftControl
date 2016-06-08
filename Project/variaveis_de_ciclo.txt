@@ -1,0 +1,21 @@
+Características do Ciclo nº1
+Duração da etapa Subida:         123.74000000000001
+Duração da etapa Produção:       2.45
+Volume de produção no Ciclo:     0.19304265081882477
+Total produzido pelo poço:       0.19304265081882477
+Tempo de viagem do pistão:       128.0
+Média de velocidade do pistão:   7.759284973144531
+Velocidade de impacto do pistão: 5.778943531529648
+Duração da etapa Afterflow:      60.0
+Duração da etapa Build-up:       585.02
+Duração do ciclo:                771.21
+
+Características do Ciclo nº2
+Duração da etapa Subida:         183.1
+Duração da etapa Produção:       18.55
+Volume de produção no Ciclo:     1.1900907754898071
+Total produzido pelo poço:       1.3831334114074707
+Tempo de viagem do pistão:       204.0
+Média de velocidade do pistão:   4.899295806884766
+Velocidade de impacto do pistão: 6.845322531453399
+Duração da etapa Afterflow:      60.0

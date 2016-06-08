@@ -3,7 +3,7 @@ package algorithm;
 import java.io.PrintWriter;
 
 public class Entities {
-
+	
 	/** Dados referentes ï¿½ coluna de producao.  */
 	DataTubing tubing;
 	/** Dados referentes ao anular.             */
@@ -20,9 +20,80 @@ public class Entities {
 	DataFluid fluido;
 	/** Tempos de abertura e fechamento.        */
 	DataTimes tempos;
-	/** Variaveis concernentes ï¿½ interface.     */
+	/** Variaveis concernentes à interface.     */
 	OutputVariables varSaida;
 	
+	public DataTubing getTubing() {
+		return tubing;
+	}
+
+	public void setTubing(DataTubing tubing) {
+		this.tubing = tubing;
+	}
+
+	public DataCasing getCasing() {
+		return casing;
+	}
+
+	public void setCasing(DataCasing casing) {
+		this.casing = casing;
+	}
+
+	public DataMotorValve getValvula() {
+		return valvula;
+	}
+
+	public void setValvula(DataMotorValve valvula) {
+		this.valvula = valvula;
+	}
+
+	public DataProductionLine getLinhaPro() {
+		return linhaPro;
+	}
+
+	public void setLinhaPro(DataProductionLine linhaPro) {
+		this.linhaPro = linhaPro;
+	}
+
+	public DataReservoir getReservat() {
+		return reservat;
+	}
+
+	public void setReservat(DataReservoir reservat) {
+		this.reservat = reservat;
+	}
+
+	public DataPlunger getPistao() {
+		return pistao;
+	}
+
+	public void setPistao(DataPlunger pistao) {
+		this.pistao = pistao;
+	}
+
+	public DataFluid getFluido() {
+		return fluido;
+	}
+
+	public void setFluido(DataFluid fluido) {
+		this.fluido = fluido;
+	}
+
+	public DataTimes getTempos() {
+		return tempos;
+	}
+
+	public void setTempos(DataTimes tempos) {
+		this.tempos = tempos;
+	}
+
+	public OutputVariables getVarSaida() {
+		return varSaida;
+	}
+
+	public void setVarSaida(OutputVariables varSaida) {
+		this.varSaida = varSaida;
+	}	
 	
 	private static Entities instance;
 	

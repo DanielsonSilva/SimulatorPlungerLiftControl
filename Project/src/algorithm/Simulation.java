@@ -8,6 +8,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 
+import controller.Controller;
+
 /**
  * Simulation Methods
  * @author Danielson Flï¿½vio Xavier da Silva
@@ -45,6 +47,8 @@ public class Simulation {
 	public PrintWriter arquivo;
 	/** Armazena o número do ciclo da execução corrente */
 	public int cyclenumber;
+	/** Controller of the current simulation */
+	private Controller controller;
 	
 	private static Simulation instance;
 	
@@ -81,6 +85,12 @@ public class Simulation {
 		} finally {
 			arquivo.close();
 		}
+	}
+	/**
+	 * Sets the controller used for control of the method
+	 */
+	public void setController(Controller ctrl) {
+		this.controller = ctrl;
 	}
 		
 	/**
@@ -635,6 +645,8 @@ public class Simulation {
 			}
 			//criarMensagem(PLUNGER_RISE);
 			addTempo();
+			//Checks the controller
+			this.controller.check();
 		}/* fim do FOR Abrir Valv Motora */
 
 		//FORÃ‡ANDO O PLOTE DO ÃšLTIMO PONTO DA ETAPA
@@ -856,6 +868,8 @@ public class Simulation {
 			//CRIA UMA MENSAGEM PARA A INTERFACE ATUALIZAR SEUS ATRIBUTOS
 			//criarMensagem(CycleStage.PRODUCTION);
 			addTempo();
+			//Checks the controller
+			this.controller.check();
 		}//fim for1
 
 		//FORï¿½ANDO O PLOTE DO ULTIMO PONTO DA ETAPA
@@ -1147,6 +1161,8 @@ public class Simulation {
 
 			//criarMensagem(CycleStage.AFTERFLOW);
 			addTempo();
+			//Checks the controller
+			this.controller.check();
 		} /*   fim do FOR  AfterFlow  -  linha 1415    */
 		//Colocando valor default para a alteracao da variï¿½vel
 		this.alterarValvula = false;
@@ -1477,7 +1493,10 @@ public class Simulation {
 				default:
 					continue;
 			}
+			// Adds the step in time
 			addTempo();
+			//Checks the controller
+			this.controller.check();
 		}/*  fim do FOR (shut-in) OFF: - linha 1429  */
 		this.alterarValvula = false;
 		//FORÃ‡ANDO O PLOTE DO ULTIMO PONTO DA ETAPA
