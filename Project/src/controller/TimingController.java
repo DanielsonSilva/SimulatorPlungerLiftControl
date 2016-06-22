@@ -21,6 +21,9 @@ public class TimingController implements Controller{
 	 * rise to the surface
 	 */	
 	private double high_plungerRiseTime;
+	/**
+	 * Check if 
+	 */
 
 	/**
 	 * Set the variables for this controller
@@ -37,8 +40,27 @@ public class TimingController implements Controller{
 		Entities            f = Entities.getInstance();
 		DataConstants       c = DataConstants.getInstance();
 		SimulationVariables v = SimulationVariables.getInstance();
+
+		switch (c.estagio) {
+		//PLUNGER RISE STAGE
+		case 2:
+			break;
+		//PRODUCTION STAGE
+		case 3:
+			break;
+		//CONTROL STAGE
+		case 4:
+			break;
+		//AFTERFLOW STAGE
+		case 5:
+			break;
+		//BUILD-UP STAGE
+		case 6:
+			break;
+		default:
+			break;
+		}
 		
-		System.out.println("Check for the controller: " + f.getVarSaida().Hplg);
 	}
 
 }
