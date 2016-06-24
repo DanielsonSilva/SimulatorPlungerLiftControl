@@ -144,8 +144,15 @@ public class SimulationThread implements Runnable {
 		DataConstants       c = DataConstants.getInstance();
 		Conversion       conv = new Conversion();
 		
+		//Timing Controller
 		this.control = new TimingController();
+		Map<String,Double> configuration = new HashMap<String,Double>();
+		configuration.put("value", 50.);
+		configuration.put("low_time", 170.);
+		configuration.put("high_time", 200.);
+		control.setVariables(configuration);
 		this.simulation.setController(control);
+		
 		
 		f.fluido.BSW = variables.get("fluidBSW").floatValue();
 		f.fluido.APi = variables.get("fluidAPI");

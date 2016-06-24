@@ -81,7 +81,7 @@ public class SimulationVariables {
 	double Nt_;           /*!< Armazena o numero de moles do gas no tubing    */
 	double Ntt;           /*!< Guarda o valor do numero de moles (do tubing)  */
 	double delta_P;       /*!< Diferen�a de Press�o                           */
-	int piston_arrival;   /*!< Indicador de chegada do pist�o � superf�cie    */
+	public int piston_arrival;   /*!< Indicador de chegada do pist�o � superf�cie    */
 	double count;         /*!< Contador de ciclos          */
 	int save_Offtime;     /*!< Armazena tempo de Offtime   */
 	int save_Afterflow;   /*!< Armazena tempo de Afterflow */

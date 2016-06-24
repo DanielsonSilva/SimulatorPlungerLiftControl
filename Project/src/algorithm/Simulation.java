@@ -962,6 +962,7 @@ public class Simulation {
 			this.OffBuildUp(false);
 			buildupgone = true;
 		}
+		this.controller.check();
 		//PARTE DO CONTROLADOR
 		if ( !byPassController ) {
 			//SE ESTIVER NO PRIMEIRO CICLO
@@ -1181,10 +1182,9 @@ public class Simulation {
 	}
 	//---------------------------------------------------------------------------
 	/**
-	 * @brief Modelo matemï¿½tico da etapa de Build Up da simulaï¿½ï¿½o.
-	 * @param ChegouSup Informa se o pistï¿½o, na etapa de subida e produï¿½ï¿½o,
-	 *									conseguiu chegar ï¿½ superfï¿½cie, se sim true ou false caso
-	 *									contrï¿½rio.
+	 * @brief Modelo matemático da etapa de Build Up da simulação.
+	 * @param ChegouSup Informa se o pistão, na etapa de subida e produção,
+	 *						conseguiu chegar à superfície, se sim true ou false caso contrário.
 	 */
 	public void OffBuildUp(boolean ChegouSup){
 		
@@ -1232,19 +1232,7 @@ public class Simulation {
 		//(estiver passando pelo controle e o pistao ainda nao chegou no fundo)) e
 		//pedido de alteraÃ§Ã£o de vÃ¡lvula motora
 
-		for( v.m = 1; ( tpgasto < f.tempos.Offtime ||
-									 (!byPassController && f.varSaida.Hplg > 0) ) &&
-									 (!this.alterarValvula);
-									 v.m++ ) {
-			//PARTE DO CONTROLADOR PARA SABER SE CHEGOU A HORA DE ABRIR A VALVULA
-			if ( !byPassController ) {
-				/*if ( v.contador == 0 && (f.varSaida.PtbgT - v.delta_P - f.linhaPro.Psep)/6894.757 >= v.CP && c._step * v.m > v.limite) {
-					break;
-				} */
-					if(v.contador == 1 && c._step * v.m >= f.tempos.Offtime && v.v0 == 0) {
-						break;
-				}
-			}
+		for( v.m = 1; ( tpgasto < f.tempos.Offtime || f.varSaida.Hplg > 0 ) && (!this.alterarValvula); v.m++ ) {
 			///////////////////////////////////////////////////
 			if ( v.m >= 100) {
 				periodoAmostragem = 120;
@@ -1471,14 +1459,7 @@ public class Simulation {
 				v.LtbgY += f.tempos.Ltbg;
 				v.flag = 2;
 			}
-			// PARTE DO CONTROLADOR (MUDA O TEMPO DE FECHAMENTO DA VALVULA)
-			if ( !byPassController ) {
-				v.temp_Offtime = (int) (c._step * v.m);
-			}
-
-			//ENVIA MENSAGEM PARA PLOTAR A SITUACAO ATUAL
-			//criarMensagem(BUILDUP);
-
+			
 			tpgasto += c._step;
 			switch (modo_passo) {
 				case 0:

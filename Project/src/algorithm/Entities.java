@@ -19,7 +19,7 @@ public class Entities {
 	/** Dados do fluido do reservatï¿½rio.        */
 	DataFluid fluido;
 	/** Tempos de abertura e fechamento.        */
-	DataTimes tempos;
+	public DataTimes tempos;
 	/** Variaveis concernentes à interface.     */
 	OutputVariables varSaida;
 	

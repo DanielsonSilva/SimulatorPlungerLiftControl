@@ -5,8 +5,8 @@ import java.io.PrintWriter;
 public final class DataTimes {
 	
 	// Dados utilizados na simula��o
-	int Afterflow;  /*!< Tempo de afterflow (s)               */
-	int Offtime;    /*!< Tempo de BuildUp                     */
+	public int Afterflow;  /*!< Tempo de afterflow (s)               */
+	public int Offtime;    /*!< Tempo de BuildUp                     */
 	int Ontime;     /*!< Tempo de v�lvula aberta              */
 	double PcsgT;   /*!< Pressao no anular na superficie (Pa) */
 	double Ltbg;    /*!< Nivel de liquido no fundo da coluna  */
