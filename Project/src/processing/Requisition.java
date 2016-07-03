@@ -37,7 +37,6 @@ public class Requisition implements Runnable {
 		simulationthread.setStop(false);
 		t.start();
 		while ( !stop ) {
-			//System.out.println("Pegando os dados");
 			point = simulationthread.requirePoint();
 			Principal.getInstance(messages).paint(point);
 		}

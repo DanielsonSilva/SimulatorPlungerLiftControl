@@ -103,10 +103,8 @@ public class Principal extends JFrame {
         try {
 			file = new PrintWriter("the-file-name.txt", "UTF-8");
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
         // Close operation

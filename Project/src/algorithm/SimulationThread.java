@@ -144,13 +144,14 @@ public class SimulationThread implements Runnable {
 		DataConstants       c = DataConstants.getInstance();
 		Conversion       conv = new Conversion();
 		
+		
 		//Timing Controller
 		this.control = new TimingController();
-		Map<String,Double> configuration = new HashMap<String,Double>();
-		configuration.put("value", 50.);
-		configuration.put("low_time", 170.);
-		configuration.put("high_time", 200.);
-		control.setVariables(configuration);
+		Map<String,Double> controllerVariables = new HashMap<String,Double>();
+		controllerVariables.put("value", 50.);
+		controllerVariables.put("lowPlungerTime", 170.);
+		controllerVariables.put("highPlungerTime", 200.);
+		control.setVariables(controllerVariables);
 		this.simulation.setController(control);
 		
 		

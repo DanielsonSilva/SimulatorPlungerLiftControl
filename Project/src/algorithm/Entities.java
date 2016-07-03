@@ -21,7 +21,7 @@ public class Entities {
 	/** Tempos de abertura e fechamento.        */
 	public DataTimes tempos;
 	/** Variaveis concernentes à interface.     */
-	OutputVariables varSaida;
+	public OutputVariables varSaida;
 	
 	public DataTubing getTubing() {
 		return tubing;

@@ -8,7 +8,7 @@ public final class DataTimes {
 	public int Afterflow;  /*!< Tempo de afterflow (s)               */
 	public int Offtime;    /*!< Tempo de BuildUp                     */
 	int Ontime;     /*!< Tempo de v�lvula aberta              */
-	double PcsgT;   /*!< Pressao no anular na superficie (Pa) */
+	public double PcsgT;   /*!< Pressao no anular na superficie (Pa) */
 	double Ltbg;    /*!< Nivel de liquido no fundo da coluna  */
 	double Lslg;    /*!< Comprimento da glofada (m)           */
 

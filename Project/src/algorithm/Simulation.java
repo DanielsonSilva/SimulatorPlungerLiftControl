@@ -12,37 +12,36 @@ import controller.Controller;
 
 /**
  * Simulation Methods
- * @author Danielson Flï¿½vio Xavier da Silva
- *
+ * @author Danielson Flávio Xavier da Silva (danielson_fx@yahoo.com.br)
  */
 public class Simulation {
 	
-	/** Guarda o tempo de simulaï¿½ï¿½o */
+	/** Guarda o tempo de simulação */
 	public double tempo;
-	/** Identifica a simulaï¿½ï¿½o (nï¿½o usada) */
+	/** Identifica a simulação (não usada) */
 	public int idSimulacao;
-	/** Identifica a simulaï¿½ï¿½o (nï¿½o usada) */
+	/** Identifica a simulação (não usada) */
 	public int idRamoSimulacao;
-	/** Guarda o nï¿½mero de pontos descartados para comparar com a amostragem */
+	/** Guarda o número de pontos descartados para comparar com a amostragem */
 	public int quantidadePontos;
-	/** Mostra quantos pontos sï¿½o descartados para se enviar um ponto para
+	/** Mostra quantos pontos são descartados para se enviar um ponto para
 			interface */
 	public int periodoAmostragem;
 	/** Tamanho da fila de espera de pontos para ser enviado para a interface */
 	public int bufferSendPoints;
-	/** Mostra se passa ou nï¿½o pelo controle no algoritmo */
+	/** Mostra se passa ou não pelo controle no algoritmo */
 	public boolean byPassController;
-	/** forï¿½a o envio do ponto inicial da etapa */
+	/** força o envio do ponto inicial da etapa */
 	public boolean forcarPontosI;
-	/** forï¿½a o envio do ponto final da etapa */
+	/** força o envio do ponto final da etapa */
 	public boolean forcarPontosF;
 	/** VariÃ¡vel para informar se o pistÃ£o chegou ou nÃ£o Ã  superfÃ­cie */
 	public boolean ChegouSup;
 	/** Variï¿½vel que iria para desenho do processo */
 	public double M_PI;
-	/** Parï¿½metro que verifica se o pedido de alteraï¿½ï¿½o da vï¿½lvula motora foi
-			feito ou nï¿½o */
-	public boolean alterarValvula;
+	/** Parâmetro que verifica se o pedido de alteração da válvula motora foi
+			feita ou não */
+	public boolean changeStateValve;
 	/** Arquivo de impressão de variáveis de ciclo */
 	public PrintWriter arquivo;
 	/** Armazena o número do ciclo da execução corrente */
@@ -74,7 +73,7 @@ public class Simulation {
 		byPassController  = true;
 		forcarPontosI     = true;
 		forcarPontosF     = true;
-		alterarValvula	  = false;
+		changeStateValve	  = false;
 		M_PI              = 3.14159265;
 		cyclenumber       = 1;
 		try {
@@ -349,7 +348,7 @@ public class Simulation {
 		/* Abertura da Valvula Motora */
 		for( v.d = 0, v.i = 1; (v.H - v.delta_h) > 0 &&
 				(f.tempos.Ontime - v.i * c.step - v.Transient) > 0 &&
-				(!this.alterarValvula); v.i++ ){
+				(!this.changeStateValve); v.i++ ){
 			if( (int)(v.i * c.step * 10) % 10 == 0) {
 				v.templ = 0.0 /*Lcauda-Hplg*/;
 				v.LtbgX = (v.flag == 0 ? f.tempos.Ltbg : v.LtbgZ);
@@ -657,8 +656,8 @@ public class Simulation {
 		//ENVIANDO MENSAGEM COM O TEMPO DE DURACAO DA SUBIDA PISTAO
 		this.enviarVarCiclo(CycleStage.STAGE_RISE_DURATION, v.i * c.step);
 		//Se a válvula foi alterada, então chamar buildup
-		if ( this.alterarValvula ) {
-			this.alterarValvula = false;
+		if ( this.changeStateValve ) {
+			this.changeStateValve = false;
 			c.estagio = c.AFTERFLOW;
 			this.ChegouSup = false;
 		}
@@ -698,7 +697,7 @@ public class Simulation {
 		//ENQUANTO O PISTAO NAO CHEGAR TOTALMENTE NA SUPERFICIE E O TEMPO DA VALVULA ABERTA NAO TIVER TERMINADO
 		for(v.j = 0; f.tubing.Lcauda > f.varSaida.Hplg &&
 					f.tempos.Ontime - (v.i*c.step + v.j*c.step_ + v.Transient) > 0 &&
-					(!this.alterarValvula); v.j++){//for1
+					(!this.changeStateValve); v.j++){//for1
 			/* A CADA INTERVALO CONSTANTE DE TEMPO, ï¿½ ATUALIZADO A VARIAVEL TEMPL(MAIS ABAIXO)
 			 * j ï¿½ O CONTADOR DO FOR(VARIAVEL) E step_ ï¿½ UM DOS PASSOS DE INTEGRACAO(CONSTANTE)
 			 * QUANDO A MULTIPLICACAO DELES FOR X.0X, A CONDICAO ï¿½ COMPLETA
@@ -881,8 +880,8 @@ public class Simulation {
 		//Enviando o tempo de duraï¿½ï¿½o da etapa de produï¿½ï¿½o
 		enviarVarCiclo(CycleStage.STAGE_PRODUC_DURATION, v.j * c.step_);
 		//Se a vï¿½lvula foi alterada de estado
-		if ( this.alterarValvula ) {
-			this.alterarValvula = false;
+		if ( this.changeStateValve ) {
+			this.changeStateValve = false;
 			this.ChegouSup = false;
 			c.estagio = c.AFTERFLOW;
 		}
@@ -1035,7 +1034,7 @@ public class Simulation {
 		//PRESSï¿½O NA COLUNA DE Gï¿½S ABAIXO DO PISTï¿½O
 		v.Pt = f.tempos.PcsgT - c.ROliq * c.G * f.tempos.Ltbg;
 		//PARA UM TEMPO MENOR QUE O DE AFTERFLOW
-		for(v.k = 1; v.k*c.step_aft < f.tempos.Afterflow && (!this.alterarValvula); v.k++) {
+		for(v.k = 1; v.k*c.step_aft < f.tempos.Afterflow && (!this.changeStateValve); v.k++) {
 			/*****/
 			if((int)(v.j*c.step_aft*10) % 10 == 0){
 				v.templ = f.tubing.Lcauda - f.varSaida.Hplg;
@@ -1166,7 +1165,7 @@ public class Simulation {
 			this.controller.check();
 		} /*   fim do FOR  AfterFlow  -  linha 1415    */
 		//Colocando valor default para a alteracao da variï¿½vel
-		this.alterarValvula = false;
+		this.changeStateValve = false;
 
 		//FORï¿½ANDO O PLOTE DO ULTIMO PONTO DA ETAPA
 		if ( forcarPontosF ) {
@@ -1232,7 +1231,7 @@ public class Simulation {
 		//(estiver passando pelo controle e o pistao ainda nao chegou no fundo)) e
 		//pedido de alteraÃ§Ã£o de vÃ¡lvula motora
 
-		for( v.m = 1; ( tpgasto < f.tempos.Offtime || f.varSaida.Hplg > 0 ) && (!this.alterarValvula); v.m++ ) {
+		for( v.m = 1; ( tpgasto < f.tempos.Offtime || f.varSaida.Hplg > 0 ) && (!this.changeStateValve); v.m++ ) {
 			///////////////////////////////////////////////////
 			if ( v.m >= 100) {
 				periodoAmostragem = 120;
@@ -1479,7 +1478,7 @@ public class Simulation {
 			//Checks the controller
 			this.controller.check();
 		}/*  fim do FOR (shut-in) OFF: - linha 1429  */
-		this.alterarValvula = false;
+		this.changeStateValve = false;
 		//FORÃ‡ANDO O PLOTE DO ULTIMO PONTO DA ETAPA
 		if ( forcarPontosF ) {
 			quantidadePontos = periodoAmostragem + 1;
@@ -1629,7 +1628,6 @@ public class Simulation {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			arquivo.close();
@@ -1646,10 +1644,8 @@ public class Simulation {
 			arquivo.println("Duração do ciclo:                " + valor);
 			arquivo.println();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} finally {
 			arquivo.close();
@@ -1659,8 +1655,8 @@ public class Simulation {
 	/**
 	 * @brief Função que recebe o pedido de alteração no estado da válvula motora.
 	 */
-	public void alterValvula() {
-		this.alterarValvula = true;
+	public void changeStateValve() {
+		this.changeStateValve = true;
 	}
 
 }
