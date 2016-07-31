@@ -125,7 +125,7 @@ public class ButtonsListenerPrincipal implements MouseListener {
 	private void play() {
 		requisition.setStop(false);
 		if ( this.isSuspended == false ) {
-			requisition.setVariables(InitialCondition.getInstance().getVariables());
+			requisition.setVariables(InitialCondition.getInstance().getVariables(),InitialCondition.getInstance().getTypeController());
 			requisition.passVariablesToSimulation();
 			if ( isStoped == false ) {
 				t.start();				

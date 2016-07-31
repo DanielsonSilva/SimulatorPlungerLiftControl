@@ -1231,7 +1231,7 @@ public class Simulation {
 		//(estiver passando pelo controle e o pistao ainda nao chegou no fundo)) e
 		//pedido de alteraÃ§Ã£o de vÃ¡lvula motora
 
-		for( v.m = 1; ( tpgasto < f.tempos.Offtime || f.varSaida.Hplg > 0 ) && (!this.changeStateValve); v.m++ ) {
+		for( v.m = 1; ( tpgasto < f.tempos.Offtime /*|| f.varSaida.Hplg > 0*/ ) && (!this.changeStateValve); v.m++ ) {
 			///////////////////////////////////////////////////
 			if ( v.m >= 100) {
 				periodoAmostragem = 120;

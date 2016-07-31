@@ -20,6 +20,7 @@ public class Requisition implements Runnable {
 	private Map<String,Double> point; // One point of the cycle
 	private ResourceBundle messages; // Just to send to Principal
 	private Map<String,Double> variables; // Initial condition for the simulation
+	private int typeController; // Variable for type of controller
 	
 	/**
 	 * Constructor
@@ -57,15 +58,16 @@ public class Requisition implements Runnable {
 	/**
 	 * @param variables the variables to set
 	 */
-	public void setVariables(Map<String, Double> variables) {
+	public void setVariables(Map<String, Double> variables, int type) {
 		this.variables = variables;
+		this.typeController = type;
 	}
 	
 	/**
 	 * Pass the variables to simulation to start properly
 	 */
 	public void passVariablesToSimulation() {
-		simulationthread.setInitialCondition(variables);
+		simulationthread.setInitialCondition(variables, typeController);
 	}
 	
 	/**

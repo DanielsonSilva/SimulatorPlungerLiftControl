@@ -53,14 +53,14 @@ public class ButtonsListenerConfiguration implements MouseListener {
 	 * Take the numbers to the InitialCondition
 	 */
 	private void Confirm() {
-		double[] v = new double[42];
+		double[] v = new double[47];
 		int k = 0;
 		for( JTextField f : config.getTexts() ) { 
 			v[k] = Double.parseDouble(f.getText());
 			k = k + 1;
 		}
 		InitialCondition initial = InitialCondition.getInstance();
-		initial.Insert(v);
+		initial.Insert(v, config.getTypeController());
 		config.seteVisible(false);
 	}
 

@@ -15,7 +15,7 @@ import algorithm.Simulation;
  * 
  * @author Danielson Flavio Xavier da Silva (danielson_fx@yahoo.com.br)
  */
-public class CasingPressureController {
+public class CasingPressureController implements Controller {
 	/**
 	 * Determine the low travel time for the plunger to rise to the surface
 	 */
