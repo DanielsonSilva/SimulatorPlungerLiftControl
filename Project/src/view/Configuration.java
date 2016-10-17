@@ -145,21 +145,27 @@ public class Configuration extends JFrame {
 	 */
 	public void setFields(JFrame frame, ResourceBundle messages) {
 		Container contentPane = frame.getContentPane();
-		double[] param1 = { 1000, 0.1320, 1.995, 2.375, 4.7 };
+		//double[] param1 = { 1000, 0.1320, 1.995, 2.375, 4.7 };
+		double[] param1 = { 1176, 0.25908, 1.995, 2.375, 4.7 };
 		contentPane.add(createElement(messages, 5, "group1", param1));
 		double[] param2 = { 1000, 0.1320, 4.95, 5.5, 15.5 };
 		contentPane.add(createElement(messages, 5, "group2", param2));
 		double[] param3 = { 0.75 };
 		contentPane.add(createElement(messages, 1, "group3", param3));
-		double[] param4 = { 45 };
+		//double[] param4 = { 45 };
+		double[] param4 = { 70 };
 		contentPane.add(createElement(messages, 1, "group4", param4));
-		double[] param5 = { 50, 2.3, 26, 596 };
+		//double[] param5 = { 50, 2.3, 26, 596 };
+		double[] param5 = { 61.4, 2.3, 26, 949 };
 		contentPane.add(createElement(messages, 4, "group5", param5));
-		double[] param6 = { 90, 0.45, 4.48, 1.95 };
+		//double[] param6 = { 90, 0.45, 4.48, 1.95 };
+		double[] param6 = { 90, 0.45, 3.6, 1.95 };
 		contentPane.add(createElement(messages, 4, "group6", param6));
-		double[] param7 = { 0.5, 37, 1.01, 0.8, 1.21 };
+		//double[] param7 = { 0.5, 37, 1.01, 0.8, 1.21 };
+		double[] param7 = { 0, 45, 1.07, 0.75, 1.21 };
 		contentPane.add(createElement(messages, 5, "group7", param7));
-		double[] param8 = { 600, 585, 60, 15.3, 90 };
+		//double[] param8 = { 600, 585, 60, 15.3, 90 };
+		double[] param8 = { 600, 585, 54, 15.3, 366 };
 		contentPane.add(createElement(messages, 5, "group8", param8));
 		double[] param9 = { 10000, 1000, 10000, 10000, 10000, 0 };
 		contentPane.add(createElement(messages, 6, "group9", param9));

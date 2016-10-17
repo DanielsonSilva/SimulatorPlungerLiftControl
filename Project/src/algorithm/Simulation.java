@@ -331,6 +331,8 @@ public class Simulation {
 	 */
 	public void subidaPistao() {
 		
+		System.out.println("Subida do pistao");
+		
 		//System.out.println("Estagio: Subida do PistÃ£o");
 		//CRIACAO DE VARIAVEIS
 		Entities            f = Entities.getInstance();
@@ -668,6 +670,7 @@ public class Simulation {
 		
 		//NÃO CONSEGUIU CHEGAR NA SUPERFÃ�CIE
 		if (f.tempos.Ontime - (v.i*c.step + v.Transient) <= 0) {
+			System.out.println("Chegou na condicao de nao chegada na superficie");
 			v.j = 0;
 			v.Ntotal += v.nn;
 			Controle();
@@ -907,7 +910,8 @@ public class Simulation {
 		 */
 		v.delta_P = v.Ppart_csg - f.tempos.PcsgT;
 		//SE O PISTAO ESTIVER ACIMA DA SUPERFICIE OU NO TOPO DO TUBING
-		if( f.varSaida.Hplg <= f.tubing.Lcauda ){
+		if( f.varSaida.Hplg == f.tubing.Lcauda ){
+			//System.out.println("Condição atingida superficie");
 			//TEMPO DE CHEGADA DO PISTAO RECEBE A SOMA  DOS TEMPOS DE OCORRENCIA
 			//DAS ETAPAS ANTERIORES MAIS O TEMPO QUE A ONDA ACUSTICA ATRAVESSA
 			//O GAS NO TUBING ATE ATINGIR A GOLFADA
@@ -915,6 +919,7 @@ public class Simulation {
 		}
 		//SE O PISTAO NAO CHEGOU NA SUPERFICIE
 		else{
+			//System.out.println("Condição NAO atingida superficie");
 			//TEMPO DE CHEGADA DO PISTAO E ZERO
 			v.piston_arrival = 0;
 		}
@@ -1193,6 +1198,7 @@ public class Simulation {
 		UtilEquations       ue= new UtilEquations();
 		
 		//System.out.println("Estagio: BuildUp | " + c.estagio);
+		//System.out.println("Chegou na iteracao do Buildup");
 		
 		this.ChegouSup = false;
 
@@ -1231,7 +1237,7 @@ public class Simulation {
 		//(estiver passando pelo controle e o pistao ainda nao chegou no fundo)) e
 		//pedido de alteraÃ§Ã£o de vÃ¡lvula motora
 
-		for( v.m = 1; ( tpgasto < f.tempos.Offtime /*|| f.varSaida.Hplg > 0*/ ) && (!this.changeStateValve); v.m++ ) {
+		for( v.m = 1; ( tpgasto < f.tempos.Offtime /*|| f.varSaida.Hplg > 0*/ ) && (!this.changeStateValve); v.m++ ) { //System.out.println("Iteracao do buildup com tp gasto = " + tpgasto);
 			///////////////////////////////////////////////////
 			if ( v.m >= 100) {
 				periodoAmostragem = 120;
