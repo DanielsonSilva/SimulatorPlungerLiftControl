@@ -1,0 +1,56 @@
+Diameter of Motor Valve Changed to 1.5:
+
+No Ciclo 2
+Pressao mínima do Anular: 0.0
+Pressão mínima da Coluna de Produção: 0.0
+Pressão máxima da Coluna de Produção: 0.0
+
+No Ciclo 3
+Pressao mínima do Anular: 167.41363478628853
+Pressão mínima da Coluna de Produção: 69.96802440687283
+Pressão máxima da Coluna de Produção: 352.15490131977936
+
+No Ciclo 4
+Pressao mínima do Anular: 242.99485997348495
+Pressão mínima da Coluna de Produção: 69.99110570954433
+Pressão máxima da Coluna de Produção: 461.77319975285485
+
+No Ciclo 5
+Pressao mínima do Anular: 251.60109151951104
+Pressão mínima da Coluna de Produção: 69.99590420081849
+Pressão máxima da Coluna de Produção: 485.30486980033254
+
+No Ciclo 6
+Pressao mínima do Anular: 257.389703284949
+Pressão mínima da Coluna de Produção: 69.98905870172268
+Pressão máxima da Coluna de Produção: 496.4075280580727
+
+No Ciclo 7
+Pressao mínima do Anular: 262.0783879898613
+Pressão mínima da Coluna de Produção: 69.99230445447975
+Pressão máxima da Coluna de Produção: 508.10638838270296
+
+No Ciclo 8
+Pressao mínima do Anular: 266.31280915249306
+Pressão mínima da Coluna de Produção: 69.98756331219242
+Pressão máxima da Coluna de Produção: 515.7282045454772
+
+No Ciclo 9
+Pressao mínima do Anular: 269.2717376577934
+Pressão mínima da Coluna de Produção: 69.97644589042716
+Pressão máxima da Coluna de Produção: 523.5433289195888
+
+No Ciclo 10
+Pressao mínima do Anular: 274.0507318983198
+Pressão mínima da Coluna de Produção: 69.98351480737223
+Pressão máxima da Coluna de Produção: 532.2426369341077
+
+No Ciclo 11
+Pressao mínima do Anular: 276.7637971849713
+Pressão mínima da Coluna de Produção: 69.99241792099039
+Pressão máxima da Coluna de Produção: 538.946916433181
+
+No Ciclo 12
+Pressao mínima do Anular: 284.2561859983402
+Pressão mínima da Coluna de Produção: 69.97969526364834
+Pressão máxima da Coluna de Produção: 553.1347592946895

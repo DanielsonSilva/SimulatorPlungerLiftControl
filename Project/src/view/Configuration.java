@@ -148,7 +148,7 @@ public class Configuration extends JFrame {
 		//double[] param1 = { 1000, 0.1320, 1.995, 2.375, 4.7 };
 		double[] param1 = { 1176, 0.25908, 1.995, 2.375, 4.7 };
 		contentPane.add(createElement(messages, 5, "group1", param1));
-		double[] param2 = { 1000, 0.1320, 4.95, 5.5, 15.5 };
+		double[] param2 = { 1176, 0.1320, 4.95, 5.5, 15.5 };
 		contentPane.add(createElement(messages, 5, "group2", param2));
 		double[] param3 = { 0.75 };
 		contentPane.add(createElement(messages, 1, "group3", param3));

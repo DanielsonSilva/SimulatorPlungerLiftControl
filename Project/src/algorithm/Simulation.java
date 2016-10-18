@@ -49,6 +49,10 @@ public class Simulation {
 	/** Controller of the current simulation */
 	private Controller controller;
 	
+	private double pminCsgSup;
+	private double pmaxTbgSup;
+	private double pminTbgSup;
+	
 	private static Simulation instance;
 	
 	public static synchronized Simulation getInstance() {
@@ -76,6 +80,9 @@ public class Simulation {
 		changeStateValve	  = false;
 		M_PI              = 3.14159265;
 		cyclenumber       = 1;
+		pminCsgSup = 0.;
+		pmaxTbgSup = 0.;
+		pminTbgSup = 0.;
 		try {
 			arquivo  = new PrintWriter("variaveis_de_ciclo.txt");
 		} catch (FileNotFoundException e) {
@@ -211,9 +218,24 @@ public class Simulation {
 		DataConstants       c = DataConstants.getInstance();
 		SimulationVariables v = SimulationVariables.getInstance();
 		UtilEquations       ue= new UtilEquations();
+		Conversion 		  conv= new Conversion();
 
 		enviarVarCiclo(CycleStage.CYCLE_START, this.cyclenumber);
 		this.cyclenumber = this.cyclenumber + 1;
+		
+		// Checar Variáveis de Validação do Modelo
+		
+		System.out.println();
+		System.out.println("No Ciclo " + this.cyclenumber);
+		System.out.println("Pressao mínima do Anular: " + conv.paToPsi(this.pminCsgSup));
+		System.out.println("Pressão mínima da Coluna de Produção: " + conv.paToPsi(this.pminTbgSup));
+		System.out.println("Pressão máxima da Coluna de Produção: " + conv.paToPsi(this.pmaxTbgSup));
+		
+		pminCsgSup = 1000000000.;
+		pmaxTbgSup = 0.;
+		pminTbgSup = 1000000000.;
+		
+		//----------------------------------------
 		
 		v.Ppart_csg = f.tempos.PcsgT;
 		v.Ppart_tbg = f.varSaida.PtbgT;
@@ -646,6 +668,15 @@ public class Simulation {
 			addTempo();
 			//Checks the controller
 			this.controller.check();
+			if (Double.compare(this.pminCsgSup, f.tempos.PcsgT) > 0) {
+				this.pminCsgSup = f.tempos.PcsgT;
+			}
+			if (Double.compare(this.pminTbgSup, f.varSaida.PtbgT) > 0) {
+				this.pminTbgSup = f.varSaida.PtbgT;
+			}
+			if (Double.compare(this.pmaxTbgSup, f.varSaida.PtbgT) < 0) {
+				this.pmaxTbgSup = f.varSaida.PtbgT;
+			}
 		}/* fim do FOR Abrir Valv Motora */
 
 		//FORÃ‡ANDO O PLOTE DO ÃšLTIMO PONTO DA ETAPA
@@ -870,6 +901,15 @@ public class Simulation {
 			addTempo();
 			//Checks the controller
 			this.controller.check();
+			if (Double.compare(this.pminCsgSup, f.tempos.PcsgT) > 0) {
+				this.pminCsgSup = f.tempos.PcsgT;
+			}
+			if (Double.compare(this.pminTbgSup, f.varSaida.PtbgT) > 0) {
+				this.pminTbgSup = f.varSaida.PtbgT;
+			}
+			if (Double.compare(this.pmaxTbgSup, f.varSaida.PtbgT) < 0) {
+				this.pmaxTbgSup = f.varSaida.PtbgT;
+			}
 		}//fim for1
 
 		//FORï¿½ANDO O PLOTE DO ULTIMO PONTO DA ETAPA
@@ -923,7 +963,7 @@ public class Simulation {
 		}
 
 		//CALCULA A PRODUCAO
-		System.out.println("LslgX: " + v.LslgX + " |Lslg: " + f.tempos.Lslg);
+		//System.out.println("LslgX: " + v.LslgX + " |Lslg: " + f.tempos.Lslg);
 		v.production = (float)((v.LslgX - f.tempos.Lslg)*c.AItbg*6.2848352758387*(1 - c.FW));
 	    //PRODUï¿½ï¿½O ACUMULADA
 		v.total_production = v.total_production + v.production;
@@ -941,7 +981,7 @@ public class Simulation {
 		//SE O PISTAO JA CHEGOU NA SUPERFICIE
 		if( v.piston_arrival != 0 ){
 			//CALCULA A VELOCIDADE DA MESMA MANEIRA QUE O TEMP
-			System.out.println("LCauda:" + f.tubing.Lcauda);
+			//System.out.println("LCauda:" + f.tubing.Lcauda);
 			v.velocity = (float)(f.tubing.Lcauda/(v.j/(1.0/ c.step_) + v.i/(1.0/ c.step) + v.Transient));
 			//ENVIANDO OS DADOS PARA A INTERFACE
 			//DADO DE VELOCIDADE MEDIA DE SUBIDA DO PISTAO
@@ -1168,6 +1208,15 @@ public class Simulation {
 			addTempo();
 			//Checks the controller
 			this.controller.check();
+			if (Double.compare(this.pminCsgSup, f.tempos.PcsgT) > 0) {
+				this.pminCsgSup = f.tempos.PcsgT;
+			}
+			if (Double.compare(this.pminTbgSup, f.varSaida.PtbgT) > 0) {
+				this.pminTbgSup = f.varSaida.PtbgT;
+			}
+			if (Double.compare(this.pmaxTbgSup, f.varSaida.PtbgT) < 0) {
+				this.pmaxTbgSup = f.varSaida.PtbgT;
+			}
 		} /*   fim do FOR  AfterFlow  -  linha 1415    */
 		//Colocando valor default para a alteracao da variï¿½vel
 		this.changeStateValve = false;
@@ -1483,6 +1532,15 @@ public class Simulation {
 			addTempo();
 			//Checks the controller
 			this.controller.check();
+			if (Double.compare(this.pminCsgSup, f.tempos.PcsgT) > 0) {
+				this.pminCsgSup = f.tempos.PcsgT;
+			}
+			if (Double.compare(this.pminTbgSup, f.varSaida.PtbgT) > 0) {
+				this.pminTbgSup = f.varSaida.PtbgT;
+			}
+			if (Double.compare(this.pmaxTbgSup, f.varSaida.PtbgT) < 0) {
+				this.pmaxTbgSup = f.varSaida.PtbgT;
+			}
 		}/*  fim do FOR (shut-in) OFF: - linha 1429  */
 		this.changeStateValve = false;
 		//FORÃ‡ANDO O PLOTE DO ULTIMO PONTO DA ETAPA
