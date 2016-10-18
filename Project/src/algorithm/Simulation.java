@@ -331,8 +331,6 @@ public class Simulation {
 	 */
 	public void subidaPistao() {
 		
-		System.out.println("Subida do pistao");
-		
 		//System.out.println("Estagio: Subida do PistÃ£o");
 		//CRIACAO DE VARIAVEIS
 		Entities            f = Entities.getInstance();
@@ -925,7 +923,8 @@ public class Simulation {
 		}
 
 		//CALCULA A PRODUCAO
-		v.production = (float)((v.LslgX - f.tempos.Lslg)*c.AItbg*6.2848352758387*(1- c.FW));
+		System.out.println("LslgX: " + v.LslgX + " |Lslg: " + f.tempos.Lslg);
+		v.production = (float)((v.LslgX - f.tempos.Lslg)*c.AItbg*6.2848352758387*(1 - c.FW));
 	    //PRODUï¿½ï¿½O ACUMULADA
 		v.total_production = v.total_production + v.production;
 		//TEMP TEM DIMENSOES DE VELOCIDADE
@@ -942,6 +941,7 @@ public class Simulation {
 		//SE O PISTAO JA CHEGOU NA SUPERFICIE
 		if( v.piston_arrival != 0 ){
 			//CALCULA A VELOCIDADE DA MESMA MANEIRA QUE O TEMP
+			System.out.println("LCauda:" + f.tubing.Lcauda);
 			v.velocity = (float)(f.tubing.Lcauda/(v.j/(1.0/ c.step_) + v.i/(1.0/ c.step) + v.Transient));
 			//ENVIANDO OS DADOS PARA A INTERFACE
 			//DADO DE VELOCIDADE MEDIA DE SUBIDA DO PISTAO
@@ -1237,7 +1237,7 @@ public class Simulation {
 		//(estiver passando pelo controle e o pistao ainda nao chegou no fundo)) e
 		//pedido de alteraÃ§Ã£o de vÃ¡lvula motora
 
-		for( v.m = 1; ( tpgasto < f.tempos.Offtime /*|| f.varSaida.Hplg > 0*/ ) && (!this.changeStateValve); v.m++ ) { //System.out.println("Iteracao do buildup com tp gasto = " + tpgasto);
+		for( v.m = 1; ( tpgasto < f.tempos.Offtime || f.varSaida.Hplg > 0 ) && (!this.changeStateValve); v.m++ ) { //System.out.println("Iteracao do buildup com tp gasto = " + tpgasto);
 			///////////////////////////////////////////////////
 			if ( v.m >= 100) {
 				periodoAmostragem = 120;
