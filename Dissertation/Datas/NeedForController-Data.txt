@@ -1,0 +1,69 @@
+Características do Ciclo nº1
+Duração da etapa Subida:         78.34
+Duração da etapa Produção:       1.44
+Volume de produção no Ciclo:     0.19393397867679596
+Total produzido pelo poço:       0.19393397867679596
+Tempo de viagem do pistão:       82.0
+Média de velocidade do pistão:   14.182205200195312
+Velocidade de impacto do pistão: 9.356774165009915
+Duração da etapa Afterflow:      500.0
+Duração da etapa Build-up:       1547.46
+Duração do ciclo:                2127.24
+
+Características do Ciclo nº2
+Duração da etapa Subida:         597.6
+Volume de produção no Ciclo:     0.0
+Total produzido pelo poço:       0.19393397867679596
+Tempo de viagem do pistão:       0.0
+Duração da etapa Build-up:       987.73
+Duração do ciclo:                1585.33
+
+Características do Ciclo nº3
+Duração da etapa Subida:         597.98
+Volume de produção no Ciclo:     0.0
+Total produzido pelo poço:       0.19393397867679596
+Tempo de viagem do pistão:       0.0
+Duração da etapa Build-up:       668.12
+Duração do ciclo:                1266.1
+
+Características do Ciclo nº4
+Duração da etapa Subida:         598.19
+Volume de produção no Ciclo:     0.0
+Total produzido pelo poço:       0.19393397867679596
+Tempo de viagem do pistão:       0.0
+Duração da etapa Build-up:       500.02000000000004
+Duração do ciclo:                1098.21
+
+Características do Ciclo nº5
+Duração da etapa Subida:         598.33
+Volume de produção no Ciclo:     0.0
+Total produzido pelo poço:       0.19393397867679596
+Tempo de viagem do pistão:       0.0
+Duração da etapa Build-up:       500.02000000000004
+Duração do ciclo:                1098.3500000000001
+
+Características do Ciclo nº6
+Duração da etapa Subida:         598.4300000000001
+Volume de produção no Ciclo:     0.0
+Total produzido pelo poço:       0.19393397867679596
+Tempo de viagem do pistão:       0.0
+Duração da etapa Build-up:       500.02000000000004
+Duração do ciclo:                1098.45
+
+Características do Ciclo nº7
+Duração da etapa Subida:         598.51
+Volume de produção no Ciclo:     0.0
+Total produzido pelo poço:       0.19393397867679596
+Tempo de viagem do pistão:       0.0
+Duração da etapa Build-up:       500.02000000000004
+Duração do ciclo:                1098.53
+
+Características do Ciclo nº8
+Duração da etapa Subida:         598.57
+Volume de produção no Ciclo:     0.0
+Total produzido pelo poço:       0.19393397867679596
+Tempo de viagem do pistão:       0.0
+Duração da etapa Build-up:       500.02000000000004
+Duração do ciclo:                1098.5900000000001
+
+Características do Ciclo nº9
