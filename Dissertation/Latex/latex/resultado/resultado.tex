@@ -1,0 +1,130 @@
+%%
+%% Capítulo 4: Resultados Parciais
+%%
+\mychapter{Resultados Parciais}
+\label{Cap:resultados}
+Após o desenvolvimento de um sistema, é necessário uma bateria de testes para verificação da exatidão dos valores calculados e se o andamento ocorre sem travas ou erros em tempo de execução. O desenvolvedor deve realizar diversos testes com algumas configurações diferentes de uso para investigar possíveis falhas que venham tornar o sistema inoperante. Alguns dos testes realizados são explicados e verificam o funcionamento do método \textit{plunger lift} corretamente.
+
+O \textit{software} simulador do método de elevação artificial \textit{plunger lift} explicado no capítulo \ref{Cap:simulador} foi construído e testado para um poço com valores mostrados na figura \ref{Fig:condicoesiniciais}. Os resultados foram satisfatórios no momento em que a simulação mostra um comportamento cíclico evidenciando o método de estudo. Podem-se observar as pressões sendo incrementadas durante a fase de \textit{build-up} e sendo decrementadas nas outras fases. Percebe-se a altura do pistão em todas as etapas quando o mesmo se dirige à superfície e ao fundo do poço durante cada ciclo. A figura \ref{Fig:simulacaoteste} mostra um exemplo de uma simulação durante X ciclos com todas as variáveis possíveis, passível de obter uma ampliação em qualquer área deste gráfico.
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=1.00\linewidth]{resultado/simulacaoteste}}
+		\caption{Exemplo de uma execução bem sucedida durante 3 ciclos completos com configuração do poço padrão}
+		\label{Fig:simulacaoteste}
+	\end{center}
+\end{figure}
+Nos ciclos mostrados na figura \ref{Fig:simulacaoteste} foram obtidos alguns valores via arquivo de texto sobre variáveis de cada um destes ciclos. Estes valores servem para diversos propósitos, como a futura comparação de produção ou de velocidade do pistão durante a fase de subida. As variáveis e seus valores coletados durante a simulação estão expressados na tabela \ref{Tab:variaveisciclo} com suas devidas unidades de medição.
+
+\begin{table}[]
+	\centering
+	\caption{Valores dos 3 ciclos completos coletados durante a execução da figura \ref{Fig:simulacaoteste}}
+	\label{Tab:variaveisciclo}
+	\begin{tabular}{cccc}
+		\hline
+		\multirow{2}{*}{\textbf{Característica}} & \multicolumn{3}{c}{\textbf{Valores}} \\
+		\cline{2-4}
+		& \textbf{Ciclo nº1} & \textbf{Ciclo nº2} & \textbf{Ciclo nº3} \\ \hline
+		Duração da etapa Subida(s) & $123,74$ & $183,1$ & $129,97$ \\ \hline
+		Duração da etapa Produção(s) & $2.45$ & $18,55$ & $13,49$ \\ \hline
+		Duração da etapa \textit{Afterflow}(s) & $60$ & $60$ & $60$ \\ \hline
+		Duração da etapa \textit{Build-up}(s) & $585,02$ & $585,02$ & $585,02$ \\ \hline
+		Duração do ciclo completo(s) & $771,21$ & $846,67$ & $788,48$ \\ \hline
+		Volume de produção no Ciclo(barril) & $0,193$ & $1,19$ & $1,102$ \\ \hline
+		Total produzido pelo poço(barril) & $0,193$ & $1,383$ & $2,484$ \\ \hline
+		Tempo de viagem do pistão(s) & $128$ & $204$ & $145$ \\ \hline
+		Média de velocidade do pistão($\frac{m}{s}$) & $7,759$ & $4,899$ & $6,851$ \\ \hline
+		Velocidade de impacto do pistão($\frac{m}{s}$) & $5,778$ & $6,845$ & $8,098$ \\ \hline
+	\end{tabular}
+\end{table}
+Ao modificar algumas variáveis exploráveis no simulador, verifica-se mudanças significativas no funcionamento do método e comportamentos diversos no processo. Ao acrescentar o tempo de pós-fluxo do método em 120 segundos, tornando a duração da etapa total em 180 segundos, verifica-se o comportamento das pressões dentro do poço. Durante a fase de pós-fluxo as pressões no topo da coluna de produção, na base e no topo do anular caem de forma consideravelmente maior que na etapa de subida do pistão. Isso é consequência do atingimento do pistão na superfície e a possibilidade do gás que há dentro do poço sair pela linha de produção sem obstáculos. Ao não modificar o tempo de válvula fechada ao variar o tempo de pós-fluxo, verifica-se também que o pistão não consegue chegar ao fundo do poço, tornando a produção de líquido do poço menor. Como durante a fase de \textit{afterflow} o poço libera gás, o poço perde pressão e torna a viagem do pistão à superfície mais lenta, diminuindo a velocidade média e o impacto do pistão na chegada à superfície. Toda a simulação descrita neste parágrafo pode ser vista na figura \ref{Fig:simulacaoposfluxo} e os valores de certas variáveis nos ciclos simulados são descritos na tabela \ref{Tab:simulacaoposfluxo}.
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=1.00\linewidth]{resultado/simulacaoposfluxo}}
+		\caption{Simulação de um poço onde o tempo da etapa de \textit{afterflow} foi alterado para 180 segundos}
+		\label{Fig:simulacaoposfluxo}
+	\end{center}
+\end{figure}
+
+\begin{table}[]
+	\centering
+	\caption{Valores dos 3 ciclos completos coletados durante a execução da figura \ref{Fig:simulacaoposfluxo}}
+	\label{Tab:simulacaoposfluxo}
+	\begin{tabular}{cccc}
+		\hline
+		\multirow{2}{*}{\textbf{Característica}} & \multicolumn{3}{c}{\textbf{Valores}} \\
+		\cline{2-4}
+		& \textbf{Ciclo nº1} & \textbf{Ciclo nº2} & \textbf{Ciclo nº3} \\ \hline
+		Duração da etapa Subida(s) & $123,74$ & $183,23$ & $142,86$ \\ \hline
+		Duração da etapa Produção(s) & $2,45$ & $19,09$ & $15,51$ \\ \hline
+		Duração da etapa \textit{Afterflow}(s) & $180$ & $180$ & $180$ \\ \hline
+		Duração da etapa \textit{Build-up}(s) & $585,02$ & $585,02$ & $585,02$ \\ \hline
+		Duração do ciclo completo(s) & $891,21$ & $967,33$ & $923,39$ \\ \hline
+		Volume de produção no Ciclo(barril) & $0,193$ & $1,20$ & $1,15$ \\ \hline
+		Total produzido pelo poço(barril) & $0,193$ & $1,398$ & $2,548$ \\ \hline
+		Tempo de viagem do pistão(s) & $128$ & $204$ & $160$ \\ \hline
+		Média de velocidade do pistão($\frac{m}{s}$) & $7,759$ & $4,884$ & $6,219$ \\ \hline
+		Velocidade de impacto do pistão($\frac{m}{s}$) & $5,778$ & $6,798$ & $7,574$ \\ \hline
+	\end{tabular}
+\end{table}
+Logo, quando o operador deseja diminuir a velocidade do pistão para decrementar a força de impacto do pistão ao chegar à superfície, deve-se aumentar o tempo de pós-fluxo para obter sucesso no resultado. Mas quando o operador quer o oposto do descrito, deve-se aumentar o tempo de válvula fechada. Com um maior tempo de válvula fechada, o poço deve acumular mais energia para, quando for a etapa de subida do pistão, impulsionar o êmbolo com maior força, aumentando a sua velocidade média e de impacto consideravelmente. Com um tempo de válvula fechada suficientemente alto, garante-se a chegada do pistão ao fundo do poço mantendo a produção de líquido alta trazendo toda a golfada formada no fundo do poço para a superfície. O aumento da velocidade pela maior pressão dentro do poço é contrabalanceada com o maior peso da golfada que o êmbolo deve carregar pela coluna de produção. A execução da simulação com um tempo de válvula fechada ajustado para 900 segundos pode ser observada pela figura \ref{Fig:simulacaobuildup} e seus valores das variáveis de ciclo pela tabela \ref{Tab:simulacaobuildup}.
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=1.00\linewidth]{resultado/simulacaobuildup}}
+		\caption{Simulação de um poço onde o tempo da etapa de \textit{build-up} foi alterado para 900 segundos}
+		\label{Fig:simulacaobuildup}
+	\end{center}
+\end{figure}
+
+\begin{table}[]
+	\centering
+	\caption{Valores dos 3 ciclos completos coletados durante a execução da figura \ref{Fig:simulacaobuildup}}
+	\label{Tab:simulacaobuildup}
+	\begin{tabular}{cccc}
+		\hline
+		\multirow{2}{*}{\textbf{Característica}} & \multicolumn{3}{c}{\textbf{Valores}} \\
+		\cline{2-4}
+		& \textbf{Ciclo nº1} & \textbf{Ciclo nº2} & \textbf{Ciclo nº3} \\ \hline
+		Duração da etapa Subida(s) 				& $123,74$ 	& $210,49$ 	& $140,65$ 	\\ \hline
+		Duração da etapa Produção(s) 			& $2.45$ 	& $28,14$ 	& $19,12$ 	\\ \hline
+		Duração da etapa \textit{Afterflow}(s) 	& $60$ 		& $60$ 		& $60$ 		\\ \hline
+		Duração da etapa \textit{Build-up}(s) 	& $900$ 	& $900$ 	& $900$ 	\\ \hline
+		Duração do ciclo completo(s) 			& $1086,21$ & $1198,65$ & $1119,79$ \\ \hline
+		Volume de produção no Ciclo(barril) 	& $0,193$ 	& $1,79$ 	& $1,60$ 	\\ \hline
+		Total produzido pelo poço(barril) 		& $0,193$ 	& $1,981$ 	& $3,581$ 	\\ \hline
+		Tempo de viagem do pistão(s) 			& $128$ 	& $240$ 	& $162$ 	\\ \hline
+		Média de velocidade do pistão($\frac{m}{s}$) 	& $7,759$ & $4,149$ & $6,164$ \\ \hline
+		Velocidade de impacto do pistão($\frac{m}{s}$) 	& $5,778$ & $7,662$ & $9,095$ \\ \hline
+	\end{tabular}
+\end{table}
+O simulador também permite a alteração de mais variáveis do tempo de etapas simultaneamente dos que os executados nas figuras \ref{Fig:simulacaoposfluxo} e \ref{Fig:simulacaobuildup}. Ao alterar o tempo de \textit{afterflow} do ciclo para 450 segundos e o tempo de válvula fechada para 1200 segundos, obtêm-se a execução mostrada na figura \ref{Fig:simulacaoposbuildup} e suas variáveis de ciclo na tabela \ref{Tab:simulacaoposbuildup}. Nesta execução, observa-se uma mudança na inclinação durante a trajetória do pistão (linha vermelha), na etapa de subida do pistão nos tr?s ciclos mostrados, próximo da superfície. Isto é causado pelo amplo volume da golfada, que se formou durante a grande duração do ciclo, que o êmbolo traz consigo do fundo do poço. O desvio da golfada para a linha de produção torna-se um grande obstáculo para o êmbolo atingir a superfície. Então quando todo o volume da golfada foi produzido e não há mais obstáculos para o pistão, o mesmo aumenta sua velocidade consideravelmente até a superfície.
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=1.00\linewidth]{resultado/simulacaoposbuildup}}
+		\caption{Simulação de um poço onde o tempo da etapa de \textit{build-up} foi alterado para 1200 segundos e a etapa de pós-fluxo para 450 segundos}
+		\label{Fig:simulacaoposbuildup}
+	\end{center}
+\end{figure}
+
+\begin{table}[]
+	\centering
+	\caption{Valores dos 3 ciclos completos coletados durante a execução da figura \ref{Fig:simulacaoposbuildup}}
+	\label{Tab:simulacaoposbuildup}
+	\begin{tabular}{cccc}
+		\hline
+		\multirow{2}{*}{\textbf{Característica}} & \multicolumn{3}{c}{\textbf{Valores}} \\
+		\cline{2-4}
+		& \textbf{Ciclo nº1} & \textbf{Ciclo nº2} & \textbf{Ciclo nº3} \\ \hline
+		Duração da etapa Subida(s) 				& $123,74$ 	& $290,35$ 	& $260,87$ 	\\ \hline
+		Duração da etapa Produção(s) 			& $2.45$ 	& $49,83$ 	& $47,73$ 	\\ \hline
+		Duração da etapa \textit{Afterflow}(s) 	& $450$		& $450$ 	& $450$		\\ \hline
+		Duração da etapa \textit{Build-up}(s) 	& $1200$ 	& $1200$ 	& $1200$ 	\\ \hline
+		Duração do ciclo completo(s) 			& $1776,21$ & $1990,2$ 	& $1958,62$ \\ \hline
+		Volume de produção no Ciclo(barril) 	& $0,193$ 	& $2,824$ 	& $2,843$ 	\\ \hline
+		Total produzido pelo poço(barril) 		& $0,193$ 	& $3,017$ 	& $5,860$ 	\\ \hline
+		Tempo de viagem do pistão(s) 			& $128$ 	& $342$ 	& $310$ 	\\ \hline
+		Média de velocidade do pistão($\frac{m}{s}$) 	& $7,759$ & $2,921$ & $3,218$ \\ \hline
+		Velocidade de impacto do pistão($\frac{m}{s}$) 	& $5,778$ & $8,400$ & $8,656$ \\ \hline
+	\end{tabular}
+\end{table}
+Estes resultados exemplificam os tipos de simulações que podem ser realizadas com este simulador e que conclusões pode-se tirar do gráfico formado e dos valores de suas variáveis de ciclo. Dependendo dos valores dos tempos de cada etapa do método, a simulação pode seguir diversos caminhos, otimizados ou não. De acordo com os resultados coletados durante todo projeto, o simulador segue conforme o esperado apresentando comportamento adequado e execução suave em processadores medianos. O simulador se apresenta preparado para receber a implementação dos controladores e analisar os resultados através das variáveis exploradas neste capítulo. As variáveis coletadas são suficientes para tirar conclusões nas futuras comparações entre controladores diversos.

@@ -1,0 +1,20 @@
+Simulação 1:
+Alteração de tempo de pós fluxo para 180s
+Liberação de pressão
+
+Simulação 2:
+Alteração de tempo de fechada para 900s
+Acúmulo de pressão
+
+Simulação 3:
+Alteração de tempo de aberta para 400s
+Pistão não chega no fundo
+
+Simulação 4:
+Alteração: Fechada para 1200 e pos fluxo para 450
+Comportamento do pos fluxo
+
+Simulação 5:
+Valvula fechada para 450
+Nao chega no fundo e verificar tempo de viagem do pistao
+

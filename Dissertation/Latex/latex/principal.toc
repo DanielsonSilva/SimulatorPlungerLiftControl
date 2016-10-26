@@ -1,0 +1,27 @@
+\select@language {brazil}
+\contentsline {chapter}{Sum\'ario}{i}{chapter*.2}
+\contentsline {chapter}{Lista de Figuras}{iii}{chapter*.3}
+\contentsline {chapter}{Lista de Tabelas}{v}{chapter*.4}
+\contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Objetivo}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Motiva\c c\~ao}{3}{section.1.2}
+\contentsline {chapter}{\numberline {2}M\'etodo de eleva\c c\~ao artificial \textit {Plunger Lift}}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Eleva\c c\~ao Artificial}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Introdu\c c\~ao ao m\'etodo \textit {plunger lift}}{8}{section.2.2}
+\contentsline {section}{\numberline {2.3}Ciclos do m\'etodo \textit {plunger lift}}{9}{section.2.3}
+\contentsline {section}{\numberline {2.4}Equipamentos}{10}{section.2.4}
+\contentsline {section}{\numberline {2.5}Vantagens do m\'etodo}{11}{section.2.5}
+\contentsline {section}{\numberline {2.6}Modos de Controle}{11}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Controle por temporiza\c c\~ao}{12}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Controle pela press\~ao de revestimento}{13}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Controle pelo fator de carga}{13}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {2.6.4}Controle por pr\'e-carga ou \textit {Booster}}{14}{subsection.2.6.4}
+\contentsline {chapter}{\numberline {3}Simulador Computacional}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}Cria\c c\~ao do simulador computacional}{16}{section.3.1}
+\contentsline {section}{\numberline {3.2}Organiza\c c\~ao do \textit {software}}{16}{section.3.2}
+\contentsline {section}{\numberline {3.3}Principais vari\'aveis gerenciadas pelo simulador}{18}{section.3.3}
+\contentsline {section}{\numberline {3.4}Implementa\c c\~ao de controladores}{20}{section.3.4}
+\contentsline {chapter}{\numberline {4}Resultados Parciais}{23}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclus\~oes}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}Cronograma para a apresenta\c c\~ao da disserta\c c\~ao}{30}{section.5.1}
+\contentsline {chapter}{Refer\^encias bibliogr\'aficas}{31}{table.5.1}

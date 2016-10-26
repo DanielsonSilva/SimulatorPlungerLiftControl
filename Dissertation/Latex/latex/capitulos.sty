@@ -1,0 +1,54 @@
+% Package: BSheaders.sty
+%
+% Sans-Serif headers, designed to mimic the chapter/section
+% headers found in Bjarne Stroustrup's "The Design and
+% Evolution of C++" (with minor changes).  Obtained
+% modifying the original definitions in book.cls.
+%
+% Last change: MLO 1997-10-06 07:49 *****
+%
+% Author: Maurizio Loreti, aka MLO or (HAM) I3NOO
+% Work:   University of Padova - Department of Physics
+%         Via F. Marzolo, 8 - 35131 PADOVA - Italy
+% EMail:  loreti@padova.infn.it
+% WWW:    http://wwwcdf.pd.infn.it/~loreti/mlo.html
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{capitulos}
+  [1997/10/06 Chapter headers a la Bjarne Stroustrup]
+
+\@ifundefined{@mainmatter}{\newif\if@mainmatter\@mainmattertrue}{}
+
+\def\@makechapterhead#1{%
+  {%\hrule height0.25pt width\hsize\vspace*{1\p@}%
+   \hrule height0.25pt width\hsize\vspace*{20\p@}%
+   \parindent \z@ \raggedright \normalfont
+   \ifnum \c@secnumdepth >\m@ne
+     \if@mainmatter
+       \huge \bfseries \@chapapp\space \thechapter
+       \par\nobreak
+       \vskip 20\p@
+     \fi
+   \fi
+   \interlinepenalty\@M
+   \Huge \bfseries #1\par\nobreak
+   \vspace*{20\p@}%
+   %\hrule height0.25pt width\hsize\vspace*{1\p@}%
+   \hrule height0.25pt width\hsize\nobreak%
+   \vskip 48\p@
+  }}
+
+\def\@makeschapterhead#1{%
+  {%\hrule height0.25pt width\hsize\vspace*{1\p@}%
+   \hrule height0.75pt width\hsize\vspace*{20\p@}%
+   \parindent \z@ \raggedright \normalfont
+   \interlinepenalty\@M
+   \Huge \bfseries #1\par\nobreak
+   \vspace*{20\p@}%
+   %\hrule height0.75pt width\hsize\vspace*{1\p@}%
+   \hrule height0.25pt width\hsize\nobreak%
+   \vskip 48\p@
+  }}
+
+%%
+%% End of `BSheaders.sty'.

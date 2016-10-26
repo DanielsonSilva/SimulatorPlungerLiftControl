@@ -1,0 +1,45 @@
+Características do Ciclo nº1
+Duração da etapa Subida:         123.74000000000001
+Duração da etapa Produção:       2.45
+Volume de produção no Ciclo:     0.19304265081882477
+Total produzido pelo poço:       0.19304265081882477
+Tempo de viagem do pistão:       128.0
+Média de velocidade do pistão:   7.759284973144531
+Velocidade de impacto do pistão: 5.778943531529648
+Duração da etapa Afterflow:      180.0
+Duração da etapa Build-up:       585.02
+Duração do ciclo:                891.21
+
+Características do Ciclo nº2
+Duração da etapa Subida:         183.23
+Duração da etapa Produção:       19.09
+Volume de produção no Ciclo:     1.205112099647522
+Total produzido pelo poço:       1.3981547355651855
+Tempo de viagem do pistão:       204.0
+Média de velocidade do pistão:   4.884537696838379
+Velocidade de impacto do pistão: 6.798383300169327
+Duração da etapa Afterflow:      180.0
+Duração da etapa Build-up:       585.02
+Duração do ciclo:                967.3399999999999
+
+Características do Ciclo nº3
+Duração da etapa Subida:         142.86
+Duração da etapa Produção:       15.51
+Volume de produção no Ciclo:     1.1506458520889282
+Total produzido pelo poço:       2.548800468444824
+Tempo de viagem do pistão:       160.0
+Média de velocidade do pistão:   6.219205856323242
+Velocidade de impacto do pistão: 7.5743158442565415
+Duração da etapa Afterflow:      180.0
+Duração da etapa Build-up:       585.02
+Duração do ciclo:                923.39
+
+Características do Ciclo nº4
+Duração da etapa Subida:         139.97
+Duração da etapa Produção:       14.950000000000001
+Volume de produção no Ciclo:     1.1364160776138306
+Total produzido pelo poço:       3.6852164268493652
+Tempo de viagem do pistão:       157.0
+Média de velocidade do pistão:   6.354487895965576
+Velocidade de impacto do pistão: 7.695327428733586
+Duração da etapa Afterflow:      180.0
