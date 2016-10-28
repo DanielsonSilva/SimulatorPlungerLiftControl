@@ -1,19 +1,19 @@
 \select@language {brazil}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Configura\c c\~ao b\'asica de um po\c co perfurado para extra\c c\~ao de petr\'oleo}}{2}{figure.1.1}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Configura\c c\~ao b\'asica de um po\c co perfurado para extra\c c\~ao de petr\'oleo}}{2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Partes do fluxo}}{6}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Curva de $IPR$}}{7}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Exemplo de um ciclo do m\'etodo \textit {Plunger Lift}}}{10}{figure.2.3}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Partes do fluxo}}{6}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Curva de $IPR$}}{7}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Exemplo de um ciclo do m\'etodo \textit {Plunger Lift}}}{11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Exemplo da tela de desenvolvimento do \textit {software Eclipse MARS.1}}}{17}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Vari\'aveis que podem ser plotadas no gr\'afico do simulador}}{18}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Amostra do gr\'afico pertencente ao simulador mostrando uma execu\c c\~ao}}{19}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Defini\c c\~oes iniciais para a execu\c c\~ao do m\'etodo \textit {plunger lift}}}{19}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Estrutura do padr\~ao de projeto \textit {Strategy} para o simulador \textit {plunger lift}}}{20}{figure.3.5}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Exemplo da tela de desenvolvimento do \textit {software Eclipse MARS.1}}}{16}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Vari\'aveis que podem ser plotadas no gr\'afico do simulador}}{18}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Amostra do gr\'afico pertencente ao simulador mostrando uma execu\c c\~ao}}{19}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Defini\c c\~oes iniciais para a execu\c c\~ao do m\'etodo \textit {plunger lift}}}{19}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Estrutura do padr\~ao de projeto \textit {Strategy} para o simulador \textit {plunger lift}}}{20}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Exemplo de uma execu\c c\~ao bem sucedida durante 3 ciclos completos com configura\c c\~ao do po\c co padr\~ao}}{24}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Simula\c c\~ao de um po\c co onde o tempo da etapa de \textit {afterflow} foi alterado para 180 segundos}}{25}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Simula\c c\~ao de um po\c co onde o tempo da etapa de \textit {build-up} foi alterado para 900 segundos}}{26}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Simula\c c\~ao de um po\c co onde o tempo da etapa de \textit {build-up} foi alterado para 1200 segundos e a etapa de p\'os-fluxo para 450 segundos}}{27}{figure.4.4}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Exemplo de uma execu\c c\~ao bem sucedida durante 3 ciclos completos com configura\c c\~ao do po\c co padr\~ao}}{24}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Simula\c c\~ao de um po\c co onde o tempo da etapa de \textit {afterflow} foi alterado para 180 segundos}}{25}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Simula\c c\~ao de um po\c co onde o tempo da etapa de \textit {build-up} foi alterado para 900 segundos}}{26}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Simula\c c\~ao de um po\c co onde o tempo da etapa de \textit {build-up} foi alterado para 1200 segundos e a etapa de p\'os-fluxo para 450 segundos}}{27}
 \addvspace {10\p@ }
