@@ -1,141 +1,56 @@
 %%
-%% Capítulo 2: Método de elevação artificial Plunger Lift
+%% Capítulo 4: Validação do Simulador
 %%
-\mychapter{Método de elevação artificial \textit{Plunger Lift}}
-\label{Cap:plungerlift}
-Este capítulo apresenta considerações de ordem geral sobre elevação natural e artificial de poços e a teoria sobre o método de elevação artificial chamado \textit{Plunger Lift}. Aprofundando neste método, são expostos o funcionamento e os equipamentos necessários para o pleno funcionamento em um poço de produção de gás ou óleo.
-\section{Elevação Artificial}
-\label{Sec:elevacaoartificial}
-Na elevação natural de óleo em reservatórios, o líquido chega à superfície sem a necessidade de operações e equipamentos diversos junto ao poço. Estes poços são chamados de poços surgentes. Com o passar do tempo de exploração de um poço, a pressão do reservatório é similar a pressão da superfície e o líquido não emerge para a superfície naturalmente, sendo necessário utilizar-se de técnicas e equipamentos para auxiliar o líquido do reservatório chegar à superfície.
+\mychapter{Validação do Simulador}
+\label{Cap:validacao}
+De posse do simulador completo, é possível a realização de testes do modelo matemático programado para verificar se os dados de saída condizem com a realidade dos poços de petróleo que utilizam este método para recuperação de óleo de reservatórios. Os dados de saída são as durações das etapas do método (subida do pistão, pós-fluxo e \textit{build-up}), velocidade média do pistão na etapa de subida do pistão, pressão mínima atingida no anular na superfície e as pressões mínima e máxima da coluna de produção na superfície.
 
-Em poços surgentes, a elevação natural leva os fluidos do reservatório até os equipamentos da superfície que tratam deste produto, como separadores e tanques, somente com a energia acumulada do reservatório. Este estado ocorre, principalmente, no início da vida produtiva de um certo poço, no qual existe grande pressão dentro do reservatório. Existem, além da pressão do reservatório, outros fatores que contribuem para uma elevação artificial ou natural de um poço: propriedades dos fluidos que estão sendo produzidos, índice de produtividade de um poço, dano causado à formação produtora durante a perfuração e adequado controle de produção através de testes periódicos de produção.
+Os dados reais podem ser obtidos a partir de \cite{baruzzi}, onde existem dados fornecidos de pressões na superfície e durações de etapas distintas. Com estes dados, pode-se comparar os dados fornecidos com os dados gerados pelo simulador deste trabalho. A tabela \ref{Tab:validacaoPoco} mostra os dados do poço de petróleo que foi retirado as saídas e a tabela \ref{Tab:validacaoSaida} compara as saídas fornecidas com as saídas geradas pelo simulador deste trabalho.
 
-Até que seja produzido nas facilidades da superfície, o óleo produzido no reservatório passa por três partes, como mostrado na figura \ref{Fig:partefluxo},  que definem se um poço deve utilizar uma técnica de elevação artificial: fluxo no meio poroso, fluxo na coluna de produção e fluxo na superfície ou coleta.
+\begin{table}[]
+	\centering
+	\caption{Dados do poço de petróleo de teste em que as saídas fornecidas foram calculadas}
+	\label{Tab:validacaoPoco}
+	\begin{tabular}{lcc}
+		\hline
+		\textbf{Parâmetro} & \textbf{Valor} & \textbf{Unidade} \\ \hline
+		Diâmetro interno da linha de produção & 2,9	& pol \\ \hline
+		Diâmetro interno da coluna de produção & 1,995 & pol \\ \hline
+		Diâmetro externo da coluna de produção & 2,375 & pol \\ \hline
+		Comprimento da coluna de produção & 1176 & m \\ \hline
+		Diâmetro interno do revestimento & 4,95 & pol \\ \hline
+		Rugosidade & 0,132 & mm \\ \hline
+		Pressão do separador & 70 & psig \\ \hline
+		BSW & 0 & \% \\ \hline
+		API do óleo & 45* & - \\ \hline
+		Densidade relativa da água & 1,07* & - \\ \hline
+		Densidade relativa do gás & 0,75 & - \\ \hline
+		RGL & 949 & \frac{std.m^{3}}{m^{3}} \\ \hline
+		Massa do pistão & 3,6 & kg \\ \hline
+		Comprimento do pistão & 0,45 & m \\ \hline
+		Pressão do anular de abertura da linha & 366 & psig \\ \hline
+		Duração do \textit{afterflow} & 54 & s \\ \hline
+		\multicolumn{3}{l}{\textit{\tiny{* valores estimados}}}
+	\end{tabular}
+\end{table}
 
-\begin{figure}[htbp!]
-	\begin{center}
-		% fbox faz uma borda ao redor do seu argumento
-		\fbox{\includegraphics[width=0.30\linewidth]{plungerlift/Etapasdofluxo}}
-		\caption{Partes do fluxo}
-		\label{Fig:partefluxo}
-	\end{center}
-\end{figure}
+\begin{table}[]
+	\centering
+	\caption{Comparação entre as saídas fornecidas pelo poço da tabela \ref{Tab:validacaoPoco} e as saídas do modelo matemático}
+	\label{Tab:validacaoComparacao}
+	\begin{tabular}{lccc}
+		\hline
+		\textbf{Parâmetro} & \textbf{Unidade} & \textbf{Poço} & \textbf{Modelo} \\ \hline
+		Duração do ciclo & s & 907 &  \\ \hline
+		Duração da subida do pistão & s & 128 &  \\ \hline
+		Duração do \textit{build-up} & s & 682 &  \\ \hline
+		Velocidade média de subida do pistão* & \frac{pés}{min} & 1341 &  \\ \hline
+		Pressão mínima no anular na superfície & psig & 303 &  \\ \hline
+		Pressão mínima no \textit{tubing} na superfície & psig & 103 &  \\ \hline
+		Pressão máxima no \textit{tubing} na superfície & psig & 342 &  \\ \hline
+		\multicolumn{3}{l}{\textit{\tiny{* tempo estimado}}}
+	\end{tabular}
+\end{table}
 
-O fluxo no meio poroso corresponde ao fluxo entre o reservatório e a entrada do óleo na coluna de produção de um poço. A vazão de um poço é influenciada pelo diferencial de pressão sobre o meio poroso, de modo que quanto maior é esse diferencial, maior a vazão de líquido que se desloca para o poço. Um teste pode ser realizado com a finalidade de definir a produtividade daquela formação específica. Este teste expressa que a capacidade de fluxo de um poço é caracterizada pelo índice de produtividade ($IP$) que é definido pela equação \ref{Eq:IP}.
-
-\begin{equation}
-IP = \frac{q}{P_{e}-P_{w}}
-\label{Eq:IP}
-\end{equation}
-
-Onde $q$ é a vazão, $P_{e}$ a pressão média do reservatório e $P_{w}$ a pressão de fluxo no fundo do poço. Este índice pode ser utilizado para estimar vazão de um certo poço para diferentes pressões de fluxo no meio poroso. Pode-se reescrever a equação acima para a definição da pressão de fluxo no fundo do poço em função dos outros parâmetros de acordo com a equação \ref{Eq:PW}.
-
-\begin{equation}
-P_{w} = P_{e} - \frac{q}{IP}
-\label{Eq:PW}
-\end{equation}
-
-Considerando $IP$ constante, qualquer que seja a vazão $q$, a equação \ref{Eq:PW} forma uma reta denominada de $IPR$ (\textit{Inflow Performance Relationship}) como mostra na figura \ref{Fig:curvaipr}. Nesta reta podemos encontrar a vazão máxima que poderia ser alcançada caso a pressão dinâmica no fundo pudesse ser reduzida a zero.
-
-\begin{figure}[htbp!] \begin{center}
-		% fbox faz uma borda ao redor do seu argumento
-		\fbox{\includegraphics[width=0.30\linewidth]{plungerlift/CurvadeIPR}}
-		\caption{Curva de $IPR$}
-		\label{Fig:curvaipr}
-\end{center} \end{figure}
-
-Este modelo linear não se aplica nos casos onde há produção de gás saindo da solução e aumentando a saturação dos fluidos. Quando isto ocorre, há variação no índice de produtividade com a variação da pressão, que torna a lógica que afirma um $IP$ constante inadequada.
-
-Para um caso geral, a determinação do gráfico de $IPR$ pode ser alcançado de alguns modos. Uma das mais precisas é a medição direta. Este modo é determinado produzindo o poço de forma estável em muitas vazões diferentes e verificar as pressões de fluxo no meio poroso correspondente para cada valor de vazão.
-
-Após o fluido passar pelo meio poroso do reservatório, ele deve vencer diversas forças (fricção, restrições de válvulas e reguladores de fluxo, coluna hidrostática do fluido na coluna de produção) para atravessar todo o caminho até a superfície do poço. O fluido deve vencer a pressão que está na coluna que é a soma do gradiente devido à elevação, à fricção e à aceleração. O gradiente devido à elevação é o gradiente hidrostático do fluido que está escoando e varia de acordo com a sua densidade. O gradiente devido a fricção existe toda vez que há movimentação de fluidos e é função da rugosidade, diâmetro da coluna de produção e vazão da mesma. O gradiente devido à aceleração é nulo nos casos de fluidos incompressíveis pois não há variação na velocidade do fluido na trajetória até a superfície.
-
-O fluxo do fluido que está sendo produzido tem sua última etapa na superfície, desde a cabeça do poço até o separador passando pela linha de produção e regulador de fluxo. O gradiente de pressão do fluxo na superfície é verificado da mesma forma que no fluxo da coluna de produção. Um dos equipamentos que se encontram na superfície de um poço que exerce função importante no fluxo na superfície é o regulador de fluxo que tem com finalidade restringir a vazão de fluido, ajustando a produção do poço de acordo com as características do reservatório.
-
-As técnicas e equipamentos de elevação artificial de poços tratam de diminuir a $BHP$ (\textit{bottomhole pressure}) para obter uma maior produção do reservatório. Em muitos poços de produção de óleo utilizam alguma técnica de elevação artificial em alguma parte durante a vida operacional do poço e em poços de produção de gás se beneficiam destas técnicas por expulsar o líquido do reservatório para que o gás possa fluir mais facilmente para a superfície.
-
-Deste modo, o estudo de elevação artificial auxilia os poços que tem pressão de reservatório baixa quando o fluido não atinge a superfície sem algum tipo de energia suplementar. Esta energia é fornecida através de equipamentos e técnicas específicas que reduzem a pressão de fluxo no fundo do poço aumentando a vazão de produção. Existem diversos métodos de elevação artificial, cada um para certas configurações de poços, de acordo com suas vantagens e desvantagens. Pode-se citar alguns dos métodos empregados na engenharia de poços: gás \textit{lift}, bombeio centrífugo submerso, bombeio mecânico com hastes e bombeio por cavidades progressivas. Neste trabalho explora-se um método chamado \textit{Plunger Lift}.
-\section{Introdução ao método \textit{plunger lift}}
-\label{Sec:introducaometodoplungerlift}
-Quando se começou a utilizar este método nos poços, ele era utilizado em poços de produção de óleo e após algum tempo tornou-se mais comum o utilizar em poços de produção de gás. Seja em poços de produção de óleo ou gás, o método \textit{plunger lift} tem como sua principal característica a utilização de uma interface mecânica, chamada de pistão, que é instalada no fundo da coluna de produção do poço para evitar que o líquido volte para o fundo do poço e a formação de incrustação de parafina ou hidratos.
-
-Após um certo período do poço em atividade, as pressões do reservatório caem e o líquido que existe no reservatório fica na parede da coluna de produção devido ao reservatório não ter pressão suficiente para trazer todo o líquido para a superfície. Essa armazenagem de líquido na parede da coluna de produção começa a ficar maior e prejudicar a passagem do gás, diminuindo sua velocidade. Para diminuir o volume de líquido que é deixado na parede da coluna de produção, é introduzido um êmbolo no fundo da coluna de produção e deixa-se que seja acumulada pressão dentro do poço fechando o poço na superfície. O pistão age como um selo entre o gás e o líquido prevenindo que o líquido fique na parede da coluna (\textit{fallback}), expulsando o líquido da coluna e removendo o pouco líquido que ficou na parede da coluna do ciclo anterior. Por conta desta ação do pistão como uma interface mecânica entre o gás e o líquido, a velocidade que o gás necessita para empurrar o pistão pela tubulação é menor que o caso da não utilização do pistão.
-
-\section{Equipamentos}
-\label{Sec:equipamentos}
-O método de elevação artificial \textit{plunger lift} é composto por um aparato de equipamentos para realização do seu funcionamento apropriado. Desde o fundo da coluna de produção à árvore de natal, existem equipamentos que devem ser mencionados para se melhor entender o método. Estes equipamentos são:
-
-\begin{itemize}
-\item Sensor de pressão --- envia informações de pressão pela coluna de produção e anular para o controlador para que as ações programadas sejam tomadas;
-\item Regulador --- mantêm a pressão menor que um \textit{set-point} controlando a abertura da válvula motora;
-\item Válvula motora --- válvula pneumática que abre e fecha a linha de produção e é ativada por pressão;
-\item Sensor de chegada --- verifica quando o pistão chega ao lubrificador;
-\item Painel solar --- armazena energia solar para fornecer energia para o controlador;
-\item Molas no fundo da coluna de produção --- suaviza a chegada do pistão ao fundo do poço na etapa de \textit{build-up};
-\item Pistão --- equipamento que dá o nome ao método. Age como selante entre o gás e o líquido e ajuda-os a subir até a superfície para os equipamentos;
-\item Rastreador do pistão --- um ecômetro que rastreia onde o pistão se encontra dentro da coluna de produção para assegurar sua chegada ao fundo do poço e estudar os dados de queda;
-\item Controlador --- equipamento utilizado para otimizar o funcionamento do método em cada poço diferente;
-\item Lubrificador --- fica no topo da coluna de produção e é composto de uma mola para suavizar o impacto da chegada do pistão à superfície.
-\end{itemize}
-
-\section{Ciclos do método \textit{plunger lift}}
-\label{Sec:ciclosplungerlift}
-No funcionamento padrão, o método \textit{plunger lift} é dividido em fases de fluxo de líquido-gás e poço fechado. 
-
-O ciclo deste método começa com uma etapa de fechamento do poço para que se possa acumular pressão dentro do reservatório e para que o pistão possa cair até chegar ao fundo do poço. Quando o poço estiver fechado tempo suficiente para acumular energia bastante para trazer o pistão à superfície, o ciclo de fluxo começa. Quando o fluxo começa, o gás empurra o pistão e líquido até a superfície. Ao pistão chegar à superfície, ele envia o líquido pela linha de produção e então o poço fica livre de líquido. O pistão passa pela linha de produção e se fixa ao topo do poço somente com a pressão do gás acumulada deixando o poço produzindo o gás do reservatório. Depois de um período o líquido começa a se acumular novamente no poço e as velocidades caem, logo o poço é fechado e o pistão cai para o fundo do poço para recomeçar o ciclo.
-
-Com mais detalhes, um ciclo do método de elevação \textit{plunger lift} pode ser dividido em quatro etapas mostradas na sequência de imagens da figura \ref{Fig:cicloplungerlift}.
-
-\begin{itemize}
-\item Crescimento de pressão no poço ou \textit{Build-up} --- nesta etapa a pressão dentro do anular cresce assim como a pressão abaixo da golfada devido ao fechamento da válvula motora do poço. A golfada aumenta à medida que o poço produz líquido e ocorre a despressurização da linha de produção. Quando a pressão dentro da coluna de produção estiver aumentado suficiente para levar o pistão ao lubrificador, a válvula motora é aberta e a etapa de subida do pistão se inicia.
-\item Subida do pistão ou \textit{Piston rise} --- quando o poço é aberto, o gás acumulado no anular escoa para a coluna de produção atravessando o pistão e a golfada de líquido. Nesse escoamento, parte do gás pressiona o pistão e a golfada para o topo da coluna de produção e o gás que está acima da golfada é levado para a linha de produção. Esta etapa acaba quando o topo da golfada chega na linha de produção na árvore de natal do poço.
-\item Produção --- essa fase ocorre a produção do líquido que foi acumulado na coluna de produção durante a etapa de \textit{build-up}. Toda a golfada escoa horizontalmente pela linha de produção para fora do poço e o pistão chega ao topo da árvore de natal dentro da coluna de produção chamado de lubrificador, quando acaba esta etapa.
-\item Pós fluxo ou \textit{Afterflow} --- Ao pistão chegar ao topo, todo o gás acumulado no anular e na coluna de produção escoa horizontalmente pela linha de produção atravessando o líquido que foi produzido na etapa anterior. O pistão pode cair caso a velocidade do gás não for suficiente para mantê-lo no topo mas esta etapa termina quando a linha de produção for fechada. Quando for fechada o pistão cai e o método vai para a etapa de \textit{build-up}, iniciando um novo ciclo.
-\end{itemize}
-
-\begin{figure}[htbp!] 
-	\begin{center}
-		% fbox faz uma borda ao redor do seu argumento
-		\fbox{\includegraphics[width=1.00\linewidth]{plungerlift/CiclosPlungerLift}}
-		\caption{Exemplo de um ciclo do método \textit{Plunger Lift}}
-		\label{Fig:cicloplungerlift}
-	\end{center}
-\end{figure}
-
-\section{Vantagens do método}
-\label{Sec:vantagensmetodo}
-Por conta da simplicidade dos equipamentos em comparação com equipamentos de outros métodos, a instalação do \textit{plunger lift} tem benefícios econômicos e ambientais.
-
-O custo de instalação é relativamente bem menor que a instalação de outros métodos. Segundo \cite{united2001installing}, o custo da instalação dos equipamentos do \textit{plunger lift} é entre \$1.900 à \$7.800 enquanto que a instalação de um método de bombeamento, como o \textit{beam lift}, custa entre \$26.000 à \$52.000. Há um menor custo de manutenção e tratamentos de remediação, os quais ocorrem emissão de metano associados a operações de \textit{blowdowns} para remoção de fluidos, pois a frequência de realização destes procedimentos é menor em relação à outros métodos. Este sistema consegue conservar a energia de elevação do poço e é auxiliado pela constante remoção do líquido e parafina do poço, que aumenta a produção de gás. A maioria dos controladores do método de \textit{plunger lift} são movidos com energia solar, então os custos energéticos para o funcionamento deste método são bem menores que em outros métodos.
-\section{Modos de Controle}
-\label{Sec:controle}
-Em todo processo industrial, desenvolvem-se maneiras de melhorar o resultado de acordo com um certo objetivo. O processo de melhora do resultado passa por uma análise de lógica do processo procurando garantir o pleno funcionamento do mesmo. O resultado desta análise, em certos procedimentos, é desenvolvido em um controlador que trabalha na observação de certas variáveis deste sistema e na alteração, quando necessário, das mesmas ou outras variáveis. Segundo \cite{plinioaltoe2009} a baixa utilização do \textit{plunger lift} na indústria do petróleo ocorreu pela dificuldade em determinar os tempos corretos para a otimização de um certo poço em controladores pneumáticos.
-
-De acordo com o que foi visto na seção \ref{Sec:equipamentos}, em um poço que utiliza do método \textit{plunger lift} existem um sensor de pressão no anular, um sensor de chegada do pistão, um controlador e uma válvula motora. Com as informações fornecidas por estes equipamentos pode-se realizar o controle de abertura e fechamento da válvula de algumas maneiras diferentes, dependendo do objetivo do operador para a operação de um certo poço. Nesta seção são discutidos alguns algoritmos de controle que são possíveis de ser implementados em um controlador na árvore de natal de um poço para que ocorra a otimização operacional de um poço.
-\subsection{Controle por temporização}
-\label{SubSec:Ctrltemporizacao}
-Este controle se caracteriza por ser o mais simples e requerer o mínimo de instrumentos. Este algoritmo tem o objetivo de manter a continuidade operacional do método, não importando a produção do poço, para que o poço não afogue e traga mais custos de manutenção. Neste controle é definido um valor padrão mínimo e máximo, chamado de janela de chegada, do tempo de viagem do pistão ao longo da coluna de produção durante a fase de subida. As variáveis que o controlador poderá modificar são os tempos de fechamento e pós-fluxo da válvula motora.
-
-A ação deste controlador está diretamente ligada à medição do tempo de viagem do pistão na etapa da subida do pistão comparando aos valores padrões mínimos e máximos definidos pelo usuário previamente. Caso a comparação resultar em um tempo de viagem muito curto, que significa uma velocidade de subida alta, haverá uma diminuição do tempo de fechamento e/ou incremento do tempo de pós-fluxo. Se ocorrer o caso contrário, na qual o tempo de viagem muito longo, que significa uma velocidade de subida baixa, haverá um aumento do tempo de fechamento e/ou diminuição do tempo de pós-fluxo. Dessa forma, o controle tenta manter uma velocidade do pistão na subida aceitável para um certo poço. Os valores de tempo só podem ser aumentados e diminuídos até um certo limite para permitir que o pistão chegue, pelo menos, ao fundo do poço.
-
-Essa descrição da ação de controle mostra conexão entre a velocidade de subida do pistão e a pressão acumulada dentro do poço. Quanto maior for a energia concentrada no interior do poço, maior será a velocidade do pistão na subida do pistão, arriscando danificar equipamentos na árvore de natal do poço, logo algo indesejável. Se a mesma energia for de pequena intensidade, poderá ocorrer a não ascensão completa do pistão à superfície, não ocorrendo a etapa de produção de líquido e nem a etapa de pós-fluxo. A pressão acumulada depende dos tempos de pós-fluxo e fechamento de maneira que quanto maior for o tempo de \textit{shut-in}, maior energia será armazenada dentro do poço e quanto maior for o tempo de pós-fluxo, mais energia interior do poço será consumida.
-\subsection{Controle pela pressão de revestimento}
-\label{SubSec:Ctrlpressao}
-Este controle procura manter as viagens do pistão estáveis enquanto maximiza a produção de líquidos. Para chegar a tal objetivo, este controle monitora o momento da chegada do pistão assim como a pressão de revestimento durante a fase de \textit{build-up}. O operador define valores de pressões máximo e mínimo da pressão anular para o controlador analisar e comparar com os valores medidos pelos instrumentos.
-
-Durante a fase crescimento de pressão, a válvula motora é aberta pelo controlador quando a pressão de revestimento alcança o valor máximo definido pelo operador e é fechada quando a mesma atinge o valor mínimo durante a fase de \textit{afterflow}. Enquanto o controlador abre e fecha a válvula motora, o mesmo analisa o tempo de viagem do pistão à superfície e verifica se está dentro da janela de chegada do pistão. Se caso não estiver dentro desta janela, o controlador modifica os valores máximo e mínimo da pressão da seguinte maneira: para tempo de viagem abaixo do esperado haverá decremento nos valores das pressões e caso o tempo de viagem for maior que o esperado, incrementa-se os valores das pressões. Desse modo, o controlador permite adequar a pressão que acumula dentro do poço para a ascensão do líquido no próximo ciclo do método.
-\subsection{Controle pelo fator de carga}
-\label{SubSec:Ctrlfc}
-Este algoritmo procura garantir a continuidade operacional deste método assegurando a chegada do pistão à superfície, examinando algumas variáveis dentro do poço e na árvore de natal.
-
-Este controle utiliza-se de uma equação para garantir a subida e produção do líquido no ciclo atual. Esta equação resulta em um valor chamado fator de carga e depende dos valores de pressão na cabeça do poço ($P_{cab}$), pressão de revestimento ($P_{rev}$) e a pressão na linha de surgência ($P_{ls}$). A equação \ref{Eq:FC} demonstra a relação entre carga de líquido a ser transportada à superfície e a potencial capacidade do sistema. Normalmente os valores aceitáveis para $FC$ são menores ou iguais a $0.5$ mas este limite pode ser modificado pelo tempo de viagem do pistão deslocado da janela de chegada, incrementando o valor limite de $FC$ quando ocorrer chegada rápida do pistão ou diminuindo, caso contrário.
-
-\begin{equation}
-	FC = \frac{P_{cab} - P_{rev}}{P_{ls}}
-	\label{Eq:FC}
-\end{equation}
-\subsection{Controle por pré-carga ou \textit{Booster}}
-\label{SubSec:Ctrlbooster}
-Esta forma de gerenciar o poço utiliza mais equipamentos que os descritos na seção \ref{Sec:equipamentos}. O equipamento necessário ao poço para aplicação dentro do controle é uma linha de gás em alta pressão ligada ao revestimento através de uma válvula de bloqueio do tipo \textit{abre-fecha}.
-
-Em todo ciclo, durante a fase de \textit{shut-in}, é fornecida uma quantidade fixa de energia, pela linha de gás, ao poço para auxiliar na subida do pistão e carregar toda a golfada de líquido até a superfície. O tempo em que a referida linha de gás fornece energia é chamada tempo de pré-carga e este pode ser aumentado ou diminuído pelo controlador de acordo com a verificação do tempo de viagem do pistão. Caso o tempo de viagem do pistão for menor que a da janela de chegada, então o controlador diminui o tempo de pré-carga e caso contrário, incrementa o tempo de pré-carga do próximo ciclo. O excesso de gás acumulado no poço durante este processo é consumido pelo aumento do tempo de \textit{afterflow} daquele mesmo ciclo.
+\section{}
+\label{Sec:}
