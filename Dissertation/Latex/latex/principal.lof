@@ -12,8 +12,9 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Defini\c c\~oes iniciais para a execu\c c\~ao do m\'etodo \textit {plunger lift}}}{19}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Estrutura do padr\~ao de projeto \textit {Strategy} para o simulador \textit {plunger lift}}}{20}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Exemplo de uma execu\c c\~ao bem sucedida durante 3 ciclos completos com configura\c c\~ao do po\c co padr\~ao}}{24}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Simula\c c\~ao de um po\c co onde o tempo da etapa de \textit {afterflow} foi alterado para 180 segundos}}{25}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Simula\c c\~ao de um po\c co onde o tempo da etapa de \textit {build-up} foi alterado para 900 segundos}}{26}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Simula\c c\~ao de um po\c co onde o tempo da etapa de \textit {build-up} foi alterado para 1200 segundos e a etapa de p\'os-fluxo para 450 segundos}}{27}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Exemplo de uma execu\c c\~ao bem sucedida durante 3 ciclos completos com configura\c c\~ao do po\c co padr\~ao}}{28}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Simula\c c\~ao de um po\c co onde o tempo da etapa de \textit {afterflow} foi alterado para 180 segundos}}{29}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Simula\c c\~ao de um po\c co onde o tempo da etapa de \textit {build-up} foi alterado para 900 segundos}}{30}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Simula\c c\~ao de um po\c co onde o tempo da etapa de \textit {build-up} foi alterado para 1200 segundos e a etapa de p\'os-fluxo para 450 segundos}}{31}
 \addvspace {10\p@ }

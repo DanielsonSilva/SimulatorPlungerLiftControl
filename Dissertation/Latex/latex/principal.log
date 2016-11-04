@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.20)  27 OCT 2016 20:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.20)  3 NOV 2016 20:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -287,7 +287,8 @@ Package: capitulos 1997/10/06 Chapter headers a la Bjarne Stroustrup
 Writing glossary file principal.glo 
 (./principal.aux (./rosto.aux) (./resumos.aux) (./introducao/introducao.aux)
 (./plungerlift/plungerlift.aux) (./simulador/simulador.aux)
-(./resultado/resultado.aux) (./conclusao/conclusao.aux))
+(./validacao/validacao.aux) (./resultado/resultado.aux)
+(./conclusao/conclusao.aux))
 \openout1 = `principal.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 173.
@@ -589,15 +590,36 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 72--73
  []
 
 ) [20 <./simulador/strategy.png>] [21]
-\openout2 = `resultado/resultado.aux'.
+\openout2 = `validacao/validacao.aux'.
 
- (./resultado/resultado.tex [22
+ (./validacao/validacao.tex [22
 
 
 
 ]
 Cap\'{\i }tulo 4.
-<resultado/simulacaoteste.png, id=144, 1300.86pt x 731.73375pt>
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 10.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 37.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 47.
+
+Missing character: There is no é in font zptmcmr!
+) [23] [24] [25]
+\openout2 = `resultado/resultado.aux'.
+
+ (./resultado/resultado.tex [26
+
+
+
+]
+Cap\'{\i }tulo 5.
+<resultado/simulacaoteste.png, id=157, 1300.86pt x 731.73375pt>
 File: resultado/simulacaoteste.png Graphic file (type png)
 
 <use resultado/simulacaoteste.png>
@@ -614,7 +636,7 @@ LaTeX Warning: No positions in optional float specifier.
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 27.
-<resultado/simulacaoposfluxo.png, id=145, 1264.725pt x 642.90187pt>
+<resultado/simulacaoposfluxo.png, id=158, 1264.725pt x 642.90187pt>
 File: resultado/simulacaoposfluxo.png Graphic file (type png)
 
 <use resultado/simulacaoposfluxo.png>
@@ -626,12 +648,12 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 43--44
  [] 
  []
 
-[23] [24 <./resultado/simulacaoteste.png>]
+[27] [28 <./resultado/simulacaoteste.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 49.
 
-<resultado/simulacaobuildup.png, id=152, 1271.5003pt x 645.16031pt>
+<resultado/simulacaobuildup.png, id=165, 1271.5003pt x 645.16031pt>
 File: resultado/simulacaobuildup.png Graphic file (type png)
 
 <use resultado/simulacaobuildup.png>
@@ -642,12 +664,12 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 73--74
  [] 
  []
 
-[25 <./resultado/simulacaoposfluxo.png>]
+[29 <./resultado/simulacaoposfluxo.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 79.
 
-<resultado/simulacaoposbuildup.png, id=157, 1271.5003pt x 642.14906pt>
+<resultado/simulacaoposbuildup.png, id=169, 1271.5003pt x 642.14906pt>
 File: resultado/simulacaoposbuildup.png Graphic file (type png)
 
 <use resultado/simulacaoposbuildup.png>
@@ -659,26 +681,23 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 103--104
  [] 
  []
 
-[26 <./resultado/simulacaobuildup.png>]
+[30 <./resultado/simulacaobuildup.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 109.
 
-) [27 <./resultado/simulacaoposbuildup.png>] [28]
+) [31 <./resultado/simulacaoposbuildup.png>] [32]
 \openout2 = `conclusao/conclusao.aux'.
 
  (./conclusao/conclusao.tex
-Cap\'{\i }tulo 5.
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [29
+Cap\'{\i }tulo 6.
+) [33
 
 
 
-]
-[30] (./principal.bbl [31
+] (./principal.bbl [34
 
+] [35
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 81--85
@@ -686,32 +705,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--85
 ction /
  []
 
-) [32] (./principal.aux (./rosto.aux) (./resumos.aux)
+) [36] (./principal.aux (./rosto.aux) (./resumos.aux)
 (./introducao/introducao.aux) (./plungerlift/plungerlift.aux)
-(./simulador/simulador.aux) (./resultado/resultado.aux)
-(./conclusao/conclusao.aux)) ) 
+(./simulador/simulador.aux) (./validacao/validacao.aux)
+(./resultado/resultado.aux) (./conclusao/conclusao.aux)) ) 
 Here is how much of TeX's memory you used:
- 4468 strings out of 493029
- 60323 string characters out of 6136233
- 138037 words of memory out of 5000000
- 7773 multiletter control sequences out of 15000+600000
- 79620 words of font info for 98 fonts, out of 8000000 for 9000
+ 4483 strings out of 493029
+ 60570 string characters out of 6136233
+ 138317 words of memory out of 5000000
+ 7776 multiletter control sequences out of 15000+600000
+ 84176 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,13n,35p,1325b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/ba
-se/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
-mes/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on principal.pdf (44 pages, 1448422 bytes).
+{/usr/share/texlive/t
+exmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8
+a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
+es/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+
+Output written on principal.pdf (48 pages, 1453597 bytes).
 PDF statistics:
- 218 PDF objects out of 1000 (max. 8388607)
- 142 compressed objects within 2 object streams
+ 230 PDF objects out of 1000 (max. 8388607)
+ 150 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

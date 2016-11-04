@@ -3,15 +3,15 @@
 %%
 \mychapter{Validação do Simulador}
 \label{Cap:validacao}
-De posse do simulador completo, é possível a realização de testes do modelo matemático programado para verificar se os dados de saída condizem com a realidade dos poços de petróleo que utilizam este método para recuperação de óleo de reservatórios. Os dados de saída são as durações das etapas do método (subida do pistão, pós-fluxo e \textit{build-up}), velocidade média do pistão na etapa de subida do pistão, pressão mínima atingida no anular na superfície e as pressões mínima e máxima da coluna de produção na superfície.
+De posse do simulador completo, é possível a realização de testes do modelo matemático programado para verificar se os dados de saída condizem com a realidade dos poços de petróleo que utilizam este método para recuperação de óleo de reservatórios. Os dados de saída deste sistema são vários, dentre eles estão as durações das etapas do método (subida do pistão, pós-fluxo e \textit{build-up}), velocidade média do pistão na etapa de subida do pistão, pressão mínima atingida no anular na superfície e as pressões mínima e máxima da coluna de produção na superfície.
 
-Os dados reais podem ser obtidos a partir de \cite{baruzzi}, onde existem dados fornecidos de pressões na superfície e durações de etapas distintas. Com estes dados, pode-se comparar os dados fornecidos com os dados gerados pelo simulador deste trabalho. A tabela \ref{Tab:validacaoPoco} mostra os dados do poço de petróleo que foi retirado as saídas e a tabela \ref{Tab:validacaoSaida} compara as saídas fornecidas com as saídas geradas pelo simulador deste trabalho.
+Os dados reais podem ser obtidos a partir de \cite{baruzzi}, onde existem dados fornecidos de pressões na superfície e durações de etapas distintas. Com estes dados, pode-se comparar os dados fornecidos com os dados gerados pelo simulador deste trabalho. A tabela \ref{Tab:validacaoPoco} mostra os dados do poço de petróleo que foi retirado as saídas e a tabela \ref{Tab:validacaoComparacao} compara as saídas fornecidas com as saídas geradas pelo simulador deste trabalho.
 
 \begin{table}[]
 	\centering
 	\caption{Dados do poço de petróleo de teste em que as saídas fornecidas foram calculadas}
 	\label{Tab:validacaoPoco}
-	\begin{tabular}{lcc}
+	\begin{tabular}{|l|c|c|}
 		\hline
 		\textbf{Parâmetro} & \textbf{Valor} & \textbf{Unidade} \\ \hline
 		Diâmetro interno da linha de produção & 2,9	& pol \\ \hline
@@ -25,7 +25,7 @@ Os dados reais podem ser obtidos a partir de \cite{baruzzi}, onde existem dados 
 		API do óleo & 45* & - \\ \hline
 		Densidade relativa da água & 1,07* & - \\ \hline
 		Densidade relativa do gás & 0,75 & - \\ \hline
-		RGL & 949 & \frac{std.m^{3}}{m^{3}} \\ \hline
+		RGL & 949 & $\frac{std.m^{3}}{m^{3}}$ \\ \hline
 		Massa do pistão & 3,6 & kg \\ \hline
 		Comprimento do pistão & 0,45 & m \\ \hline
 		Pressão do anular de abertura da linha & 366 & psig \\ \hline
@@ -38,20 +38,22 @@ Os dados reais podem ser obtidos a partir de \cite{baruzzi}, onde existem dados 
 	\centering
 	\caption{Comparação entre as saídas fornecidas pelo poço da tabela \ref{Tab:validacaoPoco} e as saídas do modelo matemático}
 	\label{Tab:validacaoComparacao}
-	\begin{tabular}{lccc}
+	\begin{tabular}{|l|c|c|c|}
 		\hline
 		\textbf{Parâmetro} & \textbf{Unidade} & \textbf{Poço} & \textbf{Modelo} \\ \hline
-		Duração do ciclo & s & 907 &  \\ \hline
-		Duração da subida do pistão & s & 128 &  \\ \hline
-		Duração do \textit{build-up} & s & 682 &  \\ \hline
-		Velocidade média de subida do pistão* & \frac{pés}{min} & 1341 &  \\ \hline
-		Pressão mínima no anular na superfície & psig & 303 &  \\ \hline
-		Pressão mínima no \textit{tubing} na superfície & psig & 103 &  \\ \hline
-		Pressão máxima no \textit{tubing} na superfície & psig & 342 &  \\ \hline
+		Duração do ciclo & s & 907 & 960 \\ \hline
+		Duração da subida do pistão & s & 128 & 107,82 \\ \hline
+		Duração do \textit{build-up} & s & 682 & 790 \\ \hline
+		Velocidade média de subida do pistão* & $\frac{pés}{min}$ & 1341 & 1942,91 \\ \hline
+		Pressão mínima no anular na superfície & psig & 303 & 433 \\ \hline
+		Pressão mínima no \textit{tubing} na superfície & psig & 103 & 73 \\ \hline
+		Pressão máxima no \textit{tubing} na superfície & psig & 342 & 496 \\ \hline
 		\multicolumn{3}{l}{\textit{\tiny{* tempo estimado}}}
 	\end{tabular}
 \end{table}
 
-%TODO Explicação da validação e o porquê de algumas diferenças entre os valores
-\section{}
-\label{Sec:}
+Foi inserido a configuração no simulador de acordo com os valores mostrados na tabela \ref{Tab:validacaoPoco} e adotado alguns valores para parâmetros não informados como, por exemplo, eficiência de vedação do pistão ($90\%$), diâmetro do pistão ($4,953 cm$) e o comprimento inicial da golfada ($15,3 m$). O resultado mostrado na tabela \ref{Tab:validacaoComparacao} foi recuperado a partir dos dados do ciclo de número 12 da simulação. A parte final do gráfico resultante do simulador, mostrando as variáveis do sistema mais importantes, após a execução desta configuração é apresentada na figura \textbf{??}.
+
+Pode-se observar alta concordância entre os dados fornecidos pelo modelo e pelo simulador atestando a validade do uso deste modelo matemático neste simulador para o método de elevação artificial \textit{plunger lift}. Estas pequenas diferenças entre os valores, principalmente nas pressões calculadas e na velocidade média do pistão na subida, ocorrem por consequência de um maior tempo de duração da etapa de \textit{build-up}. Este maior tempo da etapa de acúmulo de pressão dentro do poço influencia na força que empurra o pistão para a superfície, aumentando sua velocidade média durante a subida e, por consequência, diminuindo o tempo de duração da subida do pistão.
+
+Dessa forma, consegue-se a validação do modelo matemático para aceitação da validade dos resultados obtidos na simulação dos controladores para comparação dos dados e definição da eficiência de cada um deles.

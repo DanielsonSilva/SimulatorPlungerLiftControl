@@ -21,7 +21,7 @@
 \contentsline {section}{\numberline {3.2}Organiza\c c\~ao do \textit {software}}{17}
 \contentsline {section}{\numberline {3.3}Principais vari\'aveis gerenciadas pelo simulador}{18}
 \contentsline {section}{\numberline {3.4}Implementa\c c\~ao de controladores}{20}
-\contentsline {chapter}{\numberline {4}Resultados Parciais}{23}
-\contentsline {chapter}{\numberline {5}Conclus\~oes}{29}
-\contentsline {section}{\numberline {5.1}Cronograma para a apresenta\c c\~ao da disserta\c c\~ao}{30}
-\contentsline {chapter}{Refer\^encias bibliogr\'aficas}{31}
+\contentsline {chapter}{\numberline {4}Valida\c c\~ao do Simulador}{23}
+\contentsline {chapter}{\numberline {5}Resultados Parciais}{27}
+\contentsline {chapter}{\numberline {6}Conclus\~oes}{33}
+\contentsline {chapter}{Refer\^encias bibliogr\'aficas}{34}
