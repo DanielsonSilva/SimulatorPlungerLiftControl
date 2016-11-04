@@ -156,7 +156,7 @@ public class Configuration extends JFrame {
 		double[] param4 = { 70 };
 		contentPane.add(createElement(messages, 1, "group4", param4));
 		//double[] param5 = { 50, 2.3, 26, 596 };
-		double[] param5 = { 61.4, 2.3, 26, 500 };
+		double[] param5 = { 61.4, 2.3, 26, 949 };
 		contentPane.add(createElement(messages, 4, "group5", param5));
 		//double[] param6 = { 90, 0.45, 4.48, 1.95 };
 		double[] param6 = { 90, 0.45, 3.6, 1.95 };
@@ -165,7 +165,7 @@ public class Configuration extends JFrame {
 		double[] param7 = { 0, 45, 1.07, 0.75, 1.21 };
 		contentPane.add(createElement(messages, 5, "group7", param7));
 		//double[] param8 = { 600, 585, 60, 15.3, 90 };
-		double[] param8 = { 600, 500, 500, 15.3, 366 };
+		double[] param8 = { 600, 200, 54, 15.3, 366 };
 		contentPane.add(createElement(messages, 5, "group8", param8));
 		double[] param9 = { 10000, 1000, 10000, 10000, 10000, 0 };
 		contentPane.add(createElement(messages, 6, "group9", param9));

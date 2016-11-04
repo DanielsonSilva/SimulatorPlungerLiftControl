@@ -200,8 +200,7 @@ public class SimulationThread implements Runnable {
 
 		f.linhaPro.Psep = conv.psiaToNPerM2(variables.get("prodlineSepPressure"));
 
-		f.valvula.Dab = conv.inchToMm(variables.get("motorvalveDiameter"));
-
+		f.valvula.Dab = Math.round(conv.inchToMm(variables.get("motorvalveDiameter")) * 100)/100D;
 		f.pistao.Mplg = variables.get("plungerMass");
 		f.pistao.EfVed = (variables.get("plungerEfi").floatValue()) / 100;
 		f.pistao.Lplg = variables.get("plungerLength").floatValue();

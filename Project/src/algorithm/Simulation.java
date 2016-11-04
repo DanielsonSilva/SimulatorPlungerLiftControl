@@ -1257,16 +1257,16 @@ public class Simulation {
 		}
 		// VariÃ¡vel para o tempo gasto no buildup
 		double tpgasto = 0;
-		/* VariÃ¡vel que diz qual etapa do build up estÃ¡ para modificar o passo de
-		 *integraÃ§Ã£o:
-		 * 0 - Queda do pistÃ£o no gÃ¡s
-		 * 1 - TransiÃ§Ã£o do pistÃ£o do gÃ¡s para o lÃ¬quido
-		 * 2 - Queda do pistÃ£o no lÃ­quido
-		 * 3 - PistÃ£o no fundo do poÃ§o
+		/* Variável que diz qual etapa do build up está para modificar o passo de
+		 *integração:
+		 * 0 - Queda do pistão no gás
+		 * 1 - Transição do pistão do gás para o líquido
+		 * 2 - Queda do pistão no líquido
+		 * 3 - Pistão no fundo do poço
 		 */
 		int modo_passo = 0;
 
-		// Passo de integraÃ§Ã£o do pistÃ£o caindo no gÃ¡s
+		// Passo de integração do pistão caindo no gás
 		c._step = c._stepGas;
 
 		//Pt RECEBE PRESSÃƒO NO TOPO DO REVESTIMENTO
@@ -1280,13 +1280,14 @@ public class Simulation {
 		//LIMITE PARA QUE O BUILDUP SEJA FINALIZADO
 		//Danielson: comentei por usar a variavel Vqpl e Vqpg que foram excluidas,
 		//assim como comentei o if depois do bypasscontroller que usa limite.
-//		v.limite = (f.tubing.Lcauda - f.tempos.Ltbg) * (60*3.2808)/ f.pistao.Vqpg + ((v.Ppart_csg - v.Ppart_tbg) * (60*3.2808)/(c.ROliq * c.G * f.pistao.Vqpl));
+		//v.limite = (f.tubing.Lcauda - f.tempos.Ltbg) * (60*3.2808)/ f.pistao.Vqpg + ((v.Ppart_csg - v.Ppart_tbg) * (60*3.2808)/(c.ROliq * c.G * f.pistao.Vqpl));
 		//INICIA A ITERACAO COM M = 1 E AUMENTA A CADA ITERACAO
 		//Enquanto (nÃ£o tiver chegado no tempo de offtime ou
 		//(estiver passando pelo controle e o pistao ainda nao chegou no fundo)) e
 		//pedido de alteraÃ§Ã£o de vÃ¡lvula motora
 
-		for( v.m = 1; ( tpgasto < f.tempos.Offtime || f.varSaida.Hplg > 0 ) && (!this.changeStateValve); v.m++ ) { //System.out.println("Iteracao do buildup com tp gasto = " + tpgasto);
+		for( v.m = 1; ( tpgasto < f.tempos.Offtime || f.varSaida.Hplg > 0 ) && (!this.changeStateValve); v.m++ ) { 
+			//System.out.println("Iteracao do buildup com tp gasto = " + tpgasto);
 			///////////////////////////////////////////////////
 			if ( v.m >= 100) {
 				periodoAmostragem = 120;
