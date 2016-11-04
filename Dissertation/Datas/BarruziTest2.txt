@@ -1,0 +1,224 @@
+No Ciclo 2
+Pressao mínima do Anular: 0.0
+Pressão mínima da Coluna de Produção: 0.0
+Pressão máxima da Coluna de Produção: 0.0
+
+No Ciclo 3
+Pressao mínima do Anular: 294.04743010783307
+Pressão mínima da Coluna de Produção: 69.09766907835743
+Pressão máxima da Coluna de Produção: 385.66203813751366
+
+No Ciclo 4
+Pressao mínima do Anular: 383.07706078222645
+Pressão mínima da Coluna de Produção: 69.8255306070172
+Pressão máxima da Coluna de Produção: 429.96387219899356
+
+No Ciclo 5
+Pressao mínima do Anular: 425.21434714070165
+Pressão mínima da Coluna de Produção: 69.96614550577327
+Pressão máxima da Coluna de Produção: 485.30178189194214
+
+No Ciclo 6
+Pressao mínima do Anular: 427.8710859119122
+Pressão mínima da Coluna de Produção: 69.3848461349744
+Pressão máxima da Coluna de Produção: 488.8271177743875
+
+No Ciclo 7
+Pressao mínima do Anular: 433.6749017968294
+Pressão mínima da Coluna de Produção: 69.50809868483677
+Pressão máxima da Coluna de Produção: 496.84875492347834
+
+No Ciclo 8
+Pressao mínima do Anular: 429.2962729934768
+Pressão mínima da Coluna de Produção: 69.93272214204373
+Pressão máxima da Coluna de Produção: 490.8793598431724
+
+No Ciclo 9
+Pressao mínima do Anular: 433.56419691964385
+Pressão mínima da Coluna de Produção: 69.59202452125437
+Pressão máxima da Coluna de Produção: 496.7267465553387
+
+No Ciclo 10
+Pressao mínima do Anular: 429.22241077031794
+Pressão mínima da Coluna de Produção: 69.5746790215138
+Pressão máxima da Coluna de Produção: 490.7892940881607
+
+No Ciclo 11
+Pressao mínima do Anular: 433.5903400623386
+Pressão mínima da Coluna de Produção: 73.8894001459207
+Pressão máxima da Coluna de Produção: 496.75703316527853
+
+No Ciclo 12
+Pressao mínima do Anular: 429.22026767435955
+Pressão mínima da Coluna de Produção: 69.82666116745334
+Pressão máxima da Coluna de Produção: 490.7894280215289
+
+No Ciclo 13
+Pressao mínima do Anular: 433.57880048716936
+Pressão mínima da Coluna de Produção: 69.39847069553714
+Pressão máxima da Coluna de Produção: 496.745209751919
+
+No Ciclo 14
+Pressao mínima do Anular: 429.2643425967662
+Pressão mínima da Coluna de Produção: 69.37202868085284
+Pressão máxima da Coluna de Produção: 490.8411112246884
+
+No Ciclo 15
+Pressao mínima do Anular: 433.61858918967783
+Pressão mínima da Coluna de Produção: 73.88985799703961
+Pressão máxima da Coluna de Produção: 496.7955137707277
+
+No Ciclo 16
+Pressao mínima do Anular: 429.2844446428853
+Pressão mínima da Coluna de Produção: 69.99224209711589
+Pressão máxima da Coluna de Produção: 490.8604842534069
+
+No Ciclo 17
+Pressao mínima do Anular: 433.5657325654897
+Pressão mínima da Coluna de Produção: 69.3163439431669
+Pressão máxima da Coluna de Produção: 496.73234130999214
+
+No Ciclo 18
+Pressao mínima do Anular: 429.2285987641767
+Pressão mínima da Coluna de Produção: 69.38975262986754
+Pressão máxima da Coluna de Produção: 490.79815532156823
+
+No Ciclo 19
+Pressao mínima do Anular: 433.59431852838054
+Pressão mínima da Coluna de Produção: 73.88946008183262
+Pressão máxima da Coluna de Produção: 496.76097482380817
+
+No Ciclo 20
+Pressao mínima do Anular: 429.2210813266156
+Pressão mínima da Coluna de Produção: 69.84593918169124
+Pressão máxima da Coluna de Produção: 490.78960822877224
+
+No Ciclo 21
+Pressao mínima do Anular: 433.5781210855338
+Pressão mínima da Coluna de Produção: 69.81319111249292
+Pressão máxima da Coluna de Produção: 496.7441670154983
+
+No Ciclo 22
+Pressao mínima do Anular: 429.2640469162819
+Pressão mínima da Coluna de Produção: 69.36948328815882
+Pressão máxima da Coluna de Produção: 490.84084667326226
+
+No Ciclo 23
+Pressao mínima do Anular: 433.61847206491774
+Pressão mínima da Coluna de Produção: 73.88985616810731
+Pressão máxima da Coluna de Produção: 496.7954021713123
+
+No Ciclo 24
+Pressao mínima do Anular: 429.28439397191875
+Pressão mínima da Coluna de Produção: 69.3927925675487
+Pressão máxima da Coluna de Produção: 490.8603527316049
+
+No Ciclo 25
+Pressao mínima do Anular: 433.5648155069086
+Pressão mínima da Coluna de Produção: 69.92327486675032
+Pressão máxima da Coluna de Produção: 496.7310345174541
+
+No Ciclo 26
+Pressao mínima do Anular: 429.2281995673747
+Pressão mínima da Coluna de Produção: 69.37609193163465
+Pressão máxima da Coluna de Produção: 490.79779748137764
+
+No Ciclo 27
+Pressao mínima do Anular: 433.5941605649709
+Pressão mínima da Coluna de Produção: 73.88945761408203
+Pressão máxima da Coluna de Produção: 496.7608242457394
+
+No Ciclo 28
+Pressao mínima do Anular: 429.2210125485219
+Pressão mínima da Coluna de Produção: 69.93788032414646
+Pressão máxima da Coluna de Produção: 490.7895595113734
+
+No Ciclo 29
+Pressao mínima do Anular: 433.5780937352871
+Pressão mínima da Coluna de Produção: 69.82054848754298
+Pressão máxima da Coluna de Produção: 496.74414199101113
+
+No Ciclo 30
+Pressao mínima do Anular: 429.26403500837785
+Pressão mínima da Coluna de Produção: 69.36939051256431
+Pressão máxima da Coluna de Produção: 490.84083584025376
+
+No Ciclo 31
+Pressao mínima do Anular: 433.6184673290088
+Pressão mínima da Coluna de Produção: 73.88985609427948
+Pressão máxima da Coluna de Produção: 496.7953976723794
+
+No Ciclo 32
+Pressao mínima do Anular: 429.28439191113074
+Pressão mínima da Coluna de Produção: 69.3925901327721
+Pressão máxima da Coluna de Produção: 490.86035075278943
+
+No Ciclo 33
+Pressao mínima do Anular: 433.56481468611145
+Pressão mínima da Coluna de Produção: 69.9233905015247
+Pressão máxima da Coluna de Produção: 496.7310337398303
+
+No Ciclo 34
+Pressao mínima do Anular: 429.22819920866243
+Pressão mínima da Coluna de Produção: 69.37607611807327
+Pressão máxima da Coluna de Produção: 490.79779725103293
+
+No Ciclo 35
+Pressao mínima do Anular: 433.5941604234311
+Pressão mínima da Coluna de Produção: 73.88945761185067
+Pressão máxima da Coluna de Produção: 496.760824105959
+
+No Ciclo 36
+Pressao mínima do Anular: 429.2210124868416
+Pressão mínima da Coluna de Produção: 69.93795948828325
+Pressão máxima da Coluna de Produção: 490.78955946723397
+
+No Ciclo 37
+Pressao mínima do Anular: 433.5780937107813
+Pressão mínima da Coluna de Produção: 69.82055506639631
+Pressão máxima da Coluna de Produção: 496.7441419685828
+
+No Ciclo 38
+Pressao mínima do Anular: 429.2640349964578
+Pressão mínima da Coluna de Produção: 69.36938801730203
+Pressão máxima da Coluna de Produção: 490.8408359239103
+
+No Ciclo 39
+Pressao mínima do Anular: 433.61846732537197
+Pressão mínima da Coluna de Produção: 73.8898560941988
+Pressão máxima da Coluna de Produção: 496.7953976637558
+
+No Ciclo 40
+Pressao mínima do Anular: 429.28439190830716
+Pressão mínima da Coluna de Produção: 69.39255565851609
+Pressão máxima da Coluna de Produção: 490.86035084022825
+
+No Ciclo 41
+Pressao mínima do Anular: 433.564814686117
+Pressão mínima da Coluna de Produção: 69.92338794253338
+Pressão máxima da Coluna de Produção: 496.7310337347097
+
+No Ciclo 42
+Pressao mínima do Anular: 429.228199208664
+Pressão mínima da Coluna de Produção: 69.37607611530197
+Pressão máxima da Coluna de Produção: 490.7977972510759
+
+No Ciclo 43
+Pressao mínima do Anular: 433.5941604234393
+Pressão mínima da Coluna de Produção: 73.88945761185062
+Pressão máxima da Coluna de Produção: 496.76082410596194
+
+No Ciclo 44
+Pressao mínima do Anular: 429.22101248542174
+Pressão mínima da Coluna de Produção: 69.93834653998744
+Pressão máxima da Coluna de Produção: 490.7895596163576
+
+No Ciclo 45
+Pressao mínima do Anular: 433.5780937113263
+Pressão mínima da Coluna de Produção: 69.82054987918815
+Pressão máxima da Coluna de Produção: 496.7441419631735
+
+No Ciclo 46
+Pressao mínima do Anular: 429.2640349979494
+Pressão mínima da Coluna de Produção: 69.36939042836147
+Pressão máxima da Coluna de Produção: 490.84083583089347
