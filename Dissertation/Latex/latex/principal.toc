@@ -22,6 +22,6 @@
 \contentsline {section}{\numberline {3.3}Principais vari\'aveis gerenciadas pelo simulador}{18}
 \contentsline {section}{\numberline {3.4}Implementa\c c\~ao de controladores}{20}
 \contentsline {chapter}{\numberline {4}Valida\c c\~ao do Simulador}{23}
-\contentsline {chapter}{\numberline {5}Resultados Parciais}{27}
+\contentsline {chapter}{\numberline {5}Resultados}{27}
 \contentsline {chapter}{\numberline {6}Conclus\~oes}{33}
 \contentsline {chapter}{Refer\^encias bibliogr\'aficas}{34}

@@ -3,9 +3,9 @@
 %%
 \mychapter{Validação do Simulador}
 \label{Cap:validacao}
-De posse do simulador completo, é possível a realização de testes do modelo matemático programado para verificar se os dados de saída condizem com a realidade dos poços de petróleo que utilizam este método para recuperação de óleo de reservatórios. Os dados de saída deste sistema são vários, dentre eles estão as durações das etapas do método (subida do pistão, pós-fluxo e \textit{build-up}), velocidade média do pistão na etapa de subida do pistão, pressão mínima atingida no anular na superfície e as pressões mínima e máxima da coluna de produção na superfície.
+De posse do simulador completo, é possível a realização de testes do modelo matemático programado para verificar se os dados de saída condizem com a realidade dos poços de petróleo que utilizam este método para recuperação de óleo dos reservatórios. Os dados de saída deste sistema são vários, dentre eles estão as durações das etapas do método (subida do pistão, pós-fluxo e \textit{build-up}), velocidade média do pistão na etapa de subida do pistão, pressão mínima atingida no anular na superfície e as pressões mínima e máxima da coluna de produção na superfície.
 
-Os dados reais podem ser obtidos a partir de \cite{baruzzi}, onde existem dados fornecidos de pressões na superfície e durações de etapas distintas. Com estes dados, pode-se comparar os dados fornecidos com os dados gerados pelo simulador deste trabalho. A tabela \ref{Tab:validacaoPoco} mostra os dados do poço de petróleo que foi retirado as saídas e a tabela \ref{Tab:validacaoComparacao} compara as saídas fornecidas com as saídas geradas pelo simulador deste trabalho.
+Os dados reais podem ser obtidos a partir de \cite{baruzzi}, onde existem dados fornecidos de pressões na superfície e durações de etapas distintas. Com estes dados, pode-se comparar os dados fornecidos com os dados gerados pelo simulador deste trabalho. A tabela \ref{Tab:validacaoPoco} mostra os dados do poço de petróleo que foram retiradas as saídas e a tabela \ref{Tab:validacaoComparacao} compara as saídas fornecidas com as saídas geradas pelo simulador deste trabalho.
 
 \begin{table}[]
 	\centering
@@ -41,10 +41,10 @@ Os dados reais podem ser obtidos a partir de \cite{baruzzi}, onde existem dados 
 	\begin{tabular}{|l|c|c|c|}
 		\hline
 		\textbf{Parâmetro} & \textbf{Unidade} & \textbf{Poço} & \textbf{Modelo} \\ \hline
-		Duração do ciclo & s & 907 & 960 \\ \hline
-		Duração da subida do pistão & s & 128 & 107,82 \\ \hline
+		Duração do ciclo & s & 907 & 967 \\ \hline
+		Duração da subida do pistão & s & 128 & 114,5 \\ \hline
 		Duração do \textit{build-up} & s & 682 & 790 \\ \hline
-		Velocidade média de subida do pistão* & $\frac{pés}{min}$ & 1341 & 1942,91 \\ \hline
+		Velocidade média de subida do pistão* & $\frac{pés}{min}$ & 1341 & 1837,74 \\ \hline
 		Pressão mínima no anular na superfície & psig & 303 & 433 \\ \hline
 		Pressão mínima no \textit{tubing} na superfície & psig & 103 & 73 \\ \hline
 		Pressão máxima no \textit{tubing} na superfície & psig & 342 & 496 \\ \hline
@@ -52,7 +52,23 @@ Os dados reais podem ser obtidos a partir de \cite{baruzzi}, onde existem dados 
 	\end{tabular}
 \end{table}
 
-Foi inserido a configuração no simulador de acordo com os valores mostrados na tabela \ref{Tab:validacaoPoco} e adotado alguns valores para parâmetros não informados (figura \textbf{??})como, por exemplo, eficiência de vedação do pistão ($90\%$), diâmetro do pistão ($4,953 cm$) e o comprimento inicial da golfada ($15,3 m$). O resultado mostrado na tabela \ref{Tab:validacaoComparacao} foi recuperado a partir dos dados do ciclo de número 12 da simulação. Estes valores foram recuperados através da impressão de variáveis do modelo matemático em um arquivo de texto e de apresentação de outras variáveis na tela de \textit{log} da IDE utilizada. A última parte do gráfico executado no simulador, mostrando as variáveis do sistema mais importantes, após a execução desta configuração, é apresentada na figura \textbf{??}.
+Foi inserido a configuração no simulador de acordo com os valores mostrados na tabela \ref{Tab:validacaoPoco} e adotado alguns valores para parâmetros não informados (figura \ref{Fig:configbarruzi}) como, por exemplo, eficiência de vedação do pistão ($90\%$), diâmetro do pistão ($4,953 cm$) e o comprimento inicial da golfada no fundo do poço acima do pistão ($15,3 m$). O resultado mostrado na tabela \ref{Tab:validacaoComparacao} foi recuperado a partir dos dados do ciclo de número 44 da simulação. Estes valores foram recuperados através da impressão de variáveis do modelo matemático em um arquivo de texto e de apresentação de outras variáveis na tela de \textit{log} da IDE utilizada. A última parte do gráfico executado no simulador, mostrando as variáveis do sistema mais importantes para visualização do andamento do sistema, após a execução desta configuração, é apresentada na figura \ref{Fig:testbarruzi}.
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=1.00\linewidth]{validacao/BarruziTest}}
+		\caption{Parte final da simulação realizada para a validação}
+		\label{Fig:testbarruzi}
+	\end{center}
+\end{figure}
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=1.00\linewidth]{validacao/BarruziTest2}}
+		\caption{Configuração do poço para a realização do teste de simulação}
+		\label{Fig:configbarruzi}
+	\end{center}
+\end{figure}
 
 Pode-se observar alta concordância entre os dados fornecidos pelo modelo e pelo simulador atestando a validade do uso deste modelo matemático neste simulador para o método de elevação artificial \textit{plunger lift}. Estas pequenas diferenças entre os valores ocorrem por consequência de um maior tempo de duração da etapa de \textit{build-up}. Este maior tempo da etapa de acúmulo de pressão dentro do poço influencia na força que empurra o pistão para a superfície, aumentando sua velocidade média durante a subida e, por consequência, diminuindo o tempo de duração da subida do pistão. Também ocasiona, pelo maior tempo do poço em estado de fechamento, um maior acúmulo de pressão na superfície da coluna de produção e no revestimento do poço simulado.
 

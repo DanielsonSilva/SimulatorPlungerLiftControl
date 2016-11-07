@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.20)  3 NOV 2016 20:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.20)  7 NOV 2016 17:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -610,16 +610,35 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: Command \' invalid in math mode on input line 47.
 
 Missing character: There is no é in font zptmcmr!
-) [23] [24] [25]
+<validacao/BarruziTest.png, id=144, 1068.99374pt x 535.2497pt>
+File: validacao/BarruziTest.png Graphic file (type png)
+
+<use validacao/BarruziTest.png>
+Package pdftex.def Info: validacao/BarruziTest.png used on input line 59.
+(pdftex.def)             Requested size: 426.79134pt x 213.69588pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 59--60
+ [] 
+ []
+
+<validacao/BarruziTest2.png, id=145, 1084.05pt x 447.92343pt>
+File: validacao/BarruziTest2.png Graphic file (type png)
+
+<use validacao/BarruziTest2.png>
+Package pdftex.def Info: validacao/BarruziTest2.png used on input line 67.
+(pdftex.def)             Requested size: 426.79134pt x 176.35028pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 67--68
+ [] 
+ []
+
+[23] [24] [25 <./validacao/BarruziTest.png> <./validacao/BarruziTest2.png>])
+[26]
 \openout2 = `resultado/resultado.aux'.
 
- (./resultado/resultado.tex [26
-
-
-
-]
+ (./resultado/resultado.tex
 Cap\'{\i }tulo 5.
-<resultado/simulacaoteste.png, id=157, 1300.86pt x 731.73375pt>
+<resultado/simulacaoteste.png, id=160, 1300.86pt x 731.73375pt>
 File: resultado/simulacaoteste.png Graphic file (type png)
 
 <use resultado/simulacaoteste.png>
@@ -636,7 +655,7 @@ LaTeX Warning: No positions in optional float specifier.
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 27.
-<resultado/simulacaoposfluxo.png, id=158, 1264.725pt x 642.90187pt>
+<resultado/simulacaoposfluxo.png, id=161, 1264.725pt x 642.90187pt>
 File: resultado/simulacaoposfluxo.png Graphic file (type png)
 
 <use resultado/simulacaoposfluxo.png>
@@ -648,12 +667,16 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 43--44
  [] 
  []
 
-[27] [28 <./resultado/simulacaoteste.png>]
+[27
+
+
+
+] [28 <./resultado/simulacaoteste.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 49.
 
-<resultado/simulacaobuildup.png, id=165, 1271.5003pt x 645.16031pt>
+<resultado/simulacaobuildup.png, id=168, 1271.5003pt x 645.16031pt>
 File: resultado/simulacaobuildup.png Graphic file (type png)
 
 <use resultado/simulacaobuildup.png>
@@ -669,7 +692,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 73--74
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 79.
 
-<resultado/simulacaoposbuildup.png, id=169, 1271.5003pt x 642.14906pt>
+<resultado/simulacaoposbuildup.png, id=172, 1271.5003pt x 642.14906pt>
 File: resultado/simulacaoposbuildup.png Graphic file (type png)
 
 <use resultado/simulacaoposbuildup.png>
@@ -710,10 +733,10 @@ ction /
 (./simulador/simulador.aux) (./validacao/validacao.aux)
 (./resultado/resultado.aux) (./conclusao/conclusao.aux)) ) 
 Here is how much of TeX's memory you used:
- 4483 strings out of 493029
- 60570 string characters out of 6136233
- 138317 words of memory out of 5000000
- 7776 multiletter control sequences out of 15000+600000
+ 4495 strings out of 493029
+ 60879 string characters out of 6136233
+ 138339 words of memory out of 5000000
+ 7786 multiletter control sequences out of 15000+600000
  84176 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,13n,35p,1325b,418s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -728,10 +751,10 @@ exmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/font
 s/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
 
-Output written on principal.pdf (48 pages, 1453597 bytes).
+Output written on principal.pdf (48 pages, 1593214 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
+ 233 PDF objects out of 1000 (max. 8388607)
  150 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
