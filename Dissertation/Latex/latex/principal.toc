@@ -9,9 +9,9 @@
 \contentsline {section}{\numberline {2.1}Eleva\c c\~ao Artificial}{5}
 \contentsline {section}{\numberline {2.2}Introdu\c c\~ao ao m\'etodo \textit {plunger lift}}{8}
 \contentsline {section}{\numberline {2.3}Equipamentos}{9}
-\contentsline {section}{\numberline {2.4}Ciclos do m\'etodo \textit {plunger lift}}{9}
-\contentsline {section}{\numberline {2.5}Vantagens do m\'etodo}{10}
-\contentsline {section}{\numberline {2.6}Modos de Controle}{11}
+\contentsline {section}{\numberline {2.4}Ciclos do m\'etodo \textit {plunger lift}}{10}
+\contentsline {section}{\numberline {2.5}Vantagens do m\'etodo}{11}
+\contentsline {section}{\numberline {2.6}Modos de Controle}{12}
 \contentsline {subsection}{\numberline {2.6.1}Controle por temporiza\c c\~ao}{12}
 \contentsline {subsection}{\numberline {2.6.2}Controle pela press\~ao de revestimento}{13}
 \contentsline {subsection}{\numberline {2.6.3}Controle pelo fator de carga}{13}

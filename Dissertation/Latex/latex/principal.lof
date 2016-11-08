@@ -9,11 +9,11 @@
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Exemplo da tela de desenvolvimento do \textit {software Eclipse MARS.1}}}{16}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Vari\'aveis que podem ser plotadas no gr\'afico do simulador}}{18}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Amostra do gr\'afico pertencente ao simulador mostrando uma execu\c c\~ao}}{19}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Defini\c c\~oes iniciais para a execu\c c\~ao do m\'etodo \textit {plunger lift}}}{19}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Estrutura do padr\~ao de projeto \textit {Strategy} para o simulador \textit {plunger lift}}}{20}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Defini\c c\~oes iniciais para a execu\c c\~ao do m\'etodo \textit {plunger lift}}}{20}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Estrutura do padr\~ao de projeto \textit {Strategy} para o simulador \textit {plunger lift}}}{21}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Exemplo da tela de desenvolvimento do \textit {software Eclipse MARS.1}}}{25}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Exemplo da tela de desenvolvimento do \textit {software Eclipse MARS.1}}}{25}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Parte final da simula\c c\~ao realizada para a valida\c c\~ao}}{25}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Configura\c c\~ao do po\c co para a realiza\c c\~ao do teste de simula\c c\~ao}}{26}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Exemplo de uma execu\c c\~ao bem sucedida durante 3 ciclos completos com configura\c c\~ao do po\c co padr\~ao}}{28}
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Simula\c c\~ao de um po\c co onde o tempo da etapa de \textit {afterflow} foi alterado para 180 segundos}}{29}
