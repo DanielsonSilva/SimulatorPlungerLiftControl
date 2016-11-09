@@ -1,19 +1,20 @@
 %%
 %% Capítulo 5: Resultados
 %%
+
 \mychapter{Resultados}
 \label{Cap:resultados}
 Após o desenvolvimento de um sistema, é necessário uma bateria de testes para verificação da exatidão dos valores calculados e se o andamento ocorre sem travas ou erros em tempo de execução. O desenvolvedor deve realizar diversos testes com algumas configurações diferentes de uso para investigar possíveis falhas que venham tornar o sistema inoperante. Alguns dos testes realizados são explicados e verificam o funcionamento do método \textit{plunger lift} corretamente.
 
 O \textit{software} simulador do método de elevação artificial \textit{plunger lift} explicado no capítulo \ref{Cap:simulador} foi construído e testado para um poço com valores mostrados na figura \ref{Fig:condicoesiniciais}. Os resultados foram satisfatórios no momento em que a simulação mostra um comportamento cíclico evidenciando o método de estudo. Podem-se observar as pressões sendo incrementadas durante a fase de \textit{build-up} e sendo decrementadas nas outras fases. Percebe-se a altura do pistão em todas as etapas quando o mesmo se dirige à superfície e ao fundo do poço durante cada ciclo. A figura \ref{Fig:simulacaoteste} mostra um exemplo de uma simulação durante X ciclos com todas as variáveis possíveis, passível de obter uma ampliação em qualquer área deste gráfico.
 
-\begin{figure}[htbp!]
+\begin{sidewaysfigure}[htbp!]
 	\begin{center}
 		\fbox{\includegraphics[width=1.00\linewidth]{resultado/simulacaoteste}}
 		\caption{Exemplo de uma execução bem sucedida durante 3 ciclos completos com configuração do poço padrão}
 		\label{Fig:simulacaoteste}
 	\end{center}
-\end{figure}
+\end{sidewaysfigure}
 Nos ciclos mostrados na figura \ref{Fig:simulacaoteste} foram obtidos alguns valores via arquivo de texto sobre variáveis de cada um destes ciclos. Estes valores servem para diversos propósitos, como a futura comparação de produção ou de velocidade do pistão durante a fase de subida. As variáveis e seus valores coletados durante a simulação estão expressados na tabela \ref{Tab:variaveisciclo} com suas devidas unidades de medição.
 
 \begin{table}[]
@@ -38,13 +39,13 @@ Nos ciclos mostrados na figura \ref{Fig:simulacaoteste} foram obtidos alguns val
 	\end{tabular}
 \end{table}
 Ao modificar algumas variáveis exploráveis no simulador, verifica-se mudanças significativas no funcionamento do método e comportamentos diversos no processo. Ao acrescentar o tempo de pós-fluxo do método em 120 segundos, tornando a duração da etapa total em 180 segundos, verifica-se o comportamento das pressões dentro do poço. Durante a fase de pós-fluxo as pressões no topo da coluna de produção, na base e no topo do anular caem de forma consideravelmente maior que na etapa de subida do pistão. Isso é consequência do atingimento do pistão na superfície e a possibilidade do gás que há dentro do poço sair pela linha de produção sem obstáculos. Ao não modificar o tempo de válvula fechada ao variar o tempo de pós-fluxo, verifica-se também que o pistão não consegue chegar ao fundo do poço, tornando a produção de líquido do poço menor. Como durante a fase de \textit{afterflow} o poço libera gás, o poço perde pressão e torna a viagem do pistão à superfície mais lenta, diminuindo a velocidade média e o impacto do pistão na chegada à superfície. Toda a simulação descrita neste parágrafo pode ser vista na figura \ref{Fig:simulacaoposfluxo} e os valores de certas variáveis nos ciclos simulados são descritos na tabela \ref{Tab:simulacaoposfluxo}.
-\begin{figure}[htbp!]
+\begin{sidewaysfigure}[htbp!]
 	\begin{center}
 		\fbox{\includegraphics[width=1.00\linewidth]{resultado/simulacaoposfluxo}}
 		\caption{Simulação de um poço onde o tempo da etapa de \textit{afterflow} foi alterado para 180 segundos}
 		\label{Fig:simulacaoposfluxo}
 	\end{center}
-\end{figure}
+\end{sidewaysfigure}
 
 \begin{table}[]
 	\centering
@@ -68,13 +69,13 @@ Ao modificar algumas variáveis exploráveis no simulador, verifica-se mudanças si
 	\end{tabular}
 \end{table}
 Logo, quando o operador deseja diminuir a velocidade do pistão para decrementar a força de impacto do pistão ao chegar à superfície, deve-se aumentar o tempo de pós-fluxo para obter sucesso no resultado. Mas quando o operador quer o oposto do descrito, deve-se aumentar o tempo de válvula fechada. Com um maior tempo de válvula fechada, o poço deve acumular mais energia para, quando for a etapa de subida do pistão, impulsionar o êmbolo com maior força, aumentando a sua velocidade média e de impacto consideravelmente. Com um tempo de válvula fechada suficientemente alto, garante-se a chegada do pistão ao fundo do poço mantendo a produção de líquido alta trazendo toda a golfada formada no fundo do poço para a superfície. O aumento da velocidade pela maior pressão dentro do poço é contrabalanceada com o maior peso da golfada que o êmbolo deve carregar pela coluna de produção. A execução da simulação com um tempo de válvula fechada ajustado para 900 segundos pode ser observada pela figura \ref{Fig:simulacaobuildup} e seus valores das variáveis de ciclo pela tabela \ref{Tab:simulacaobuildup}.
-\begin{figure}[htbp!]
+\begin{sidewaysfigure}[htbp!]
 	\begin{center}
 		\fbox{\includegraphics[width=1.00\linewidth]{resultado/simulacaobuildup}}
 		\caption{Simulação de um poço onde o tempo da etapa de \textit{build-up} foi alterado para 900 segundos}
 		\label{Fig:simulacaobuildup}
 	\end{center}
-\end{figure}
+\end{sidewaysfigure}
 
 \begin{table}[]
 	\centering
@@ -97,14 +98,14 @@ Logo, quando o operador deseja diminuir a velocidade do pistão para decrementar 
 		Velocidade de impacto do pistão($\frac{m}{s}$) 	& $5,778$ & $7,662$ & $9,095$ \\ \hline
 	\end{tabular}
 \end{table}
-O simulador também permite a alteração de mais variáveis do tempo de etapas simultaneamente dos que os executados nas figuras \ref{Fig:simulacaoposfluxo} e \ref{Fig:simulacaobuildup}. Ao alterar o tempo de \textit{afterflow} do ciclo para 450 segundos e o tempo de válvula fechada para 1200 segundos, obtêm-se a execução mostrada na figura \ref{Fig:simulacaoposbuildup} e suas variáveis de ciclo na tabela \ref{Tab:simulacaoposbuildup}. Nesta execução, observa-se uma mudança na inclinação durante a trajetória do pistão (linha vermelha), na etapa de subida do pistão nos tr?s ciclos mostrados, próximo da superfície. Isto é causado pelo amplo volume da golfada, que se formou durante a grande duração do ciclo, que o êmbolo traz consigo do fundo do poço. O desvio da golfada para a linha de produção torna-se um grande obstáculo para o êmbolo atingir a superfície. Então quando todo o volume da golfada foi produzido e não há mais obstáculos para o pistão, o mesmo aumenta sua velocidade consideravelmente até a superfície.
-\begin{figure}[htbp!]
+O simulador também permite a alteração de mais variáveis do tempo de etapas simultaneamente dos que os executados nas figuras \ref{Fig:simulacaoposfluxo} e \ref{Fig:simulacaobuildup}. Ao alterar o tempo de \textit{afterflow} do ciclo para 450 segundos e o tempo de válvula fechada para 1200 segundos, obtêm-se a execução mostrada na figura \ref{Fig:simulacaoposbuildup} e suas variáveis de ciclo na tabela \ref{Tab:simulacaoposbuildup}. Nesta execução, observa-se uma mudança na inclinação durante a trajetória do pistão (linha vermelha), na etapa de subida do pistão nos três ciclos mostrados, próximo da superfície. Isto é causado pelo amplo volume da golfada, que se formou durante a grande duração do ciclo, que o êmbolo traz consigo do fundo do poço. O desvio da golfada para a linha de produção torna-se um grande obstáculo para o êmbolo atingir a superfície. Então quando todo o volume da golfada foi produzido e não há mais obstáculos para o pistão, o mesmo aumenta sua velocidade consideravelmente até a superfície.
+\begin{sidewaysfigure}[htbp!]
 	\begin{center}
 		\fbox{\includegraphics[width=1.00\linewidth]{resultado/simulacaoposbuildup}}
 		\caption{Simulação de um poço onde o tempo da etapa de \textit{build-up} foi alterado para 1200 segundos e a etapa de pós-fluxo para 450 segundos}
 		\label{Fig:simulacaoposbuildup}
 	\end{center}
-\end{figure}
+\end{sidewaysfigure}
 
 \begin{table}[]
 	\centering
@@ -128,3 +129,10 @@ O simulador também permite a alteração de mais variáveis do tempo de etapas simu
 	\end{tabular}
 \end{table}
 Estes resultados exemplificam os tipos de simulações que podem ser realizadas com este simulador e que conclusões pode-se tirar do gráfico formado e dos valores de suas variáveis de ciclo. Dependendo dos valores dos tempos de cada etapa do método, a simulação pode seguir diversos caminhos, otimizados ou não. De acordo com os resultados coletados durante todo projeto, o simulador segue conforme o esperado apresentando comportamento adequado e execução suave em processadores medianos. O simulador se apresenta preparado para receber a implementação dos controladores e analisar os resultados através das variáveis exploradas neste capítulo. As variáveis coletadas são suficientes para tirar conclusões nas futuras comparações entre controladores diversos.
+
+%TODO LIST:
+%Lembrar de colocar as figura de gráfico na paisagem
+% Novo capítulo de resultados, verificar o que manter da qualificação
+% Colocar o papel do controlador e como a operação pode melhorar
+% Comparação de dados entre testes no mesmo poço por controladores diferentes com parâmetros similares
+% Pequena conclusão acerca dos resultados entre os controladores, deixar a conclusão maior no seu capítulo
