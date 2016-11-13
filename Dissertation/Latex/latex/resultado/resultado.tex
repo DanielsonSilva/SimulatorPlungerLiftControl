@@ -130,24 +130,84 @@ O simulador também permite a alteração de mais variáveis do tempo de etapas simu
 \end{table}
 Estes resultados exemplificam os tipos de simulações que podem ser realizadas com este simulador e que conclusões pode-se tirar do gráfico formado e dos valores de suas variáveis de ciclo. Dependendo dos valores dos tempos de cada etapa do método, a simulação pode seguir diversos caminhos, otimizados ou não. De acordo com os resultados coletados durante todo projeto, o simulador segue conforme o esperado apresentando comportamento adequado e execução suave em processadores medianos.
 
-%TODO LIST:
-%-Lembrar de colocar as figura de gráfico na paisagem
-% Novo capítulo de resultados, verificar o que manter da qualificação
-% Colocar o papel do controlador e como a operação pode melhorar
-% Comparação de dados entre testes no mesmo poço por controladores diferentes com parâmetros similares
-% Pequena conclusão acerca dos resultados entre os controladores, deixar a conclusão maior no seu capítulo
-
 \section{Controle e sua função no \textit{plunger lift}}
 \label{Sec:controlefuncao}
 
 Existem alguns algoritmos, como os explicados na seção \ref{Sec:controle}, que melhoram o processo e/ou garantem o funcionamento adequando o sistema a novas características ou até pará-los em casos de falta de segurança. Estes algoritmos contêm parâmetros que, com o maior conhecimento do operador sobre o processo, o controle pode ser melhor apropriado para uma certa situação. Os parâmetros do controle irão depender da característica do poço como RGL (Razão gás-líquido) e profundidade do poço, por exemplo.
 
-Ao longo do tempo da exploração de um poço o RGL do reservatório vai diminuindo, necessitando que o controle sofra alterações para manter a performance do sistema, funcionando no processo cíclico do método \textit{plunger lift}.
+Ao longo do tempo da exploração de um poço o RGL do reservatório vai diminuindo, necessitando que o controle sofra alterações para manter a performance do sistema, funcionando no processo cíclico do método \textit{plunger lift}. Com o RGL do poço menor, o tempo de pós-fluxo deve ser menor e o tempo de acúmulo de pressão deve ser maior para que seja possível que o pistão chegue na superfície todos ciclos.
+
+Pode existir casos de poços que, caso não houver controle ou conhecimento prévio do método, os tempos de abertura e fechamento de válvula não sejam adequados e levam o poço à um afogamento, ou seja, o pistão não chega na superfície com o óleo acumulado no fundo do poço. Uma simulação com as características mostradas na figura \ref{Fig:needforcontrollerconfiguration} foi realizada e o simulador obteve como resultado o mostrado na figura \ref{Fig:needforcontrollersimulation}. Na simulador pode-se perceber que no momento da subida do pistão, o mesmo não consegue chegar à superfície e então pula a etapa de pós-fluxo para o \textit{build-up} e o líquido acumulado no fundo do poço se torna maior e mais pesado, de forma que o pistão não é capaz de chegar na superfície nos próximos ciclos.
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=1.00\linewidth]{resultado/NeedForControllerConfiguration}}
+		\caption{Configuração de teste para a simulação de afogamento de um poço}
+		\label{Fig:needforcontrollerconfiguration}
+	\end{center}
+\end{figure}
+
+\begin{sidewaysfigure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=1.00\linewidth]{resultado/NeedForControllerSimulation}}
+		\caption{Simulação de um afogamento no método \textit{plunger lift} no segundo ciclo}
+		\label{Fig:needforcontrollersimulation}
+	\end{center}
+\end{sidewaysfigure}
+
+O controle por temporização e por pressão de revestimento resolve este transtorno com algoritmos explicados nas subseções \ref{SubSec:Ctrltemporizacao} e \ref{SubSec:Ctrltemporizacao}. Enquanto que o controle por temporização tem três parâmetros (mínimo tempo de viagem do pistão, máximo tempo de viagem do pistão e o valor de modificação de tempo de pós-fluxo e \textit{build-up}), o controle por pressão de revestimento tem dois parâmetros adicionais (máxima pressão de revestimento e mínima pressão de revestimento). A figura \ref{Fig:temporizacao} e \ref{Fig:pressaorevestimento} mostram o resultado da aplicação destes dois controladores, respectivamente, na configuração do poço dada pela figura \ref{Fig:needforcontrollerconfiguration}. Os parâmetros utilizados nos controladores estão descritos nas tabela \ref{Tab:parametroControlador} e estes valores foram adotados a partir de testes no simulador de forma que permitisse que o método seguisse os ciclos normalmente
+
+\begin{table}[]
+	\centering
+	\caption{Parâmetros adotados nos controladores}
+	\label{Tab:parametroControlador}
+	\begin{tabular}{|l|c|c|}
+		\hline
+		\textbf{Parâmetro} & \textbf{Temporização} & \textbf{Pressão de Revestimento} \\ \hline
+		Máximo tempo de viagem do pistão & 80 segundos & X segundos \\ \hline
+		Mínimo tempo de viagem do pistão & 120 segundos & X segundos \\ \hline
+		Valor de alteração das durações das etapas* & 50 segundos & X segundos \\ \hline
+		Máxima pressão de revestimento & ** &  \\ \hline
+		Mínima pressão de revestimento & ** &  \\ \hline
+		\multicolumn{3}{l}{\textit{\tiny{* etapa de \textit{build-up} e \textit{afterflow}}} \\ \hline
+		\multicolumn{3}{l}{\textit{\tiny{** não utiliza}}}
+	\end{tabular}
+\end{table}
+
+\begin{sidewaysfigure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=1.00\linewidth]{resultado/ControleTemporizacao}}
+		\caption{Correção do afogamento pelo controle por temporização}
+		\label{Fig:temporizacao}
+	\end{center}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=1.00\linewidth]{resultado/}}
+		\caption{Correção do afogamento pelo controle por pressão de revestimento}
+		\label{Fig:pressaorevestimento}
+	\end{center}
+\end{sidewaysfigure}
+
+% Explicação do resultado
 
 
+\section{Comparativo entre as performances dos controladores}
+\label{Sec:comparativocontrolador}
 
+De acordo com a seção \ref{Sec:controlefuncao}, os controladores são importantes pois mantêm o método funcionando no poço adequadamente. Todos os dois controladores exemplificados neste trabalho podem evitar o afogamento de um poço assegurando que o pistão alcance a superfície em todos os ciclos.
 
+Apesar dos controladores terem mesma importância de manter o método progredindo sem transtornos, eles apresentam performances diferentes no que diz respeito à produtividade e à segurança do poço. Adotando a configuração do poço dada pela figura \ref{Fig:configbarruzi}, foram realizadas algumas simulações para determinar melhores parâmetros quanto à produtividade e que levam a valores similares de durações das etapas de crescimento de pressão e pós-fluxo. Após as simulações atingirem um estado de equilíbrio, foram capturadas as situações das figuras \ref{Fig:controletemporizacao} e \ref{Fig:controlerevestimento}. Os dados recuperados das duas simulações através de arquivo e \textit{log} estão descritos na tabela \ref{Tab:controleperformance} para comparação.
 
+%Figura da simulação do controle por temporização
+
+%Figura da simulação do controle por pressão de revestimento
+
+%Tabela de comparação dos dados
+
+%Conclusão sobre as figuras e tabelas
+% Pequena conclusão acerca dos resultados entre os controladores, deixar a conclusão maior no seu capítulo
 
 
 
