@@ -1,22 +1,23 @@
 \select@language {brazil}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Configura\c c\~ao b\'asica de um po\c co perfurado para extra\c c\~ao de petr\'oleo}}{2}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Configura\c c\~ao b\'asica de um po\c co perfurado para extra\c c\~ao de petr\'oleo}}{2}{figure.1.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Partes do fluxo}}{6}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Curva de $IPR$}}{7}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Exemplo de um ciclo do m\'etodo \textit {Plunger Lift}}}{11}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Partes do fluxo}}{6}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Curva de $IPR$}}{7}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Exemplo de um ciclo do m\'etodo \textit {Plunger Lift}}}{11}{figure.2.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Exemplo da tela de desenvolvimento do \textit {software Eclipse MARS.1}}}{16}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Vari\'aveis que podem ser plotadas no gr\'afico do simulador}}{18}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Amostra do gr\'afico pertencente ao simulador mostrando uma execu\c c\~ao}}{19}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Defini\c c\~oes iniciais para a execu\c c\~ao do m\'etodo \textit {plunger lift}}}{20}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Estrutura do padr\~ao de projeto \textit {Strategy} para o simulador \textit {plunger lift}}}{21}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Exemplo da tela de desenvolvimento do \textit {software Eclipse MARS.1}}}{16}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Vari\'aveis que podem ser plotadas no gr\'afico do simulador}}{17}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Amostra do gr\'afico pertencente ao simulador mostrando uma execu\c c\~ao}}{18}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Defini\c c\~oes iniciais para a execu\c c\~ao do m\'etodo \textit {plunger lift}}}{19}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Estrutura do padr\~ao de projeto \textit {Strategy} para o simulador \textit {plunger lift}}}{20}{figure.3.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Parte final da simula\c c\~ao realizada para a valida\c c\~ao}}{25}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Configura\c c\~ao do po\c co para a realiza\c c\~ao do teste de simula\c c\~ao}}{26}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Parte final da simula\c c\~ao realizada para a valida\c c\~ao}}{25}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Configura\c c\~ao do po\c co para a realiza\c c\~ao do teste de simula\c c\~ao}}{26}{figure.4.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Exemplo de uma execu\c c\~ao bem sucedida durante 3 ciclos completos com configura\c c\~ao do po\c co padr\~ao}}{28}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Simula\c c\~ao de um po\c co onde o tempo da etapa de \textit {afterflow} foi alterado para 180 segundos}}{29}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Simula\c c\~ao de um po\c co onde o tempo da etapa de \textit {build-up} foi alterado para 900 segundos}}{30}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Simula\c c\~ao de um po\c co onde o tempo da etapa de \textit {build-up} foi alterado para 1200 segundos e a etapa de p\'os-fluxo para 450 segundos}}{31}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Exemplo de uma execu\c c\~ao bem sucedida durante 3 ciclos completos com configura\c c\~ao do po\c co padr\~ao}}{28}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Configura\c c\~ao de teste para a simula\c c\~ao de afogamento de um po\c co}}{32}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Simula\c c\~ao de um afogamento no m\'etodo \textit {plunger lift} no segundo ciclo}}{33}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Corre\c c\~ao do afogamento pelo controle por temporiza\c c\~ao}}{34}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Corre\c c\~ao do afogamento pelo controle por press\~ao de revestimento}}{35}{figure.5.5}
 \addvspace {10\p@ }

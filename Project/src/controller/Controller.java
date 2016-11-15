@@ -24,5 +24,10 @@ public interface Controller {
 	 * Function for setting the needed variables into the controller
 	 */
 	public void setVariables(Map<String, Double> var);
+	
+	/**
+	 * Prints the information requested in the controller
+	 */
+	public void print();
 
 }

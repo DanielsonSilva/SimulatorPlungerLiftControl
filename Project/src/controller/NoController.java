@@ -22,5 +22,12 @@ public class NoController implements Controller {
 	public void check() {
 		//Nothing to do
 	}
+	
+	/**
+	 * Prints the information about this controller
+	 */
+	public void print() {
+		System.out.println("This simulation is not using a controller.");
+	}
 
 }

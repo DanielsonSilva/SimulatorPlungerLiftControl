@@ -70,12 +70,12 @@ public class TimingController implements Controller {
 				if (v.piston_arrival < this.lowPlungerRiseTime) {
 					// Decrement Offtime and increment Afterflow time by value
 					f.tempos.Afterflow += this.value;
-					f.tempos.Offtime -= this.value;
+					f.tempos.Offtime = (int) Math.max(f.tempos.Offtime - this.value,0);
 				}
 				// Check if is higher than the highPlungerRiseTime variable
 				if (v.piston_arrival > this.highPlungerRiseTime) {
 					// Decrement Afterflow and increment Offtime time by value
-					f.tempos.Afterflow -= this.value;
+					f.tempos.Afterflow = (int) Math.max(f.tempos.Afterflow - this.value, 0);
 					f.tempos.Offtime += this.value;
 				}
 			}
@@ -91,6 +91,15 @@ public class TimingController implements Controller {
 			break;
 		}
 
+	}
+	
+	/**
+	 * Prints the information about this controller
+	 */
+	public void print() {
+		Entities f = Entities.getInstance();
+		System.out.println("Duração de afterflow: " + f.tempos.Afterflow);
+		System.out.println("Duração de build-up: " + f.tempos.Offtime);
 	}
 
 }

@@ -1,0 +1,209 @@
+No Ciclo 1
+Pressao mínima do Anular: 0.0
+Pressão mínima da Coluna de Produção: 0.0
+Pressão máxima da Coluna de Produção: 0.0
+Duração de afterflow: 54
+Duração de build-up: 200
+
+No Ciclo 2
+Pressao mínima do Anular: 280.2301805527861
+Pressão mínima da Coluna de Produção: 69.09766907835743
+Pressão máxima da Coluna de Produção: 375.3584500085962
+Duração de afterflow: 74
+Duração de build-up: 180
+
+No Ciclo 3
+Pressao mínima do Anular: 362.5924778815046
+Pressão mínima da Coluna de Produção: 69.79261539005176
+Pressão máxima da Coluna de Produção: 428.022854446574
+Duração de afterflow: 74
+Duração de build-up: 180
+
+No Ciclo 4
+Pressao mínima do Anular: 378.81100890513835
+Pressão mínima da Coluna de Produção: 73.57963519657845
+Pressão máxima da Coluna de Produção: 480.75774979790253
+Duração de afterflow: 94
+Duração de build-up: 160
+
+No Ciclo 5
+Pressao mínima do Anular: 356.50967569997044
+Pressão mínima da Coluna de Produção: 69.82612660460887
+Pressão máxima da Coluna de Produção: 475.47959430439585
+Duração de afterflow: 114
+Duração de build-up: 140
+
+No Ciclo 6
+Pressao mínima do Anular: 339.9215490445254
+Pressão mínima da Coluna de Produção: 69.93952316040601
+Pressão máxima da Coluna de Produção: 477.49661940101527
+Duração de afterflow: 134
+Duração de build-up: 120
+
+No Ciclo 7
+Pressao mínima do Anular: 334.458552698367
+Pressão mínima da Coluna de Produção: 69.86192999215203
+Pressão máxima da Coluna de Produção: 466.24807402479803
+Duração de afterflow: 134
+Duração de build-up: 120
+
+No Ciclo 8
+Pressao mínima do Anular: 322.59925753785745
+Pressão mínima da Coluna de Produção: 69.86682208827277
+Pressão máxima da Coluna de Produção: 474.7527233231384
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 9
+Pressao mínima do Anular: 317.75750567913684
+Pressão mínima da Coluna de Produção: 69.83957487029559
+Pressão máxima da Coluna de Produção: 463.6774180833601
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 10
+Pressao mínima do Anular: 321.94312699134974
+Pressão mínima da Coluna de Produção: 69.95987470000453
+Pressão máxima da Coluna de Produção: 472.6836247835974
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 11
+Pressao mínima do Anular: 318.166354583307
+Pressão mínima da Coluna de Produção: 73.30954734004041
+Pressão máxima da Coluna de Produção: 464.3132140998198
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 12
+Pressao mínima do Anular: 322.0856384193489
+Pressão mínima da Coluna de Produção: 69.97345748020895
+Pressão máxima da Coluna de Produção: 472.96766930626865
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 13
+Pressao mínima do Anular: 318.1652245812182
+Pressão mínima da Coluna de Produção: 69.95926899617582
+Pressão máxima da Coluna de Produção: 464.32317005922897
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 14
+Pressao mínima do Anular: 322.0851121110694
+Pressão mínima da Coluna de Produção: 69.97235323798058
+Pressão máxima da Coluna de Produção: 472.9696032692926
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 15
+Pressao mínima do Anular: 318.1650840437
+Pressão mínima da Coluna de Produção: 69.96029554199907
+Pressão máxima da Coluna de Produção: 464.32295632539217
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 16
+Pressao mínima do Anular: 322.0850753540849
+Pressão mínima da Coluna de Produção: 69.97282949589001
+Pressão máxima da Coluna de Produção: 472.96955755421345
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 17
+Pressao mínima do Anular: 318.1650741727756
+Pressão mínima da Coluna de Produção: 69.96042390378902
+Pressão máxima da Coluna de Produção: 464.32294410969814
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 18
+Pressao mínima do Anular: 322.08507315142145
+Pressão mínima da Coluna de Produção: 69.97285156700381
+Pressão máxima da Coluna de Produção: 472.9695546089042
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 19
+Pressao mínima do Anular: 318.16507356182376
+Pressão mínima da Coluna de Produção: 69.9604379370132
+Pressão máxima da Coluna de Produção: 464.3229436303246
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 20
+Pressao mínima do Anular: 322.0850730177431
+Pressão mínima da Coluna de Produção: 69.97285250797421
+Pressão máxima da Coluna de Produção: 472.96955441188686
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 21
+Pressao mínima do Anular: 318.16507354530756
+Pressão mínima da Coluna de Produção: 69.96043213589725
+Pressão máxima da Coluna de Produção: 464.32294333683205
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 22
+Pressao mínima do Anular: 322.08507301189917
+Pressão mínima da Coluna de Produção: 69.97285295512388
+Pressão máxima da Coluna de Produção: 472.96955442202216
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 23
+Pressao mínima do Anular: 318.16507354373397
+Pressão mínima da Coluna de Produção: 69.9604321537059
+Pressão máxima da Coluna de Produção: 464.3229433347588
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 24
+Pressao mínima do Anular: 322.0850730115305
+Pressão mínima da Coluna de Produção: 69.97285295918121
+Pressão máxima da Coluna de Produção: 472.96955442154
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 25
+Pressao mínima do Anular: 318.16507354363426
+Pressão mínima da Coluna de Produção: 69.96043215500846
+Pressão máxima da Coluna de Produção: 464.3229433346382
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 26
+Pressao mínima do Anular: 322.085073011509
+Pressão mínima da Coluna de Produção: 69.97285295940601
+Pressão máxima da Coluna de Produção: 472.96955442151136
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 27
+Pressao mínima do Anular: 318.1650735242433
+Pressão mínima da Coluna de Produção: 69.96043842991963
+Pressão máxima da Coluna de Produção: 464.3229435840338
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 28
+Pressao mínima do Anular: 322.0850730093844
+Pressão mínima da Coluna de Produção: 69.9728525911648
+Pressão máxima da Coluna de Produção: 472.9695544006918
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 29
+Pressao mínima do Anular: 318.16507352367137
+Pressão mínima da Coluna de Produção: 69.96043844020522
+Pressão máxima da Coluna de Produção: 464.322943583463
+Duração de afterflow: 154
+Duração de build-up: 100
+
+No Ciclo 30
+Pressao mínima do Anular: 322.0850730092767
+Pressão mínima da Coluna de Produção: 69.97285259184865
+Pressão máxima da Coluna de Produção: 472.9695544005327
+Duração de afterflow: 154
+Duração de build-up: 100

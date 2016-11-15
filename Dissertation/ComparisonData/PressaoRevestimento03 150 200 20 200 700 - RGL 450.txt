@@ -1,0 +1,97 @@
+No Ciclo 1
+Pressao mínima do Anular: 0.0
+Pressão mínima da Coluna de Produção: 0.0
+Pressão máxima da Coluna de Produção: 0.0
+Pressão mínima de revestimento: 200.0
+Pressão máxima de revestimento: 700.0
+
+No Ciclo 2
+Pressao mínima do Anular: 280.0652620098152
+Pressão mínima da Coluna de Produção: 83.45786814300479
+Pressão máxima da Coluna de Produção: 357.3325217768867
+Pressão mínima de revestimento: 180.0
+Pressão máxima de revestimento: 680.0
+
+No Ciclo 3
+Pressao mínima do Anular: 307.19769554547094
+Pressão mínima da Coluna de Produção: 69.93950284036679
+Pressão máxima da Coluna de Produção: 336.76242008455955
+Pressão mínima de revestimento: 180.0
+Pressão máxima de revestimento: 680.0
+
+No Ciclo 4
+Pressao mínima do Anular: 340.0020012273863
+Pressão mínima da Coluna de Produção: 69.98079754253743
+Pressão máxima da Coluna de Produção: 379.47375357120535
+Pressão mínima de revestimento: 180.0
+Pressão máxima de revestimento: 680.0
+
+No Ciclo 5
+Pressao mínima do Anular: 353.4625649411201
+Pressão mínima da Coluna de Produção: 69.90161804535592
+Pressão máxima da Coluna de Produção: 398.9074729425565
+Pressão mínima de revestimento: 180.0
+Pressão máxima de revestimento: 680.0
+
+No Ciclo 6
+Pressao mínima do Anular: 347.3729103886201
+Pressão mínima da Coluna de Produção: 69.6420550120968
+Pressão máxima da Coluna de Produção: 390.1729950768666
+Pressão mínima de revestimento: 180.0
+Pressão máxima de revestimento: 680.0
+
+No Ciclo 7
+Pressao mínima do Anular: 354.30369258610807
+Pressão mínima da Coluna de Produção: 69.89887325585258
+Pressão máxima da Coluna de Produção: 400.318589422703
+Pressão mínima de revestimento: 180.0
+Pressão máxima de revestimento: 680.0
+
+No Ciclo 8
+Pressao mínima do Anular: 347.44237928883695
+Pressão mínima da Coluna de Produção: 69.84313387412412
+Pressão máxima da Coluna de Produção: 390.36873126725976
+Pressão mínima de revestimento: 180.0
+Pressão máxima de revestimento: 680.0
+
+No Ciclo 9
+Pressao mínima do Anular: 354.21542418137074
+Pressão mínima da Coluna de Produção: 72.37541148152123
+Pressão máxima da Coluna de Produção: 400.209168597482
+Pressão mínima de revestimento: 180.0
+Pressão máxima de revestimento: 680.0
+
+No Ciclo 10
+Pressao mínima do Anular: 347.4107366210185
+Pressão mínima da Coluna de Produção: 69.94607614270787
+Pressão máxima da Coluna de Produção: 390.32063709665664
+Pressão mínima de revestimento: 180.0
+Pressão máxima de revestimento: 680.0
+
+No Ciclo 11
+Pressao mínima do Anular: 354.1997411193177
+Pressão mínima da Coluna de Produção: 69.93364507616171
+Pressão máxima da Coluna de Produção: 400.1927120465895
+Pressão mínima de revestimento: 180.0
+Pressão máxima de revestimento: 680.0
+
+No Ciclo 12
+Pressao mínima do Anular: 347.3994666383039
+Pressão mínima da Coluna de Produção: 69.8960079566732
+Pressão máxima da Coluna de Produção: 390.3078606160683
+Pressão mínima de revestimento: 180.0
+Pressão máxima de revestimento: 680.0
+
+No Ciclo 13
+Pressao mínima do Anular: 354.19516471931917
+Pressão mínima da Coluna de Produção: 69.99523186045772
+Pressão máxima da Coluna de Produção: 400.1841959609259
+Pressão mínima de revestimento: 180.0
+Pressão máxima de revestimento: 680.0
+
+No Ciclo 14
+Pressao mínima do Anular: 347.3997880751727
+Pressão mínima da Coluna de Produção: 69.9056026419739
+Pressão máxima da Coluna de Produção: 462.2384809507952
+Pressão mínima de revestimento: 180.0
+Pressão máxima de revestimento: 680.0

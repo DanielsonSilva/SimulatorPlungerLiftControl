@@ -155,7 +155,7 @@ Pode existir casos de poços que, caso não houver controle ou conhecimento prévio
 	\end{center}
 \end{sidewaysfigure}
 
-O controle por temporização e por pressão de revestimento resolve este transtorno com algoritmos explicados nas subseções \ref{SubSec:Ctrltemporizacao} e \ref{SubSec:Ctrltemporizacao}. Enquanto que o controle por temporização tem três parâmetros (mínimo tempo de viagem do pistão, máximo tempo de viagem do pistão e o valor de modificação de tempo de pós-fluxo e \textit{build-up}), o controle por pressão de revestimento tem dois parâmetros adicionais (máxima pressão de revestimento e mínima pressão de revestimento). A figura \ref{Fig:temporizacao} e \ref{Fig:pressaorevestimento} mostram o resultado da aplicação destes dois controladores, respectivamente, na configuração do poço dada pela figura \ref{Fig:needforcontrollerconfiguration}. Os parâmetros utilizados nos controladores estão descritos nas tabela \ref{Tab:parametroControlador} e estes valores foram adotados a partir de testes no simulador de forma que permitisse que o método seguisse os ciclos normalmente
+O controle por temporização e por pressão de revestimento resolve este transtorno com algoritmos explicados nas subseções \ref{SubSec:Ctrltemporizacao} e \ref{SubSec:Ctrlpressao}. Enquanto que o controle por temporização tem três parâmetros (mínimo tempo de viagem do pistão, máximo tempo de viagem do pistão e o valor de modificação de tempo de pós-fluxo e \textit{build-up}), o controle por pressão de revestimento tem dois parâmetros adicionais (máxima pressão de revestimento e mínima pressão de revestimento). A figura \ref{Fig:temporizacao} e \ref{Fig:pressaorevestimento} mostram o resultado da aplicação destes dois controladores, respectivamente, na configuração do poço dada pela figura \ref{Fig:needforcontrollerconfiguration}. Os parâmetros utilizados nos controladores estão descritos nas tabela \ref{Tab:parametroControlador} e estes valores foram adotados a partir de testes no simulador de forma que permitisse que o método seguisse os ciclos normalmente
 
 \begin{table}[]
 	\centering
@@ -164,13 +164,13 @@ O controle por temporização e por pressão de revestimento resolve este transtorn
 	\begin{tabular}{|l|c|c|}
 		\hline
 		\textbf{Parâmetro} & \textbf{Temporização} & \textbf{Pressão de Revestimento} \\ \hline
-		Máximo tempo de viagem do pistão & 80 segundos & X segundos \\ \hline
-		Mínimo tempo de viagem do pistão & 120 segundos & X segundos \\ \hline
-		Valor de alteração das durações das etapas* & 50 segundos & X segundos \\ \hline
-		Máxima pressão de revestimento & ** &  \\ \hline
-		Mínima pressão de revestimento & ** &  \\ \hline
-		\multicolumn{3}{l}{\textit{\tiny{* etapa de \textit{build-up} e \textit{afterflow}}} \\ \hline
-		\multicolumn{3}{l}{\textit{\tiny{** não utiliza}}}
+		Máximo tempo de viagem do pistão & 80 segundos & 90 segundos \\ \hline
+		Mínimo tempo de viagem do pistão & 120 segundos & 140 segundos \\ \hline
+		\multirow{2}{*}{Valor de alteração das durações das etapas de \textit{build-up} e \textit{afterflow}}* & \multirow{2}{*}{50 segundos} & \multirow{2}{*}{**} \\ \hline
+		Máxima pressão de revestimento & ** & 400 psi \\ \hline
+		Mínima pressão de revestimento & ** & 620 psi \\ \hline
+		\multirow{2}{*}{Valor de alteração nas pressões máxima e mínima de revestimento} & \multirow{2}{*}{**} & \multirow{2}{*}{20 psi} \\ \hline
+		\multicolumn{3}{l}{\textit{\tiny{** não utiliza}}}		
 	\end{tabular}
 \end{table}
 
@@ -184,21 +184,21 @@ O controle por temporização e por pressão de revestimento resolve este transtorn
 
 \begin{sidewaysfigure}[htbp!]
 	\begin{center}
-		\fbox{\includegraphics[width=1.00\linewidth]{resultado/}}
+		\fbox{\includegraphics[width=1.00\linewidth]{resultado/ControlePressaoRevestimento}}
 		\caption{Correção do afogamento pelo controle por pressão de revestimento}
 		\label{Fig:pressaorevestimento}
 	\end{center}
 \end{sidewaysfigure}
 
 % Explicação do resultado
-
+O resultado dos dois controladores foram similares devido aos valores de máximo e mínimo tempo de viagem do pistão aproximados definidos para os controladores. É possível identificar um controle da pressão de revestimento maior pelo controlador que recebe este nome, evitando que durante a fase de crescimento de pressão, ela não cresça até pontos críticos para o equipamento utilizado. De posse deste resultado, pode-se verificar a importância do uso de controladores para tornar o sistema mais confiável e seguro para a exploração de recursos naturais neste método de elevação artificial.
 
 \section{Comparativo entre as performances dos controladores}
 \label{Sec:comparativocontrolador}
 
 De acordo com a seção \ref{Sec:controlefuncao}, os controladores são importantes pois mantêm o método funcionando no poço adequadamente. Todos os dois controladores exemplificados neste trabalho podem evitar o afogamento de um poço assegurando que o pistão alcance a superfície em todos os ciclos.
 
-Apesar dos controladores terem mesma importância de manter o método progredindo sem transtornos, eles apresentam performances diferentes no que diz respeito à produtividade e à segurança do poço. Adotando a configuração do poço dada pela figura \ref{Fig:configbarruzi}, foram realizadas algumas simulações para determinar melhores parâmetros quanto à produtividade e que levam a valores similares de durações das etapas de crescimento de pressão e pós-fluxo. Após as simulações atingirem um estado de equilíbrio, foram capturadas as situações das figuras \ref{Fig:controletemporizacao} e \ref{Fig:controlerevestimento}. Os dados recuperados das duas simulações através de arquivo e \textit{log} estão descritos na tabela \ref{Tab:controleperformance} para comparação.
+Apesar dos controladores terem mesma importância de manter o método progredindo sem transtornos, eles apresentam performances diferentes no que diz respeito à produtividade e à segurança do poço. Adotando a configuração do poço dada pela figura \ref{Fig:configbarruzi}, foram realizadas algumas simulações para determinar parâmetros de forma a garantir produtividade e continuidade do sistema por um número indeterminado de ciclos. Após as simulações atingirem um estado de equilíbrio, ou seja, tenha se passado um grande espaço de tempo, foram capturadas as situações das figuras \ref{Fig:controletemporizacao} e \ref{Fig:controlerevestimento}. Os dados recuperados das duas simulações através de impressão em arquivo e \textit{log} do programa estão descritos na tabela \ref{Tab:controleperformance} para comparação de resultados.
 
 %Figura da simulação do controle por temporização
 
@@ -208,10 +208,8 @@ Apesar dos controladores terem mesma importância de manter o método progredindo 
 
 %Conclusão sobre as figuras e tabelas
 % Pequena conclusão acerca dos resultados entre os controladores, deixar a conclusão maior no seu capítulo
+Apesar de diferentes dados de algumas variáveis, a produtividade do poço não é muito alterada devido à característica de RGL ser a mesma nas duas simulações e o pistão somente começa a subir para a superfície quando o mesmo chega ao fundo do poço. Portanto a produtividade do método controlador por certo controlador não é característica comparativa de performance. Por outro lado, dependendo da velocidade na qual o pistão deve alcançar na etapa de subida do pistão, o comportamento da simulação sofre modificações. Para o controlador por temporização, quanto maior o tempo de viagem do pistão, ele tende a aumentar consideravelmente o tempo de pós-fluxo deixando o tempo de crescimento de pressão somente o necessário para que o pistão chegue ao fundo do poço enquanto que o controlador por pressão de revestimento não modifica o tempo de pós-fluxo não conseguindo alcançar o tempo de viagem do pistão proposto para valores de RGL do reservatório muito altas.
 
+Constata-se que o controlador por temporização é mais eficaz no sentido de adequar os tempos das etapas correspondentes afim de atingir o intervalo definido pelo operador da janela de tempo de viagem do pistão na etapa de subida do pistão pois ele modifica diretamente as durações das etapas. Em contrapartida, o controlador por pressão de revestimento, dependendo do valor requisitado de tempo de viagem do pistão e das características do reservatório, não é possível atingir a duração do tempo de viagem do pistão definida. Isso acontece devido ao fato que a simples modificação do intervalo da pressão máxima e mínima do revestimento não possibilita atingir certas condições dentro do poço, é necessário a modificação dos tempos de pós fluxo e crescimento do pistão. Apesar desta situação, o controlador por pressão de revestimento é mais seguro para o poço por possibilitar a abertura do poço em casos que a pressão acumulada se torne extremamente alta a ponto do andamento do sistema tornar-se algo perigoso, a qual não é disponível no controlador por temporização. 
 
-
-
-
-
-
+Com os dados fornecidos pelo simulador deste projeto, pode-se observar o papel de cada um destes controladores como otimizador e estabilizador deste método de elevação artificial a depender de características do reservatório explorado.

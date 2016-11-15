@@ -77,9 +77,9 @@ public class Simulation {
 		byPassController  = true;
 		forcarPontosI     = true;
 		forcarPontosF     = true;
-		changeStateValve	  = false;
+		changeStateValve  = false;
 		M_PI              = 3.14159265;
-		cyclenumber       = 1;
+		cyclenumber       = 0;
 		pminCsgSup = 0.;
 		pmaxTbgSup = 0.;
 		pminTbgSup = 0.;
@@ -230,6 +230,7 @@ public class Simulation {
 		System.out.println("Pressao mínima do Anular: " + conv.paToPsi(this.pminCsgSup));
 		System.out.println("Pressão mínima da Coluna de Produção: " + conv.paToPsi(this.pminTbgSup));
 		System.out.println("Pressão máxima da Coluna de Produção: " + conv.paToPsi(this.pmaxTbgSup));
+		this.controller.print();
 		
 		pminCsgSup = 1000000000.;
 		pmaxTbgSup = 0.;
@@ -1707,6 +1708,7 @@ public class Simulation {
 		try {
 			arquivo  = new PrintWriter(new FileWriter("variaveis_de_ciclo.txt", true));
 			arquivo.println("Duração do ciclo:                " + valor);
+			arquivo.println("Tempo atual:                     " + this.tempo);
 			arquivo.println();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

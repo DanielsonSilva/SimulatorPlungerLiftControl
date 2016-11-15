@@ -4,6 +4,7 @@
 package controller;
 
 import java.util.Map;
+
 import algorithm.DataConstants;
 import algorithm.Entities;
 import algorithm.SimulationVariables;
@@ -85,8 +86,8 @@ public class CasingPressureController implements Controller {
 				// Check if is lower than the lowPlungerRiseTime variable
 				if (v.piston_arrival < this.lowPlungerRiseTime) {
 					// Decrement the triggers for the casing pressure
-					this.lowCasingPressure -= this.value;
-					this.highCasingPressure -= this.value;
+					this.lowCasingPressure = Math.max(this.lowCasingPressure - this.value, 0);
+					this.highCasingPressure = Math.max(this.highCasingPressure - this.value, 0);
 				}
 				// Check if is higher than the highPlungerRiseTime variable
 				if (v.piston_arrival > this.highPlungerRiseTime) {
@@ -101,7 +102,13 @@ public class CasingPressureController implements Controller {
 			// Checks when the low casing pressure will trigger
 			// This is done checking the average casing pressure and if
 			// it is lower than the lowCasingPressure variables
-			if ((cv.paToPsi(f.varSaida.PcsgB) + cv.paToPsi(f.tempos.PcsgT)) / 2 <= this.lowCasingPressure) {
+			/*if ((cv.paToPsi(f.varSaida.PcsgB) + cv.paToPsi(f.tempos.PcsgT)) / 2 <= this.lowCasingPressure) {
+				// If so, close the motor valve
+				simulation.changeStateValve();
+			}*/
+			// This is done checking the lower pressure from casing(PcsgT) and
+			//comparing with the lowCasingPressure defined
+			if (cv.paToPsi(f.tempos.PcsgT) <= this.lowCasingPressure) {
 				// If so, close the motor valve
 				simulation.changeStateValve();
 			}
@@ -111,8 +118,14 @@ public class CasingPressureController implements Controller {
 			// Checks when the high casing pressure will trigger
 			// This is done checking the average casing pressure and if
 			// it is higher than the lowCasingPressure variables
-			if ((cv.paToPsi(f.varSaida.PcsgB) + cv.paToPsi(f.tempos.PcsgT)) / 2 >= this.highCasingPressure) {
+			/*if ((cv.paToPsi(f.varSaida.PcsgB) + cv.paToPsi(f.tempos.PcsgT)) / 2 >= this.highCasingPressure) {
 				// If so, opens the motor valve
+				simulation.changeStateValve();
+			}*/
+			// This is done checking the higher pressure from casing(PcsgB) and
+			//comparing with the highCasingPressure defined
+			if (cv.paToPsi(f.varSaida.PcsgB) >= this.highCasingPressure) {
+				// If so, close the motor valve
 				simulation.changeStateValve();
 			}
 			break;
@@ -120,6 +133,14 @@ public class CasingPressureController implements Controller {
 		default:
 			break;
 		}
+	}
+	
+	/**
+	 * Prints the information about this controller
+	 */
+	public void print() {
+		System.out.println("Pressão mínima de revestimento: " + this.lowCasingPressure);
+		System.out.println("Pressão máxima de revestimento: " + this.highCasingPressure);
 	}
 
 }
