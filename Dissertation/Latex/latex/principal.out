@@ -11,16 +11,18 @@
 \BOOKMARK [1][-]{section.2.4}{Ciclos do m\351todo plunger lift}{chapter.2}% 11
 \BOOKMARK [1][-]{section.2.5}{Vantagens do m\351todo}{chapter.2}% 12
 \BOOKMARK [1][-]{section.2.6}{Modos de Controle}{chapter.2}% 13
-\BOOKMARK [2][-]{subsection.2.6.1}{Controle pela press\343o de revestimento}{section.2.6}% 14
-\BOOKMARK [2][-]{subsection.2.6.2}{Controle pelo fator de carga}{section.2.6}% 15
-\BOOKMARK [2][-]{subsection.2.6.3}{Controle por pr\351-carga ou Booster}{section.2.6}% 16
-\BOOKMARK [0][-]{chapter.3}{Simulador Computacional}{}% 17
-\BOOKMARK [1][-]{section.3.1}{Organiza\347\343o do software}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.2}{Principais vari\341veis gerenciadas pelo simulador}{chapter.3}% 19
-\BOOKMARK [1][-]{section.3.3}{Implementa\347\343o de controladores}{chapter.3}% 20
-\BOOKMARK [0][-]{chapter.4}{Valida\347\343o do Simulador}{}% 21
-\BOOKMARK [0][-]{chapter.5}{Resultados}{}% 22
-\BOOKMARK [1][-]{section.5.1}{Controle e sua fun\347\343o no plunger lift}{chapter.5}% 23
-\BOOKMARK [1][-]{section.5.2}{Comparativo entre as performances dos controladores}{chapter.5}% 24
-\BOOKMARK [0][-]{chapter.6}{Conclus\365es}{}% 25
-\BOOKMARK [0][-]{chapter.6}{Refer\352ncias bibliogr\341ficas}{}% 26
+\BOOKMARK [2][-]{subsection.2.6.1}{Controle por temporiza\347\343o}{section.2.6}% 14
+\BOOKMARK [2][-]{subsection.2.6.2}{Controle pela press\343o de revestimento}{section.2.6}% 15
+\BOOKMARK [2][-]{subsection.2.6.3}{Controle pelo fator de carga}{section.2.6}% 16
+\BOOKMARK [2][-]{subsection.2.6.4}{Controle por pr\351-carga ou Booster}{section.2.6}% 17
+\BOOKMARK [0][-]{chapter.3}{Simulador Computacional}{}% 18
+\BOOKMARK [1][-]{section.3.1}{Desenvolvimento do simulador computacional}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.2}{Organiza\347\343o do software}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.3}{Principais vari\341veis gerenciadas pelo simulador}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.4}{Implementa\347\343o de controladores}{chapter.3}% 22
+\BOOKMARK [0][-]{chapter.4}{Valida\347\343o do Simulador}{}% 23
+\BOOKMARK [0][-]{chapter.5}{Resultados}{}% 24
+\BOOKMARK [1][-]{section.5.1}{Controle e sua fun\347\343o no plunger lift}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.2}{Comparativo entre as performances dos controladores}{chapter.5}% 26
+\BOOKMARK [0][-]{chapter.6}{Conclus\365es}{}% 27
+\BOOKMARK [0][-]{chapter.6}{Refer\352ncias bibliogr\341ficas}{}% 28
