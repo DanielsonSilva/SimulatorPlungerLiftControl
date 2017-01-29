@@ -9,19 +9,21 @@
 \contentsline {section}{\numberline {2.1}Eleva\c c\~ao Artificial}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Introdu\c c\~ao ao m\'etodo \textit {plunger lift}}{8}{section.2.2}
 \contentsline {section}{\numberline {2.3}Equipamentos}{9}{section.2.3}
-\contentsline {section}{\numberline {2.4}Ciclos do m\'etodo \textit {plunger lift}}{9}{section.2.4}
-\contentsline {section}{\numberline {2.5}Vantagens do m\'etodo}{11}{section.2.5}
-\contentsline {section}{\numberline {2.6}Modos de Controle}{11}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Controle pela press\~ao de revestimento}{12}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Controle pelo fator de carga}{13}{subsection.2.6.2}
-\contentsline {subsection}{\numberline {2.6.3}Controle por pr\'e-carga ou \textit {Booster}}{13}{subsection.2.6.3}
-\contentsline {chapter}{\numberline {3}Simulador Computacional}{15}{chapter.3}
-\contentsline {section}{\numberline {3.1}Organiza\c c\~ao do \textit {software}}{16}{section.3.1}
-\contentsline {section}{\numberline {3.2}Principais vari\'aveis gerenciadas pelo simulador}{17}{section.3.2}
-\contentsline {section}{\numberline {3.3}Implementa\c c\~ao de controladores}{19}{section.3.3}
-\contentsline {chapter}{\numberline {4}Valida\c c\~ao do Simulador}{23}{chapter.4}
-\contentsline {chapter}{\numberline {5}Resultados}{27}{chapter.5}
-\contentsline {section}{\numberline {5.1}Controle e sua fun\c c\~ao no \textit {plunger lift}}{31}{section.5.1}
-\contentsline {section}{\numberline {5.2}Comparativo entre as performances dos controladores}{32}{section.5.2}
-\contentsline {chapter}{\numberline {6}Conclus\~oes}{33}{chapter.6}
-\contentsline {chapter}{Refer\^encias bibliogr\'aficas}{34}{chapter.6}
+\contentsline {section}{\numberline {2.4}Ciclos do m\'etodo \textit {plunger lift}}{11}{section.2.4}
+\contentsline {section}{\numberline {2.5}Vantagens do m\'etodo}{12}{section.2.5}
+\contentsline {section}{\numberline {2.6}Modos de Controle}{13}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Controle por temporiza\c c\~ao}{13}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Controle pela press\~ao de revestimento}{14}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.3}Controle pelo fator de carga}{14}{subsection.2.6.3}
+\contentsline {subsection}{\numberline {2.6.4}Controle por pr\'e-carga ou \textit {Booster}}{15}{subsection.2.6.4}
+\contentsline {chapter}{\numberline {3}Simulador Computacional}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Desenvolvimento do simulador computacional}{17}{section.3.1}
+\contentsline {section}{\numberline {3.2}Organiza\c c\~ao do \textit {software}}{19}{section.3.2}
+\contentsline {section}{\numberline {3.3}Principais vari\'aveis gerenciadas pelo simulador}{20}{section.3.3}
+\contentsline {section}{\numberline {3.4}Implementa\c c\~ao de controladores}{22}{section.3.4}
+\contentsline {chapter}{\numberline {4}Valida\c c\~ao do Simulador}{25}{chapter.4}
+\contentsline {chapter}{\numberline {5}Resultados}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}Controle e sua fun\c c\~ao no \textit {plunger lift}}{36}{section.5.1}
+\contentsline {section}{\numberline {5.2}Comparativo entre as performances dos controladores}{41}{section.5.2}
+\contentsline {chapter}{\numberline {6}Conclus\~oes}{47}{chapter.6}
+\contentsline {chapter}{Refer\^encias bibliogr\'aficas}{48}{chapter.6}

@@ -43,12 +43,13 @@ Considerando $IP$ constante, qualquer que seja a vazão $q$, a equação \ref{Eq:PW
 \nomenclature{$P_{e}$:}{Pressão média do reservatório}%
 \nomenclature{$P_{w}$:}{Pressão de fluxo no fundo do poço}%
 
-\begin{figure}[htbp!] \begin{center}
-		% fbox faz uma borda ao redor do seu argumento
+\begin{figure}[htbp!] 
+	\begin{center}
 		\fbox{\includegraphics[width=0.50\linewidth]{plungerlift/CurvadeIPR}}
 		\caption{Curva de $IPR$}
 		\label{Fig:curvaipr}
-\end{center} \end{figure}
+	\end{center} 
+\end{figure}
 
 Este modelo linear não se aplica nos casos onde há produção de gás saindo da solução e aumentando a saturação dos fluidos. Quando isto ocorre, há variação no índice de produtividade com a variação da pressão, que torna a lógica que afirma um $IP$ constante inadequada.
 
@@ -72,7 +73,7 @@ Após um certo período do poço em atividade, as pressões do reservatório caem e o
 
 \section{Equipamentos}
 \label{Sec:equipamentos}
-O método de elevação artificial \textit{plunger lift} é composto por um aparato de equipamentos para realização do seu funcionamento apropriado. Desde o fundo da coluna de produção à árvore de natal, existem equipamentos que devem ser mencionados para se melhor entender o método. Estes equipamentos são:
+O método de elevação artificial \textit{plunger lift} é composto por um aparato de equipamentos (mostrados na figura \ref{Fig:equipamentos}) para realização do seu funcionamento apropriado. Desde o fundo da coluna de produção à árvore de natal, existem equipamentos que devem ser mencionados para se melhor entender o método. Estes equipamentos são:
 
 \begin{itemize}
 \item Sensor de pressão --- envia informações de pressão pela coluna de produção e anular para o controlador para que as ações programadas sejam tomadas;
@@ -88,6 +89,14 @@ O método de elevação artificial \textit{plunger lift} é composto por um aparato 
 \end{itemize}
 
 \nomenclature{SP:}{\textit{Set-point}}%
+
+\begin{figure}[htbp!]
+	\begin{center}
+		\fbox{\includegraphics[width=1.00\linewidth]{plungerlift/Equipamentos}}
+		\caption{Aparato de equipamentos necessários para o pleno funcionamento do método \textit{plunger lift}}
+		\label{Fig:equipamentos}
+	\end{center}
+\end{figure}
 
 \section{Ciclos do método \textit{plunger lift}}
 \label{Sec:ciclosplungerlift}

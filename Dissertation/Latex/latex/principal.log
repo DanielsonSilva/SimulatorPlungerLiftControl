@@ -1,16 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.15)  15 NOV 2016 10:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.9)  16 NOV 2016 18:48
 entering extended mode
 **./principal.tex
 (principal.tex
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9n> and hyphenation patterns for 69 languages loaded.
-
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\b
-ook.cls"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\book.cls"
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
-
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\b
-k12.clo"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\bk12.clo"
 File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -26,37 +22,30 @@ File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\i
-nputenc.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.st
+y"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\l
-atin1.def"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\latin1.def"
 File: latin1.def 2015/03/17 v1.2c Input encoding file
-))
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ae\ae.
-sty"
+)) ("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ae\ae.sty"
 Package: ae 2001/02/12 1.3 Almost European Computer Modern
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\f
-ontenc.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty
+"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
-
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t
-1enc.def"
+ ("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 )
 LaTeX Font Info:    Try loading font information for T1+aer on input line 105.
-
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ae\t1a
-er.fd"
+ ("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ae\t1aer.fd"
 File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
 )))
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pslate
-x\pslatex.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pslatex\pslatex.
+sty"
 Package: pslatex 1996/07/24 v1.2 pslatex emulation (DPC)
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -91,72 +80,72 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 75.
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babe
-l\babel.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.st
+y"
 Package: babel 2016/01/08 3.9n The Babel package
 
 *************************************
 * Local config file bblopts.cfg used
 *
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00mikt
-ex\bblopts.cfg"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\bblopts
+.cfg"
 File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-
-portuges\portuges.ldf"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-portuges\p
+ortuges.ldf"
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babe
-l\babel.def"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.de
+f"
 File: babel.def 2016/01/08 3.9n Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
 Package babel Info: Making " an active character on input line 145.
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-
-portuges\portuges.ldf"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-portuges\p
+ortuges.ldf"
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 \l@brazil = a dialect from \language\l@portuges 
 ))
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\
-indentfirst.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\indentfirs
+t.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphi
-cs\graphicx.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphic
+x.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphi
-cs\keyval.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.
+sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphi
-cs\graphics.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphic
+s.sty"
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphi
-cs\trig.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.st
+y"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00mikt
-ex\graphics.cfg"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\graphic
+s.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdftex
--def\pdftex.def"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\pdftex-def\pdfte
+x.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ober
-diek\infwarerr.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infwa
+rerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ober
-diek\ltxcmds.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxcm
+ds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count89
@@ -164,8 +153,8 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\wrapfi
-g\wrapfig.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.
+sty"
 \wrapoverhang=\dimen106
 \WF@size=\dimen107
 \c@WF@wrappedlines=\count90
@@ -173,16 +162,15 @@ g\wrapfig.sty"
 \WF@everypar=\toks17
 Package: wrapfig 2003/01/31  v 3.6
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphi
-cs\lscape.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\lscape.
+sty"
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\rotati
-ng\rotating.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\rotating\rotatin
+g.sty"
 Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\i
-fthen.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \c@r@tfl@t=\count91
@@ -191,36 +179,36 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \rot@float@box=\box27
 \rot@mess@toks=\toks18
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdi
-ek\epstopdf.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopd
+f.sty"
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdi
-ek\epstopdf-base.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopd
+f-base.sty"
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdi
-ek\grfext.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext.
+sty"
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ober
-diek\kvdefinekeys.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvdef
+inekeys.sty"
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdi
-ek\kvoptions.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvoptio
+ns.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ober
-diek\kvsetkeys.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvset
+keys.sty"
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ober
-diek\etexcmds.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etexc
+mds.sty"
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ober
-diek\ifluatex.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\iflua
+tex.sty"
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -229,13 +217,13 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ober
-diek\pdftexcmds.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdfte
+xcmds.sty"
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ober
-diek\ifpdf.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpdf
+.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -249,41 +237,41 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 ))
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\nomenc
-l\nomencl.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\nomencl\nomencl.
+sty"
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \nomlabelwidth=\dimen108
 \nom@tempdim=\dimen109
 \nomitemsep=\skip45
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\setspa
-ce\setspace.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\setspace\setspac
+e.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmat
-h\amsmath.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.
+sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip46
 
 For additional information on amsmath, use the `?' option.
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmat
-h\amstext.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.
+sty"
 Package: amstext 2000/06/29 v2.01
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmat
-h\amsgen.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.s
+ty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks19
 \ex@=\dimen110
 ))
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmat
-h\amsbsy.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.s
+ty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen111
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmat
-h\amsopn.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.s
+ty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count92
@@ -324,19 +312,18 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\
-verbatim.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\verbatim.s
+ty"
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks24
 \verbatim@line=\toks25
 \verbatim@in@stream=\read1
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\
-tabularx.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\tabularx.s
+ty"
 Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\
-array.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen119
 \extrarowheight=\dimen120
@@ -352,33 +339,31 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \TX@cols=\count104
 \TX@ftn=\toks27
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\
-afterpage.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\afterpage.
+sty"
 Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
 \AP@output=\toks28
 \AP@partial=\box30
 \AP@footins=\box31
-)
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\ur
-l.sty"
+) ("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ) (noitemsep.sty) (harvard.sty
 Package: harvard 
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\latex2
-html\html.sty"
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperr
-ef\hyperref.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\latex2html\html.
+sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hyperre
+f.sty"
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ober
-diek\hobsub-hyperref.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsu
+b-hyperref.sty"
 Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
 
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ober
-diek\hobsub-generic.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\hobsu
+b-generic.sty"
 Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -408,26 +393,26 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxe
-tex\ifxetex.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxete
+x.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdi
-ek\auxhook.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\auxhook
+.sty"
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen126
 \Hy@linkcounter=\count105
 \Hy@pagecounter=\count106
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperr
-ef\pd1enc.def"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\pd1enc.
+def"
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count107
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00mikt
-ex\hyperref.cfg"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\hyperre
+f.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4443.
@@ -460,14 +445,14 @@ LaTeX Info: Redefining \pageref on input line 6369.
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperr
-ef\hpdftex.def"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\hpdftex
+.def"
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count113
 \c@bookmark@seq@number=\count114
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdi
-ek\rerunfilecheck.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfi
+lecheck.sty"
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
@@ -486,50 +471,26 @@ Package: html 1999/07/19 v1.38 hypertext commands for latex2html (nd, hws, rrm)
 \c@lsubsubparagraph=\count122
 \ptrfile=\write3
 ))
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphi
-cs\color.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\color.s
+ty"
 Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00mikt
-ex\color.cfg"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00miktex\color.c
+fg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 142.
 )
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\multir
-ow\multirow.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\multirow\multiro
+w.sty"
 \bigstrutjot=\dimen130
-)
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\xcolor
-\xcolor.sty"
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\00mikt
-ex\color.cfg"
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
-)
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\colort
-bl\colortbl.sty"
-Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
-\everycr=\toks29
-\minrowclearance=\skip52
-)
-LaTeX Info: Redefining \color on input line 709.
-\rownum=\count123
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ) (capitulos.sty
 Package: capitulos 1997/10/06 Chapter headers a la Bjarne Stroustrup
-) (comandos.tex)
+) (comandos.tex
+
+Package array Warning: Column C is already defined on input line 38.
+
+)
 \@glossaryfile=\write4
 \openout4 = `principal.glo'.
 
@@ -540,74 +501,74 @@ Writing glossary file principal.glo
 (validacao/validacao.aux) (resultado/resultado.aux) (conclusao/conclusao.aux))
 \openout1 = `principal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 177.
-LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 17
-7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 180.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 18
+0.
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss
-\omspzccm.fd"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omspzccm.
+fd"
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 180.
+LaTeX Font Info:    ... okay on input line 180.
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\context\base
-\supp-pdf.mkii"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.
+mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count124
+\scratchcounter=\count123
 \scratchdimen=\dimen131
 \scratchbox=\box32
-\nofMPsegments=\count125
-\nofMParguments=\count126
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count127
+\nofMPsegments=\count124
+\nofMParguments=\count125
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count126
 \MPscratchDim=\dimen132
-\MPnumerator=\count128
-\makeMPintoPDFobject=\count129
-\everyMPtoPDFconversion=\toks31
+\MPnumerator=\count127
+\makeMPintoPDFobject=\count128
+\everyMPtoPDFconversion=\toks30
 )
 \AtBeginShipoutBox=\box33
-Package hyperref Info: Link coloring OFF on input line 177.
+Package hyperref Info: Link coloring OFF on input line 180.
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperr
-ef\nameref.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref
+.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ober
-diek\gettitlestring.sty"
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\getti
+tlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count130
+\c@section@level=\count129
 )
-LaTeX Info: Redefining \ref on input line 177.
-LaTeX Info: Redefining \pageref on input line 177.
-LaTeX Info: Redefining \nameref on input line 177.
+LaTeX Info: Redefining \ref on input line 180.
+LaTeX Info: Redefining \pageref on input line 180.
+LaTeX Info: Redefining \nameref on input line 180.
  (principal.out) (principal.out)
 \@outlinefile=\write5
 \openout5 = `principal.out'.
 
-Package hyperref Info: *** compatibility with harvard ****  on input line 177.
+Package hyperref Info: *** compatibility with harvard ****  on input line 180.
 \openout2 = `rosto.aux'.
 
  (rosto.tex
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss
-\ot1ptmcm.fd")
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss
-\omlptmcm.fd")
-("C:\Users\Danielson Fl√°vio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss
-\omxpsycm.fd") <UFRN.pdf, id=107, 319.1925pt x 131.49126pt> <use UFRN.pdf>
-<PPgEE.pdf, id=108, 256.96pt x 171.64125pt> <use PPgEE.pdf> <use UFRN.pdf>
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1ptmcm.
+fd")
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omlptmcm.
+fd")
+("C:\Users\1896491\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omxpsycm.
+fd") <UFRN.pdf, id=114, 319.1925pt x 131.49126pt> <use UFRN.pdf>
+<PPgEE.pdf, id=115, 256.96pt x 171.64125pt> <use PPgEE.pdf> <use UFRN.pdf>
 <use PPgEE.pdf>
 File: UFRN.pdf Graphic file (type pdf)
  <use UFRN.pdf>
@@ -637,8 +598,8 @@ Package babel Info: Redefining portuges shorthand "|
 
 
 
-{C:/Users/Danielson Fl√°vio/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} 
-<./UFRN.pdf> <./PPgEE.pdf>])
+{C:/Users/1896491/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./UFRN.pd
+f> <./PPgEE.pdf>])
 \openout2 = `resumos.aux'.
 
 
@@ -667,84 +628,77 @@ Package babel Info: Redefining portuges shorthand "|
 
 ])
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 210.
+(babel)             in language  on input line 213.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 210.
+(babel)             in language  on input line 213.
  [5]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 213.
+(babel)             in language  on input line 216.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 213.
+(babel)             in language  on input line 216.
  [6
 
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 216.
+(babel)             in language  on input line 219.
+ (principal.toc
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 8.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 27.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 27.
+ [1
 
-
-Package hyperref Warning: old toc file detected, not used; run LaTeX again.
-
+])
 \tf@toc=\write6
 \openout6 = `principal.toc'.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 220.
+(babel)             in language  on input line 223.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 220.
-[1
-
-]
+(babel)             in language  on input line 223.
+ [2]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 220.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 220.
- [2
-
-]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 221.
-
-
-Package hyperref Warning: old lof file detected, not used; run LaTeX again.
-
+(babel)             in language  on input line 224.
+ (principal.lof)
 \tf@lof=\write7
 \openout7 = `principal.lof'.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 228.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 228.
+
 [3
+
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 228.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 225.
+(babel)             in language  on input line 228.
  [4
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 226.
-
-
-Package hyperref Warning: old lot file detected, not used; run LaTeX again.
-
+(babel)             in language  on input line 229.
+ (principal.lot)
 \tf@lot=\write8
 \openout8 = `principal.lot'.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 231.
+(babel)             in language  on input line 234.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 231.
-[5
+(babel)             in language  on input line 234.
+ [5
 
 ]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 231.
+(babel)             in language  on input line 234.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 231.
+(babel)             in language  on input line 234.
  [6
 
 ]
@@ -755,33 +709,22 @@ No file principal.nls.
 Cap\'{\i }tulo 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 4.
-Runaway argument?
-{\@firstoffive }\fi , tem como objetivo trazer para a superfÌcie o fl\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.11 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-<introducao/introducao.png, id=177, 341.77687pt x 549.55313pt>
+<introducao/introducao.png, id=294, 341.77687pt x 549.55313pt>
 File: introducao/introducao.png Graphic file (type png)
 
 <use introducao/introducao.png>
 Package pdftex.def Info: introducao/introducao.png used on input line 14.
 (pdftex.def)             Requested size: 128.0387pt x 205.88066pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 20.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 22.
+(babel)             in language  on input line 20.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.22 \section{
-              Objetivo} [1
+l.20 
+      [1
 
 
 
@@ -791,35 +734,29 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 29.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 32.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 32.
+(babel)             in language  on input line 29.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.32 
-      [2 <./introducao/introducao.png>])
+l.29 \section{
+              MotivaÁ„o} [2 <./introducao/introducao.png>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 251.
+(babel)             in language  on input line 29.
+)
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 251.
+(babel)             in language  on input line 254.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 254.
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.251 \include{introducao/introducao}
+l.254 \include{introducao/introducao}
                                       [3]
-! Extra \else.
-\@include ...ediate \closeout \@partaux \fi \else 
-                                                  \deadcycles \z@ \@nameuse ...
-l.251 \include{introducao/introducao}
-                                     
-I'm ignoring this; it doesn't match any \if.
-
 \openout2 = `plungerlift/plungerlift.aux'.
 
-(plungerlift/plungerlift.tex
+ (plungerlift/plungerlift.tex
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining portuges shorthand "|
@@ -841,238 +778,160 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 4.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 7.
-Runaway argument?
-{\@firstoffive }\fi , que definem se um poÁo deve utilizar uma tÈcnic\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.14 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-<plungerlift/Etapasdofluxo.png, id=195, 145.29282pt x 160.34906pt>
+<plungerlift/Etapasdofluxo.png, id=312, 145.29282pt x 160.34906pt>
 File: plungerlift/Etapasdofluxo.png Graphic file (type png)
 
 <use plungerlift/Etapasdofluxo.png>
 Package pdftex.def Info: plungerlift/Etapasdofluxo.png used on input line 18.
 (pdftex.def)             Requested size: 213.39566pt x 235.52678pt.
-
-Runaway argument?
-{\@firstoffive }\fi . 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.25 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 22.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 25.
+(babel)             in language  on input line 22.
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.25 
-      [5]
-Runaway argument?
-{\@firstoffive }\fi . 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.32 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  forma uma reta denominada de $IPR$ (\textit {Inf\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.39 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-<plungerlift/CurvadeIPR.png, id=200, 185.94469pt x 170.13562pt>
-File: plungerlift/CurvadeIPR.png Graphic file (type png)
-
-<use plungerlift/CurvadeIPR.png>
-Package pdftex.def Info: plungerlift/CurvadeIPR.png used on input line 42.
-(pdftex.def)             Requested size: 213.39566pt x 195.25723pt.
+l.22 \end{figure}
+                  [5]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 48.
+(babel)             in language  on input line 39.
 pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.48 
+l.39 
       [6 <./plungerlift/Etapasdofluxo.png>]
-Underfull \vbox (badness 2818) has occurred while \output is active []
+<plungerlift/CurvadeIPR.png, id=327, 185.94469pt x 170.13562pt>
+File: plungerlift/CurvadeIPR.png Graphic file (type png)
 
+<use plungerlift/CurvadeIPR.png>
+Package pdftex.def Info: plungerlift/CurvadeIPR.png used on input line 43.
+(pdftex.def)             Requested size: 213.39566pt x 195.25723pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 54.
+(babel)             in language  on input line 56.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 54.
+(babel)             in language  on input line 56.
  [7 <./plungerlift/CurvadeIPR.png>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 58.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 60.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 58.
+(babel)             in language  on input line 60.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 63.
+(babel)             in language  on input line 65.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 63.
+(babel)             in language  on input line 65.
  [8]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 64.
+(babel)             in language  on input line 66.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 69.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 81.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 86.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 86.
- [9]
-Runaway argument?
-{\@firstoffive }\fi . 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.88 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 71.
 
-<plungerlift/CiclosPlungerLift.png, id=223, 883.80188pt x 362.10281pt>
-File: plungerlift/CiclosPlungerLift.png Graphic file (type png)
+<plungerlift/Equipamentos.png, id=338, 351.3125pt x 406.51875pt>
+File: plungerlift/Equipamentos.png Graphic file (type png)
 
-<use plungerlift/CiclosPlungerLift.png>
-Package pdftex.def Info: plungerlift/CiclosPlungerLift.png used on input line 9
-9.
-(pdftex.def)             Requested size: 426.79134pt x 174.86269pt.
+<use plungerlift/Equipamentos.png>
+Package pdftex.def Info: plungerlift/Equipamentos.png used on input line 85.
+(pdftex.def)             Requested size: 426.79134pt x 493.89896pt.
 
-Overfull \hbox (6.79999pt too wide) in paragraph at lines 99--100
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 85--86
  [] 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 105.
+(babel)             in language  on input line 91.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 109.
+(babel)             in language  on input line 95.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 109.
-[10]
+(babel)             in language  on input line 95.
+[9]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 110.
+(babel)             in language  on input line 95.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 113.
+(babel)             in language  on input line 95.
+ [10 <./plungerlift/Equipamentos.png>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 113.
- [11 <./plungerlift/CiclosPlungerLift.png>]
-Runaway argument?
-{\@firstoffive }\fi , em um poÁo que utiliza do mÈtodo \textit {plung\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.118 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+(babel)             in language  on input line 104.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 104.
+ [11]
+<plungerlift/CiclosPlungerLift.png, id=353, 883.80188pt x 362.10281pt>
+File: plungerlift/CiclosPlungerLift.png Graphic file (type png)
 
+<use plungerlift/CiclosPlungerLift.png>
+Package pdftex.def Info: plungerlift/CiclosPlungerLift.png used on input line 1
+09.
+(pdftex.def)             Requested size: 426.79134pt x 174.86269pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 109--110
+ [] 
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 115.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 120.
+
+Underfull \vbox (badness 2189) has occurred while \output is active []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 123.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 123.
+ [12 <./plungerlift/CiclosPlungerLift.png>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 122.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 125.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 122.
+(babel)             in language  on input line 125.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 127.
+(babel)             in language  on input line 130.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 127.
-[12]
+(babel)             in language  on input line 130.
+ [13]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 127.
-
-Runaway argument?
-{\@firstoffive }\fi  demonstra a relaÁ„o entre carga de lÌquido a ser\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.132 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 137.
+(babel)             in language  on input line 132.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 137.
-Runaway argument?
-{\@firstoffive }\fi . O equipamento necess·rio ao poÁo para aplicaÁ„o\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.140 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 142.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 142.
+ [14]
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 147.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 147.
 )
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 254.
+(babel)             in language  on input line 257.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 254.
- [13]
-! Extra \else.
-\@include ...ediate \closeout \@partaux \fi \else 
-                                                  \deadcycles \z@ \@nameuse ...
-l.254 \include{plungerlift/plungerlift}
-                                       
-I'm ignoring this; it doesn't match any \if.
-
+(babel)             in language  on input line 257.
+ [15]
 \openout2 = `simulador/simulador.aux'.
 
-(simulador/simulador.tex
+ (simulador/simulador.tex
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 4.
+
+[16
+
+
+
+]
 Cap\'{\i }tulo 3.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 4.
-Runaway argument?
-{\@firstoffive }\fi , foi desenvolvido e est· sendo melhorado um apli\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.12 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-Runaway argument?
-{\@firstoffive }\fi  enquanto a janela mostra todos os arquivos do pr\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.14 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-<simulador/IDE_Eclipse.png, id=243, 1445.4pt x 781.41937pt>
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 9.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 12.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 12.
+[17] <simulador/IDE_Eclipse.png, id=386, 1445.4pt x 781.41937pt>
 File: simulador/IDE_Eclipse.png Graphic file (type png)
 
 <use simulador/IDE_Eclipse.png>
@@ -1087,33 +946,18 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 24.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 24.
-[15
-
-
-
-]
+[18 <./simulador/IDE_Eclipse.png>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 24.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 31.
+(babel)             in language  on input line 33.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 31.
- [16 <./simulador/IDE_Eclipse.png>]
+(babel)             in language  on input line 33.
+ [19]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 33.
 
-Runaway argument?
-{\@firstoffive }\fi ) em um gr·fico em duas dimensıes (figura \ref {F\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.36 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-<simulador/variaveisgrafico.png, id=253, 1288.815pt x 37.64063pt>
+<simulador/variaveisgrafico.png, id=399, 1288.815pt x 37.64063pt>
 File: simulador/variaveisgrafico.png Graphic file (type png)
 
 <use simulador/variaveisgrafico.png>
@@ -1124,7 +968,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 39--40
  [] 
  []
 
-<simulador/grafico.png, id=254, 1297.84875pt x 681.29532pt>
+<simulador/grafico.png, id=400, 1297.84875pt x 681.29532pt>
 File: simulador/grafico.png Graphic file (type png)
 
 <use simulador/grafico.png>
@@ -1135,7 +979,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 47--48
  [] 
  []
 
-<simulador/condicoesiniciais.png, id=255, 1011.02719pt x 336.50719pt>
+<simulador/condicoesiniciais.png, id=401, 1011.02719pt x 336.50719pt>
 File: simulador/condicoesiniciais.png Graphic file (type png)
 
 <use simulador/condicoesiniciais.png>
@@ -1149,29 +993,20 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 55--56
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 64.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 64.
-[17 <./simulador/variaveisgrafico.png>]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 64.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 64.
- [18 <./simulador/grafico.png>]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 64.
 
-Runaway argument?
-{\@firstoffive }\fi , fornecendo uma interface comum para todos os al\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.69 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+Underfull \vbox (badness 1231) has occurred while \output is active []
 
-<simulador/strategy.png, id=266, 722.7pt x 215.30438pt>
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 67.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 67.
+ [20 <./simulador/variaveisgrafico.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 67.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 67.
+ [21 <./simulador/grafico.png>]
+<simulador/strategy.png, id=411, 722.7pt x 215.30438pt>
 File: simulador/strategy.png Graphic file (type png)
 
 <use simulador/strategy.png>
@@ -1182,31 +1017,26 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 72--73
  [] 
  []
 
+)
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 79.
+(babel)             in language  on input line 260.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 79.
-[19 <./simulador/condicoesiniciais.png>])
+(babel)             in language  on input line 260.
+ [22 <./simulador/condicoesiniciais.png>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 257.
+(babel)             in language  on input line 260.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 257.
- [20 <./simulador/strategy.png>]
-! Extra \else.
-\@include ...ediate \closeout \@partaux \fi \else 
-                                                  \deadcycles \z@ \@nameuse ...
-l.257 \include{simulador/simulador}
-                                   
-I'm ignoring this; it doesn't match any \if.
-
+(babel)             in language  on input line 260.
+ [23 <./simulador/strategy.png>]
 \openout2 = `validacao/validacao.aux'.
+
 
 (validacao/validacao.tex
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 4.
- [22
+ [24
 
 
 
@@ -1214,17 +1044,6 @@ Package babel Info: Redefining portuges shorthand "|
 Cap\'{\i }tulo 4.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 4.
-Runaway argument?
-{\@firstoffive }\fi  mostra os dados do poÁo de petrÛleo que foram re\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.9 
-    
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 10.
@@ -1233,78 +1052,11 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 37.
 
-! Argument of \Hy@setref@link has an extra }.
-<inserted text> 
-                \par 
-l.39 ...caoPoco} e as saÌdas do modelo matem·tico}
-                                                  
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-{\@firstoffive }\fi  e as saÌdas do modelo matem·tico\fi \color@endgroup 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.39 ...caoPoco} e as saÌdas do modelo matem·tico}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.39 ...caoPoco} e as saÌdas do modelo matem·tico}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.39 ...caoPoco} e as saÌdas do modelo matem·tico}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.39 ...caoPoco} e as saÌdas do modelo matem·tico}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
 
 LaTeX Warning: Command \' invalid in math mode on input line 47.
 
 Missing character: There is no È in font zptmcmr!
-Runaway argument?
-{\@firstoffive }\fi  e adotado alguns valores para par‚metros n„o inf\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.56 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-<validacao/BarruziTest.png, id=282, 1068.99374pt x 535.2497pt>
+<validacao/BarruziTest.png, id=432, 1068.99374pt x 535.2497pt>
 File: validacao/BarruziTest.png Graphic file (type png)
 
 <use validacao/BarruziTest.png>
@@ -1315,7 +1067,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 59--60
  [] 
  []
 
-<validacao/BarruziTest2.png, id=283, 1084.05pt x 447.92343pt>
+<validacao/BarruziTest2.png, id=433, 1084.05pt x 447.92343pt>
 File: validacao/BarruziTest2.png Graphic file (type png)
 
 <use validacao/BarruziTest2.png>
@@ -1326,52 +1078,33 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 67--68
  [] 
  []
 
-)
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 260.
+(babel)             in language  on input line 74.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 260.
- [23]
+(babel)             in language  on input line 74.
+[25]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 260.
+(babel)             in language  on input line 74.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 260.
- [24]
+(babel)             in language  on input line 74.
+ [26]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 260.
+(babel)             in language  on input line 74.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 260.
- [25 <./validacao/BarruziTest.png>]
+(babel)             in language  on input line 74.
+ [27 <./validacao/BarruziTest.png>])
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 260.
+(babel)             in language  on input line 263.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 260.
- [26 <./validacao/BarruziTest2.png>]
-! Extra \else.
-\@include ...ediate \closeout \@partaux \fi \else 
-                                                  \deadcycles \z@ \@nameuse ...
-l.260 \include{validacao/validacao}
-                                   
-I'm ignoring this; it doesn't match any \if.
-
+(babel)             in language  on input line 263.
+ [28 <./validacao/BarruziTest2.png>]
 \openout2 = `resultado/resultado.aux'.
 
-(resultado/resultado.tex
+ (resultado/resultado.tex
 Cap\'{\i }tulo 5.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 5.
-Runaway argument?
-{\@firstoffive }\fi  foi construÌdo e testado para um poÁo com valore\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.10 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-<resultado/simulacaoteste.png, id=305, 1300.86pt x 731.73375pt>
+<resultado/simulacaoteste.png, id=455, 1300.86pt x 731.73375pt>
 File: resultado/simulacaoteste.png Graphic file (type png)
 
 <use resultado/simulacaoteste.png>
@@ -1382,95 +1115,29 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 13--14
  [] 
  []
 
-Runaway argument?
-{\@firstoffive }\fi  foram obtidos alguns valores via arquivo de text\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.19 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 20.
 
-! Argument of \Hy@setref@link has an extra }.
-<inserted text> 
-                \par 
-l.22 ...ecuÁ„o da figura \ref{Fig:simulacaoteste}}
-                                                  
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-{\@firstoffive }\fi \fi \color@endgroup 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.22 ...ecuÁ„o da figura \ref{Fig:simulacaoteste}}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.22 ...ecuÁ„o da figura \ref{Fig:simulacaoteste}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.22 ...ecuÁ„o da figura \ref{Fig:simulacaoteste}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.22 ...ecuÁ„o da figura \ref{Fig:simulacaoteste}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 28.
-Runaway argument?
-{\@firstoffive }\fi  e os valores de certas vari·veis nos ciclos simu\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.49 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+<resultado/simulacaoposfluxo.png, id=461, 1264.725pt x 642.90187pt>
+File: resultado/simulacaoposfluxo.png Graphic file (type png)
+
+<use resultado/simulacaoposfluxo.png>
+Package pdftex.def Info: resultado/simulacaoposfluxo.png used on input line 44.
+
+(pdftex.def)             Requested size: 645.87747pt x 328.32687pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 44--45
+ [] 
+ []
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 49.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 49.
-[27
+[29
 
 
 
@@ -1479,247 +1146,79 @@ Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 49.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 49.
- [28 <./resultado/simulacaoteste.png>]
+ [30 <./resultado/simulacaoteste.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 50.
 
-! Argument of \Hy@setref@link has an extra }.
-<inserted text> 
-                \par 
-l.52 ...Á„o da figura \ref{Fig:simulacaoposfluxo}}
-                                                  
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
+<resultado/simulacaobuildup.png, id=473, 1271.5003pt x 645.16031pt>
+File: resultado/simulacaobuildup.png Graphic file (type png)
 
-Runaway argument?
-{\@firstoffive }\fi \fi \color@endgroup 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.52 ...Á„o da figura \ref{Fig:simulacaoposfluxo}}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+<use resultado/simulacaobuildup.png>
+Package pdftex.def Info: resultado/simulacaobuildup.png used on input line 74.
+(pdftex.def)             Requested size: 645.87747pt x 327.72795pt.
 
-! Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.52 ...Á„o da figura \ref{Fig:simulacaoposfluxo}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 74--75
+ [] 
+ []
 
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.52 ...Á„o da figura \ref{Fig:simulacaoposfluxo}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.52 ...Á„o da figura \ref{Fig:simulacaoposfluxo}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-Runaway argument?
-{\@firstoffive }\fi  e seus valores das vari·veis de ciclo pela tabel\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.79 
-     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 79.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 79.
+[31]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 79.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 79.
+ [32 <./resultado/simulacaoposfluxo.png>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 80.
 
-! Argument of \Hy@setref@link has an extra }.
-<inserted text> 
-                \par 
-l.82 ...uÁ„o da figura \ref{Fig:simulacaobuildup}}
-                                                  
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
+<resultado/simulacaoposbuildup.png, id=488, 1271.5003pt x 642.14906pt>
+File: resultado/simulacaoposbuildup.png Graphic file (type png)
 
-Runaway argument?
-{\@firstoffive }\fi \fi \color@endgroup 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.82 ...uÁ„o da figura \ref{Fig:simulacaobuildup}}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+<use resultado/simulacaoposbuildup.png>
+Package pdftex.def Info: resultado/simulacaoposbuildup.png used on input line 1
+04.
+(pdftex.def)             Requested size: 645.87747pt x 326.1983pt.
 
-! Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.82 ...uÁ„o da figura \ref{Fig:simulacaobuildup}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.82 ...uÁ„o da figura \ref{Fig:simulacaobuildup}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.82 ...uÁ„o da figura \ref{Fig:simulacaobuildup}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-Runaway argument?
-{\@firstoffive }\fi  e \ref {Fig:simulacaobuildup}. Ao alterar o temp\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.109 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 104--105
+ [] 
+ []
 
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 110.
 
-! Argument of \Hy@setref@link has an extra }.
-<inserted text> 
-                \par 
-l.112 ... da figura \ref{Fig:simulacaoposbuildup}}
-                                                  
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
 
-Runaway argument?
-{\@firstoffive }\fi \fi \color@endgroup 
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.112 ... da figura \ref{Fig:simulacaoposbuildup}}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.112 ... da figura \ref{Fig:simulacaoposbuildup}}
-                                                  
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.112 ... da figura \ref{Fig:simulacaoposbuildup}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.112 ... da figura \ref{Fig:simulacaoposbuildup}}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Underfull \vbox (badness 1122) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 132.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 132.
- [29]
+ [33]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 132.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 132.
 
-[30]
+[34 <./resultado/simulacaobuildup.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 132.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 132.
+ [35 <./resultado/simulacaoposbuildup.png>]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 133.
-
-Runaway argument?
-{\@firstoffive }\fi , que melhoram o processo e/ou garantem o funcion\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.137 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-
-LaTeX Warning: Reference `Fig:needforcontrollerconfiguration' on page 31 undefi
-ned on input line 140.
-
-
-LaTeX Warning: Reference `Fig:needforcontrollersimulation' on page 31 undefined
- on input line 140.
-
-
-<resultado/NeedForControllerConfiguration.png, id=324, 749.04843pt x 447.92343p
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 141.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 141.
+ [36]
+<resultado/NeedForControllerConfiguration.png, id=509, 749.04843pt x 447.92343p
 t>
 File: resultado/NeedForControllerConfiguration.png Graphic file (type png)
  <use resultado/NeedForControllerConfiguration.png>
@@ -1732,7 +1231,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 144--145
  []
 
 
-<resultado/NeedForControllerSimulation.png, id=325, 1355.0625pt x 579.16376pt>
+<resultado/NeedForControllerSimulation.png, id=510, 1355.0625pt x 579.16376pt>
 File: resultado/NeedForControllerSimulation.png Graphic file (type png)
 
 <use resultado/NeedForControllerSimulation.png>
@@ -1744,27 +1243,11 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 152--153
  [] 
  []
 
-Runaway argument?
-{\@firstoffive }\fi  e \ref {SubSec:Ctrlpressao}. Enquanto que o cont\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.159 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 160.
 
-
-Overfull \hbox (130.15184pt too wide) in paragraph at lines 164--175
- [][] 
- []
-
-<resultado/ControleTemporizacao.png, id=326, 953.06062pt x 485.56406pt>
+<resultado/ControleTemporizacao.png, id=517, 953.06062pt x 485.56406pt>
 File: resultado/ControleTemporizacao.png Graphic file (type png)
 
 <use resultado/ControleTemporizacao.png>
@@ -1776,7 +1259,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 179--180
  [] 
  []
 
-<resultado/ControlePressaoRevestimento.png, id=327, 1414.53468pt x 662.475pt>
+<resultado/ControlePressaoRevestimento.png, id=518, 1414.53468pt x 662.475pt>
 File: resultado/ControlePressaoRevestimento.png Graphic file (type png)
 
 <use resultado/ControlePressaoRevestimento.png>
@@ -1789,105 +1272,126 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 187--188
  []
 
 Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 195.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 195.
+[37 <./resultado/NeedForControllerConfiguration.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 195.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 195.
+ [38 <./resultado/NeedForControllerSimulation.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 195.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 195.
+ [39 <./resultado/ControleTemporizacao.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 195.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 195.
+ [40 <./resultado/ControlePressaoRevestimento.png>]
+Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 196.
 
-LaTeX Warning: Reference `Sec:controlefuncao' on page 31 undefined on input lin
-e 199.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 204.
+
+<resultado/SimulacaoTemporizacao.png, id=546, 1430.34375pt x 663.22781pt>
+File: resultado/SimulacaoTemporizacao.png Graphic file (type png)
+
+<use resultado/SimulacaoTemporizacao.png>
+Package pdftex.def Info: resultado/SimulacaoTemporizacao.png used on input line
+ 224.
+(pdftex.def)             Requested size: 645.87747pt x 299.482pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 224--225
+ [] 
+ []
+
+<resultado/SimulacaoRevestimento.png, id=547, 1418.29875pt x 663.98062pt>
+File: resultado/SimulacaoRevestimento.png Graphic file (type png)
+
+<use resultado/SimulacaoRevestimento.png>
+Package pdftex.def Info: resultado/SimulacaoRevestimento.png used on input line
+ 233.
+(pdftex.def)             Requested size: 645.87747pt x 302.37506pt.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 233--234
+ [] 
+ []
 
 
-Underfull \vbox (badness 7504) has occurred while \output is active []
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 240.
+
+
+Overfull \hbox (64.62035pt too wide) in paragraph at lines 244--265
+ [][] 
+ []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 200.
+(babel)             in language  on input line 269.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 200.
- [31]
-Runaway argument?
-{\@firstoffive }\fi , foram realizadas algumas simulaÁıes para determ\ETC.
-! Paragraph ended before \Hy@setref@link was complete.
-<to be read again> 
-                   \par 
-l.202 
-      
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-)
+(babel)             in language  on input line 269.
+[41]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 269.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 263.
- [32 <./resultado/NeedForControllerConfiguration.png>]
+(babel)             in language  on input line 269.
+ [42]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 269.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 263.
- [33 <./resultado/NeedForControllerSimulation.png>]
+(babel)             in language  on input line 269.
+ [43 <./resultado/SimulacaoTemporizacao.png>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 269.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 263.
- [34 <./resultado/ControleTemporizacao.png>]
+(babel)             in language  on input line 269.
+ [44 <./resultado/SimulacaoRevestimento.png>])
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 266.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 263.
-
-[35 <./resultado/ControlePressaoRevestimento.png>]
-! Extra \else.
-\@include ...ediate \closeout \@partaux \fi \else 
-                                                  \deadcycles \z@ \@nameuse ...
-l.263 \include{resultado/resultado}
-                                   
-I'm ignoring this; it doesn't match any \if.
-
+(babel)             in language  on input line 266.
+ [45]
 \openout2 = `conclusao/conclusao.aux'.
 
-(conclusao/conclusao.tex
+ (conclusao/conclusao.tex
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 4.
+ [46
+
+
+
+]
 Cap\'{\i }tulo 6.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 4.
 )
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 266.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 266.
-pdfTeX warning (ext4): destination with the same identifier (name{page.33}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.266 \include{conclusao/conclusao}
-                                    [33
-
-
-
-]
+(babel)             in language  on input line 269.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 269.
+ [47]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 272.
  (principal.bbl
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 1.
-pdfTeX warning (ext4): destination with the same identifier (name{page.34}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \begin{thebibliography}{xx}
-                                [34
+ [48
 
 ]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 62.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 62.
-pdfTeX warning (ext4): destination with the same identifier (name{page.35}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.62 
-      [35
+ [49
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 85--85
@@ -1896,102 +1400,50 @@ oduction /$
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 278.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 281.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 278.
+(babel)             in language  on input line 281.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 278.
- [36]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 278.
+(babel)             in language  on input line 281.
+ [50]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
  (principal.aux (rosto.aux) (resumos.aux) (introducao/introducao.aux)
 (plungerlift/plungerlift.aux) (simulador/simulador.aux)
 (validacao/validacao.aux) (resultado/resultado.aux) (conclusao/conclusao.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 278.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 278.
-
-
-Package rerunfilecheck Warning: File `principal.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `principal.out':
-(rerunfilecheck)             Before: 7373D8377A8B305AB6D9684E43FC7FA5;1887
-(rerunfilecheck)             After:  B46879BC26C66BDE08D2FC20B91E9A5C;1854.
-
-LaTeX Warning: There were undefined references.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 281.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 281.
+Package rerunfilecheck Info: File `principal.out' has not changed.
+(rerunfilecheck)             Checksum: F0933A749672E7B227312F5D196916BF;2030.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 278.
- )
-(\end occurred when \ifx on line 136 was incomplete)
-(\end occurred when \iffalse on line 112 was incomplete)
-(\end occurred when \ifx on line 112 was incomplete)
-(\end occurred when \ifx on line 101 was incomplete)
-(\end occurred when \iffalse on line 82 was incomplete)
-(\end occurred when \ifx on line 82 was incomplete)
-(\end occurred when \ifx on line 71 was incomplete)
-(\end occurred when \iffalse on line 52 was incomplete)
-(\end occurred when \ifx on line 52 was incomplete)
-(\end occurred when \ifx on line 41 was incomplete)
-(\end occurred when \iffalse on line 22 was incomplete)
-(\end occurred when \ifx on line 22 was incomplete)
-(\end occurred when \ifx on line 18 was incomplete)
-(\end occurred when \ifx on line 9 was incomplete)
-(\end occurred when \iftrue on line 263 was incomplete)
-(\end occurred when \ifnum on line 263 was incomplete)
-(\end occurred when \ifx on line 39 was incomplete)
-(\end occurred when \ifx on line 8 was incomplete)
-(\end occurred when \iftrue on line 260 was incomplete)
-(\end occurred when \ifnum on line 260 was incomplete)
-(\end occurred when \ifx on line 13 was incomplete)
-(\end occurred when \ifx on line 8 was incomplete)
-(\end occurred when \iftrue on line 257 was incomplete)
-(\end occurred when \ifnum on line 257 was incomplete)
-(\end occurred when \ifx on line 114 was incomplete)
-(\end occurred when \ifx on line 87 was incomplete)
-(\end occurred when \ifx on line 38 was incomplete)
-(\end occurred when \ifx on line 31 was incomplete)
-(\end occurred when \ifx on line 24 was incomplete)
-(\end occurred when \ifx on line 13 was incomplete)
-(\end occurred when \iftrue on line 254 was incomplete)
-(\end occurred when \ifnum on line 254 was incomplete)
-(\end occurred when \ifnum on line 251 was incomplete) 
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 281.
+ ) 
 Here is how much of TeX's memory you used:
- 8445 strings out of 493634
- 126202 string characters out of 3130341
- 226769 words of memory out of 3000000
- 11429 multiletter control sequences out of 15000+200000
- 81408 words of font info for 101 fonts, out of 3000000 for 9000
+ 8072 strings out of 493634
+ 120680 string characters out of 3134424
+ 220894 words of memory out of 3000000
+ 11025 multiletter control sequences out of 15000+200000
+ 84176 words of font info for 103 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 44i,13n,35p,1327b,453s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): na
-me{table.5.1} has been referenced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.4} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.6.4} has been referenced but does not 
-exist, replaced by a fixed one
-
-{C:/Users/Danielson Fl√°vio/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/f
-ontname/8r.enc}<C:/Users/Danielson Fl√°vio/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Danielson Fl√°vio/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Danie
-lson Fl√°vio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Users/Danielson Fl√°vio/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/urw/courier/ucrr8a.pfb><C:/Users/Danielson Fl√°vio/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Danielson Fl√°vio/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Daniel
-son Fl√°vio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb
-><C:/Users/Danielson Fl√°vio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/
-times/utmr8a.pfb><C:/Users/Danielson Fl√°vio/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/urw/times/utmr8a.pfb><C:/Users/Danielson Fl√°vio/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on principal.pdf (49 pages, 1527111 bytes).
+ 44i,12n,34p,1327b,463s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/1896491/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/fontname/
+8r.enc}<C:/Users/1896491/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb><C:/Users/1896491/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/1896491/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/1896491/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/1896491/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/1
+896491/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/U
+sers/1896491/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pf
+b><C:/Users/1896491/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utm
+r8a.pfb><C:/Users/1896491/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/tim
+es/utmr8a.pfb><C:/Users/1896491/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/u
+rw/times/utmri8a.pfb>
+Output written on principal.pdf (62 pages, 2239923 bytes).
 PDF statistics:
- 456 PDF objects out of 1000 (max. 8388607)
- 109 named destinations out of 1000 (max. 500000)
- 299 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 682 PDF objects out of 1000 (max. 8388607)
+ 137 named destinations out of 1000 (max. 500000)
+ 345 words of extra memory for PDF output out of 10000 (max. 10000000)
 
