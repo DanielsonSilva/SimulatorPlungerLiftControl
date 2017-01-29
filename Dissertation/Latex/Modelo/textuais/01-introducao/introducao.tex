@@ -1,0 +1,103 @@
+%%
+%% Capítulo 1: Modelo de Capítulo
+%%
+
+% Está sendo usando o comando \mychapter, que foi definido no arquivo
+% comandos.tex. Este comando \mychapter é essencialmente o mesmo que o
+% comando \chapter, com a diferença que acrescenta um \thispagestyle{empty}
+% após o \chapter. Isto é necessário para corrigir um erro de LaTeX, que
+% coloca um número de página no rodapé de todas as páginas iniciais dos
+% capítulos, mesmo quando o estilo de numeração escolhido é outro.
+\mychapter{Introdução}
+\label{Cap:Introducao}
+
+Este documento é um modelo para propostas de tema para exames de
+qualificação, dissertações de mestrado e teses de doutorado a serem
+submetidos ao Programa de Pós-Graduação em Engenharia Elétrica e de Computação (PPgEEC)
+da Universidade Federal do Rio Grande do Norte (UFRN).  Procure ler o
+texto acompanhando o resultado produzido a partir do código fonte que
+o gerou.
+
+A introdução deve dar ao leitor o posicionamento da tese e a motivação suficiente para a leitura da tese, esclarecendo:
+\begin{itemize}
+	\item A natureza do problema cuja resolução se descreve (uma palhinha do problema);
+	\item Uma indicação dos métodos usados para atacar o problema;
+	\item As contribuições do trabalho e sua relevância para fazer progredir o estado da arte. Se for uma tese, aqui se coloca a hipótese de pesquisa, a tese, e como ela será demonstrada durante o texto;
+	\item A forma como a tese está estruturada (estrutura do texto).
+\end{itemize}
+
+Uma dica para a montagem de uma tese ou monografia é responder as seguintes perguntas, cada uma em um parágrafo:
+\begin{itemize}
+	\item \textbf{O que fez?}: O que se propõe, o que se trabalhou, ``Propomos...'';
+	\item \textbf{Como fez?}: Técnicas, metodologia de trabalho, ``Para tal...'';
+	\item \textbf{Por que?}: Quais as motivações e justificativas do trabalho. A motivação inclui se faz parte de um projeto maior, o fato do problema não ter solução, e/ou qual a história que o levou a trabalhar nisso. A justificativa não é obrigatória, mas pode motivar o leitor;
+	\item \textbf{Quanto vale?}: Quais as contribuições do trabalho. Inclui hipótese, tese,  e resultados principais (técnicas, métodos novos, produtos, publicações);
+	\item \textbf{Para quem?} Quais as aplicações que se beneficiarão do seu trabalho, para quê será (ou poderá ser) usado - como parte de um projeto;
+	\item \textbf{Como está?} Estrutura do texto. Evite escrever coisas obvias (como ``na Introdução, introduzimos...'', ``na conclusão, concluímos''). Coloque texto informativo, que acrescente o saber de quem lê (como ``na seção 2 será mostrado por que \textbf{wavelets} podem ser usadas para estabilizar corrente'').
+\end{itemize}
+
+Uma observação importante é não colocar ``Objetivos'' nos trabalhos finais, pois não são mais objetivos, uma vez que você os atingiu. Neste caso, estes viram contribuições. Os ``Objetivos'' são mais utilizados para qualificações e projetos de pesquisa, que ainda não foi desenvolvidos. Tomar cuidado também para colocar objetivos factíveis (porque será um problema se não os cumprir...).
+
+\section{Processando textos com \LaTeX}
+
+O \LaTeX\ não é um editor de texto no sentido convencional. Ele funciona
+muito mais como um ``compilador'' de uma linguagem de programação de
+textos:%
+% Este é um comando para incluir um item no glossário
+% Note os % no fim da linha anterior e da próxima
+\nomenclature{\LaTeX:}{um poderoso processador de textos}%
+\begin{enumerate}
+\item Inicialmente você escreve um ``programa'' nesta linguagem de
+programação de textos (linguagem \LaTeX), dizendo o conteúdo e a
+formatação do seu documento.  Para escrever este ``programa'' pode-se
+usar qualquer editor de textos capaz de salvar documentos em formato
+texto ASCII puro.
+\item O próximo passo é compilar este código fonte, produzindo um arquivo
+\texttt{.dvi} que funciona como um ``programa objeto''. Esta compilação
+é feita pelo programa \texttt{latex}.
+\item Em seguida o arquivo \texttt{.dvi} é convertido para o formato no
+qual se deseja produzir o texto: PostScript (usando o programa
+\texttt{dvips}), PDF (usando o \texttt{pdflatex}, que já faz esta fase
+e a fase anterior) ou visualização na tela (\texttt{xdvi}).
+\end{enumerate}
+Estas explicações tomaram como base a versão do \LaTeX\ mais comum para
+sistemas operacionais Unix. Existem outras implementações tanto para
+Unix quanto para Windows, onde os comandos executados são diferentes
+mas a idéia geral é sempre a mesma.
+
+Além do \texttt{latex} para compilar o texto, pode ser necessário
+executar outros programas, como o \texttt{bibtex} para incluir
+automaticamente as referências bibliográficas ou o \texttt{makeindex}
+para gerar o glossário. Estes programas devem ser chamados em uma
+ordem específica. Para automatizar este processo, é fornecido um
+arquivo \texttt{Makefile}, de modo que a compilação completa pode
+ser feita utilizando um dos seguintes comandos:%
+\nomenclature{\BibTeX:}{uma ferramenta para geração automática de
+listas de referências bibliográficas}%
+\begin{description}
+\item[{\tt make}:] executa a tarefa \emph{par default}, que pode ser
+alterada no \texttt{Makefile} para apontar para qualquer uma das seguintes.
+\item[{\tt make simples}:] apenas executa o \texttt{latex} uma vez;
+\item[{\tt make principal.dvi}:] executa todos os passos e aplicativos
+necessários para produzir o arquivo \texttt{.dvi} completo;
+\item[{\tt make principal.ps}:] executa todos os passos e aplicativos
+necessários para produzir o arquivo PostScript \texttt{principal.ps}
+completo;
+\item[{\tt make principal.pdf}:] executa todos os passos e aplicativos
+necessários para produzir o arquivo PDF \texttt{principal.pdf} completo;
+\item[{\tt make clean}:] remove todos os arquivos intermediários gerados
+no processo de compilação, inclusive o \texttt{principal.dvi}.
+\item[{\tt make realclean}:] além de fazer um \texttt{make clean}, remove
+os arquivos \texttt{principal.ps} e \texttt{principal.pdf}.
+\end{description}
+
+%\section{Organização do texto}
+%
+%O fecho do capítulo introdutório muitas vezes apresenta uma ideia
+%global do trabalho, mostrando o que vai ser tratado nos capítulos
+%subsequentes.
+
+Neste documento, além de dicas sobre como montar cada capítulo, serão apresentadas inofrmações importantes e dicas sobre como utilizar o \LaTeX\ neste tipo de documento. O capítulo~\ref{Cap:Teoria} apresenta as diretrizes gerais sobre a formatação dos textos. O capítulo~\ref{Cap:TrabalhosRelacionados} apresenta alguns recursos dp \LaTeX\ para escrever expressões
+matemáticas, enquanto o capítulo~\ref{Cap:Problema} trata da inclusão de tabelas, gráficos e figuras no documento. Um recurso para a construção de algoritmos pode ser visto em ~\ref{Cap:Implementacao}. Por fim, o capítulo~\ref{Cap:Conclusao} mostra alguns exemplos de construção automática de bibliografias utilizando o aplicativo \BibTeX\ e menciona fontes adicionais para mais informações.
+
+

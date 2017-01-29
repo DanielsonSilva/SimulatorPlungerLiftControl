@@ -1,0 +1,13 @@
+*.aux
+*.dvi
+*.swp
+*.blg
+*.bbl
+principal.pdf
+*.log
+*.ilg
+*.lot
+*.lof
+*.nlo
+*.nls
+*.toc

@@ -1,0 +1,341 @@
+%%
+%% Capítulo 2: Expressões matemáticas
+%%
+
+\mychapter{Trabalhos relacionados}
+\label{Cap:TrabalhosRelacionados}
+
+Nos trabalhos relacionados, coloque a essência dos trabalhos no domínio abordado (com referências bibliográficas). Isto não inclui citações específicas e particulares para trabalhos anteriores (seus e de outros), mas sim, algo mais genérico, por categoria ou características (por exemplo, classificar os trabalhos segundo as técnicas empregadas). É muito interessante também construir uma tabela (quem lê gosta muito e com certeza elogia!). Escolha apenas os trabalhos estritamente relacionados com o seu (muito similares) para comentar especificamente, sem categorias (por exemplo, ``O trabalho de Fulano [10] propõe uma abordagem muito similar à nossa, porém diferindo pela base wavelet usada...''). Ao final, contextualize o seu trabalho, situando-o em relação ao quadro (tabela) e a esses estritamente relacionados (dizer no que o seu trabalho melhora ou se distingue dos anteriores). E, principalmente, lembre-se de ser educado sempre: nunca desmereça os trabalhos dos outros.
+
+
+\section{Expressões matemáticas}
+\label{Sec:expressoesMatematicas}
+
+\LaTeX~é insuperável no processamento de expressões matemáticas. Expressões
+simples como $2^{n}$ podem ser editadas no próprio texto. Equações
+complexas como:
+% eqnarray é o comando LaTeX de base para expressões multilinhas com
+% alinhamento. O & indica o ponto onde todas as linhas devem ser
+% alinhadas. Neste capítulo serão apresentadas outras opções de alinhamento
+\begin{eqnarray} \label{eq:PDF:RSR}
+  p \left( \gamma \right) & = & \frac{1}{2} \sqrt{\frac{M}{\gamma \bar{\gamma}_{b}}} \frac{1}{ \prod_{i=1}^M {\sqrt{\tilde{\gamma}_i}}}
+  \int_0^{\sqrt{M \delta}} \int_0^{\sqrt{M \delta} - r_M } \cdots
+  \int_0^{\sqrt{M \delta} - \sum_{i = 3}^M {r_i } } \nonumber \\
+  & & p \left( {\frac{\sqrt{M \delta} - \sum_{i = 2}^M {r_i }}{\sqrt{\tilde{\gamma}_1}} ,
+  \frac{r_2}{\sqrt{\tilde{\gamma}_2}} , \ldots ,\frac{r_M}{\sqrt{\tilde{\gamma}_M}} } \right)
+  \, dr_2 \cdots dr_{M-1} \, dr_M
+\end{eqnarray}
+% sem linha em branco
+ou:
+% sem linha em branco
+\begin{equation} \label{eq:TrCGI}
+  T(r) = \frac{1}{f_m}
+  \left( \frac{\pi}{2} \sum_{i=1}^M
+  {\tilde{r}_i^2 \dot{\varsigma}_i^2}\right)^{-1/2}
+  \frac
+  {\begin{array}{ll}
+  \int_0^{\rho \sqrt{M}} \int_0^{\rho \sqrt{M} - r_M } \cdots
+  \int_0^{\rho \sqrt{M} - \sum_{i = 3}^M {r_i } } \int_0^{\rho \sqrt{M} -
+  \sum_{i = 2}^M {r_i } }  \\
+  p \left( {\frac{r_1}{\tilde{r}_1} ,
+  \frac{r_2}{\tilde{r}_2} , \ldots ,\frac{r_M}{\tilde{r}_M} } \right)
+  \, dr_1 \, dr_2 \cdots dr_{M-1} \, dr_M \\ \end{array}}
+  {\begin{array}{ll}
+  \int_0^{\rho \sqrt{M}} \int_0^{\rho \sqrt{M} - r_M } \cdots
+  \int_0^{\rho \sqrt{M} - \sum_{i = 3}^M {r_i } } \\
+  p \left( {\frac{\rho \sqrt{M} - \sum_{i = 2}^M {r_i }}{\tilde{r}_1} ,
+  \frac{r_2}{\tilde{r}_2} , \ldots ,\frac{r_M}{\tilde{r}_M} } \right)
+  \, dr_2 \cdots dr_{M-1} \, dr_M \\ \end{array}}
+\end{equation}
+
+% ops, aqui eu deixei uma linha em branco de propósito
+são automaticamente numeradas e podem ser referenciadas a partir do
+texto. Por exemplo, a equação~\ref{eq:TrCGI} é trivialmente derivada
+da equação~\ref{eq:PDF:RSR}.
+
+No parágrafo anterior foi intencionalmente introduzido um erro. Note
+que o trecho de frase ``são automaticamente numeradas\dots'' tem uma
+indentação, ou seja, um espaço inicial de tabulação, como se fosse a
+primeira frase de um novo parágrafo. Na realidade, todo o texto
+anterior constitui um único parágrafo, no meio do qual se inserem as
+duas equações. Por esta razão, os trechos de frase após as equações
+não devem se iniciar com letra maiúscula nem ser indentados. É
+importante lembrar que nestas situações em que frases são
+interrompidas por equações é obrigatória a inclusão de dois pontos no
+fim dos trechos da frase, como em ``\dots Equações complexas como:'' e
+em ``ou:''.
+
+O que gerou este erro de indentação? Lembre-se que em \LaTeX\ uma
+linha em branco no código fonte indica a separação entre dois
+parágrafos. A causa do problema é a linha em branco entre o
+\verb|\end{equation}| e o \texttt{são automaticamente
+numeradas}\dots~. Como regra geral, enquanto um parágrafo não for
+encerrado, não podem ser incluídas linhas em branco, mesmo que no meio
+do parágrafo existam equações, figuras, notas de rodapé, etc.
+
+Pequenas expressões matemáticas como $x_0^2$ podem ser inseridas
+diretamente no texto, delimitadas por cifrões (\texttt{\$}). Deve-se
+evitar este recurso com expressões muito grandes, como
+% array é o ambiente para fazer coisas como matrizes. É muito similar
+% ao tabular, que será explicado no próximo capítulo, com a diferença
+% que os elementos do array são expressões matemáticas.
+% Para fazer uma matriz , lembre-se que o array não inclui os
+% delimitadores. No caso, nós pusemos o array dentro de delimitadores
+% \left[ e right]. Estes delimitadores desenham um colchete do tamanho
+% necessário para incluir a coisa delimitada
+$\left[\begin{array}{cc} 1 & \frac{2}{x+1} \\ -2 &
+1\end{array}\right]^{-1}$, porque o espaçamento entre as linhas fica
+prejudicado. Para incluir expressões não numeradas maiores, pode-se
+utilizar o par de delimitadores \verb|\[| e \verb|\]|, o que gera
+expressões centralizadas na página:
+\[
+% Nesta expressão nós trocamos o delimitador das matrizes, passando
+% a usar parênteses
+\left(\begin{array}{cc}
+1 & \frac{2}{x+1} \\ -2 & 1
+\end{array}\right)^{-1} = \left(\begin{array}{cc}
+\frac{x+1}{x+5} & -\frac{2}{x+5} \\ \frac{2(x+1)}{x+5} & \frac{x+1}{x+5}
+\end{array}\right) \quad
+% quad é uma das formas de incluir espaço em expressões matemáticas,
+% pois os espaços são ignorados. quad deve ser usado com moderação,
+% pois na maioria dos casos a formatação do LaTeX é a mais adequada.
+% Muitos usos de quad podem ser substituídos por ambientes de alinhamento,
+% explicados a seguir
+\text{se} \quad x \neq -1 \quad \text{e} \quad x \neq -5
+\]
+
+Um erro comum em expressões matemáticas é o de digitar os nomes de
+funções diretamente, sem utilizar os comandos apropriados. Por
+exemplo, a expressão $\sin(\omega t+\phi)$ está correta, enquanto que
+a expressão $sin(\omega t+\phi)$ é interpretada pelo \LaTeX como sendo
+o produto das variáveis $s$, $i$ e $n$ pela expressão entre
+parênteses. Para as funções usuais já existem comandos predefinidos,
+como \verb|\sin|. Para suas próprias funções, utilize o comando
+\verb|\operatorname{}|, diretamente ou definindo um novo comando:
+% newcommand define novos comandos, que podem passar a ser usados da
+% mesma forma que os comandos LaTeX de base.
+\newcommand{\fat}{\operatorname{fatorial}}
+\[
+\fat(x) = x \cdot \fat(x-1)
+\]
+
+O \LaTeX\ possui uma sintaxe específica para índices (sub-escritos) e
+expoentes (super-escritos) posicionados do lado direito do objeto a
+que se referem, mas não do lado esquerdo. Para conseguir este efeito,
+adicione índices e/ou expoentes a um bloco vazio posicionado antes do
+objeto:
+% O ambiente xalignat* é normalmente utilizado para escrever expressões
+% matemáticas multilinhas com vários pontos de alinhamento. Será detalhado
+% na próxima seção. Neste caso, está sendo usado de um modo não
+% convencional, pois se trata de uma expressão só com uma linha. O ambiente
+% xalignat* está sendo empregado aqui para espaçar igualmente os 6 ítens
+% da expressão ao longo da linha de texto.
+\begin{xalignat*}{3}
+    &w^2 &     &w_i &   {}_z&w \\
+{}^*&w   & {}_P&w^Q & {}^A_B&w^C_D
+\end{xalignat*}
+
+\subsection{Equações}
+\label{Sec:equacoes}
+
+As equações são delimitadas por \verb|\begin{equation}| e
+\verb|\end{equation}|. Devem ser identificadas por um \verb|\label|
+para permitir referências futuras:
+% Nesta equação são utilizados delimitadores. Não se pode usar um
+% delimitador direito sem o esquerdo correspondente, mas os delimitadores
+% não precisam ser do mesmo tipo (posso abrir com chave e fechar com
+% colchete, por exemplo). Existe o delimitador . que é um delimitador
+% vazio. Para colocar uma barra vertical ao lado das expressões, colocamos
+% um delimitador . à esquerda e um delimitador | à direita.
+\begin{equation}
+y = g(x) = g(x_{PO}) + \left.\frac{dg}{dx}\right|_{x=x_{PO}}
+\frac{(x-x_{PO})}{1!} + \left.\frac{d^2g}{dx^2}\right|_{x=x_{PO}}
+\frac{(x-x_{PO})^2}{2!} + \cdots
+\label{Eq:Taylor}
+\end{equation}
+
+Devem-se evitar referências com expressões do tipo ``a equação acima''
+e ``a próxima equação'', pois modificações no texto podem tornar a
+referência inválida. Use sempre referências pelo rótulo
+(\texttt{label}), como em ``a equação~\ref{Eq:Taylor}'', mesmo para
+equações próximas.
+
+Existem vários ambientes para escrever equações, como o \verb|cases|
+para construir expressões condicionais:
+\begin{equation}
+f(x) = 1+\begin{cases}
+0   & \text{se $x=0$}\\
+1/x & \text{caso contrário}
+\end{cases} + \begin{cases}
+x/2             & \text{se $x$ é inteiro e par}\\
+\frac{x+1}{2}   & \text{se $x$ é inteiro e ímpar}\\
+\frac{x+0.5}{2} & \text{se $x$ não é inteiro}
+\end{cases}
+\end{equation}
+
+\subsection{Expressões multilinhas}
+\label{Sec:multilinhas}
+
+O pacote \texttt{amstex} define vários ambientes para criar expressões
+matemáticas que ocupam mais de uma linha. Existem versões dos
+ambientes com e sem inclusão do número na equação, conforme indicado
+na tabela~\ref{Tab:multilinhas}\footnotemark.
+% A explicação sobre o comando \footnotemark está logo mais à frente
+% no texto
+
+\begin{table}[htbp]
+\begin{center}
+\newlength{\LL}
+\settowidth{\LL}{Tipo de alinhamento}
+\begin{tabular}{|>{\tt}l|>{\tt}l|l|} \hline
+\multicolumn{2}{|c|}{PACOTE} &
+\multicolumn{1}{c|}{\multirow{2}{\LL}{Tipo de alinhamento}}
+\\ \cline{1-2}
+\textrm{Com número} & \textrm{Sem número} &  \\ \hline
+gather & gather* & sem alinhamento (só múltiplas linhas) \\
+multiline & multline* & quebra de equação em várias linhas \\
+align & align* & alinhamento em um único ponto \\
+alignat & alignat* & alinhamento em vários pontos, no centro da linha\\
+xalignat & xalignat* & vários pontos, ocupando toda a linha (com margens)\\
+-- & xxalignat & vários pontos, ocupando toda a linha (sem margens)
+\\ \hline
+\end{tabular}
+\end{center}
+\caption{Os ambientes para geração de equações multilinhas}
+\label{Tab:multilinhas}
+\end{table}
+
+Para os ambientes \texttt{alignat}, \texttt{xalignat} e
+\texttt{xxalignat} existe um parâmetro obrigatório que é o número de
+elementos em cada linha. Cada elemento tem um ponto de alinhamento com
+os outros elementos da mesma coluna em outras linhas.  Cada elemento é
+separado do próximo por um \texttt{\&}. Dentro de cada elemento, um
+novo \texttt{\&} marca seu ponto de alinhamento, conforme o exemplo da
+tabela \ref{Tab:exemplomultilinhas}, onde se vê o código fonte e o
+resultado produzido.
+
+% Este table não contém um tabular, mas sim uma frase composta por
+% dois minipages. Maiores detalhes sobre tables, tabulars, etc. no
+% capítulo seguinte.
+\begin{table}[htbp] \begin{center}
+\hrule
+% O ambiente minipage cria uma micropágina com a dimensão especificada
+% e que se comporta exatamente como a página real, porém com dimensões
+% reduzidas. Ela pode ser incluída em praticamente todo outro ambiente
+% e no meio de frases.
+\begin{minipage}[c]{0.3\linewidth}
+\tiny
+% O ambiente verbatim põe na tela o texto exatamente como foi digitado.
+% Muito útil para incluir código fonte, como neste caso.
+\begin{verbatim}
+\begin{xxalignat}{3}
+&aaaa  &  mm&mm  &  cccc& \\
+xxxx&  &  ii&ii  &  llll&
+\end{xxalignat}
+\end{verbatim}
+\end{minipage}
+% para uma minipage ficar à esquerda e a outra à direita vamos
+% incluir entre elas dois espaços horizontais \hfill, que são espaços
+% que "esticam" até ocupar a máxima largura possível.
+\hfill
+$\implica$
+\hfill
+\begin{minipage}[c]{0.3\linewidth}
+\begin{xxalignat}{3}
+% A primeira coluna alinha o início de um com o fim do outro
+% A segunda coluna alinha os dois pelo meio
+% A terceira coluna alinha os dois pelo fim
+&aaaa  &  mm&mm  &  cccc& \\
+xxxx&  &  ii&ii  &  llll&
+\end{xxalignat}
+\end{minipage}
+\hrule
+\caption{Exemplo de equação multilinha com vários pontos de alinhamento}
+\label{Tab:exemplomultilinhas}
+\end{center}\end{table}
+
+Os ambientes da tabela~\ref{Tab:multilinhas} funcionam como um
+ambiente \texttt{equation}: ocupam toda a linha e centralizam a
+expressão.  Em algumas situações, entretanto, se deseja incluir um
+sub-ambiente multilinhas dentro de uma expressão mais geral. Para
+isto, o \texttt{amstex} fornece as opções listadas na
+tabela~\ref{Tab:submultilinhas}\addtocounter{footnote}{-1}\footnotemark.
+% Para inserir uma nota de rodapé, pode-se utilizar o comando \footnote,
+% que já insere a marca e o texto. Em algumas situações, entretanto, é
+% preciso utilizar um comando para a marca (\footnotemark) e outro para
+% o texto (\footnotetext). Uma das situações onde isto é necessário é
+% o caso deste exemplo, onde queremos que duas marcas se refiram ao
+% mesmo texto.
+% O comando \footnotemark incrementa o contador das marcas de rodapé,
+% de modo que o primeiro \footnotemark imprimirá a marca 1, o segundo a
+% marca 2, etc. Para contornar este incremento automático, nós
+% decrementamos o contador de uma unidade antes da segunda chamada.
+
+% Agora vai o texto da nota de rodapé. Ele é associado à marca do
+% último \footnotemark. O comando \footnotetext não incrementa o
+% contador de notas de rodapé.
+\footnotetext{Nestas tabelas foram utilizadas extensões do ambiente
+\texttt{tabular} fornecidas pelo pacote \texttt{tabularx}. Esta
+extensões serão explicadas no capítulo \ref{Cap:Problema}}
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|>{\tt}l|l|} \hline
+% Estes multicolumn's que abranjem uma única coluna são utilizados para
+% mudar o tipo de alinhamento. Por default, a primeira coluna é alinhada
+% à esquerda (l). Usando o multicolumn, consegue-se que apenas o elemento
+% na linha em questão fique centralizado (c).
+\multicolumn{1}{|c|}{PACOTE} &
+\multicolumn{1}{c|}{Tipo de alinhamento}
+\\ \hline
+gathered & sem alinhamento (só múltiplas linhas) \\
+aligned & alinhamento em um único ponto \\
+alignedat & alinhamento em vários pontos
+\\ \hline
+\end{tabular}
+\end{center}
+\caption{Os ambientes para geração de trechos multilinhas em equações}
+\label{Tab:submultilinhas}
+\end{table}
+
+A equação \ref{Eq:alinhamento} ilustra a utilização de ambientes
+\texttt{aligned} inseridos dentro de um ambiente \texttt{alignat}.
+Nos ambientes multilinhas numerados cada linha terá seu próprio número
+e deverá receber seu próprio rótulo (\texttt{label}), exceto caso se
+informe explicitamente que a linha não deverá ser numerada, usando o
+comando \verb|\nonumber|.
+
+\begin{alignat}{3}
+% Primeira linha do alignat (não numerada)
+% Primeiro elemento do alignat (inclui um aligned) - alinha no fim
+\left\{\begin{aligned} % Alinha no sinal de =
+\dot{\mathbf{x}}(t) &= \mathsf{A}\mathbf{x}(t)+\mathsf{B}\mathbf{u}(t) \\
+\mathbf{y} &= \mathsf{C}\mathbf{x}(t)+\mathsf{D}\mathbf{u}(t)
+\end{aligned}\right.&
+% Note que o aligned é envolvido por dois delimitadores diferentes:
+% uma chave (\left\{) no lado esquerdo e um vazio (\right.) no direito
+&
+% Segundo elemento do alignat (só uma seta) - alinha no início
+&\implica
+&
+% Terceiro elemento do alignat (inclui um aligned) - alinha no início
+&\left\{\begin{aligned} % Alinha no sinal de =
+s\mathbf{X}(s)-\mathbf{x}(0)&=\mathsf{A}\mathbf{X}(s)+\mathsf{B}\mathbf{U}(s)\\
+\mathbf{Y}(s) &= \mathsf{C}\mathbf{X}(s)+\mathsf{D}\mathbf{U}(s)
+\end{aligned}\right.\implicafim
+\nonumber
+\\
+% Segunda linha do alignat (numerada)
+% Primeiro elemento do alignat (inclui um aligned) - alinha no fim
+\left\{\begin{aligned} % Alinha no sinal de =
+\mathbf{X}(s) &= \Phi(s)\mathbf{x}(0) + \Phi(s)\mathsf{B}\mathbf{U}(s) \\
+\mathbf{Y}(s) &= \mathsf{C}\mathbf{X}(s)+\mathsf{D}\mathbf{U}(s)
+\end{aligned}\right.&
+&
+% Segundo elemento do alignat - alinha no início
+&\quad \text{onde} \quad
+&
+% Terceiro elemento do alignat - alinha no início
+&\Phi(s) = (s\mathsf{I}-\mathsf{A})^{-1}
+\label{Eq:alinhamento}
+\end{alignat}

@@ -193,7 +193,7 @@
 % Só são incluídos na versão final da tese ou dissertação. Não são
 % incluídos nem na proposta de tema de qualificação nem na versão
 % preliminar da tese ou dissertação: nestes casos, comente a próxima linha.
-%\include{preambulo}
+\include{preambulo}
 
 %
 % O espaçamento entre linhas
@@ -201,10 +201,10 @@
 
 % PARA A VERSÃO FINAL:
 % Deve ser usado espaçamento simples nas páginas de texto
-%\singlespacing
+\singlespacing
 % PARA A QUALIFICAÇÃO E PARA A VERSÃO INICIAL:
 % Deve ser usado espaçamento 1 1/2 nas páginas de texto
-\onehalfspacing
+%\onehalfspacing
 
 % Resumo/Abstract
 \include{resumos}
@@ -229,9 +229,9 @@
 % Glossário (gerado automaticamente - veja entradas em
 % introducao/introducao.tex e em estilo/estilo.tex)
 \cleardoublepage
-%\renewcommand{\nomname}{Lista de Símbolos e Abreviaturas}
-%\markboth{\MakeUppercase{\nomname}}{\MakeUppercase{\nomname}}
-%\addcontentsline{toc}{chapter}{\nomname}
+\renewcommand{\nomname}{Lista de Símbolos e Abreviaturas}
+\markboth{\MakeUppercase{\nomname}}{\MakeUppercase{\nomname}}
+\addcontentsline{toc}{chapter}{\nomname}
 
 % O argumento opcional do comando \printglossary é a largura deixada
 % para os símbolos no glossário. Se seus símbolos são "largos", como
@@ -265,9 +265,12 @@
 % Cap. 6 - Conclusões
 \include{conclusao/conclusao}
 
-Drop	% Referências bibliogáficas (geradas automaticamente)
+% Referências bibliogáficas (geradas automaticamente)
 \addcontentsline{toc}{chapter}{Referências bibliográficas}
-\nocite{*}
+
+% Adicionar todas as bibliografias
+%\nocite{*}
+
 \bibliography{bibliografia}
 
 %\appendix

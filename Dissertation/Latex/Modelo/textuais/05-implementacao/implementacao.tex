@@ -1,0 +1,126 @@
+%%
+%% Capítulo 4: Figuras, gráficos e tabelas
+%%
+
+\mychapter{Implementação}
+\label{Cap:Implementacao}
+
+Coloque aqui a parte sistêmica da solução do problema. Para isto, monte um diagrama de blocos, descrevendo cada caixinha do diagrama. Caso o seu trabalho lide com engenharia de \textit{software}, você também pode apresentar também outros tipos de diagrama (casos de uso, classes, modelos entidade-relacionamento, entre outros), desde que saiba o que eles significam. Diga qual a linguagem, máquina e outras informações técnicas. Coloque os algoritmos ou técnicas implementadas que resolveram o problema especificado formalmente no capítulo anterior. Use e abuse de textos como ``este algoritmo implementa a equação xx do Capítulo YY'', para fazer referência aos formalismos definidos nos capítulos \ref{Cap:Teoria} e \ref{Cap:Problema}.
+
+\section{Algoritmos}
+\label{Sec:algoritmos}
+
+O latex provê alguns pacotes para a montagem de algoritmos. Um destes pacotes é o \texttt{algorithm2e}, que permite o uso de diretivas de comando em português. De acordo com o manual do pacote, os comandos disponíveis em português são os seguintes:
+
+
+\begin{itemize}
+\item Entradas e saídas do algoritmo:
+	\begin{itemize}
+ 	\item \verb|\Entrada{Entrada}| $\rightarrow$ \textbf{KwEntrada};
+ 	\item \verb|\Saida{Saída}| $\rightarrow$ \textbf{KwSaida};
+ 	\item \verb|\Dados{Dados}| $\rightarrow$ \textbf{KwDados};
+ 	\item \verb|\Resultado{Resultado}| $\rightarrow$ \textbf{KwResultado}.
+ 	\end{itemize}
+\item Retorno do algoritmo:
+	\begin{itemize}
+ 		\item \verb|\Ate| $\rightarrow$ \textbf{at\'{e}};
+ 		\item \verb|\KwRetorna{[valor]}| $\rightarrow$ \textbf{KwRetorna};
+ 		\item \verb|\Retorna{[valor]}| $\rightarrow$ \textbf{Retorna}.
+ 	\end{itemize}
+\item Início de bloco: \verb|\Iniciob{bloco interno}| $\rightarrow$ \textbf{Iniciob}.
+\item Condicionais (\textit{if-then-else}):
+	\begin{itemize} 
+		\item \verb|\eSe{condição}{bloco `then'}{bloco `else'}| $\rightarrow$ \textbf{eSe};
+ 		\item \verb|\Se{condição}{bloco `then'}| $\rightarrow$ \textbf{Se};
+ 		\item \verb|\uSe{condição}{bloco `else'' sem `fim'}| $\rightarrow$ \textbf{uSe};
+ 		\item \verb|\lSe{condição}{linha de texto `then'}| $\rightarrow$ \textbf{lSe};
+ 		\item \verb|\Senao{bloco `else'}| $\rightarrow$ \textbf{Senão};
+ 		\item \verb|\uSenao{bloco `else' sem `else'}| $\rightarrow$ \textbf{uSenão};
+ 		\item \verb|\lSenao{linha de código ``else''}| $\rightarrow$ \textbf{lSenão};
+ 		\item \verb|\SenaoSe{condição}{bloco ``else-if''}| $\rightarrow$ \textbf{uSenãoSe};
+		\item \verb|\uSenaoSe{condição}{bloco ``else-if'' sem ``fim''}| $\rightarrow$ \textbf{uSenãoSe};
+ 		\item \verb|\lSenaoSe{condição}{linha de códigoo ``else-if''}| $\rightarrow$ \textbf{lSenãoSe}.
+ 	\end{itemize}
+\item Seleção de casos (\textit{switch-case}):
+	\begin{itemize}
+		\item \verb|\Selec{condição}{bloco `switch'}| $\rightarrow$ \textbf{Selec};
+  		\item \verb|\Caso{um caso}{bloco `case'}| $\rightarrow$ \textbf{Caso};
+  		\item \verb|\uCaso{um caso}{bloco `case' sem `fim'}| $\rightarrow$ \textbf{uCaso};
+  		\item \verb|\lCaso{um caso}{linha de código `case'}| $\rightarrow$ \textbf{lCaso};
+  		\item \verb|\Outro{bloco `outros'}| $\rightarrow$ \textbf{Outro};
+  		\item \verb|\lOutro{linha de código`outros'}| $\rightarrow$ \textbf{lOutro}.
+  	\end{itemize}
+\item Laços \textit{for}:
+	\begin{itemize}
+		\item \verb|\Para{condição}{bloco de repetição}| $\rightarrow$ \textbf{Para};
+  		\item \verb|\lPara{condição}{linha de código de repetição}| $\rightarrow$ \textbf{lPara};
+		\item \verb|\ParaPar{condição}{bloco de repetição}| $\rightarrow$ \textbf{ParaPar};
+  		\item \verb|\lParaPar{condição}{linha de código de repetição}| $\rightarrow$ \textbf{lParaPar} ;
+  		\item \verb|\ParaCada{condição}{bloco de repetição}| $\rightarrow$ \textbf{ParaCada};
+  		\item \verb|\lParaCada{condição}{linha de código de repetição}| $\rightarrow$ \textbf{lParaCada};
+		\item \verb|\ParaTodo{condição}{bloco de repetição}| $\rightarrow$ \textbf{ParaTodo};
+  		\item \verb|\lParaTodo{condição}{linha de código de repetição}| $\rightarrow$ \textbf{lParaTodo}.
+	\end{itemize}
+\item Laços \textit{while}:
+	\begin{itemize}
+		\item \verb|\Enqto{condição de parada}{bloco de repetição}| $\rightarrow$ \textbf{Enqto};
+  		\item \verb|\lEnqto{condição de parada}{bloco de repetição}| $\rightarrow$ \textbf{lEnqto}.
+	\end{itemize}
+\item Laços \textit{do-while}:
+	\begin{itemize}
+		\item \verb|\Repita{condição de parada}{bloco de repetição}| $\rightarrow$ \textbf{Repita};
+  		\item \verb|\lRepita{condição de parada}{linha de código de repetição}| $\rightarrow$ \textbf{lRepita}.
+  	\end{itemize}
+\item Comentários: \verb|\tcc{comentário}|.
+\end{itemize}
+
+Os algoritmos \ref{algo:1} e \ref{algo:2} apresentam alguns modelos de algoritmos para serem tomados de exemplo.
+
+\begin{algorithm}
+%% \SetLine
+\Entrada{$x$: vetores de valores; $y$ = $L(x)$; $p$: valor de entrada a ser calculado }
+\Saida{$s$ = $L(p)$}
+$n \leftarrow \mathtt{comprimento}(x)$\;
+$s \leftarrow 0$\;
+\Para {$i=1$ \Ate $n$} {
+	$L \leftarrow 1$\;
+	\Para {$j=1:1:n$} {
+		\Se{$i \neq j$} {
+			$L \leftarrow L* \left( \dfrac{p-x[j]}{x[i]-x[j]} \right) $
+		}
+	}
+	$s \leftarrow s + L*y[i]$\;
+}
+\Retorna $s$\;
+\caption{Algoritmo para interpolação de Lagrange.}
+\label{algo:1}
+\end{algorithm}
+
+\begin{algorithm}
+%% \SetLine
+\Entrada{$a$: valor inicial; $b$: valor final; $n$: número de subintervalos (deve ser múltiplo de 2)  }
+\tcc{A função a ser integrada é definida em uma função denominada \texttt{f}, fora do escopo deste algoritmo.}
+\Saida{$I$ = integral de \texttt{f} entre $a$ e $b$}
+$h \leftarrow$ $\dfrac{b-a}{n}$\;
+$x[1] \leftarrow a$\;
+$y[1] \leftarrow f(a)$\;
+$I \leftarrow 0$\;
+$k \leftarrow 2$\;
+\Enqto {$k <= n$} {
+	$x[i] \leftarrow x[i-1] + h$\;
+	$y[i] \leftarrow f(x[i])$\;
+	\eSe{$i \% 2 = 0$} {
+		$I \leftarrow I + 4*y[i]$\;
+	}
+	{
+		$I \leftarrow I + 2*y[i]$\;
+	}
+	$k = k+1$\;
+}
+$x[n+1] \leftarrow b$\;
+$y[n+1] \leftarrow f(x[i+1])$\;
+$I \leftarrow I + \dfrac{h}{3}*(I + y[n+1])$\;
+\Retorna $I$\;
+\caption{Algoritmo para a integração pelo primeiro método de Simpson.}
+\label{algo:2}
+\end{algorithm}

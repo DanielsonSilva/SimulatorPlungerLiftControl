@@ -1,0 +1,42 @@
+% newcommand define novos comandos, que podem passar a ser usados da
+% mesma forma que os comandos LaTeX de base.
+
+% Implicação em fórmulas
+\newcommand{\implica}{\quad\Rightarrow\quad} %Meio de linha
+\newcommand{\implicafim}{\quad\Rightarrow}   %Fim de linha
+\newcommand{\tende}{\rightarrow}
+\newcommand{\BibTeX}{\textsc{B\hspace{-0.1em}i\hspace{-0.1em}b\hspace{-0.3em}}\TeX}
+
+% Fração com parentesis
+\newcommand{\pfrac}[2]{\left(\frac{#1}{#2}\right)}
+
+% Transformada de Laplace e transformada Z
+%\newcommand{\lapl}{\makebox[0cm][l]{\hspace{0.1em}\raisebox{0.25ex}{-}}\mathcal{L}}
+\newcommand{\lapl}{\pounds}
+\newcommand{\transfz}{\mathcal{Z}}
+
+% Não aparecer o número na primeira página dos capítulos
+\newcommand{\mychapter}[1]{\chapter{#1}\thispagestyle{empty}}
+
+% Os capítulos sem número
+\newcommand{\mychapterast}[1]{\chapter*{#1}\thispagestyle{empty}
+\chaptermark{#1}
+\afterpage{\markboth{\uppercase{#1}}{\rightmark}}
+\markboth{\uppercase{#1}}{}
+}
+
+% Seções sem número
+\newcommand{\mysectionast}[1]{\section*{#1}
+\addcontentsline{toc}{section}{#1}
+\markright{\uppercase{#1}}
+}
+
+% No tabularx, as celulas devem ser centradas verticalmente
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+
+% Células centralizadas horizontalmente no tabularx
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+%% Abrevia figuras e tabelas
+%\def\figurename{Fig.}
+%\def\tablename{Tab.}

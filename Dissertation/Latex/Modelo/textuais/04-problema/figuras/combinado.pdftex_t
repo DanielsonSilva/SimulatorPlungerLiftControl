@@ -1,0 +1,27 @@
+\begin{picture}(0,0)%
+\includegraphics{textuais/04-problema/figuras/combinado.pdf}%
+\end{picture}%
+\setlength{\unitlength}{4144sp}%
+%
+\begingroup\makeatletter\ifx\SetFigFont\undefined%
+\gdef\SetFigFont#1#2#3#4#5{%
+  \reset@font\fontsize{#1}{#2pt}%
+  \fontfamily{#3}\fontseries{#4}\fontshape{#5}%
+  \selectfont}%
+\fi\endgroup%
+\begin{picture}(4230,1104)(451,-2278)
+\put(1576,-1816){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\sfdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$G_1$}%
+}}}}
+\put(2476,-1816){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\sfdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$G_2$}%
+}}}}
+\put(4681,-1816){\makebox(0,0)[rb]{\smash{{\SetFigFont{10}{12.0}{\sfdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$C(s)$}%
+}}}}
+\put(2476,-1411){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\sfdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$\frac{H_2}{G_4}$}%
+}}}}
+\put(2476,-2176){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\sfdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$H_3$}%
+}}}}
+\put(3376,-1816){\makebox(0,0)[b]{\smash{{\SetFigFont{10}{12.0}{\sfdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}\formulagrande}%
+}}}}
+\put(451,-1816){\makebox(0,0)[lb]{\smash{{\SetFigFont{10}{12.0}{\sfdefault}{\mddefault}{\updefault}{\color[rgb]{0,0,0}$R(s)$}%
+}}}}
+\end{picture}%
