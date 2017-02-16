@@ -12,9 +12,6 @@ O \textit{software} foi desenvolvido usando a ferramenta \textit{Eclipse MARS.1}
 
 Diferente de uma ferramenta RAD (\textit{Rapid Application Development}) na qual existe a possibilidade de clicar e arrastar componentes para uma janela com o objetivo de tornar rápida o desenvolvimento de um \textit{software}, a construção do sistema foi realizada em uma IDE (\textit{Integrated Development Environment}) onde não há opção de criar interfaces mas não cria códigos em \textit{background}. Esta criação de código em \textit{background} torna o sistema lento e confuso pois adiciona muito código que não é utilizado pelo sistema. A ferramenta \textit{Eclipse MARS.1} está sendo mostrada na figura \ref{Fig:eclipse} exibindo todos os arquivos do projeto à esquerda e o código de um dos arquivos na parte central. Esta ferramenta ajuda na gerência do código e arquivos adicionados ao projeto para que estejam incorporados e funcionando corretamente, facilidade na manutenção e ligação entre as classes criadas pelo desenvolvedor.
 
-\nomenclature{RAD:}{\textit{Rapid Application Development} ou Desenvolvimento de Aplicação Rápida}%
-\nomenclature{IDE:}{\textit{Integrated Development Environment} ou Ambiente de Desenvolvimento Integrado}%
-
 \begin{figure}[htbp!]
 	\begin{center}
 		\fbox{\includegraphics[width=1.00\linewidth]{simulador/IDE_Eclipse}}
@@ -36,8 +33,6 @@ Cada uma das partes do simulador é desenvolvida em diretórios diferentes dentro 
 \section{Principais variáveis gerenciadas pelo simulador}
 \label{Sec:variaveissimulador}
 O modelo matemático implementado no simulador dispõe de diversas variáveis que podem ser observadas pelo usuário assim com existem diversas variáveis que podem ser definidas antes da execução começar. Estas definições podem ser realizadas com relação ao pistão utilizado no poço, estrutura da coluna de produção e anular, RGL (razão gás-óleo) do reservatório que está retirando óleo, tamanho inicial da golfada entre outras. O simulador está definido para apresentar certas variáveis (mostradas da figura \ref{Fig:variaveisgrafico}) em um gráfico de duas dimensões (figura \ref{Fig:grafico}) plotando os valores calculados pelo tempo decorrido. Antes da execução, o usuário deve definir as condições iniciais abrindo o menu de configuração (figura \ref{Fig:condicoesiniciais}) e alterar as características que forem necessárias ao teste de simulação.
-
-\nomenclature{RGL:}{Razão Gás-Líquido}%
 
 \begin{figure}[htbp!]
 	\begin{center}
@@ -67,13 +62,11 @@ Ao definir as condições iniciais do simulador, o usuário poderá executar e obser
 
 Algumas variáveis importantes para um ciclo completo do método \textit{plunger lift} devem ser impressas em um arquivo de texto separado para análise na finalização do sistema pelo usuário. Estas variáveis seriam: tempo total do ciclo e de cada uma das suas etapas, tempo da válvula aberta e fechada, velocidade média do pistão na fase de subida, pressão máxima e mínima do anular, volume de produção no ciclo, o total de líquido produzido até o momento, velocidade de impacto do pistão e o tempo exato da chegada do pistão à superfície. Estes valores são únicos em cada ciclo do método e será utilizado no estudo da comparação entre diferentes controladores.
 
-% CONTINUAR A REVISÃO DESTE PONTO
-
 \section{Implementação de controladores}
 \label{Sec:implementacaocontroladores}
-A implementação e integração dos variados tipos de controladores ao simulador devem ser planejado de modo simples e que seja o mais organizado possível. Este planejamento envolve um estudo nos padrões de projeto, que representam as melhores formas de arquitetura de \textit{software} para resolução de diversos tipos de problemas. Uma análise de UML (\textit{Unified Modelling Language}) para ter segurança nos caminhos que a informação irá ser transportada entre as \textit{threads}, principalmente nos diagramas de classes e sequência.
+A implementação e integração dos variados tipos de controladores ao simulador devem ser planejados de modo simples e de forma organizada. Este planejamento envolve um estudo nos padrões de projeto, que representam as melhores formas de arquitetura de \textit{software} para resolução de diversos tipos de problemas. Uma análise de UML (\textit{Unified Modelling Language}) é recomendada para garantir por onde a informação será transportada entre as \textit{threads}, principalmente no diagrama de classe.
 
-O padrão de projeto que combina com a arquitetura mostrada para implementação destes controladores é chamada de \textit{Strategy}. Segundo \cite{gammapadroes}, o padrão de projeto \textit{Strategy} define uma família de algoritmos diferentes, encapsulando cada um deles em uma classe diferente e os faz alternáveis. O cliente que irá utilizá-los não precisa definir a qual classe recorrer. Este padrão é aplicável quando existem variantes de um algoritmo que modifica somente o seu comportamento quando é chamado no cliente. Sua estrutura é definida como na figura \ref{Fig:strategy}, fornecendo uma interface comum para todos os algoritmos, a implementação de cada um dos algoritmos e o objeto contexto para utilizar alguns dos algoritmos.
+O padrão de projeto que é utilizada para organização da implementação destes controladores é chamada de \textit{Strategy}. Segundo \cite{gammapadroes}, o padrão de projeto \textit{Strategy} define uma família de algoritmos diferentes, encapsulando cada um deles em uma classe diferente e os faz alternáveis. O cliente que utilizá-los não precisa definir a qual classe recorrer. Este padrão é aplicável quando existem variantes de um algoritmo que modifica somente o seu comportamento quando é chamado no cliente. Sua estrutura é definida como na figura \ref{Fig:strategy}, fornecendo uma interface comum para todos os algoritmos, a implementação de cada um dos algoritmos e o objeto contexto para utilizar os algoritmos.
 
 \begin{figure}[htbp!]
 	\begin{center}
@@ -83,6 +76,6 @@ O padrão de projeto que combina com a arquitetura mostrada para implementação de
 	\end{center}
 \end{figure}
 
-Os tipos de controladores devem ser armazenados em um diretório separado com cada classe representando um controlador diferente e cada controlador deve estender de uma classe mãe com atributos e funções padrões com que todo controlador deve implementar. A simulação deve ser selecionada somente um controlador para cada execução e para testar outro controlador, a simulação necessita ser finalizada. Estes controladores farão parte do processo contendo o modelo matemático, alterando suas variáveis ou não durante a execução.
+Os tipos de controladores devem ser armazenados em um diretório separado com cada classe representando um controlador diferente e cada controlador deve estender de uma classe com atributos e funções padrões com que todo controlador deve implementar. A simulação deve ser selecionada somente um controlador para cada execução. A simulação necessita ser finalizada para testar outro controlador. Estes controladores fazem parte do processo contendo o modelo matemático, alterando suas variáveis ou não durante a execução do processo.
 
-Para cada etapa do método \textit{plunger lift}, existe uma função associada no modelo matemático e em cada uma dessas funções existe uma iteração que executa numerosos cálculos diversas vezes até que seja o momento de sair da iteração e ir para outra etapa do método. No caso deste simulador, na condição da seleção de algum controlador, em cada iteração de qualquer uma dessas etapas deverá chamar a função do controlador selecionado e em seguida o objeto do controlador terá papel de verificar as condições do poço e tomar decisões ou não acerca das variáveis modificáveis do modelo. Dessa maneira o modelo não terá uma grande alteração em seu código e o controlador somente tomará decisões em certas partes contidas no ciclo do referido método, facilitando a programação e o compreendimento do funcionamento.
+Para cada etapa do método \textit{plunger lift}, existe uma função associada no modelo matemático e em cada uma dessas funções existe uma iteração que executa numerosos cálculos diversas vezes até que seja o momento de sair da iteração e executar outra etapa do método. Em cada iteração de qualquer das etapas é chamada a função do controlador selecionado de checagem, em seguida o objeto do controlador verifica as condições do poço e decide se modifica ou não certas variáveis do poço. Dessa maneira os cálculos e iterações do modelo não necessitam passar por adaptações no código e o controlador pode modificar as variáveis do poço em certas partes contidas no ciclo do referido método, facilitando a programação e o compreendimento do funcionamento da execução do \textit{software}.

@@ -9,12 +9,14 @@ Com o objetivo de alcançar a este reservatório, é perfurado o solo desde a super
 
 Todo o aparato de perfuração e equipamentos do poço, mostrados na figura \ref{Fig:introducao}, tem como objetivo trazer para a superfície o fluido ou o gás produzido pelo reservatório ao longo do tempo. De acordo com a pressão dentro do reservatório em um dado momento o fluido poderá ascender do fundo do poço naturalmente. Quanto maior a pressão dentro do reservatório, maior a chance que o poço tenha uma elevação do fluido natural. Quando um poço eleva o fluido produzido pelo reservatório naturalmente, este poço é chamado de poço surgente. Normalmente isto acontece no início da vida de um poço e dura um certo período de tempo, enquanto houver pressão suficiente no reservatório para manter esta condição.
 
-\begin{figure}[htbp!] \begin{center}
-	% fbox faz uma borda ao redor do seu argumento
-	\fbox{\includegraphics[width=0.30\linewidth]{introducao/introducao}}
-	\caption{Configuração básica de um poço perfurado para extração de petróleo}
-	\label{Fig:introducao}
-\end{center} \end{figure}
+\begin{figure}[htbp!] 
+	\begin{center}
+		% fbox faz uma borda ao redor do seu argumento
+		\fbox{\includegraphics[width=0.30\linewidth]{introducao/introducao}}
+		\caption{Configuração básica de um poço perfurado para extração de petróleo}
+		\label{Fig:introducao}
+	\end{center} 
+\end{figure}
 
 Quando a pressão do reservatório cai e o fluido não ascende para a superfície naturalmente, este poço precisa de instrumentos adicionais para que possa ser fornecido mais energia ao poço. Dessa forma, o processo de trazer o fluido para a superfície tem sucesso. Todo o conjunto de equipamentos atrelado ao poço nesta situação é chamado de sistema de elevação artificial de petróleo.
 
@@ -24,9 +26,6 @@ Existem diversos sistemas de elevação artificial para cada tipo de característic
 O objetivo principal deste trabalho é fornecer um estudo comparativo de alguns algoritmos de controle para o método de elevação artificial \textit{Plunger Lift} utilizando um simulador computacional.
 
 Para atingir este objetivo, um simulador computacional desenvolvido em linguagem de programação Java foi criado. Este simulador contêm a implementação de um modelo matemático desenvolvido durante o projeto AUTOPOC nas dependências do LAUT.
-
-\nomenclature{AUTOPOC:}{Automação de Poços}%
-\nomenclature{LAUT:}{Laboratório de Automação em Petróleo}%
 
 O simulador atualmente conta com um controle manual, na qual o operador modifica as variáveis no início do processo e verifica o desenvolvimento do processo em um poço simulado. Neste simulador serão implementados, pelo menos, dois algoritmos de controle com suas características próprias e alteráveis. Serão comparados diversas características, como velocidade do pistão durante seu trajeto de subida e descida e volume de fluido produzido, do método em cada um dos algoritmos de controle para que seja possível tirar conclusões e realizar um estudo mais aprofundado nestes tipos de controles.
 \section{Motivação}
