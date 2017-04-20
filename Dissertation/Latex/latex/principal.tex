@@ -157,7 +157,7 @@
 
 % Para a criação do glossário (ou lista de símbolos)
 \makeglossary
-
+\makenomenclature
 % Lista de arquivos a serem processados. Estes comandos "includeonly" são
 % dispensáveis e devem obrigatoriamente ser comentados na hora de gerar o
 % documento definitivo. Eles servem para compilar apenas parte do documento.
@@ -209,9 +209,6 @@
 % Deve ser usado espaçamento 1 1/2 nas páginas de texto
 %\onehalfspacing
 
-% Abreviações e Nomeclaturas
-\include{abreviacoes}
-
 % Resumo/Abstract
 \include{resumos}
 
@@ -235,6 +232,7 @@
 % Glossário (gerado automaticamente - veja entradas em
 % introducao/introducao.tex e em estilo/estilo.tex)
 \cleardoublepage
+
 \renewcommand{\nomname}{Lista de Símbolos e Abreviaturas}
 \markboth{\MakeUppercase{\nomname}}{\MakeUppercase{\nomname}}
 \addcontentsline{toc}{chapter}{\nomname}
@@ -252,6 +250,9 @@
 % Para facilitar a organização, foi criado um diretório para cada
 % capítulo do documento, pois assim os arquivos das figuras ficam
 % classificados por capítulos
+
+% Abreviações e Nomeclaturas
+\include{abreviacoes}
 
 % Cap. 1 - Introdução
 \include{introducao/introducao}

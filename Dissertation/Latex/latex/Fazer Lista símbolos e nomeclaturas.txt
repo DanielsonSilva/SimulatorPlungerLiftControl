@@ -1,0 +1,1 @@
+makeindex principal.nlo -s nomencl.ist -o principal.nls

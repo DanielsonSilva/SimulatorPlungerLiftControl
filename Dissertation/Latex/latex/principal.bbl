@@ -1,38 +1,9 @@
 \begin{thebibliography}{xx}
 
-\harvarditem{Assmann}{2012}{felipepinheiro}
-Assmann, Felipe Pinheiro~Mota  \harvardyearleft 2012\harvardyearright ,
-  Modelagem dinâmica do escoamento de um sistema de elevação por plunger lift,
-  Dissertação de mestrado, Universidade Federal do Rio Grande do Norte, UFRN,
-  Natal, RN.
-
-\harvarditem{Brown}{1982}{kermitbrown}
-Brown, Kermit~E.  \harvardyearleft 1982\harvardyearright , `Overview of
-  artificial lift systems', {\em Journal of Petroleum Technology} {\bf 34}.
-
-\harvarditem[de~Castro et~al.]{de~Castro, de~Sousa \harvardand\
-  Abrantes}{2010}{simulador2010}
-de~Castro, Cristiano~Gurgel, Bruno A.~Santos de~Sousa \harvardand\
-  Joílson~Vidal Abrantes  \harvardyearleft 2010\harvardyearright , `Simulador
-  computacional para o método de elevação artificial plunger lift', {\em Rio
-  Oil \& Gas} .
-
-\harvarditem{de~Moura~Fonsêca}{2011}{diegofonseca2011}
-de~Moura~Fonsêca, Diego~Antônio  \harvardyearleft 2011\harvardyearright ,
-  Desenvolvimento de uma planta piloto para estudos de poços de petróleo
-  produzindo por plunger lift, Dissertação de mestrado, Universidade Federal do
-  Rio Grande do Norte, UFRN, Natal, RN.
-
 \harvarditem{do~Amaral~Baruzzi}{1994}{baruzzi}
 do~Amaral~Baruzzi, Jose~Octavio  \harvardyearleft 1994\harvardyearright ,
   Modelagem do plunger lift convencional, Dissertação de mestrado, Faculdade de
   Engenharia Mecânica, FEM, Campinas, SP.
-
-\harvarditem{e~Silva}{2007}{sergiojose2007}
-e~Silva, Sérgio José~Gonçalves  \harvardyearleft 2007\harvardyearright , Um
-  sistema para estimação da vazão de gás de poços produzindo por plunger lift
-  para vaso separador de teste em plataformas de petróleo, Dissertação de
-  mestrado, Universidade Federal do Rio Grande do Norte, UFRN, Natal, RN.
 
 \harvarditem[GAMMA et~al.]{GAMMA, Helm, Johnson \harvardand\
   Vlissides}{2004}{gammapadroes}
@@ -40,25 +11,9 @@ GAMMA, ERICH, R Helm, R Johnson \harvardand\ J Vlissides  \harvardyearleft
   2004\harvardyearright , {\em Padrões de Projeto --- Soluções Reutilizáveis de
   Software Orientado a Objetos}, Bookman, Porto Alegre.
 
-\harvarditem[Guo et~al.]{Guo, Lyons \harvardand\
-  Ghalambor}{2007}{petrocomputerassist}
-Guo, Boyun, William~C. Lyons \harvardand\ Ali Ghalambor  \harvardyearleft
-  2007\harvardyearright , {\em Petroleum Production Engineering : A
-  Computer-Assisted Approach}, Elsevier, Oxford.
-
 \harvarditem{Javier}{2012}{javier2012java}
 Javier, Fernandez  \harvardyearleft 2012\harvardyearright , `Java 7 concurrency
   cookbook'.
-
-\harvarditem{Lake}{2007}{petrovol4}
-Lake, Larry W.;~Clegg, Joe~D.  \harvardyearleft 2007\harvardyearright , {\em
-  Petroleum engineering handbook : production operations engineering}, Vol.~4,
-  Society of Petroleum Engineers, Texas.
-
-\harvarditem{Mitra}{2012}{mitra2012principles}
-Mitra, N.K.  \harvardyearleft 2012\harvardyearright , {\em Principles of
-  Artificial Lift}, First edition, Allied Publishers Pvt. Limited.
-\newline\url{https://books.google.com.br/books?id=6NokTvD4mjoC}
 
 \harvarditem{of~Air \harvardand\ Radiation}{2001}{united2001installing}
 of~Air, United States. Environmental Protection Agency.~Office \harvardand\
@@ -67,27 +22,9 @@ of~Air, United States. Environmental Protection Agency.~Office \harvardand\
   U.S. Environmental Protection Agency, Air and Radiation.
 \newline\url{https://books.google.com.br/books?id=vqHRZwEACAAJ}
 
-\harvarditem{Soares}{2010}{lennedyCampos}
-Soares, Lennedy~Campos  \harvardyearleft 2010\harvardyearright , Sistema
-  supervisório para poços de petróleo baseados no método de elevação artificial
-  plunger lift, Dissertação de mestrado, Universidade Federal do Rio Grande do
-  Norte, UFRN, Natal, RN.
-
 \harvarditem{Vieira}{2009}{plinioaltoe2009}
 Vieira, Plínio Altoé~Costa  \harvardyearleft 2009\harvardyearright , Projeto de
   um sistema emulador de escoamentos e vaso de separação primária, Dissertação
   de mestrado, Universidade Federal do Rio Grande do Norte, UFRN, Natal, RN.
-
-\harvarditem{Weatherford}{2016}{siteplungerWeatherford}
-Weatherford  \harvardyearleft 2016\harvardyearright , `Plunger lift systems',
-  Site oficial da Weatherford.
-\newline\url{http://www.weatherford.com/products-services/production/artificial-lift-systems/plunger-lift-systems}
-
-\harvarditem[Yan et~al.]{Yan, Lieskovsky \harvardand\
-  Gorgen}{2014}{siteartificiallift}
-Yan, Richard, Jozef Lieskovsky \harvardand\ Sam Gorgen  \harvardyearleft
-  2014\harvardyearright , `New eagle ford wells continue to show higher
-  production', Independent Statistics \& Analysis.
-\newline\url{http://www.eia.gov/todayinenergy/detail.cfm?id=18171}
 
 \end{thebibliography}

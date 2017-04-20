@@ -4,9 +4,10 @@
 
 \mychapter{Resultados}
 \label{Cap:resultados}
-Após o desenvolvimento de um sistema, é necessário uma bateria de testes para verificação da exatidão dos valores calculados e se o andamento ocorre sem travas ou erros em tempo de execução. O desenvolvedor deve realizar diversos testes com algumas configurações diferentes de uso para investigar possíveis falhas que venham tornar o sistema inoperante. Alguns dos testes realizados são explicados e verificam o funcionamento do método \textit{plunger lift} corretamente.
 
-O \textit{software} simulador do método de elevação artificial \textit{plunger lift} explicado no capítulo \ref{Cap:simulador} foi construído e testado para um poço com valores mostrados na figura \ref{Fig:condicoesiniciais}. Os resultados foram satisfatórios no momento em que a simulação mostra um comportamento cíclico evidenciando o método de estudo. Podem-se observar as pressões sendo incrementadas durante a fase de \textit{build-up} e sendo decrementadas nas outras fases. Percebe-se a altura do pistão em todas as etapas quando o mesmo se dirige à superfície e ao fundo do poço durante cada ciclo. A figura \ref{Fig:simulacaoteste} mostra um exemplo de uma simulação durante X ciclos com todas as variáveis possíveis, passível de obter uma ampliação em qualquer área deste gráfico.
+Após o desenvolvimento de um sistema, é necessário vários testes para verificação da exatidão dos valores calculados e se o andamento ocorre sem travas ou erros em tempo de execução. O desenvolvedor deve realizar diversos testes com algumas configurações diferentes de uso para investigar possíveis falhas que venham tornar o sistema inoperante. Alguns dos testes realizados são explicados a seguir e afirmam o funcionamento corretamente do método \textit{plunger lift}.
+
+O \textit{software} simulador do método de elevação artificial \textit{plunger lift} explicado no capítulo \ref{Cap:simulador} foi construído e testado para um poço com valores mostrados na figura \ref{Fig:condicoesiniciais}. Os resultados foram satisfatórios no momento em que a simulação mostra um comportamento cíclico evidenciando o método de estudo. Podem-se observar as pressões sendo incrementadas durante a fase de \textit{build-up} e sendo decrementadas nas outras fases. Também observa-se o comportamento do pistão em todas as etapas quando o mesmo se dirige à superfície e ao fundo do poço durante cada ciclo. A figura \ref{Fig:simulacaoteste} mostra um exemplo de uma simulação durante 3 ciclos completos (apresentando todas as etapas) com as principais variáveis do método, passível de obter uma ampliação em qualquer área deste gráfico usando o mouse.
 
 \begin{sidewaysfigure}[htbp!]
 	\begin{center}
@@ -15,7 +16,8 @@ O \textit{software} simulador do método de elevação artificial \textit{plunger l
 		\label{Fig:simulacaoteste}
 	\end{center}
 \end{sidewaysfigure}
-Nos ciclos mostrados na figura \ref{Fig:simulacaoteste} foram obtidos alguns valores via arquivo de texto sobre variáveis de cada um destes ciclos. Estes valores servem para diversos propósitos, como a futura comparação de produção ou de velocidade do pistão durante a fase de subida. As variáveis e seus valores coletados durante a simulação estão expressados na tabela \ref{Tab:variaveisciclo} com suas devidas unidades de medição.
+
+Nos ciclos mostrados na figura \ref{Fig:simulacaoteste} foram obtidos alguns valores via arquivo de texto sobre variáveis de cada um destes ciclos. Estes valores servem para diversos propósitos, como a comparação de produção ou de velocidade do pistão durante a fase de subida. As variáveis e seus valores coletados durante a simulação estão expressados na tabela \ref{Tab:variaveisciclo} com suas respectivas unidades de medição.
 
 \begin{table}[]
 	\centering
@@ -38,7 +40,9 @@ Nos ciclos mostrados na figura \ref{Fig:simulacaoteste} foram obtidos alguns val
 		Velocidade de impacto do pistão($\frac{m}{s}$) & $5,778$ & $6,845$ & $8,098$ \\ \hline
 	\end{tabular}
 \end{table}
+% CONTINUAR A PARTIR DESTE PONTO
 Ao modificar algumas variáveis exploráveis no simulador, verifica-se mudanças significativas no funcionamento do método e comportamentos diversos no processo. Ao acrescentar o tempo de pós-fluxo do método em 120 segundos, tornando a duração da etapa total em 180 segundos, verifica-se o comportamento das pressões dentro do poço. Durante a fase de pós-fluxo as pressões no topo da coluna de produção, na base e no topo do anular caem de forma consideravelmente maior que na etapa de subida do pistão. Isso é consequência do atingimento do pistão na superfície e a possibilidade do gás que há dentro do poço sair pela linha de produção sem obstáculos. Ao não modificar o tempo de válvula fechada ao variar o tempo de pós-fluxo, verifica-se também que o pistão não consegue chegar ao fundo do poço, tornando a produção de líquido do poço menor. Como durante a fase de \textit{afterflow} o poço libera gás, o poço perde pressão e torna a viagem do pistão à superfície mais lenta, diminuindo a velocidade média e o impacto do pistão na chegada à superfície. Toda a simulação descrita neste parágrafo pode ser vista na figura \ref{Fig:simulacaoposfluxo} e os valores de certas variáveis nos ciclos simulados são descritos na tabela \ref{Tab:simulacaoposfluxo}.
+
 \begin{sidewaysfigure}[htbp!]
 	\begin{center}
 		\fbox{\includegraphics[width=1.00\linewidth]{resultado/simulacaoposfluxo}}
