@@ -7,8 +7,8 @@ Scanning style file C:/Users/Danielson Flávio/AppData/Local/Programs/MiKTeX 2.9
 ** Input style error (file = C:/Users/Danielson Flávio/AppData/Local/Programs/MiKTeX 2.9/makeindex/nomencl/nomencl.ist, line = 72):
    -- Unknown specifier lethead_flag.
 ...done (10 attributes redefined, 3 ignored).
-Scanning input file principal.nlo....done (18 entries accepted, 0 rejected).
-Sorting entries....done (76 comparisons).
-Generating output file principal.nls....done (58 lines written, 0 warnings).
+Scanning input file principal.nlo....done (19 entries accepted, 0 rejected).
+Sorting entries....done (81 comparisons).
+Generating output file principal.nls....done (63 lines written, 0 warnings).
 Output written in principal.nls.
 Transcript written in principal.ilg.

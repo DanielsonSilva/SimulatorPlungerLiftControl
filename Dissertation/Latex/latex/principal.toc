@@ -10,11 +10,11 @@
 \contentsline {section}{\numberline {2.1}Eleva\c c\~ao Artificial}{5}{section.2.1}
 \contentsline {section}{\numberline {2.2}Introdu\c c\~ao ao m\'etodo \textit {plunger lift}}{8}{section.2.2}
 \contentsline {section}{\numberline {2.3}Equipamentos}{8}{section.2.3}
-\contentsline {section}{\numberline {2.4}Ciclos do m\'etodo \textit {plunger lift}}{9}{section.2.4}
+\contentsline {section}{\numberline {2.4}Ciclos do m\'etodo \textit {plunger lift}}{10}{section.2.4}
 \contentsline {section}{\numberline {2.5}Vantagens do m\'etodo}{11}{section.2.5}
-\contentsline {section}{\numberline {2.6}Modos de Controle}{12}{section.2.6}
+\contentsline {section}{\numberline {2.6}Modos de Controle}{11}{section.2.6}
 \contentsline {subsection}{\numberline {2.6.1}Controle por temporiza\c c\~ao}{12}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Controle pela press\~ao de revestimento}{13}{subsection.2.6.2}
+\contentsline {subsection}{\numberline {2.6.2}Controle pela press\~ao de revestimento}{12}{subsection.2.6.2}
 \contentsline {subsection}{\numberline {2.6.3}Controle pelo fator de carga}{13}{subsection.2.6.3}
 \contentsline {subsection}{\numberline {2.6.4}Controle por pr\'e-carga ou \textit {Booster}}{13}{subsection.2.6.4}
 \contentsline {chapter}{\numberline {3}Simulador Computacional}{15}{chapter.3}
@@ -25,6 +25,6 @@
 \contentsline {chapter}{\numberline {4}Valida\c c\~ao do Simulador}{21}{chapter.4}
 \contentsline {chapter}{\numberline {5}Resultados}{25}{chapter.5}
 \contentsline {section}{\numberline {5.1}Controle e sua fun\c c\~ao no \textit {plunger lift}}{32}{section.5.1}
-\contentsline {section}{\numberline {5.2}Comparativo entre as performances dos controladores}{37}{section.5.2}
-\contentsline {chapter}{\numberline {6}Conclus\~oes}{41}{chapter.6}
-\contentsline {chapter}{Refer\^encias bibliogr\'aficas}{42}{chapter.6}
+\contentsline {section}{\numberline {5.2}Comparativo entre os desempenhos dos controladores}{37}{section.5.2}
+\contentsline {chapter}{\numberline {6}Conclus\~oes}{43}{chapter.6}
+\contentsline {chapter}{Refer\^encias bibliogr\'aficas}{44}{chapter.6}

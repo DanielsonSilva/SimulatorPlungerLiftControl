@@ -1,6 +1,6 @@
 \nomenclatureentry{AUTOPOC:@[{AUTOPOC:}]\begingroup Automação de Poços\nomeqref {0}|nompageref}{1}
 \nomenclatureentry{LAUT:@[{LAUT:}]\begingroup Laboratório de Automação em Petróleo\nomeqref {0}|nompageref}{1}
-\nomenclatureentry{$IP$:@[{$IP$:}]\begingroup Índice de produtividade\nomeqref {0}|nompageref}{1}
+\nomenclatureentry{$IP$:@[{$IP$:}]\begingroup \'Indice de produtividade\nomeqref {0}|nompageref}{1}
 \nomenclatureentry{$q$:@[{$q$:}]\begingroup Vazão\nomeqref {0}|nompageref}{1}
 \nomenclatureentry{$IPR$:@[{$IPR$:}]\begingroup \textit{Inflow Performance Relationship}\nomeqref {0}|nompageref}{1}
 \nomenclatureentry{$P_{e}$:@[{$P_{e}$:}]\begingroup Pressão média do reservatório\nomeqref {0}|nompageref}{1}
@@ -15,3 +15,5 @@
 \nomenclatureentry{IDE:@[{IDE:}]\begingroup \textit{Integrated Development Environment} ou Ambiente de Desenvolvimento Integrado\nomeqref {0}|nompageref}{1}
 \nomenclatureentry{RGL:@[{RGL:}]\begingroup Razão Gás-Líquido\nomeqref {0}|nompageref}{1}
 \nomenclatureentry{UML:@[{UML:}]\begingroup \textit{Unified Modelling Language} ou Linguaguem de Modelagem Unificada\nomeqref {0}|nompageref}{1}
+\nomenclatureentry{$\frac{m}{s}$:@[{$\frac{m}{s}$:}]\begingroup Metro por segundo\nomeqref {0}|nompageref}{1}
+\nomenclatureentry{psi:@[{psi:}]\begingroup \textit{pound force per square inch} ou libra-força por polegada quadrada ou $\frac{lbf}{in^2}$\nomeqref {0}|nompageref}{1}

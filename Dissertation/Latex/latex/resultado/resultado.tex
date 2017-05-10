@@ -5,7 +5,7 @@
 \mychapter{Resultados}
 \label{Cap:resultados}
 
-Após o desenvolvimento de um sistema, é necessário vários testes para verificação da exatidão dos valores calculados e se o andamento ocorre sem travas ou erros em tempo de execução. O desenvolvedor deve realizar diversos testes com algumas configurações diferentes de uso para investigar possíveis falhas que venham tornar o sistema inoperante. Alguns dos testes realizados são explicados a seguir e afirmam o funcionamento corretamente do método \textit{plunger lift}.
+Após o desenvolvimento de um sistema, são necessários vários testes para verificação da exatidão dos valores calculados e se o andamento ocorre sem travas ou erros em tempo de execução. O desenvolvedor deve realizar diversos testes com algumas configurações diferentes de uso para investigar possíveis falhas que venham tornar o sistema inoperante. Alguns dos testes realizados são explicados a seguir e afirmam o funcionamento corretamente do método \textit{plunger lift}.
 
 O \textit{software} simulador do método de elevação artificial \textit{plunger lift} explicado no capítulo \ref{Cap:simulador} foi construído e testado para um poço com valores mostrados na figura \ref{Fig:condicoesiniciais}. Os resultados foram satisfatórios no momento em que a simulação mostra um comportamento cíclico evidenciando o método de estudo. Podem-se observar as pressões sendo incrementadas durante a fase de \textit{build-up} e sendo decrementadas nas outras fases. Também observa-se o comportamento do pistão em todas as etapas quando o mesmo se dirige à superfície e ao fundo do poço durante cada ciclo. A figura \ref{Fig:simulacaoteste} mostra um exemplo de uma simulação durante 3 ciclos completos (apresentando todas as etapas) com as principais variáveis do método, passível de obter uma ampliação em qualquer área deste gráfico usando o mouse.
 
@@ -40,8 +40,8 @@ Nos ciclos mostrados na figura \ref{Fig:simulacaoteste} foram obtidos alguns val
 		Velocidade de impacto do pistão($\frac{m}{s}$) & $5,778$ & $6,845$ & $8,098$ \\ \hline
 	\end{tabular}
 \end{table}
-% CONTINUAR A PARTIR DESTE PONTO
-Ao modificar algumas variáveis exploráveis no simulador, verifica-se mudanças significativas no funcionamento do método e comportamentos diversos no processo. Ao acrescentar o tempo de pós-fluxo do método em 120 segundos, tornando a duração da etapa total em 180 segundos, verifica-se o comportamento das pressões dentro do poço. Durante a fase de pós-fluxo as pressões no topo da coluna de produção, na base e no topo do anular caem de forma consideravelmente maior que na etapa de subida do pistão. Isso é consequência do atingimento do pistão na superfície e a possibilidade do gás que há dentro do poço sair pela linha de produção sem obstáculos. Ao não modificar o tempo de válvula fechada ao variar o tempo de pós-fluxo, verifica-se também que o pistão não consegue chegar ao fundo do poço, tornando a produção de líquido do poço menor. Como durante a fase de \textit{afterflow} o poço libera gás, o poço perde pressão e torna a viagem do pistão à superfície mais lenta, diminuindo a velocidade média e o impacto do pistão na chegada à superfície. Toda a simulação descrita neste parágrafo pode ser vista na figura \ref{Fig:simulacaoposfluxo} e os valores de certas variáveis nos ciclos simulados são descritos na tabela \ref{Tab:simulacaoposfluxo}.
+
+Ao modificar algumas características do poço virtual no simulador, verifica-se mudanças significativas no funcionamento do método e comportamentos diversos no processo. Ao acrescentar o tempo de pós-fluxo do método em 120 segundos, tornando a duração da etapa total em 180 segundos, verifica-se que o comportamento das pressões no topo da coluna de produção, na base e no topo do anular caem de forma consideravelmente maior que na etapa de subida do pistão. Isso é consequência do atingimento do pistão na superfície e a possibilidade do gás que há dentro do poço sair pela linha de produção sem obstáculos. Ao não modificar o tempo de válvula fechada ao variar o tempo de pós-fluxo, verifica-se também que o pistão não consegue chegar ao fundo do poço, tornando a produção de líquido do poço menor. Como durante a fase de \textit{afterflow} o poço libera gás, o poço perde pressão e torna a viagem do pistão à superfície mais lenta, diminuindo a velocidade média e o impacto do pistão na chegada à superfície. Toda a simulação descrita neste parágrafo pode ser vista na figura \ref{Fig:simulacaoposfluxo} e os valores de certas variáveis nos ciclos simulados são descritos na tabela \ref{Tab:simulacaoposfluxo}.
 
 \begin{sidewaysfigure}[htbp!]
 	\begin{center}
@@ -72,7 +72,9 @@ Ao modificar algumas variáveis exploráveis no simulador, verifica-se mudanças si
 		Velocidade de impacto do pistão($\frac{m}{s}$) & $5,778$ & $6,798$ & $7,574$ \\ \hline
 	\end{tabular}
 \end{table}
-Logo, quando o operador deseja diminuir a velocidade do pistão para decrementar a força de impacto do pistão ao chegar à superfície, deve-se aumentar o tempo de pós-fluxo para obter sucesso no resultado. Mas quando o operador quer o oposto do descrito, deve-se aumentar o tempo de válvula fechada. Com um maior tempo de válvula fechada, o poço deve acumular mais energia para, quando for a etapa de subida do pistão, impulsionar o êmbolo com maior força, aumentando a sua velocidade média e de impacto consideravelmente. Com um tempo de válvula fechada suficientemente alto, garante-se a chegada do pistão ao fundo do poço mantendo a produção de líquido alta trazendo toda a golfada formada no fundo do poço para a superfície. O aumento da velocidade pela maior pressão dentro do poço é contrabalanceada com o maior peso da golfada que o êmbolo deve carregar pela coluna de produção. A execução da simulação com um tempo de válvula fechada ajustado para 900 segundos pode ser observada pela figura \ref{Fig:simulacaobuildup} e seus valores das variáveis de ciclo pela tabela \ref{Tab:simulacaobuildup}.
+
+Logo, quando o operador deseja diminuir a velocidade do pistão para decrementar a força de impacto do pistão ao chegar à superfície, deve-se aumentar o tempo de pós-fluxo para obter sucesso no resultado. Mas quando o operador quer o oposto do descrito, deve-se aumentar o tempo de válvula fechada. Com um maior tempo de válvula fechada o poço deve acumular mais energia para impulsionar o êmbolo com maior força na etapa de subida do pistão, aumentando a sua velocidade média e de impacto consideravelmente. Com um tempo de válvula fechada suficientemente alto, garante-se a chegada do pistão ao fundo do poço mantendo a produção de líquido alta trazendo toda a golfada formada no fundo do poço para a superfície. O aumento da velocidade pela maior pressão dentro do poço é contrabalanceada com o maior peso da golfada que o êmbolo deve carregar pela coluna de produção. A execução da simulação com um tempo de válvula fechada ajustado para 900 segundos pode ser observada pela figura \ref{Fig:simulacaobuildup} e seus valores das variáveis de ciclo pela tabela \ref{Tab:simulacaobuildup}.
+
 \begin{sidewaysfigure}[htbp!]
 	\begin{center}
 		\fbox{\includegraphics[width=1.00\linewidth]{resultado/simulacaobuildup}}
@@ -102,7 +104,9 @@ Logo, quando o operador deseja diminuir a velocidade do pistão para decrementar 
 		Velocidade de impacto do pistão($\frac{m}{s}$) 	& $5,778$ & $7,662$ & $9,095$ \\ \hline
 	\end{tabular}
 \end{table}
-O simulador também permite a alteração de mais variáveis do tempo de etapas simultaneamente dos que os executados nas figuras \ref{Fig:simulacaoposfluxo} e \ref{Fig:simulacaobuildup}. Ao alterar o tempo de \textit{afterflow} do ciclo para 450 segundos e o tempo de válvula fechada para 1200 segundos, obtêm-se a execução mostrada na figura \ref{Fig:simulacaoposbuildup} e suas variáveis de ciclo na tabela \ref{Tab:simulacaoposbuildup}. Nesta execução, observa-se uma mudança na inclinação durante a trajetória do pistão (linha vermelha), na etapa de subida do pistão nos três ciclos mostrados, próximo da superfície. Isto é causado pelo amplo volume da golfada, que se formou durante a grande duração do ciclo, que o êmbolo traz consigo do fundo do poço. O desvio da golfada para a linha de produção torna-se um grande obstáculo para o êmbolo atingir a superfície. Então quando todo o volume da golfada foi produzido e não há mais obstáculos para o pistão, o mesmo aumenta sua velocidade consideravelmente até a superfície.
+
+O simulador também permite a alteração de mais características do tempo de etapas simultaneamente dos que os executados nas figuras \ref{Fig:simulacaoposfluxo} e \ref{Fig:simulacaobuildup}. Ao alterar o tempo de \textit{afterflow} do ciclo para 450 segundos e o tempo de válvula fechada para 1200 segundos, obtêm-se a execução mostrada na figura \ref{Fig:simulacaoposbuildup} e suas variáveis de ciclo na tabela \ref{Tab:simulacaoposbuildup}. Nesta execução, observa-se uma mudança na inclinação durante a trajetória do pistão (linha vermelha) próximo da superfície na etapa de subida do pistão nos três ciclos mostrados. Isto é causado pelo amplo volume da golfada, que se formou durante a grande duração do ciclo, que o êmbolo traz consigo do fundo do poço. O desvio da golfada para a linha de produção torna-se um grande obstáculo para o êmbolo atingir a superfície. Então quando todo o volume da golfada foi produzido e não há mais obstáculos para o pistão, o mesmo aumenta sua velocidade consideravelmente até a superfície.
+
 \begin{sidewaysfigure}[htbp!]
 	\begin{center}
 		\fbox{\includegraphics[width=1.00\linewidth]{resultado/simulacaoposbuildup}}
@@ -132,16 +136,17 @@ O simulador também permite a alteração de mais variáveis do tempo de etapas simu
 		Velocidade de impacto do pistão($\frac{m}{s}$) 	& $5,778$ & $8,400$ & $8,656$ \\ \hline
 	\end{tabular}
 \end{table}
-Estes resultados exemplificam os tipos de simulações que podem ser realizadas com este simulador e que conclusões pode-se tirar do gráfico formado e dos valores de suas variáveis de ciclo. Dependendo dos valores dos tempos de cada etapa do método, a simulação pode seguir diversos caminhos, otimizados ou não. De acordo com os resultados coletados durante todo projeto, o simulador segue conforme o esperado apresentando comportamento adequado e execução suave em processadores medianos.
+
+Estes resultados exemplificam os tipos de simulações que podem ser realizadas com este simulador e que conclusões pode-se tirar do gráfico formado e dos valores de suas variáveis de ciclo. Dependendo dos valores dos tempos de cada etapa do método, a simulação pode seguir diversos caminhos, otimizados ou não. De acordo com os resultados coletados durante todo projeto, o simulador segue conforme o esperado apresentando comportamento adequado e execução suave em processadores computacionais medianos.
 
 \section{Controle e sua função no \textit{plunger lift}}
 \label{Sec:controlefuncao}
 
-Existem alguns algoritmos, como os explicados na seção \ref{Sec:controle}, que melhoram o processo e/ou garantem o funcionamento adequando o sistema a novas características ou até pará-los em casos de falta de segurança. Estes algoritmos contêm parâmetros que, com o maior conhecimento do operador sobre o processo, o controle pode ser melhor apropriado para uma certa situação. Os parâmetros do controle irão depender da característica do poço como RGL (Razão gás-líquido) e profundidade do poço, por exemplo.
+Existem alguns algoritmos, como os explicados na seção \ref{Sec:controle}, que melhoram o processo e/ou garantem o funcionamento adequando o sistema a novas características ou até pará-los em casos de falta de segurança. Estes algoritmos contêm parâmetros no qual o controle pode ser melhor apropriado para uma certa situação de acordo com o conhecimento do operador sobre o processo. Os parâmetros do controle irão depender da característica do poço como RGL (Razão gás-líquido) e profundidade do poço, por exemplo.
 
-Ao longo do tempo da exploração de um poço o RGL do reservatório vai diminuindo, necessitando que o controle sofra alterações para manter a performance do sistema, funcionando no processo cíclico do método \textit{plunger lift}. Com o RGL do poço menor, o tempo de pós-fluxo deve ser menor e o tempo de acúmulo de pressão deve ser maior para que seja possível que o pistão chegue na superfície todos ciclos.
+Ao longo do tempo da exploração de um poço, o RGL do reservatório vai diminuindo, necessitando que o controle sofra alterações para manter a performance do sistema, funcionando no processo cíclico do método \textit{plunger lift}. Com o RGL do poço menor, o tempo de pós-fluxo deve ser menor e o tempo de acúmulo de pressão deve ser maior para que seja possível que o pistão chegue na superfície todos ciclos.
 
-Pode existir casos de poços que, caso não houver controle ou conhecimento prévio do método, os tempos de abertura e fechamento de válvula não sejam adequados e levam o poço à um afogamento, ou seja, o pistão não chega na superfície com o óleo acumulado no fundo do poço. Uma simulação com as características mostradas na figura \ref{Fig:needforcontrollerconfiguration} foi realizada e o simulador obteve como resultado o mostrado na figura \ref{Fig:needforcontrollersimulation}. Na simulador pode-se perceber que no momento da subida do pistão, o mesmo não consegue chegar à superfície e então pula a etapa de pós-fluxo para o \textit{build-up} e o líquido acumulado no fundo do poço se torna maior e mais pesado, de forma que o pistão não é capaz de chegar na superfície nos próximos ciclos.
+Pode existir casos de poços que se não houver controle ou conhecimento prévio do método, os tempos de abertura e fechamento de válvula podem não serem adequados e levam o poço a um afogamento, ou seja, o pistão não chega na superfície com o óleo acumulado no fundo do poço. Uma simulação com as características mostradas na figura \ref{Fig:needforcontrollerconfiguration} foi realizada e o simulador obteve como resultado o mostrado na figura \ref{Fig:needforcontrollersimulation}. No simulador pode-se perceber que no momento da subida do pistão o mesmo não consegue chegar à superfície e então pula a etapa de pós-fluxo para o \textit{build-up} e o líquido acumulado no fundo do poço se torna maior e mais pesado, de forma que o pistão não é capaz de chegar na superfície nos próximos ciclos.
 
 \begin{figure}[htbp!]
 	\begin{center}
@@ -159,11 +164,11 @@ Pode existir casos de poços que, caso não houver controle ou conhecimento prévio
 	\end{center}
 \end{sidewaysfigure}
 
-O controle por temporização e por pressão de revestimento resolve este transtorno com algoritmos explicados nas subseções \ref{SubSec:Ctrltemporizacao} e \ref{SubSec:Ctrlpressao}. Enquanto que o controle por temporização tem três parâmetros (mínimo tempo de viagem do pistão, máximo tempo de viagem do pistão e o valor de modificação de tempo de pós-fluxo e \textit{build-up}), o controle por pressão de revestimento tem dois parâmetros adicionais (máxima pressão de revestimento e mínima pressão de revestimento). A figura \ref{Fig:temporizacao} e \ref{Fig:pressaorevestimento} mostram o resultado da aplicação destes dois controladores, respectivamente, na configuração do poço dada pela figura \ref{Fig:needforcontrollerconfiguration}. Os parâmetros utilizados nos controladores estão descritos nas tabela \ref{Tab:parametroControlador} e estes valores foram adotados a partir de testes no simulador de forma que permitisse que o método seguisse os ciclos normalmente
+O controle por temporização e por pressão de revestimento resolve este transtorno com algoritmos explicados nas subseções \ref{SubSec:Ctrltemporizacao} e \ref{SubSec:Ctrlpressao}. Enquanto que o controle por temporização tem três parâmetros (mínimo tempo de viagem do pistão, máximo tempo de viagem do pistão e o valor de modificação de tempo de pós-fluxo e \textit{build-up}), o controle por pressão de revestimento tem dois parâmetros adicionais (máxima pressão de revestimento e mínima pressão de revestimento). A figura \ref{Fig:temporizacao} e \ref{Fig:pressaorevestimento} mostram o resultado da aplicação destes dois controladores, respectivamente, na configuração do poço dada pela figura \ref{Fig:needforcontrollerconfiguration}. Os parâmetros utilizados nos controladores estão descritos nas tabela \ref{Tab:parametroControlador} e estes valores foram adotados a partir de testes no simulador de forma que permitisse que o método seguisse os ciclos normalmente sem afogamentos.
 
 \begin{table}[]
 	\centering
-	\caption{Parâmetros adotados nos controladores}
+	\caption{Parâmetros adotados nos controladores para as simulações das figuras \ref{Fig:temporizacao} e \ref{Fig:pressaorevestimento}}
 	\label{Tab:parametroControlador}
 	\begin{tabular}{|L{6.5cm}|c|c|}
 		\hline
@@ -195,14 +200,14 @@ O controle por temporização e por pressão de revestimento resolve este transtorn
 \end{sidewaysfigure}
 
 % Explicação do resultado
-O resultado dos dois controladores foram similares devido aos valores de máximo e mínimo tempo de viagem do pistão aproximados definidos para os controladores. É possível identificar um controle da pressão de revestimento maior pelo controlador que recebe este nome, evitando que durante a fase de crescimento de pressão, ela não cresça até pontos críticos para o equipamento utilizado. De posse deste resultado, pode-se verificar a importância do uso de controladores para tornar o sistema mais confiável e seguro para a exploração de recursos naturais neste método de elevação artificial.
+O resultado dos dois controladores foram similares devido aos valores de máximo e mínimo tempo de viagem do pistão aproximados definidos para os controladores. É possível identificar um controle da pressão de revestimento maior pelo controlador que recebe este nome, evitando que na etapa de \textit{build-up} as pressões não cresçam até pontos críticos para o equipamento utilizado. De posse deste resultado, pode-se verificar a importância do uso de controladores para tornar o sistema mais confiável e seguro para a exploração de recursos naturais neste método de elevação artificial.
 
-\section{Comparativo entre as performances dos controladores}
+\section{Comparativo entre os desempenhos dos controladores}
 \label{Sec:comparativocontrolador}
 
 De acordo com a seção \ref{Sec:controlefuncao}, os controladores são importantes pois mantêm o método funcionando no poço adequadamente. Todos os dois controladores exemplificados neste trabalho podem evitar o afogamento de um poço assegurando que o pistão alcance a superfície em todos os ciclos.
 
-Apesar dos controladores terem mesma importância de manter o método progredindo sem transtornos, eles apresentam performances diferentes no que diz respeito à produtividade e à segurança do poço. Adotando a configuração do poço dada pela figura \ref{Fig:configbarruzi}, foram realizadas algumas simulações para determinar parâmetros de forma a garantir produtividade e continuidade do sistema por um número indeterminado de ciclos. Após as simulações atingirem um estado de equilíbrio, ou seja, tenha se passado um grande espaço de tempo, foram capturadas as situações das figuras \ref{Fig:controletemporizacao} e \ref{Fig:controlerevestimento}. Os dados recuperados das duas simulações através de impressão em arquivo e \textit{log} do programa estão descritos na tabela \ref{Tab:controleperformance} para comparação de resultados. Nestas duas simulações foi escolhido controlar o tempo de viagem do pistão entre 100 e 150 segundos, logo os parâmetros para cada controlador está expresso na tabela \ref{Tab:parametroSimulacaoResultado}.
+Apesar dos controladores terem mesma importância de manter o método progredindo sem transtornos, eles apresentam performances diferentes no que diz respeito à produtividade e à segurança do poço. Adotando a configuração do poço dada pela figura \ref{Fig:configbarruzi}, foram realizadas algumas simulações para determinar parâmetros de forma a garantir produtividade e continuidade do sistema por diversos ciclos. Após as simulações atingirem um estado de equilíbrio, ou seja, tenha se passado um grande espaço de tempo e os comportamentos das variáveis do sistema se manterem similares entre os ciclos, foram capturadas as situações das figuras \ref{Fig:controletemporizacao} e \ref{Fig:controlerevestimento}. Os dados recuperados das duas simulações através de impressão em arquivo e \textit{log} do programa estão descritos na tabela \ref{Tab:controleperformance} para comparação de resultados. Os parâmetros utilizados nos testes de simulação para cada controlador está expresso na tabela \ref{Tab:parametroSimulacaoResultado}, tanto para o controlador por temporização como para o controlador por pressão de revestimento.
 
 %Tabela de parâmetros dos controladores
 \begin{table}[]
@@ -248,19 +253,19 @@ Apesar dos controladores terem mesma importância de manter o método progredindo 
 	\begin{tabular}{|l|c|c|}
 		\hline
 		\textbf{Parâmetro} & \textbf{Temporização} & \textbf{Pressão de Revestimento} \\ \hline
-		Duração da etapa Subida(s) 				& $107,81$ 	& $93,05$  	\\ \hline
-		Duração da etapa Produção(s) 			& $8,28$ 	& $4,51$  	\\ \hline
-		Duração da etapa \textit{Afterflow}(s) 	& $54$		& $41,46$ 	\\ \hline
-		Duração da etapa \textit{Build-up}(s) 	& $790$ 	& $566,12$  \\ \hline
-		Duração do ciclo completo(s) 			& $960,16$  & $705,14$  \\ \hline
-		Volume de produção no Ciclo(barril) 	& $0,9914$ 	& $0,56$  	\\ \hline
-		Total produzido pelo poço(barril) 		& $130,65$ 	& $73,49$ 	\\ \hline
-		Tempo de viagem do pistão(s) 			& $119$ 	& $100$  	\\ \hline
-		Média de velocidade do pistão($\frac{m}{s}$) 	& $9,87$  & $11,69$ \\ \hline
-		Velocidade de impacto do pistão($\frac{m}{s}$) 	& $11,50$ & $10,81$ \\ \hline
-		Tempo decorrido desde o início(hora)	& $35,13$ & $25,68$ 	\\ \hline
+		Duração da etapa Subida (s) 			& $107,81$ 	& $93,05$  	\\ \hline
+		Duração da etapa Produção (s) 			& $8,28$ 	& $4,51$  	\\ \hline
+		Duração da etapa \textit{Afterflow} (s)	& $54$		& $41,46$ 	\\ \hline
+		Duração da etapa \textit{Build-up} (s) 	& $790$ 	& $566,12$  \\ \hline
+		Duração do ciclo completo (s) 			& $960,16$  & $705,14$  \\ \hline
+		Volume de produção no Ciclo (barril) 	& $0,9914$ 	& $0,56$  	\\ \hline
+		Total produzido pelo poço (barril) 		& $130,65$ 	& $73,49$ 	\\ \hline
+		Tempo de viagem do pistão (s) 			& $119$ 	& $100$  	\\ \hline
+		Média de velocidade do pistão ($\frac{m}{s}$) 	& $9,87$  & $11,69$ \\ \hline
+		Velocidade de impacto do pistão ($\frac{m}{s}$) & $11,50$ & $10,81$ \\ \hline
+		Tempo decorrido desde o início (hora)	& $35,13$  & $25,68$ 	\\ \hline
 		Pressão mínima no anular (psi)			& $433,58$ & $399,99$ \\ \hline
-		Pressão mínima da coluna de produção (psi) & $69,59$ & $75,28$ \\ \hline
+		Pressão mínima da coluna de produção (psi) & $69,59$  & $75,28$ \\ \hline
 		Pressão máxima da coluna de produção (psi) & $496,75$ & $446,20$ \\ \hline
 		Pressão mínima de revestimento no controlador (psi) & * & $400$ \\ \hline
 		Pressão máxima de revestimento no controlador (psi) & * & $570$ \\ \hline
@@ -269,7 +274,7 @@ Apesar dos controladores terem mesma importância de manter o método progredindo 
 \end{table}
 
 %Conclusão sobre as figuras e tabelas
-Observa-se, pelos dados obtidos no simulador \textit{plunger lift}, uma menor produtividade por conta do controle por pressão de revestimento, ocorrida pelo fato do atingimento da pressão máxima de revestimento durante a etapa de crescimento de pressão que abre a válvula motora antes que o pistão chegue ao fundo do poço. Por outro lado, dependendo da velocidade na qual o pistão deve alcançar na etapa de subida do pistão, o comportamento da simulação sofre modificações. Por este motivo, o tempo que o sistema passa na etapa de produção de líquido é menor que a do controlador por temporização. Nota-se também que a janela de pressão de revestimento, inicialmente definida entre 440 e 620 psi, equilibrou-se entre 400 e 570 psi pelo controlador do sistema. Percebe-se ainda a menor duração do ciclo no controle por pressão de revestimento, a qual é vantajoso no ponto que quanto mais ciclos em um poço de \textit{plunger lift} no mesmo intervalo de tempo, o pistão mantêm as paredes da coluna de produção com menos óleo e mais limpas, aumentando a durabilidade do equipamento.
+Observa-se pelos dados obtidos no simulador \textit{plunger lift} que há uma menor produtividade por conta do controle por pressão de revestimento, ocorrida pelo fato do atingimento da pressão máxima de revestimento durante a etapa de crescimento de pressão que abre a válvula motora antes que o pistão chegue ao fundo do poço. Por outro lado, dependendo da velocidade na qual o pistão deve alcançar na etapa de subida do pistão, o comportamento da simulação sofre modificações. Por este motivo, o tempo que o sistema passa na etapa de produção de líquido é menor que a do controlador por temporização. Nota-se também que a janela de pressão de revestimento, inicialmente definida entre 440 e 620 psi, equilibrou-se entre 400 e 570 psi pelo controlador do sistema. Percebe-se ainda a menor duração do ciclo no controle por pressão de revestimento, a qual é vantajoso no ponto que quanto mais ciclos em um poço de \textit{plunger lift} no mesmo intervalo de tempo, o pistão mantêm as paredes da coluna de produção com menos óleo e mais limpas, aumentando a durabilidade do equipamento.
 
 Para o controlador por temporização, quanto maior o tempo de viagem do pistão, ele tende a aumentar consideravelmente o tempo de pós-fluxo deixando o tempo de crescimento de pressão somente o necessário para que o pistão chegue ao fundo do poço enquanto que o controlador por pressão de revestimento não modifica o tempo de pós-fluxo não conseguindo alcançar o tempo de viagem do pistão proposto para valores de RGL do reservatório muito altas.
 

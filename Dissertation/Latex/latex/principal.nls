@@ -5,25 +5,27 @@
   \item [{$BHP$:}]\begingroup \textit{Bottomhole pressure}\nomeqref {0}
 		\nompageref{1}
   \item [{$FC$:}]\begingroup Fator de Carga\nomeqref {0}\nompageref{1}
-  \item [{$IP$:}]\begingroup Índice de produtividade\nomeqref {0}
+  \item [{$IP$:}]\begingroup \'{I}ndice de produtividade\nomeqref {0}
 		\nompageref{1}
   \item [{$IPR$:}]\begingroup \textit{Inflow Performance Relationship}\nomeqref {0}
 		\nompageref{1}
-  \item [{$P_{cab}$:}]\begingroup Pressão na cabeça do poço\nomeqref {0}
+  \item [{$P_{cab}$:}]\begingroup Press\~{a}o na cabe\c{c}a do po\c{c}o\nomeqref {0}
 		\nompageref{1}
-  \item [{$P_{e}$:}]\begingroup Pressão média do reservatório\nomeqref {0}
+  \item [{$P_{e}$:}]\begingroup Press\~{a}o m\'{e}dia do reservat\'{o}rio\nomeqref {0}
 		\nompageref{1}
-  \item [{$P_{ls}$:}]\begingroup Pressão na linha de surgência\nomeqref {0}
+  \item [{$P_{ls}$:}]\begingroup Press\~{a}o na linha de surg\^{e}ncia\nomeqref {0}
 		\nompageref{1}
-  \item [{$P_{rev}$:}]\begingroup Pressão de revestimento\nomeqref {0}
+  \item [{$P_{rev}$:}]\begingroup Press\~{a}o de revestimento\nomeqref {0}
 		\nompageref{1}
-  \item [{$P_{w}$:}]\begingroup Pressão de fluxo no fundo do poço\nomeqref {0}
+  \item [{$P_{w}$:}]\begingroup Press\~{a}o de fluxo no fundo do po\c{c}o\nomeqref {0}
 		\nompageref{1}
-  \item [{$q$:}]\begingroup Vazão\nomeqref {0}\nompageref{1}
+  \item [{$\frac{m}{s}$:}]\begingroup Metro por segundo\nomeqref {0}
+		\nompageref{1}
+  \item [{$q$:}]\begingroup Vaz\~{a}o\nomeqref {0}\nompageref{1}
 
  \nomgroup{A}
 
-  \item [{AUTOPOC:}]\begingroup Automação de Poços\nomeqref {0}
+  \item [{AUTOPOC:}]\begingroup Automa\c{c}\~{a}o de Po\c{c}os\nomeqref {0}
 		\nompageref{1}
 
  \nomgroup{I}
@@ -33,19 +35,24 @@
 
  \nomgroup{L}
 
-  \item [{LAUT:}]\begingroup Laboratório de Automação em Petróleo\nomeqref {0}
+  \item [{LAUT:}]\begingroup Laborat\'{o}rio de Automa\c{c}\~{a}o em Petr\'{o}leo\nomeqref {0}
+		\nompageref{1}
+
+ \nomgroup{P}
+
+  \item [{psi:}]\begingroup \textit{pound force per square inch} ou libra-for\c{c}a por polegada quadrada ou $\frac{lbf}{in^2}$\nomeqref {0}
 		\nompageref{1}
 
  \nomgroup{R}
 
-  \item [{RAD:}]\begingroup \textit{Rapid Application Development} ou Desenvolvimento de Aplicação Rápida\nomeqref {0}
+  \item [{RAD:}]\begingroup \textit{Rapid Application Development} ou Desenvolvimento de Aplica\c{c}\~{a}o R\'{a}pida\nomeqref {0}
 		\nompageref{1}
-  \item [{RGL:}]\begingroup Razão Gás-Lí­quido\nomeqref {0}
+  \item [{RGL:}]\begingroup Raz\~{a}o G\'{a}s-L\'{i}quido\nomeqref {0}
 		\nompageref{1}
 
  \nomgroup{S}
 
-  \item [{SP:}]\begingroup \textit{Set-point} ou ponto de equilí­brio\nomeqref {0}
+  \item [{SP:}]\begingroup \textit{Set-point} ou ponto de equil\'{i}brio\nomeqref {0}
 		\nompageref{1}
 
  \nomgroup{U}

@@ -10,7 +10,7 @@
 \contentsline {table}{\numberline {5.2}{\ignorespaces Valores dos 3 ciclos completos coletados durante a execu\c c\~ao da figura \ref {Fig:simulacaoposfluxo}}}{27}{table.5.2}
 \contentsline {table}{\numberline {5.3}{\ignorespaces Valores dos 3 ciclos completos coletados durante a execu\c c\~ao da figura \ref {Fig:simulacaobuildup}}}{29}{table.5.3}
 \contentsline {table}{\numberline {5.4}{\ignorespaces Valores dos 3 ciclos completos coletados durante a execu\c c\~ao da figura \ref {Fig:simulacaoposbuildup}}}{29}{table.5.4}
-\contentsline {table}{\numberline {5.5}{\ignorespaces Par\^ametros adotados nos controladores}}{33}{table.5.5}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Par\^ametros adotados nos controladores para as simula\c c\~oes das figuras \ref {Fig:temporizacao} e \ref {Fig:pressaorevestimento}}}{33}{table.5.5}
 \contentsline {table}{\numberline {5.6}{\ignorespaces Par\^ametros adotados nos controladores nas simula\c c\~oes das figuras \ref {Fig:controletemporizacao} e \ref {Fig:controlerevestimento}}}{37}{table.5.6}
 \contentsline {table}{\numberline {5.7}{\ignorespaces Dados recuperados das simula\c c\~oes das figuras \ref {Fig:controletemporizacao} e \ref {Fig:controlerevestimento} referentes ao ciclo de n\'umero 130}}{40}{table.5.7}
 \addvspace {10\p@ }
