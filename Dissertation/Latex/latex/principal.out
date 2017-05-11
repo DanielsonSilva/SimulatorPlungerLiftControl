@@ -6,24 +6,25 @@
 \BOOKMARK [1][-]{section.1.1}{Objetivo}{chapter.1}% 6
 \BOOKMARK [1][-]{section.1.2}{Motiva\347\343o}{chapter.1}% 7
 \BOOKMARK [0][-]{chapter.2}{M\351todo de eleva\347\343o artificial Plunger Lift}{}% 8
-\BOOKMARK [1][-]{section.2.1}{Eleva\347\343o Artificial}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.1}{Eleva\347\343o artificial}{chapter.2}% 9
 \BOOKMARK [1][-]{section.2.2}{Introdu\347\343o ao m\351todo plunger lift}{chapter.2}% 10
 \BOOKMARK [1][-]{section.2.3}{Equipamentos}{chapter.2}% 11
 \BOOKMARK [1][-]{section.2.4}{Ciclos do m\351todo plunger lift}{chapter.2}% 12
 \BOOKMARK [1][-]{section.2.5}{Vantagens do m\351todo}{chapter.2}% 13
-\BOOKMARK [1][-]{section.2.6}{Modos de Controle}{chapter.2}% 14
-\BOOKMARK [2][-]{subsection.2.6.1}{Controle por temporiza\347\343o}{section.2.6}% 15
-\BOOKMARK [2][-]{subsection.2.6.2}{Controle pela press\343o de revestimento}{section.2.6}% 16
-\BOOKMARK [2][-]{subsection.2.6.3}{Controle pelo fator de carga}{section.2.6}% 17
-\BOOKMARK [2][-]{subsection.2.6.4}{Controle por pr\351-carga ou Booster}{section.2.6}% 18
-\BOOKMARK [0][-]{chapter.3}{Simulador Computacional}{}% 19
-\BOOKMARK [1][-]{section.3.1}{Desenvolvimento do simulador computacional}{chapter.3}% 20
-\BOOKMARK [1][-]{section.3.2}{Organiza\347\343o do software}{chapter.3}% 21
-\BOOKMARK [1][-]{section.3.3}{Principais vari\341veis gerenciadas pelo simulador}{chapter.3}% 22
-\BOOKMARK [1][-]{section.3.4}{Implementa\347\343o de controladores}{chapter.3}% 23
-\BOOKMARK [0][-]{chapter.4}{Valida\347\343o do Simulador}{}% 24
-\BOOKMARK [0][-]{chapter.5}{Resultados}{}% 25
-\BOOKMARK [1][-]{section.5.1}{Controle e sua fun\347\343o no plunger lift}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.2}{Comparativo entre os desempenhos dos controladores}{chapter.5}% 27
-\BOOKMARK [0][-]{chapter.6}{Conclus\365es}{}% 28
-\BOOKMARK [0][-]{chapter.6}{Refer\352ncias bibliogr\341ficas}{}% 29
+\BOOKMARK [1][-]{section.2.6}{Tipos de instala\347\365es}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.7}{Modos de controle}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.7.1}{Controle por temporiza\347\343o}{section.2.7}% 16
+\BOOKMARK [2][-]{subsection.2.7.2}{Controle pela press\343o de revestimento}{section.2.7}% 17
+\BOOKMARK [2][-]{subsection.2.7.3}{Controle pelo fator de carga}{section.2.7}% 18
+\BOOKMARK [2][-]{subsection.2.7.4}{Controle por pr\351-carga ou booster}{section.2.7}% 19
+\BOOKMARK [0][-]{chapter.3}{Simulador Computacional}{}% 20
+\BOOKMARK [1][-]{section.3.1}{Desenvolvimento do simulador computacional}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.2}{Organiza\347\343o do software}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.3}{Principais vari\341veis gerenciadas pelo simulador}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.4}{Implementa\347\343o de controladores}{chapter.3}% 24
+\BOOKMARK [0][-]{chapter.4}{Valida\347\343o do Simulador}{}% 25
+\BOOKMARK [0][-]{chapter.5}{Resultados}{}% 26
+\BOOKMARK [1][-]{section.5.1}{Controle e sua fun\347\343o no plunger lift}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.2}{Comparativo entre os desempenhos dos controladores}{chapter.5}% 28
+\BOOKMARK [0][-]{chapter.6}{Conclus\365es}{}% 29
+\BOOKMARK [0][-]{chapter.6}{Refer\352ncias bibliogr\341ficas}{}% 30

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.15)  9 MAY 2017 20:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.5.15)  10 MAY 2017 20:49
 entering extended mode
 **./principal.tex
 (principal.tex
@@ -587,8 +587,8 @@ Package hyperref Info: *** compatibility with harvard ****  on input line 180.
 ("C:\Users\Danielson Flávio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss
 \omlptmcm.fd")
 ("C:\Users\Danielson Flávio\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss
-\omxpsycm.fd") <UFRN.pdf, id=118, 319.1925pt x 131.49126pt> <use UFRN.pdf>
-<PPgEE.pdf, id=119, 256.96pt x 171.64125pt> <use PPgEE.pdf> <use UFRN.pdf>
+\omxpsycm.fd") <UFRN.pdf, id=122, 319.1925pt x 131.49126pt> <use UFRN.pdf>
+<PPgEE.pdf, id=123, 256.96pt x 171.64125pt> <use PPgEE.pdf> <use UFRN.pdf>
 <use PPgEE.pdf>
 File: UFRN.pdf Graphic file (type pdf)
  <use UFRN.pdf>
@@ -811,7 +811,7 @@ Package babel Info: Redefining portuges shorthand "|
 Cap\'{\i }tulo 1.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 4.
-<introducao/introducao.png, id=333, 341.77687pt x 549.55313pt>
+<introducao/introducao.png, id=338, 341.77687pt x 549.55313pt>
 File: introducao/introducao.png Graphic file (type png)
 
 <use introducao/introducao.png>
@@ -837,7 +837,7 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 31.
 
-Underfull \vbox (badness 6493) has occurred while \output is active []
+Underfull \vbox (badness 2334) has occurred while \output is active []
 
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 34.
@@ -883,7 +883,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 4.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 7.
-<plungerlift/Etapasdofluxo.png, id=350, 145.29282pt x 160.34906pt>
+<plungerlift/Etapasdofluxo.png, id=355, 145.29282pt x 160.34906pt>
 File: plungerlift/Etapasdofluxo.png Graphic file (type png)
 
 <use plungerlift/Etapasdofluxo.png>
@@ -898,7 +898,7 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.25 
-      [5] <plungerlift/CurvadeIPR.png, id=359, 185.94469pt x 170.13562pt>
+      [5] <plungerlift/CurvadeIPR.png, id=364, 185.94469pt x 170.13562pt>
 File: plungerlift/CurvadeIPR.png Graphic file (type png)
 
 <use plungerlift/CurvadeIPR.png>
@@ -943,7 +943,7 @@ been already used, duplicate ignored
                    \relax 
 l.74 \item S
             ensor de chegada --- verifica quando o pist�o chega ao lubrifica...
-[8] <plungerlift/Equipamentos.png, id=374, 351.3125pt x 406.51875pt>
+[8] <plungerlift/Equipamentos.png, id=379, 351.3125pt x 406.51875pt>
 File: plungerlift/Equipamentos.png Graphic file (type png)
 
 <use plungerlift/Equipamentos.png>
@@ -956,7 +956,7 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 94.
  [9 <./plungerlift/Equipamentos.png>]
-<plungerlift/CiclosPlungerLift.png, id=381, 883.80188pt x 362.10281pt>
+<plungerlift/CiclosPlungerLift.png, id=386, 883.80188pt x 362.10281pt>
 File: plungerlift/CiclosPlungerLift.png Graphic file (type png)
 
 <use plungerlift/CiclosPlungerLift.png>
@@ -978,33 +978,35 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 121.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 128.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 124.
+(babel)             in language  on input line 128.
  [11 <./plungerlift/CiclosPlungerLift.png>]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 132.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 127.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 127.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 135.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 138.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 138.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 138.
+(babel)             in language  on input line 143.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 143.
  [12]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 141.
-LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 152.
+(babel)             in language  on input line 146.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 152.
-)
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 261.
+(babel)             in language  on input line 157.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language  on input line 261.
+(babel)             in language  on input line 157.
  [13]
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 163.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 163.
+)
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 261.
 Package babel Info: Redefining portuges shorthand "|
@@ -1027,7 +1029,7 @@ Package babel Info: Redefining portuges shorthand "|
 
 
 
-] <simulador/IDE_Eclipse.png, id=414, 1445.4pt x 781.41937pt>
+] <simulador/IDE_Eclipse.png, id=420, 1445.4pt x 781.41937pt>
 File: simulador/IDE_Eclipse.png Graphic file (type png)
 
 <use simulador/IDE_Eclipse.png>
@@ -1048,7 +1050,7 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 33.
 
-<simulador/variaveisgrafico.png, id=422, 1288.815pt x 37.64063pt>
+<simulador/variaveisgrafico.png, id=428, 1288.815pt x 37.64063pt>
 File: simulador/variaveisgrafico.png Graphic file (type png)
 
 <use simulador/variaveisgrafico.png>
@@ -1059,7 +1061,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 39--40
  [] 
  []
 
-<simulador/grafico.png, id=423, 1297.84875pt x 681.29532pt>
+<simulador/grafico.png, id=429, 1297.84875pt x 681.29532pt>
 File: simulador/grafico.png Graphic file (type png)
 
 <use simulador/grafico.png>
@@ -1070,7 +1072,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 47--48
  [] 
  []
 
-<simulador/condicoesiniciais.png, id=424, 1011.02719pt x 336.50719pt>
+<simulador/condicoesiniciais.png, id=430, 1011.02719pt x 336.50719pt>
 File: simulador/condicoesiniciais.png Graphic file (type png)
 
 <use simulador/condicoesiniciais.png>
@@ -1095,7 +1097,7 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 65.
 
-<simulador/strategy.png, id=435, 722.7pt x 215.30438pt>
+<simulador/strategy.png, id=441, 722.7pt x 215.30438pt>
 File: simulador/strategy.png Graphic file (type png)
 
 <use simulador/strategy.png>
@@ -1135,7 +1137,7 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: Command \' invalid in math mode on input line 47.
 
 Missing character: There is no � in font zptmcmr!
-<validacao/BarruziTest.png, id=452, 1068.99374pt x 535.2497pt>
+<validacao/BarruziTest.png, id=458, 1068.99374pt x 535.2497pt>
 File: validacao/BarruziTest.png Graphic file (type png)
 
 <use validacao/BarruziTest.png>
@@ -1146,7 +1148,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 59--60
  [] 
  []
 
-<validacao/BarruziTest2.png, id=453, 1084.05pt x 447.92343pt>
+<validacao/BarruziTest2.png, id=459, 1084.05pt x 447.92343pt>
 File: validacao/BarruziTest2.png Graphic file (type png)
 
 <use validacao/BarruziTest2.png>
@@ -1188,7 +1190,7 @@ Package babel Info: Redefining portuges shorthand "|
 Cap\'{\i }tulo 5.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 5.
-<resultado/simulacaoteste.png, id=475, 1300.86pt x 731.73375pt>
+<resultado/simulacaoteste.png, id=481, 1300.86pt x 731.73375pt>
 File: resultado/simulacaoteste.png Graphic file (type png)
 
 <use resultado/simulacaoteste.png>
@@ -1219,7 +1221,7 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 45.
  [26 <./resultado/simulacaoteste.png>]
-<resultado/simulacaoposfluxo.png, id=489, 1264.725pt x 642.90187pt>
+<resultado/simulacaoposfluxo.png, id=495, 1264.725pt x 642.90187pt>
 File: resultado/simulacaoposfluxo.png Graphic file (type png)
 
 <use resultado/simulacaoposfluxo.png>
@@ -1235,7 +1237,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 48--49
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 54.
 
-<resultado/simulacaobuildup.png, id=493, 1271.5003pt x 645.16031pt>
+<resultado/simulacaobuildup.png, id=499, 1271.5003pt x 645.16031pt>
 File: resultado/simulacaobuildup.png Graphic file (type png)
 
 <use resultado/simulacaobuildup.png>
@@ -1264,7 +1266,7 @@ Package babel Info: Redefining portuges shorthand "|
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 86.
 
-<resultado/simulacaoposbuildup.png, id=507, 1271.5003pt x 642.14906pt>
+<resultado/simulacaoposbuildup.png, id=513, 1271.5003pt x 642.14906pt>
 File: resultado/simulacaoposbuildup.png Graphic file (type png)
 
 <use resultado/simulacaoposbuildup.png>
@@ -1298,7 +1300,7 @@ Package babel Info: Redefining portuges shorthand "|
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 142.
 
-<resultado/NeedForControllerConfiguration.png, id=525, 749.04843pt x 447.92343p
+<resultado/NeedForControllerConfiguration.png, id=531, 749.04843pt x 447.92343p
 t>
 File: resultado/NeedForControllerConfiguration.png Graphic file (type png)
  <use resultado/NeedForControllerConfiguration.png>
@@ -1311,7 +1313,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 153--154
  []
 
 
-<resultado/NeedForControllerSimulation.png, id=526, 1355.0625pt x 579.16376pt>
+<resultado/NeedForControllerSimulation.png, id=532, 1355.0625pt x 579.16376pt>
 File: resultado/NeedForControllerSimulation.png Graphic file (type png)
 
 <use resultado/NeedForControllerSimulation.png>
@@ -1327,7 +1329,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 161--162
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 169.
 
-<resultado/ControleTemporizacao.png, id=537, 953.06062pt x 485.56406pt>
+<resultado/ControleTemporizacao.png, id=543, 953.06062pt x 485.56406pt>
 File: resultado/ControleTemporizacao.png Graphic file (type png)
 
 <use resultado/ControleTemporizacao.png>
@@ -1339,7 +1341,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 188--189
  [] 
  []
 
-<resultado/ControlePressaoRevestimento.png, id=538, 1414.53468pt x 662.475pt>
+<resultado/ControlePressaoRevestimento.png, id=544, 1414.53468pt x 662.475pt>
 File: resultado/ControlePressaoRevestimento.png Graphic file (type png)
 
 <use resultado/ControlePressaoRevestimento.png>
@@ -1383,7 +1385,7 @@ Package babel Info: Redefining portuges shorthand "|
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 213.
 
-<resultado/SimulacaoTemporizacao.png, id=570, 1430.34375pt x 663.22781pt>
+<resultado/SimulacaoTemporizacao.png, id=576, 1430.34375pt x 663.22781pt>
 File: resultado/SimulacaoTemporizacao.png Graphic file (type png)
 
 <use resultado/SimulacaoTemporizacao.png>
@@ -1395,7 +1397,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 233--234
  [] 
  []
 
-<resultado/SimulacaoRevestimento.png, id=571, 1418.29875pt x 663.98062pt>
+<resultado/SimulacaoRevestimento.png, id=577, 1418.29875pt x 663.98062pt>
 File: resultado/SimulacaoRevestimento.png Graphic file (type png)
 
 <use resultado/SimulacaoRevestimento.png>
@@ -1472,22 +1474,27 @@ Package babel Info: Redefining portuges shorthand "|
  [44
 
 
-])
+]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 75.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language  on input line 75.
+ [45])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 288.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 288.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language  on input line 288.
- [45]
+ [46]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 288.
- (principal.aux (rosto.aux) (preambulo.aux)
-(resumos.aux) (abreviacoes.aux) (introducao/introducao.aux)
+ (principal.aux (rosto.aux) (preambulo.aux) (resumos.aux) (abreviacoes.aux) (in
+troducao/introducao.aux)
 (plungerlift/plungerlift.aux) (simulador/simulador.aux)
 (validacao/validacao.aux) (resultado/resultado.aux) (conclusao/conclusao.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 288.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 288.
 Package rerunfilecheck Info: File `principal.out' has not changed.
-(rerunfilecheck)             Checksum: 84C54F7E48A821601D2109BF69FCDD50;2102.
+(rerunfilecheck)             Checksum: 055840555E31744C6CBFE02D99DEFBF1;2176.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -1495,11 +1502,11 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 288.
  ) 
 Here is how much of TeX's memory you used:
- 8063 strings out of 493634
- 121858 string characters out of 3130341
- 219577 words of memory out of 3000000
- 11005 multiletter control sequences out of 15000+200000
- 87024 words of font info for 105 fonts, out of 3000000 for 9000
+ 8093 strings out of 493634
+ 122507 string characters out of 3130341
+ 219921 words of memory out of 3000000
+ 11027 multiletter control sequences out of 15000+200000
+ 89746 words of font info for 107 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  44i,12n,34p,1285b,470s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Danielson Flávio/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips
@@ -1516,9 +1523,9 @@ fb><C:/Users/Danielson Flávio/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/ur
 w/times/utmr8a.pfb><C:/Users/Danielson Flávio/AppData/Local/Programs/MiKTeX 2.
 9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Danielson Flávio/AppData/Local/Pr
 ograms/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on principal.pdf (65 pages, 2238508 bytes).
+Output written on principal.pdf (66 pages, 2246013 bytes).
 PDF statistics:
- 691 PDF objects out of 1000 (max. 8388607)
- 130 named destinations out of 1000 (max. 500000)
- 353 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 709 PDF objects out of 1000 (max. 8388607)
+ 137 named destinations out of 1000 (max. 500000)
+ 361 words of extra memory for PDF output out of 10000 (max. 10000000)
 
