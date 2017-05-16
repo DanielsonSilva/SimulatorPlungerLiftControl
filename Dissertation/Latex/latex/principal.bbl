@@ -1,8 +1,30 @@
 \begin{thebibliography}{xx}
 
+\harvarditem{Assmann}{2012}{felipepinheiro}
+Assmann, Felipe Pinheiro~Mota  \harvardyearleft 2012\harvardyearright ,
+  Modelagem dinâmica do escoamento de um sistema de elevação por plunger lift,
+  Dissertação de mestrado, Universidade Federal do Rio Grande do Norte, UFRN,
+  Natal, RN.
+
+\harvarditem{Beauregard \harvardand\ Ferguson}{1981}{ferguson}
+Beauregard, E. \harvardand\ Paul~L. Ferguson  \harvardyearleft
+  1981\harvardyearright , `Introduction to plunger lift: Application,
+  advantages and limitations', {\em Southwestern Pretroleum Short Course} .
+
+\harvarditem{Beauregard \harvardand\ Ferguson}{1983}{ferguson2}
+Beauregard, E. \harvardand\ Paul~L. Ferguson  \harvardyearleft
+  1983\harvardyearright , `Will plunger lift work in my well?', {\em
+  Southwestern Pretroleum Short Course} .
+
 \harvarditem{Brown}{1982}{kermitbrown}
 Brown, Kermit~E.  \harvardyearleft 1982\harvardyearright , `Overview of
   artificial lift systems', {\em Journal of Petroleum Technology} {\bf 34}.
+
+\harvarditem[Chilingarian et~al.]{Chilingarian, John O.~Robertson \harvardand\
+  Kumar}{1987}{surfaceoperations}
+Chilingarian, George~V., JR. John O.~Robertson \harvardand\ Sanjay Kumar
+  \harvardyearleft 1987\harvardyearright , {\em Surface Operations in Petroleum
+  Production, I}, Elsevier, Nova Iorque, EUA.
 
 \harvarditem[de~Castro et~al.]{de~Castro, de~Sousa \harvardand\
   Abrantes}{2010}{simulador2010}
@@ -58,6 +80,13 @@ Lake, Larry W.;~Clegg, Joe~D.  \harvardyearleft 2007\harvardyearright , {\em
 Mitra, N.K.  \harvardyearleft 2012\harvardyearright , {\em Principles of
   Artificial Lift}, First edition, Allied Publishers Pvt. Limited.
 \newline\url{https://books.google.com.br/books?id=6NokTvD4mjoC}
+
+\harvarditem[Mower et~al.]{Mower, J.F.~Lea, Beauregard \harvardand\
+  Ferguson}{1985}{mower}
+Mower, L.N., Amoco Production~Co. J.F.~Lea, E. Beauregard \harvardand\ P.L.
+  Ferguson  \harvardyearleft 1985\harvardyearright , `Defining the
+  characteristics and performance of gas-lift plungers', {\em 60th Annual
+  Technical Conference and Exhibition of the Society of Petroleum Engineers} .
 
 \harvarditem{of~Air \harvardand\ Radiation}{2001}{united2001installing}
 of~Air, United States. Environmental Protection Agency.~Office \harvardand\
