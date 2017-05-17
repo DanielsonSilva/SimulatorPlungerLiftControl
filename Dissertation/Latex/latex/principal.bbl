@@ -16,6 +16,10 @@ Beauregard, E. \harvardand\ Paul~L. Ferguson  \harvardyearleft
   1983\harvardyearright , `Will plunger lift work in my well?', {\em
   Southwestern Pretroleum Short Course} .
 
+\harvarditem[Booch et~al.]{Booch, Rumbaugh \harvardand\ Jacobson}{2005}{booch}
+Booch, Grady, James Rumbaugh \harvardand\ Ivar Jacobson  \harvardyearleft
+  2005\harvardyearright , {\em UML: Guia do Usuário}, Elsevier, Rio de Janeiro.
+
 \harvarditem{Brown}{1982}{kermitbrown}
 Brown, Kermit~E.  \harvardyearleft 1982\harvardyearright , `Overview of
   artificial lift systems', {\em Journal of Petroleum Technology} {\bf 34}.
@@ -25,6 +29,16 @@ Brown, Kermit~E.  \harvardyearleft 1982\harvardyearright , `Overview of
 Chilingarian, George~V., JR. John O.~Robertson \harvardand\ Sanjay Kumar
   \harvardyearleft 1987\harvardyearright , {\em Surface Operations in Petroleum
   Production, I}, Elsevier, Nova Iorque, EUA.
+
+\harvarditem{David~Cosby \harvardand\ LLC}{2013}{davidcosby}
+David~Cosby, P.E. \harvardand\ Shale~Tec LLC  \harvardyearleft
+  2013\harvardyearright , `Defining the characteristics and performance of
+  gas-lift plungers', {\em Gas Well Deliquification Workshop} .
+
+\harvarditem{de~Campos \harvardand\ Teixeira}{2006}{controlestipicos}
+de~Campos, Mário Cesar M.~Massa \harvardand\ Herbert C.~G. Teixeira
+  \harvardyearleft 2006\harvardyearright , {\em Controles típicos de
+  equipamentos e processos industriais}, Edgard Blücher, São Paulo.
 
 \harvarditem[de~Castro et~al.]{de~Castro, de~Sousa \harvardand\
   Abrantes}{2010}{simulador2010}
